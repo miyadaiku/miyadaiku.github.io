@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+  Blogサイトの作成
+</title>
+  
+
+  <!-- include boolstrap4 -->
+  
+<link rel="stylesheet" href="../../static/bootstrap4/bootstrap.min.css">
+
+  <!-- include jquery.js -->
+  
+<script src="../../static/jquery/jquery.min.js"></script> 
+
+
+  <!-- include tether.js -->
+  
+<script src="../../static/tether/tether.min.js"></script> 
+
+
+  <!-- include boolstrap4 js -->
+  
+<script src="../../static/bootstrap4/bootstrap.min.js"></script> 
+
+  <!-- include pygments css -->
+  
+<link rel="stylesheet" href="../../static/pygments/css/pygments.css">
+  
+  <!-- include font awesome -->
+  
+<link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="../../static/css/miyadaiku-docs.css">
+
+
+</head>
+
+<body>
+  
+
+
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html">Miyadaiku</a>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">チュートリアル</a>
+        <div class="dropdown-menu">
+          
+
+          
+            <a class="dropdown-item" href="tutorial.html">サイトの作成</a>
+          
+            <a class="dropdown-item" href="tutorial_blog.html">Blogサイトの作成</a>
+          
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">ガイド</a>
+        <div class="dropdown-menu">
+          
+
+          
+            <a class="dropdown-item" href="../guide/project.html">Miyadaikuプロジェクト</a>
+          
+            <a class="dropdown-item" href="../guide/config.html">コンフィグ</a>
+          
+            <a class="dropdown-item" href="../guide/article.html">アーティクル</a>
+          
+            <a class="dropdown-item" href="../guide/snippet.html">スニペット</a>
+          
+            <a class="dropdown-item" href="../guide/index.html">インデックス</a>
+          
+            <a class="dropdown-item" href="../guide/feed.html">フィード</a>
+          
+            <a class="dropdown-item" href="../guide/template.html">テンプレート</a>
+          
+            <a class="dropdown-item" href="../guide/themes.html">テーマ</a>
+          
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-3 toc'>
+      
+          
+
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='tutorial.html'>サイトの作成</a></div>
+                </div>
+            
+          
+            
+                <div class="current article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='tutorial_blog.html'>Blogサイトの作成</a></div>
+
+                  <ul>
+                  
+                    <li class="header_h1">
+                      <a href="#h_ja_tutorial_tutorial_blog.rst_1">プロジェクト設定</a>
+                    </li>
+                  
+                    <li class="header_h1">
+                      <a href="#h_ja_tutorial_tutorial_blog.rst_2">記事の作成</a>
+                    </li>
+                  
+                    <li class="header_h1">
+                      <a href="#h_ja_tutorial_tutorial_blog.rst_3">サイトのビルド</a>
+                    </li>
+                  
+                  </ul>
+                </div>
+            
+          
+
+      
+
+
+      
+
+    </div>
+
+    <div class='col-md-9 article-body'>
+      <a id='page_title' class='header_anchor'></a>
+      <h1>
+        Blogサイトの作成
+      </h1>
+
+      <div class='article-content'>
+        <p>はじめに、次のコマンドで <span class="docutils literal">first_blog</span> ディレクトリに <span class="docutils literal">miyadaiku</span> のプロジェクトを作成します</p>
+<div class="code-block">
+<div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-start ./first_blog
+</pre></div>
+</div>
+<div class="section" id="id1">
+<a class="header_anchor" id="h_ja_tutorial_tutorial_blog.rst_1"></a><h1>プロジェクト設定</h1>
+<p>初期設定では、プロジェクト設定ファイル <span class="docutils literal">first_blog/config.yml</span> ファイルは次のようになっています。</p>
+<div class="code-block">
+<div class="code-block-caption">first_blog/config.yml:</div>
+<div class="highlight"><pre><span></span><span class="c1"># Title of the site</span>
+<span class="l l-Scalar l-Scalar-Plain">site_title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">FIXME - site title</span>
+
+<span class="c1"># Default language code</span>
+<span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ja</span>
+
+<span class="c1"># Default charset</span>
+<span class="l l-Scalar l-Scalar-Plain">charset</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">utf-8</span>
+
+<span class="c1"># Default timezone</span>
+<span class="l l-Scalar l-Scalar-Plain">timezone</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Asia/Tokyo</span>
+
+<span class="c1"># List of site theme</span>
+<span class="l l-Scalar l-Scalar-Plain">themes</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">miyadaiku.themes.base</span>
+</pre></div>
+</div>
+<p><span class="docutils literal">first_blog/config.yml</span> の <span class="docutils literal">themes</span> を修正し、組み込みテーマ <span class="docutils literal">miyadaiku.themes.sample.blog</span> を使用するように設定します。</p>
+<div class="code-block">
+<div class="code-block-caption">first_blog/config.yml:</div>
+<div class="highlight"><pre><span></span><span class="c1"># Title of the site</span>
+<span class="l l-Scalar l-Scalar-Plain">site_title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">FIXME - site title</span>
+
+<span class="c1"># Default language code</span>
+<span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ja</span>
+
+<span class="c1"># Default charset</span>
+<span class="l l-Scalar l-Scalar-Plain">charset</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">utf-8</span>
+
+<span class="c1"># Default timezone</span>
+<span class="l l-Scalar l-Scalar-Plain">timezone</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Asia/Tokyo</span>
+
+<span class="c1"># List of site theme</span>
+<span class="l l-Scalar l-Scalar-Plain">themes</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">miyadaiku.themes.sample.blog</span>   <span class="c1"># &lt;--- この行を修正</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<a class="header_anchor" id="h_ja_tutorial_tutorial_blog.rst_2"></a><h1>記事の作成</h1>
+<p>ブログの記事として、<span class="docutils literal">first_blog/contents/first_entry.rst</span> ファイルを作成します。</p>
+<div class="code-block">
+<div class="code-block-caption">first_blog/contents/first_entry.rst:</div>
+<div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
+   <span class="nc">:date:</span> <span class="nf">2017-01-01</span>
+   <span class="nc">:category:</span> <span class="nf">カテゴリ1</span>
+   <span class="nc">:tags:</span> <span class="nf">タグ1, タグ2</span>
+
+<span class="gh">First entry</span>
+<span class="gh">-------------</span>
+
+This is my first blog entry.
+</pre></div>
+</div>
+<p>ブログの日付、カテゴリなどの記事情報を、<span class="docutils literal">article</span> ロールに記述します。ここでは、記事の日付、カテゴリ、タグを指定しています。</p>
+<p>同様に、二つ目の記事 <span class="docutils literal">first_blog/contents/second_entry.rst</span> ファイルを作成します。</p>
+<div class="code-block">
+<div class="code-block-caption">first_blog/contents/second_entry.rst:</div>
+<div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
+   <span class="nc">:date:</span> <span class="nf">2017-01-01</span>
+   <span class="nc">:category:</span> <span class="nf">カテゴリ2</span>
+   <span class="nc">:tags:</span> <span class="nf">タグ3</span>
+
+<span class="gh">First entry</span>
+<span class="gh">-------------</span>
+
+This is my second blog entry.
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<a class="header_anchor" id="h_ja_tutorial_tutorial_blog.rst_3"></a><h1>サイトのビルド</h1>
+<p>次のコマンドでサイトをビルドします。</p>
+<div class="code-block">
+<div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-build ./first_blog
+</pre></div>
+</div>
+<p>正常に終了すると、<span class="docutils literal">first_blog/outputs/index.html</span> にBlogが出力されます。</p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+<footer>
+Copyright &copy; 2017 Atsuo Ishimoto
+</footer>
+
+
+</body>
+</html>

@@ -117,14 +117,14 @@
             
                 <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='config.html'>コンフィグ</a></div>
+                    <a href='config.html'>コンフィグ</a></div>
 
                   <ul>
-                  
-                    <li class="header_h1">
-                      <a href="#h_ja_guide_config.rst_1">標準プロパティ</a>
-                    </li>
-                  
+                    
+                      <li class="header_h1">
+                        <a href="#a_h_ja_guide_config.rst_1">標準プロパティ</a>
+                      </li>
+                    
                   </ul>
                 </div>
             
@@ -171,7 +171,6 @@
                 </div>
             
           
-
       
 
 
@@ -187,7 +186,7 @@
 
       <div class='article-content'>
         <p>アーティクルやインデックスなどのプロパティのデフォルト値は、ルートディレクトリの <span class="docutils literal">config.yml</span> ファイルで指定します。</p>
-<p>また、<span class="docutils literal">contents</span> ディレクトリ内のサブディレクトリごとに、<span class="docutils literal">config</span> タイプのYAMLファイルで、辞書として指定します。</p>
+<p>また、<span class="docutils literal">contents</span> ディレクトリ内のサブディレクトリにYAMLファイルを作成し、ディレクトリ別のデフォルト値を指定できます。</p>
 <div class="code-block">
 <div class="code-block-caption">contents/dir1/config.yml</div>
 <div class="highlight"><pre><span></span>type: config   # YAMLファイルのタイプを config に指定
@@ -243,14 +242,6 @@ category: tutorial # categoryのデフォルト値を tutorial に設定
 </dd>
 <dt>title:</dt>
 <dd><p>コンテンツのタイトルを指定します。</p>
-</dd>
-<dt>feed_num_articles:</dt>
-<dd><p>値: <span class="docutils literal">10</span></p>
-<p>フィードに含まれるアーティクルの数を指定します。</p>
-</dd>
-<dt>feed_type:</dt>
-<dd><p>値: <span class="docutils literal">'atom'</span></p>
-<p>フィードの種類を、<span class="docutils literal">atom</span> または <span class="docutils literal">rss</span> で指定します。未指定の場合は <span class="docutils literal">'atom'</span> となります。</p>
 </dd>
 </dl>
 </div>

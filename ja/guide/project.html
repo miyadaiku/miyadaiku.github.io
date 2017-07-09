@@ -110,22 +110,22 @@
             
                 <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='project.html'>Miyadaikuプロジェクト</a></div>
+                    <a href='project.html'>Miyadaikuプロジェクト</a></div>
 
                   <ul>
-                  
-                    <li class="header_h1">
-                      <a href="#h_ja_guide_project.rst_1">ディレクトリ構成</a>
-                    </li>
-                  
-                    <li class="header_h1">
-                      <a href="#h_ja_guide_project.rst_2">コンテンツファイル</a>
-                    </li>
-                  
-                    <li class="header_h1">
-                      <a href="#h_ja_guide_project.rst_3">テンプレート</a>
-                    </li>
-                  
+                    
+                      <li class="header_h1">
+                        <a href="#a_h_ja_guide_project.rst_1">ディレクトリ構成</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#a_h_ja_guide_project.rst_2">コンテンツファイル</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#a_h_ja_guide_project.rst_3">テンプレート</a>
+                      </li>
+                    
                   </ul>
                 </div>
             
@@ -179,7 +179,6 @@
                 </div>
             
           
-
       
 
 
@@ -216,17 +215,15 @@ config.yml   contents        files           templates
      ├─── templates/   jinja2テンプレートファイルを格納するディレクトリ
      │
      └─── outputs/      HTMLなどの出力ファイルを出力するディクレクトリ</pre>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt>config.yml ファイル</dt>
 <dd><p>プロジェクト全体のデフォルトとなるプロパティを指定する <span class="docutils literal">YAML</span> ファイルです。</p>
 </dd>
 <dt>contents ディレクトリ</dt>
 <dd><p>reStructuredText/Markdownなどによる文書ファイルや設定ファイルなど、 <span class="docutils literal"><span class="pre">miyadaiku-build</span></span> コマンドが処理するソースファイルを格納します。</p>
-<p><span class="docutils literal">contents</span> ディレクトリにサブディレクトリを作成してソースファイルを作成すると、<span class="docutils literal">outputs</span> ディレクトリに同じサブディレクトリを作成して結果を出力します。</p>
 </dd>
 <dt>files ディレクトリ</dt>
-<dd><p><span class="docutils literal"><span class="pre">miyadaiku-build</span></span> コマンドで変換せず、<span class="docutils literal">outputs</span> ディレクトリにコピーするファイルを格納します。</p>
-<p><span class="docutils literal">files</span> ディレクトリにサブディレクトリを作成してファイルを作成すると、<span class="docutils literal">outputs</span> ディレクトリに同じサブディレクトリを作成してファイルをコピーします。</p>
+<dd><p><span class="docutils literal"><span class="pre">miyadaiku-build</span></span> コマンドで変換せずに、そのまま <span class="docutils literal">outputs</span> ディレクトリにコピーするファイルを格納します。</p>
 </dd>
 <dt>templates ディレクトリ</dt>
 <dd><p><span class="docutils literal">jinja2</span> テンプレートファイルを格納します。</p>

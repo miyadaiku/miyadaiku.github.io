@@ -119,23 +119,23 @@
                   <ul>
                     
                       <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial.rst_1">アーティクルの作成</a>
+                        <a href="#a_h_ja_tutorial_tutorial_2erst_1">アーティクルの作成</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial.rst_2">サイトのビルド</a>
+                        <a href="#a_h_ja_tutorial_tutorial_2erst_2">サイトのビルド</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial.rst_3">アーティクルのリンク</a>
+                        <a href="#a_h_ja_tutorial_tutorial_2erst_3">アーティクルのリンク</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial.rst_4">テンプレートのカスタマイズ</a>
+                        <a href="#a_h_ja_tutorial_tutorial_2erst_4">テンプレートのカスタマイズ</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial.rst_5">CSSファイルを追加</a>
+                        <a href="#a_h_ja_tutorial_tutorial_2erst_5">CSSファイルを追加</a>
                       </li>
                     
                   </ul>
@@ -174,7 +174,7 @@
      │
      └─── templates/   jinja2テンプレートファイルを格納するディレクトリ</pre>
 <div class="section" id="id2">
-<a class="header_anchor" id="h_ja_tutorial_tutorial.rst_1"></a><h1>アーティクルの作成</h1>
+<a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_1"></a><h1 id="h_ja_tutorial_tutorial_2erst_1">アーティクルの作成</h1>
 <p>では、最初のアーティクルとして、reStructuredText形式のファイルを作成しましょう。</p>
 <div class="code-block">
 <div class="code-block-caption">first_doc/contents/hello.rst:</div>
@@ -187,7 +187,7 @@ This is my first miyadaiku article.
 <p>上記の内容のテキストファイルを作成し、 <span class="docutils literal">first_doc/contents/hello.rst</span> という名前で保存してください。</p>
 </div>
 <div class="section" id="id3">
-<a class="header_anchor" id="h_ja_tutorial_tutorial.rst_2"></a><h1>サイトのビルド</h1>
+<a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_2"></a><h1 id="h_ja_tutorial_tutorial_2erst_2">サイトのビルド</h1>
 <p>テキストファイルを保存したら、次のコマンドでサイトをビルドします。</p>
 <div class="code-block">
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-build ./first_doc
@@ -196,7 +196,7 @@ This is my first miyadaiku article.
 <p>正常に終了すれば、<span class="docutils literal">first_doc/output/hello.html</span> ファイルが作成されています。</p>
 </div>
 <div class="section" id="id4">
-<a class="header_anchor" id="h_ja_tutorial_tutorial.rst_3"></a><h1>アーティクルのリンク</h1>
+<a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_3"></a><h1 id="h_ja_tutorial_tutorial_2erst_3">アーティクルのリンク</h1>
 <p>もう一つ、新しいアーティクル <span class="docutils literal">first_doc/contents/link.rst</span> を作成します。</p>
 <div class="code-block">
 <div class="code-block-caption">first_doc/contents/link.rst:</div>
@@ -218,7 +218,7 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ page.link_to("./hell
 <p><span class="docutils literal">first_doc/contents/index.rst</span> では、<span class="docutils literal">:jinja:</span> ロールを利用して、<span class="docutils literal">./hello.rst</span> ページへのリンクを作成しています。<span class="docutils literal">page.link_to(ページ名)</span> メソッドは、指定したページのタイトルをテキストとして、リンクを作成します。</p>
 </div>
 <div class="section" id="id5">
-<a class="header_anchor" id="h_ja_tutorial_tutorial.rst_4"></a><h1>テンプレートのカスタマイズ</h1>
+<a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_4"></a><h1 id="h_ja_tutorial_tutorial_2erst_4">テンプレートのカスタマイズ</h1>
 <p>MiyadaikuがアーティクルからHTMLページを生成する時、<span class="docutils literal">page_article.html</span> という名前の Jinja2 テンプレートを使用します。デフォルトでは、<span class="docutils literal">miyadaiku.themes.base</span> パッケージの <span class="docutils literal">page_article.html</span> ファイルがテンプレートとなります。</p>
 <p>Jinja2 の継承機能を利用してこのテンプレートをカスタマイズし、独自のテンプレートを作成できます。例として、テンプレートディレクトリ <span class="docutils literal">first_doc/templates</span> に、 テンプレートとなる <span class="docutils literal">page_article.html</span> ファイルを作成しましょう。</p>
 <div class="code-block">
@@ -242,7 +242,7 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ page.link_to("./hell
 <p>Miyadaikuでは、Pythonパッケージに含まれるテンプレートを、<span class="docutils literal">パッケージ名!テンプレートファイル名</span> のように、パッケージ名とファイル名を <span class="docutils literal">!</span> 記号で区切って指定します。この例では、<span class="docutils literal">miyadaiku.themes.base</span> パッケージの <span class="docutils literal">page_article.html</span> ファイルを拡張しています。</p>
 </div>
 <div class="section" id="css">
-<a class="header_anchor" id="h_ja_tutorial_tutorial.rst_5"></a><h1>CSSファイルを追加</h1>
+<a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_5"></a><h1 id="h_ja_tutorial_tutorial_2erst_5">CSSファイルを追加</h1>
 <p>プロジェクトの <span class="docutils literal">files/</span> ディレクトリにあるファイルは、HTMLに変換せずにそのまま <span class="docutils literal">output</span> ディレクトリにコピーされます。</p>
 <p><span class="docutils literal">first_doc/files/static/css</span> ディレクトリに、以下の内容の <span class="docutils literal">copyright.css</span> ファイルを追加します。</p>
 <div class="code-block">

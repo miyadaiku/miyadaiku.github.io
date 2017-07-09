@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FIXME - site title</title>
+  
+
+  <!-- include jquery.js -->
+  
+<script src="static/jquery/jquery.min.js"></script> 
+
+
+  <link rel="stylesheet" type="text/css" href="jquery.fullpage.min.css" />
+  <script type="text/javascript" src="jquery.fullpage.min.js"></script>
+
+  <style>
+  #menu {
+    background-color: black;
+    display: flex;
+  }
+
+  #menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0.2rem 0.5rem;
+  }
+
+  #menu .active {
+    color: black;
+    background-color: white;
+  }
+
+  </style>
+
+  <script>
+  $(document).ready(function() {
+    $('#fullpage').fullpage({
+      menu: '#menu'
+    });
+  });
+  </script>
+
+
+</head>
+
+<body>
+  
+  
+  <div id='menu' style='position:absolute; right:50px; top:50px; z-index:1000;'>
+    
+      <a data-menuanchor="1" href="#1" data-anchor="1">section 1</a>
+    
+      <a data-menuanchor="2" href="#2" data-anchor="2">section 2</a>
+    
+      <a data-menuanchor="3" href="#3" data-anchor="3">section 3</a>
+    
+  </div>
+  <div id="fullpage">
+    
+      <div class="section" data-anchor="1" style="background-color:pink"><p>Content of section 1.</p></div>
+    
+      <div class="section" data-anchor="2" style="background-color:yellow"><p>Content of section 2.</p></div>
+    
+      <div class="section" data-anchor="3" style="background-color:green"><p>Content of section 3.</p></div>
+    
+  </div>
+
+
+</body>
+</html>

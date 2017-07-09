@@ -16,9 +16,31 @@
   <link rel="stylesheet" type="text/css" href="jquery.fullpage.min.css" />
   <script type="text/javascript" src="jquery.fullpage.min.js"></script>
 
+  <style>
+  #menu {
+    background-color: black;
+    display: flex;
+  }
+
+  #menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0.2rem 0.5rem;
+  }
+
+  #menu .active {
+    color: black;
+    background-color: white;
+  }
+
+  </style>
+
   <script>
   $(document).ready(function() {
-    $('#fullpage').fullpage({});
+    $('#fullpage').fullpage({
+      menu: '#menu'
+    });
   });
   </script>
 
@@ -27,18 +49,14 @@
 
 <body>
   
-
   
-  []
-   <div id="fullpage">
+  <div id='menu' style='position:absolute; right:50px; top:50px; z-index:1000;'>
     
-   </div>
+  </div>
+  <div id="fullpage">
+    
+  </div>
 
-<!--	<div class="section" data-anchor="slide1">Some section</div>
-	<div class="section" data-anchor="slide2">Some section</div>
-	<div class="section">Some section</div>
-	<div class="section">Some section</div>
--->
 
 </body>
 </html>

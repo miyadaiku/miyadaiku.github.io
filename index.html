@@ -1,0 +1,13 @@
+<html>
+<!--<head><meta http-equiv="refresh" content="0; url=./ja/index.html" /></head>-->
+<script>
+  var language = (window.navigator.languages 
+      || [window.navigator.language || window.navigator.userLanguage])[0].substring(0, 2);
+  var pages = { ja: './ja/index.html' };
+  var page = pages[language];
+  if (!page) {
+    page = './ja/index.html';
+  }
+  window.location.href=page;
+</script>
+</html>

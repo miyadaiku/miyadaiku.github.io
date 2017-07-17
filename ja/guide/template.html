@@ -11,30 +11,23 @@
   
 
   <!-- include boolstrap4 -->
-  
-<link rel="stylesheet" href="../../static/bootstrap4/bootstrap.min.css">
+  <link rel="stylesheet" href="../../static/bootstrap4/bootstrap.min.css">
 
   <!-- include jquery.js -->
-  
-<script src="../../static/jquery/jquery.min.js"></script> 
-
+  <script src="../../static/jquery/jquery.min.js"></script>
 
   <!-- include tether.js -->
-  
-<script src="../../static/tether/tether.min.js"></script> 
-
+  <script src="../../static/tether/tether.min.js"></script>
 
   <!-- include boolstrap4 js -->
-  
-<script src="../../static/bootstrap4/bootstrap.min.js"></script> 
+  <script src="../../static/bootstrap4/bootstrap.min.js"></script>
 
   <!-- include pygments css -->
   
 <link rel="stylesheet" href="../../static/pygments/css/pygments.css">
   
   <!-- include font awesome -->
-  
-<link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
   
   <link rel="stylesheet" href="../../static/css/miyadaiku-docs.css">
 
@@ -114,49 +107,49 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='project.html'>Miyadaikuプロジェクト</a></div>
+                  <a href='project.html' >Miyadaikuプロジェクト</a></div>
                 </div>
             
           
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='config.html'>コンフィグ</a></div>
+                  <a href='config.html' >コンフィグ</a></div>
                 </div>
             
           
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='article.html'>アーティクル</a></div>
+                  <a href='article.html' >アーティクル</a></div>
                 </div>
             
           
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='snippet.html'>スニペット</a></div>
+                  <a href='snippet.html' >スニペット</a></div>
                 </div>
             
           
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='index.html'>インデックス</a></div>
+                  <a href='index.html' >インデックス</a></div>
                 </div>
             
           
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='feed.html'>フィード</a></div>
+                  <a href='feed.html' >フィード</a></div>
                 </div>
             
           
             
                 <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                    <a href='template.html'>テンプレート</a></div>
+                    <a href='template.html' >テンプレート</a></div>
 
                   <ul>
                     
@@ -191,7 +184,7 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='themes.html'>テーマ</a></div>
+                  <a href='themes.html' >テーマ</a></div>
                 </div>
             
           
@@ -279,10 +272,10 @@
 <span class="x">  &lt;hr&gt;</span>
 <span class="x">  &lt;div&gt;</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">cur_page</span> <span class="p">!</span><span class="o">=</span> <span class="m">1</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">page.path_to_indexpage</span><span class="o">(</span><span class="nv">group_names</span><span class="o">,</span> <span class="nv">cur_page-1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Prev page&lt;/a&gt;</span>
+<span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">page.path_to</span><span class="o">(</span><span class="nv">page</span><span class="o">,</span> <span class="nv">values</span><span class="o">=</span><span class="nv">group_names</span><span class="o">,</span> <span class="nv">npage</span><span class="o">=</span><span class="nv">cur_page-1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Prev page&lt;/a&gt;</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nv">is_last</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">page.path_to_indexpage</span><span class="o">(</span><span class="nv">group_names</span><span class="o">,</span> <span class="nv">cur_page</span><span class="o">+</span><span class="m">1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Next page&lt;/a&gt;</span>
+<span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">page.path_to</span><span class="o">(</span><span class="nv">page</span><span class="o">,</span> <span class="nv">groups</span><span class="o">=</span><span class="nv">group_names</span><span class="o">,</span> <span class="nv">npage</span><span class="o">=</span><span class="nv">cur_page</span><span class="o">+</span><span class="m">1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Next page&lt;/a&gt;</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">  &lt;/div&gt;</span>
 <span class="x">&lt;/body&gt;</span>

@@ -185,7 +185,7 @@
       </h1>
 
       <div class='article-content'>
-        <p>Blogサイトなどでは、新着記事ページや、記事カテゴリ別の一覧ページなどが必要となります。Miyadaikuでは、アーティクルの一覧は <strong>インデックスオブジェクト</strong> から作成します。</p>
+        <p>Blogサイトなどでは、新着記事ページや、記事カテゴリ別の一覧ページなど、アーティクルの一覧からなるページが必要となります。Miyadaikuでは、このようなアーティクルの一覧を <strong>インデックスオブジェクト</strong> から作成します。</p>
 <p>インデックスオブジェクトは <span class="docutils literal">contents</span> ディレクトリのYAMLファイルに、辞書として定義します。</p>
 <div class="code-block">
 <div class="code-block-caption">contents/index_ja.yml</div>
@@ -197,7 +197,7 @@
 </div>
 <div class="section" id="id2">
 <a class="header_anchor" id="a_h_ja_guide_index_2erst_1"></a><h1 id="h_ja_guide_index_2erst_1">インデックスのプロパティ</h1>
-<p>インデックスオブジェクトは、標準プロパティに加え、以下のプロパティを指定できます。</p>
+<p>インデックスオブジェクトには、<a href="config.html#standardprofs">標準プロパティ</a> に加え、以下のプロパティを指定できます。</p>
 <dl>
 <dt>filters</dt>
 <dd><p>表示するアーティクルの検索条件を指定します。検索する文書プロパティ名をキー、表示対象のプロパティ値のリストを値とする辞書を指定します。</p>
@@ -238,7 +238,7 @@
 <p>テンプレートでは、<span class="docutils literal">indexpage_filename_templ</span> と同じ変数を使用できます。</p>
 </dd>
 <dt>indexpage_max_articles</dt>
-<dd><p>インデックスページに表示する、1ページあたりのアーティクル数を指定します。未指定の場合は <span class="docutils literal">3</span> となります。</p>
+<dd><p>インデックスページに表示する、1ページあたりのアーティクル数を指定します。未指定の場合は <span class="docutils literal">5</span> となります。</p>
 </dd>
 <dt>indexpage_max_num_pages</dt>
 <dd><p>インデックスの最大ページ数を指定します。<span class="docutils literal">0</span> の場合は、すべてのページを出力します。未指定の場合は <span class="docutils literal">0</span> となります。</p>

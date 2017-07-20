@@ -266,11 +266,14 @@ This is a miyadaiku article in reST.
 <div class="highlight"><pre><span></span><span class="gh">Properties of this document</span>
 <span class="gh">-----------------------------------</span>
 
-Category is <span class="na">:jinja:</span><span class="nv">`{{ content.category }}`</span>
 
-Tags are <span class="na">:jinja:</span><span class="nv">`{{ ', '.join(content.tags) }}`</span>
+<span class="p">..</span> <span class="ow">jinja</span><span class="p">::</span>
 
-Date is <span class="na">:jinja:</span><span class="nv">`{{ content.date.strftime('%Y-%m-%d') }}`</span>
+   &lt;ul&gt;
+     &lt;li&gt; Category is {{ content.category }} &lt;/li&gt;
+     &lt;li&gt; Tags are {{ ', '.join(content.tags) }} &lt;/li&gt;
+     &lt;li&gt; Date is {{ content.date.strftime('%Y-%m-%d') }} &lt;/li&gt;
+   &lt;/ul&gt;
 </pre></div>
 </div>
 </div>

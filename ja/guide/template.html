@@ -157,7 +157,7 @@
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#a_h_ja_guide_template_2erst_2">テンプレート変数</a>
+                        <a href="#a_h_ja_guide_template_2erst_2">コンテンツ変数</a>
                       </li>
                     
                       <li class="header_h3">
@@ -197,7 +197,7 @@
       </h1>
 
       <div class='article-content'>
-        <p><span class="docutils literal">contents</span> ディレクトリのアーティクルやインデックスは、Jinjaテンプレートを適用して最終的なHTMLファイルを出力します。</p>
+        <p><span class="docutils literal">contents</span> ディレクトリのアーティクルやインデックスは、Jinja2テンプレートを適用して最終的なHTMLファイルを出力します。テンプレートは、プロジェクトディレクトリの <span class="docutils literal">templates</span> ディレクトリに保存します。</p>
 <div class="section" id="id2">
 <a class="header_anchor" id="a_h_ja_guide_template_2erst_1"></a><h1 id="h_ja_guide_template_2erst_1">アーティクルテンプレート</h1>
 <p>アーティクルに適用するテンプレートは、<span class="docutils literal">article_template</span> プロパティで指定します。未指定の場合は、<span class="docutils literal">'page_article.html'</span> となります。</p>
@@ -217,12 +217,16 @@
 </pre></div>
 </div>
 <a class="header_anchor" id="content_vars"></a><div class="section" id="id3">
-<a class="header_anchor" id="a_h_ja_guide_template_2erst_2"></a><h2 id="h_ja_guide_template_2erst_2">テンプレート変数</h2>
-<p>アーティクルテンプレートでは、次の変数を使用できます。</p>
+<a class="header_anchor" id="a_h_ja_guide_template_2erst_2"></a><h2 id="h_ja_guide_template_2erst_2">コンテンツ変数</h2>
+<p>テンプレート内では、作成中のHTMLページのアーティクルコンテンツオブジェクトを <span class="docutils literal">page</span> 変数で参照できます。</p>
+<p>例えば <span class="docutils literal">contents</span> ディレクトリの <span class="docutils literal">article1.rst</span> からHTMLページを作成する場合、テンプレートファイル <span class="docutils literal">page_article.html</span> では、 <span class="docutils literal">page</span> 変数は <span class="docutils literal">article1.rst</span> オブジェクトとなります。</p>
 <div class="section" id="page">
 <a class="header_anchor" id="a_h_ja_guide_template_2erst_3"></a><h3 id="h_ja_guide_template_2erst_3">page オブジェクト</h3>
-<p><span class="docutils literal">page</span> オブジェクトは、現在テンプレートでHTMLページを作成しているコンテントオブジェクトで、アーティクルなどのコンテントに設定された <a href="article.html#propsofarticle">プロパティ</a> と、次のプロパティ/メソッドを使用できます。</p>
+<p><span class="docutils literal">page</span> オブジェクトは、現在テンプレートでHTMLページを作成しているコンテンツオブジェクトで、アーティクルなどのコンテントに設定された <a href="article.html#propsofarticle">プロパティ</a> と、次のプロパティ/メソッドを使用できます。</p>
 <dl>
+<dt>abstruct</dt>
+<dd><p>HTMLに変換したアーティクルを、 <span class="docutils literal">abstract_length</span> プロパティで指定した文字数分取得します。<span class="docutils literal">abstract_length</span> が <span class="docutils literal">0</span> の場合、全文を返します。</p>
+</dd>
 <dt>html</dt>
 <dd><p>HTMLに変換したアーティクル全文を返します</p>
 </dd>
@@ -283,6 +287,8 @@
 </div>
 <div class="section" id="id5">
 <a class="header_anchor" id="a_h_ja_guide_template_2erst_5"></a><h2 id="h_ja_guide_template_2erst_5">テンプレート変数</h2>
+<p>テンプレート内では、作成中のHTMLページのアーティクルコンテンツオブジェクトを <span class="docutils literal">page</span> 変数で参照できます。</p>
+<p>例えば、<span class="docutils literal">contents</span> ディレクトリの <span class="docutils literal">index.yml</span> ファイルから <span class="docutils literal">index.html</span> ファイルを作成する場合、HTMLファイルを作成する作成中の <span class="docutils literal">page</span> 変数は <span class="docutils literal">index.yml</span> のインデックスオブジェクトとなります。</p>
 <p>インデックステンプレートでは、<a href="template.html#content_vars">アーティクルテンプレートの変数</a> に加え、以下の変数を使用できます。</p>
 <dl class="simple">
 <dt>cur_page</dt>

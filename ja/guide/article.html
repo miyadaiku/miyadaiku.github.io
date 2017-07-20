@@ -257,7 +257,7 @@ This is a miyadaiku article in reST.
 </div>
 <div class="section" id="jinja">
 <a class="header_anchor" id="a_h_ja_guide_article_2erst_3"></a><h2 id="h_ja_guide_article_2erst_3">jinjaテンプレート</h2>
-<p><span class="docutils literal">jinja</span> ディレクティブと <span class="docutils literal">jinja</span> ロールを使って、Jinja2テンプレートをreSTに記述できます。</p>
+<p><span class="docutils literal">jinja</span> ディレクティブと <span class="docutils literal">jinja</span> ロールを使って、reST中にJinja2テンプレートを記述できます。</p>
 <div class="section" id="id5">
 <a class="header_anchor" id="a_h_ja_guide_article_2erst_4"></a><h3 id="h_ja_guide_article_2erst_4">jinjaディレクティブ</h3>
 <p><span class="docutils literal">jinja</span> ディレクティブで指定した文字列は、Jinja2テンプレートとして評価され、結果はHTMLに出力されます。</p>
@@ -291,13 +291,37 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ page.link_to("./hell
 <p>Jinjaテンプレート内では、次の変数を使用できます。</p>
 <dl class="simple">
 <dt>content</dt>
-<dd><p>Jinjaテンプレートを含む <a href="template.html#content_vars">コンテントオブジェクト</a>。</p>
+<dd><p>アーティクルオブジェクト自身を参照します。</p>
 </dd>
 <dt>page</dt>
-<dd><p>HTMLページの元となる <a href="template.html#content_vars">コンテントオブジェクト</a>。</p>
+<dd><p>アーティクルを呼び出しているコンテンツオブジェクトを参照します。</p>
 </dd>
 </dl>
-<p>アーティクルからHTMLファイルを生成する際は、<span class="docutils literal">page</span>  も <span class="docutils literal">content</span> もおなじアーティクルオブジェクトとなります。ブログのインデックスページなら <span class="docutils literal">page</span> はインデックスオブジェクトで、<span class="docutils literal">content</span> はアーティクルオブジェクトです。</p>
+<p><span class="docutils literal">content</span> と <span class="docutils literal">page</span> はどちらもコンテンツオブジェクトです。コンテンツオブジェクトの詳細は、<a href="template.html#content_vars">テンプレートのコンテンツ変数</a> を参照してください。</p>
+<p>例えば、次のような2つのアーティクル <span class="docutils literal">parent.rst</span> と <span class="docutils literal">child.rst</span> があった場合</p>
+<div class="code-block">
+<div class="highlight"><pre><span></span>This is parent.rst
+
+page: {{ page.name }}
+content: {{ content.name }}
+
+---
+
+{{ page.load('./child.rst').html }}
+</pre></div>
+</div>
+<div class="code-block">
+<div class="highlight"><pre><span></span>This is child.rst
+
+page: {{ page.name }}
+content: {{ content.name }}
+</pre></div>
+</div>
+<p><span class="docutils literal">parent.rst</span> の</p>
+<blockquote>
+<p><span class="docutils literal">{{ <span class="pre">page.load('./child.rst').html</span> }}</span></p>
+</blockquote>
+<p>で <span class="docutils literal">child.rst</span> を読み込んでHTMLを生成しますが、この時、<span class="docutils literal">child.rst</span> の <span class="docutils literal">page</span> は <span class="docutils literal">parent.rst</span> オブジェクト、<span class="docutils literal">content</span> は <span class="docutils literal">child.rst</span> オブジェクトとなります。</p>
 </div>
 </div>
 <div class="section" id="code-block">

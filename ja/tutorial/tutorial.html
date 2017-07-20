@@ -244,7 +244,11 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ page.link_to("./hell
 </pre></div>
 </div>
 <p><span class="docutils literal">page_article.html</span> テンプレートには <span class="docutils literal">head</span> ブロックと <span class="docutils literal">body</span> ブロックがあり、それぞれ <span class="docutils literal">&lt;head&gt;</span> 要素と <span class="docutils literal">&lt;body&gt;</span> 要素を出力します。ここでは <span class="docutils literal">body</span> ブロックをオーバライドして、<span class="docutils literal">body</span> 要素にコピーライト表記を追加します。</p>
-<p>Miyadaikuでは、Pythonパッケージに含まれるテンプレートを、<span class="docutils literal">パッケージ名!テンプレートファイル名</span> のように、パッケージ名とファイル名を <span class="docutils literal">!</span> 記号で区切って指定します。この例では、<span class="docutils literal">miyadaiku.themes.base</span> パッケージの <span class="docutils literal">page_article.html</span> ファイルを拡張しています。</p>
+<p>Pythonパッケージに含まれるテンプレートを使用するときは、パッケージ名とファイル名を <span class="docutils literal">!</span> 記号で区切って指定します。</p>
+<blockquote>
+<p><span class="docutils literal">パッケージ名!テンプレートファイル名</span></p>
+</blockquote>
+<p>この例では、<span class="docutils literal">miyadaiku.themes.base</span> パッケージの <span class="docutils literal">page_article.html</span> ファイルを拡張しています。</p>
 </div>
 <div class="section" id="css">
 <a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_6"></a><h1 id="h_ja_tutorial_tutorial_2erst_6">CSSファイルを追加</h1>

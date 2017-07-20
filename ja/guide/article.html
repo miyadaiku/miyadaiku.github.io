@@ -262,10 +262,10 @@ This is a miyadaiku article in reST.
 <a class="header_anchor" id="a_h_ja_guide_article_2erst_4"></a><h3 id="h_ja_guide_article_2erst_4">jinjaディレクティブ</h3>
 <p><span class="docutils literal">jinja</span> ディレクティブで指定した文字列は、Jinja2テンプレートとして評価され、結果はHTMLに出力されます。</p>
 <div class="code-block">
-<div class="code-block-caption">Sample of Jinja role in reST:</div>
-<div class="highlight"><pre><span></span><span class="gh">Properties of this document</span>
-<span class="gh">-----------------------------------</span>
+<div class="code-block-caption">Sample of Jinja directive in reST:</div>
+<div class="highlight"><pre><span></span>Properties of this document
 
+-----------------------------------
 
 <span class="p">..</span> <span class="ow">jinja</span><span class="p">::</span>
 
@@ -304,22 +304,22 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ page.link_to("./hell
 <p>例えば、次のような2つのアーティクル <span class="docutils literal">parent.rst</span> と <span class="docutils literal">child.rst</span> があった場合</p>
 <div class="code-block">
 <div class="code-block-caption">parent.rst:</div>
-<div class="highlight"><pre><span></span>This is parent.rst
+<div class="highlight"><pre><span></span><span class="x">This is parent.rst</span>
 
-page: {{ page.name }}
-content: {{ content.name }}
+<span class="x">page: </span><span class="cp">{{</span> <span class="nv">page.name</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">content: </span><span class="cp">{{</span> <span class="nv">content.name</span> <span class="cp">}}</span><span class="x"></span>
 
----
+<span class="x">---</span>
 
-{{ page.load('./child.rst').html }}
+<span class="cp">{{</span> <span class="nv">page.load</span><span class="o">(</span><span class="s1">'./child.rst'</span><span class="o">)</span><span class="nv">.html</span> <span class="cp">}}</span><span class="x"></span>
 </pre></div>
 </div>
 <div class="code-block">
 <div class="code-block-caption">child.rst:</div>
-<div class="highlight"><pre><span></span>This is child.rst
+<div class="highlight"><pre><span></span><span class="x">This is child.rst</span>
 
-page: {{ page.name }}
-content: {{ content.name }}
+<span class="x">page: </span><span class="cp">{{</span> <span class="nv">page.name</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">content: </span><span class="cp">{{</span> <span class="nv">content.name</span> <span class="cp">}}</span><span class="x"></span>
 </pre></div>
 </div>
 <p><span class="docutils literal">parent.rst</span> の</p>

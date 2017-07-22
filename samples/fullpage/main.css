@@ -1,6 +1,10 @@
 #menu {
   background-color: black;
   display: flex;
+  position:absolute;
+  right:50px;
+  top:50px;
+  z-index:1000;
 }
 
 #menu a {

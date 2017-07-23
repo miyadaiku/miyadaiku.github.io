@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-  Blogサイトの作成
+  フィード
 </title>
   
 
@@ -52,9 +52,9 @@
           
 
           
-            <a class="dropdown-item" href="tutorial.html">サイトの作成</a>
+            <a class="dropdown-item" href="../tutorial/tutorial.html">サイトの作成</a>
           
-            <a class="dropdown-item" href="tutorial_blog.html">Blogサイトの作成</a>
+            <a class="dropdown-item" href="../tutorial/tutorial_blog.html">Blogサイトの作成</a>
           
         </div>
       </li>
@@ -65,21 +65,21 @@
           
 
           
-            <a class="dropdown-item" href="../guide/project.html">Miyadaikuプロジェクト</a>
+            <a class="dropdown-item" href="project.html">Miyadaikuプロジェクト</a>
           
-            <a class="dropdown-item" href="../guide/config.html">コンフィグ</a>
+            <a class="dropdown-item" href="config.html">コンフィグ</a>
           
-            <a class="dropdown-item" href="../guide/article.html">アーティクル</a>
+            <a class="dropdown-item" href="article.html">アーティクル</a>
           
-            <a class="dropdown-item" href="../guide/snippet.html">スニペット</a>
+            <a class="dropdown-item" href="snippet.html">スニペット</a>
           
-            <a class="dropdown-item" href="../guide/index.html">インデックス</a>
+            <a class="dropdown-item" href="index.html">インデックス</a>
           
-            <a class="dropdown-item" href="../guide/feed.html">フィード</a>
+            <a class="dropdown-item" href="feed.html">フィード</a>
           
-            <a class="dropdown-item" href="../guide/template.html">テンプレート</a>
+            <a class="dropdown-item" href="template.html">テンプレート</a>
           
-            <a class="dropdown-item" href="../guide/themes.html">テーマ</a>
+            <a class="dropdown-item" href="themes.html">テーマ</a>
           
         </div>
       </li>
@@ -106,34 +106,60 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='tutorial.html' >サイトの作成</a></div>
+                  <a href='project.html' >Miyadaikuプロジェクト</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='config.html' >コンフィグ</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='article.html' >アーティクル</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='snippet.html' >スニペット</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='index.html' >インデックス</a></div>
                 </div>
             
           
             
                 <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                    <a href='tutorial_blog.html' >Blogサイトの作成</a></div>
+                    <a href='feed.html' >フィード</a></div>
 
                   <ul>
                     
-                      <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_blog_2erst_1">プロジェクトの作成</a>
-                      </li>
-                    
-                      <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_blog_2erst_2">プロジェクト設定</a>
-                      </li>
-                    
-                      <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_blog_2erst_3">記事の作成</a>
-                      </li>
-                    
-                      <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_blog_2erst_4">サイトのビルド</a>
-                      </li>
-                    
                   </ul>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='template.html' >テンプレート</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='themes.html' >テーマ</a></div>
                 </div>
             
           
@@ -143,110 +169,44 @@
     <div class='col-md-9 article-body'>
       <a id='page_title' class='header_anchor'></a>
       <h1>
-        Blogサイトの作成
+        フィード
       </h1>
 
       <div class='article-content'>
-        <p>このチュートリアルで作成するソースコードは、</p>
-<blockquote>
-<p><a class="reference external" href="https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog">https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog</a></p>
-</blockquote>
-<p>からダウンロードできます。</p>
-<div class="section" id="id1">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_blog_2erst_1"></a><h1 id="h_ja_tutorial_tutorial_blog_2erst_1">プロジェクトの作成</h1>
-<p>はじめに、次のコマンドで <span class="docutils literal">first_blog</span> ディレクトリに <span class="docutils literal">miyadaiku</span> のプロジェクトを作成します</p>
+        <p>Atom/RSSフィードは、<strong>フィードオブジェクト</strong> で作成します。フィードオブジェクトは <span class="docutils literal">contents</span> ディレクトリのYAMLファイルで定義します。</p>
 <div class="code-block">
-<div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-start ./first_blog
+<div class="code-block-caption">contents/atom.yml</div>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">feed</span>   <span class="c1"># YAMLファイルのタイプを feed に指定</span>
+<span class="l l-Scalar l-Scalar-Plain">feedtype</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">atom</span>  <span class="c1"># Atomフィードを作成</span>
+<span class="l l-Scalar l-Scalar-Plain">feed_num_articles</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id2">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_blog_2erst_2"></a><h1 id="h_ja_tutorial_tutorial_blog_2erst_2">プロジェクト設定</h1>
-<p>初期設定では、プロジェクト設定ファイル <span class="docutils literal">first_blog/config.yml</span> ファイルは次のようになっています。</p>
+<p>フィードオブジェクトには、<a href="config.html#standardprofs">標準プロパティ</a> に加え、以下のプロパティを設定できます。</p>
+<dl>
+<dt>type</dt>
+<dd><p>YAMLファイルのタイプを指定します。インデックスページの場合は <span class="docutils literal">feed</span> を指定します。</p>
+</dd>
+<dt>feedtype</dt>
+<dd><p>フィードの種類を、<span class="docutils literal">atom</span> または <span class="docutils literal">rss</span> で指定します。未指定の場合は <span class="docutils literal">atom</span> となります。</p>
+</dd>
+<dt>feed_num_articles</dt>
+<dd><p>フィードに含まれるアーティクルの数を指定します。未指定の場合は <span class="docutils literal">10</span> となります。</p>
+</dd>
+<dt>filename</dt>
+<dd><p>出力ファイル名を指定します。未指定の場合は、YAMLファイルの拡張子を <span class="docutils literal">.atom</span> または <span class="docutils literal">.html</span> としたファイルを作成します。</p>
+</dd>
+<dt>filters</dt>
+<dd><p>フィードに登録するアーティクルの検索条件を指定します。検索する文書プロパティ名をキー、表示対象のプロパティ値のリストを値とする辞書を指定します。</p>
+<p>未指定の場合は、すべてのアーティクルを登録します。</p>
 <div class="code-block">
-<div class="code-block-caption">first_blog/config.yml:</div>
-<div class="highlight"><pre><span></span><span class="c1"># Base URL of the site</span>
-<span class="l l-Scalar l-Scalar-Plain">site_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">http://localhost:8888/</span>
-
-<span class="c1"># Title of the site</span>
-<span class="l l-Scalar l-Scalar-Plain">site_title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">FIXME - site title</span>
-
-<span class="c1"># Default language code</span>
-<span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ja</span>
-
-<span class="c1"># Default charset</span>
-<span class="l l-Scalar l-Scalar-Plain">charset</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">utf-8</span>
-
-<span class="c1"># Default timezone</span>
-<span class="l l-Scalar l-Scalar-Plain">timezone</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Asia/Tokyo</span>
-
-<span class="c1"># List of site theme</span>
-<span class="l l-Scalar l-Scalar-Plain">themes</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">miyadaiku.themes.base</span>
+<div class="code-block-caption">'news' または 'event' カテゴリの日本語アーティクルのみを登録する</div>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">feed</span>   <span class="c1"># YAMLファイルのタイプを index に指定</span>
+<span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">category</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">'news'</span><span class="p p-Indicator">,</span> <span class="s">'event'</span><span class="p p-Indicator">]</span>  <span class="c1"># カテゴリが 'news' または 'events'</span>
 </pre></div>
 </div>
-<p><span class="docutils literal">first_blog/config.yml</span> の <span class="docutils literal">themes</span> を修正し、組み込みテーマ <span class="docutils literal">miyadaiku.themes.sample.blog</span> を使用するように設定します。</p>
-<div class="code-block">
-<div class="code-block-caption">first_blog/config.yml:</div>
-<div class="highlight"><pre><span></span><span class="c1"># Title of the site</span>
-<span class="l l-Scalar l-Scalar-Plain">site_title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">FIXME - site title</span>
-
-<span class="c1"># Default language code</span>
-<span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ja</span>
-
-<span class="c1"># Default charset</span>
-<span class="l l-Scalar l-Scalar-Plain">charset</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">utf-8</span>
-
-<span class="c1"># Default timezone</span>
-<span class="l l-Scalar l-Scalar-Plain">timezone</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Asia/Tokyo</span>
-
-<span class="c1"># List of site theme</span>
-<span class="l l-Scalar l-Scalar-Plain">themes</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">miyadaiku.themes.sample.blog</span>   <span class="c1"># &lt;--- この行を修正</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id3">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_blog_2erst_3"></a><h1 id="h_ja_tutorial_tutorial_blog_2erst_3">記事の作成</h1>
-<p>ブログの記事として、<span class="docutils literal">first_blog/contents/first_entry.rst</span> ファイルを作成します。</p>
-<div class="code-block">
-<div class="code-block-caption">first_blog/contents/first_entry.rst:</div>
-<div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
-   <span class="nc">:date:</span> <span class="nf">2017-01-01</span>
-   <span class="nc">:category:</span> <span class="nf">カテゴリ1</span>
-   <span class="nc">:tags:</span> <span class="nf">タグ1, タグ2</span>
-
-<span class="gh">First entry</span>
-<span class="gh">-------------</span>
-
-This is my first blog entry.
-</pre></div>
-</div>
-<p>ブログの日付、カテゴリなどの記事情報を、<span class="docutils literal">article</span> ロールに記述します。ここでは、記事の日付、カテゴリ、タグを指定しています。</p>
-<p>同様に、二つ目の記事 <span class="docutils literal">first_blog/contents/second_entry.rst</span> ファイルを作成します。</p>
-<div class="code-block">
-<div class="code-block-caption">first_blog/contents/second_entry.rst:</div>
-<div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
-   <span class="nc">:date:</span> <span class="nf">2017-01-01</span>
-   <span class="nc">:category:</span> <span class="nf">カテゴリ2</span>
-   <span class="nc">:tags:</span> <span class="nf">タグ3</span>
-
-<span class="gh">Second entry</span>
-<span class="gh">-------------</span>
-
-This is my second blog entry.
-</pre></div>
-</div>
-</div>
-<div class="section" id="id4">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_blog_2erst_4"></a><h1 id="h_ja_tutorial_tutorial_blog_2erst_4">サイトのビルド</h1>
-<p>次のコマンドでサイトをビルドします。</p>
-<div class="code-block">
-<div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-build ./first_blog
-</pre></div>
-</div>
-<p>正常に終了すると、<span class="docutils literal">first_blog/outputs/index.html</span> にBlogが出力されます。</p>
-</div>
+</dd>
+</dl>
       </div>
     </div>
   </div>

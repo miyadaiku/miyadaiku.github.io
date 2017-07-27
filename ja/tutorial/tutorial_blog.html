@@ -176,14 +176,16 @@
 <p>初期設定では、プロジェクト設定ファイル <span class="docutils literal">first_blog/config.yml</span> ファイルは次のようになっています。</p>
 <div class="code-block">
 <div class="code-block-caption">first_blog/config.yml:</div>
-<div class="highlight"><pre><span></span><span class="c1"># Base URL of the site</span>
+<div class="highlight"><pre><span></span><span class="c1"># Miyadaiku config file</span>
+
+<span class="c1"># Base URL of the site</span>
 <span class="l l-Scalar l-Scalar-Plain">site_url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">http://localhost:8888/</span>
 
 <span class="c1"># Title of the site</span>
 <span class="l l-Scalar l-Scalar-Plain">site_title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">FIXME - site title</span>
 
 <span class="c1"># Default language code</span>
-<span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ja</span>
+<span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ja-JP</span>
 
 <span class="c1"># Default charset</span>
 <span class="l l-Scalar l-Scalar-Plain">charset</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">utf-8</span>
@@ -192,8 +194,8 @@
 <span class="l l-Scalar l-Scalar-Plain">timezone</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Asia/Tokyo</span>
 
 <span class="c1"># List of site theme</span>
-<span class="l l-Scalar l-Scalar-Plain">themes</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">miyadaiku.themes.base</span>
+<span class="c1"># themes:</span>
+<span class="c1">#   - miyadaiku.themes.sample.blog</span>
 </pre></div>
 </div>
 <p><span class="docutils literal">first_blog/config.yml</span> の <span class="docutils literal">themes</span> を修正し、組み込みテーマ <span class="docutils literal">miyadaiku.themes.sample.blog</span> を使用するように設定します。</p>
@@ -212,7 +214,7 @@
 <span class="l l-Scalar l-Scalar-Plain">timezone</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Asia/Tokyo</span>
 
 <span class="c1"># List of site theme</span>
-<span class="l l-Scalar l-Scalar-Plain">themes</span><span class="p p-Indicator">:</span>
+<span class="l l-Scalar l-Scalar-Plain">themes</span><span class="p p-Indicator">:</span>                            <span class="c1"># &lt;--- この行を修正</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">miyadaiku.themes.sample.blog</span>   <span class="c1"># &lt;--- この行を修正</span>
 </pre></div>
 </div>

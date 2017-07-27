@@ -230,11 +230,16 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ page.link_to("./hell
 </div>
 <p>でサイトを構築すると、あらたに <span class="docutils literal">first_doc/output/link.html</span> が作成されます。</p>
 <p><span class="docutils literal">:jinja:</span> ロールで記述した内容は、そのまま <span class="docutils literal">Jinja2</span> のテンプレートとして処理され、HTMLに変換されます。</p>
-<p><span class="docutils literal">first_doc/contents/index.rst</span> では、<span class="docutils literal">:jinja:</span> ロールを利用して、<span class="docutils literal">./hello.rst</span> ページへのリンクを作成しています。<span class="docutils literal">page.link_to(ページ名)</span> メソッドは、指定したページのタイトルをテキストとして、リンクを作成します。</p>
+<p>ここでは、<span class="docutils literal">page.link_to(ページ名)</span> メソッドを使用して、他のページへのリンクを作成します。リンクのテキストは、リンク先ページのタイトルを使用します。</p>
+<p>変数 <span class="docutils literal">page</span> は、処理中のコンテンツオブジェクトを参照します。<span class="docutils literal">link_to()</span> メソッドの他にも、</p>
+<blockquote>
+<p><a href="../guide/template.html#content_vars">テンプレートのコンテンツ変数</a></p>
+</blockquote>
+<p>のメソッドやプロパティを使用できます。</p>
 </div>
 <div class="section" id="id6">
 <a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_5"></a><h1 id="h_ja_tutorial_tutorial_2erst_5">テンプレートのカスタマイズ</h1>
-<p>MiyadaikuがアーティクルからHTMLページを生成する時、<span class="docutils literal">page_article.html</span> という名前の Jinja2 テンプレートを使用します。デフォルトでは、<span class="docutils literal">miyadaiku.themes.base</span> パッケージの <span class="docutils literal">page_article.html</span> ファイルがテンプレートとなります。</p>
+<p>MiyadaikuがアーティクルからHTMLページを生成する時、<span class="docutils literal">page_article.html</span> という名前の Jinja2 テンプレートを検索して使用します。デフォルトでは、<a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates">miyadaiku.themes.base パッケージ</a> の、 <a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates/page_article.html">page_article.html</a> ファイルがテンプレートとなります。</p>
 <p>Jinja2 の継承機能を利用してこのテンプレートをカスタマイズし、独自のテンプレートを作成できます。</p>
 <p>例として、テンプレートディレクトリ <span class="docutils literal">first_doc/templates</span> に、 テンプレートとなる <span class="docutils literal">page_article.html</span> ファイルを作成しましょう。</p>
 <div class="code-block">
@@ -254,16 +259,20 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ page.link_to("./hell
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">body</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
 </div>
-<p><span class="docutils literal">page_article.html</span> テンプレートには <span class="docutils literal">head</span> ブロックと <span class="docutils literal">body</span> ブロックがあり、それぞれ <span class="docutils literal">&lt;head&gt;</span> 要素と <span class="docutils literal">&lt;body&gt;</span> 要素を出力します。ここでは <span class="docutils literal">body</span> ブロックをオーバライドして、<span class="docutils literal">body</span> 要素にコピーライト表記を追加します。</p>
-<p>Pythonパッケージに含まれるテンプレートを使用するときは、パッケージ名とファイル名を <span class="docutils literal">!</span> 記号で区切って指定します。</p>
+<p><span class="docutils literal">page_article.html</span> には、<span class="docutils literal">head</span> ブロックと <span class="docutils literal">body</span> ブロックがあり、それぞれ <span class="docutils literal">&lt;head&gt;</span> 要素と <span class="docutils literal">&lt;body&gt;</span> 要素を出力します。ここでは <span class="docutils literal">body</span> ブロックをオーバライドして、<span class="docutils literal">body</span> 要素にコピーライト表記を追加します。</p>
+<p>Pythonパッケージの <span class="docutils literal">templates</span> ディレクトリにあるテンプレートを使用するときは、パッケージ名とファイル名を <span class="docutils literal">!</span> 記号で区切って指定します。</p>
 <blockquote>
 <p><span class="docutils literal">パッケージ名!テンプレートファイル名</span></p>
 </blockquote>
-<p>この例では、<span class="docutils literal">miyadaiku.themes.base</span> パッケージの <span class="docutils literal">page_article.html</span> ファイルを拡張しています。</p>
+<p>この例で使用している</p>
+<blockquote>
+<p><span class="docutils literal">miyadaiku.themes.base!page_article.html</span></p>
+</blockquote>
+<p>は、<span class="docutils literal">miyadaiku.themes.base</span> パッケージの <span class="docutils literal">page_article.html</span> ファイルを指定しています。</p>
 </div>
 <div class="section" id="css">
 <a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_6"></a><h1 id="h_ja_tutorial_tutorial_2erst_6">CSSファイルを追加</h1>
-<p>プロジェクトの <span class="docutils literal">files/</span> ディレクトリにあるファイルは、HTMLに変換せずにそのまま <span class="docutils literal">output</span> ディレクトリにコピーされます。</p>
+<p>プロジェクトの <span class="docutils literal">files/</span> ディレクトリにあるファイルは、HTMLに変換せずにそのまま <span class="docutils literal">outputs</span> ディレクトリにコピーされます。</p>
 <p><span class="docutils literal">first_doc/files/static/css</span> ディレクトリに、以下の内容の <span class="docutils literal">copyright.css</span> ファイルを追加します。</p>
 <div class="code-block">
 <div class="code-block-caption">first_doc/files/static/css/copyright.css:</div>
@@ -272,7 +281,7 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ page.link_to("./hell
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>前節で作成した <span class="docutils literal">first_doc/templetes/page_article.html</span> を、次のように修正します。</p>
+<p>前節で作成したテンプレート <span class="docutils literal">first_doc/templetes/page_article.html</span> を、次のように修正します。</p>
 <div class="code-block">
 <div class="code-block-caption">first_doc/templetes/page_article.html:</div>
 <div class="highlight"><pre><span></span><span class="x">&lt;!-- miyadaiku.themes.base パッケージの page_article.html を拡張する --&gt;</span>

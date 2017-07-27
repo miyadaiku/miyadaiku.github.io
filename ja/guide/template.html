@@ -312,11 +312,11 @@
 <dd><p>表示対象のアーティクルのリストを返します。</p>
 </dd>
 </dl>
-</div>
+<a class="header_anchor" id="template_names"></a></div>
 </div>
 <div class="section" id="id6">
 <a class="header_anchor" id="a_h_ja_guide_template_2erst_6"></a><h1 id="h_ja_guide_template_2erst_6">テンプレート名の解決</h1>
-<p>Jinjaでは、<span class="docutils literal">extends</span> 文や <span class="docutils literal">import</span> 文で、テンプレート名を指定して外部のテンプレートを再利用する仕組みがあります。Miyadaikuでは、<span class="docutils literal">extends</span> 文などでテンプレート名が指定された時、以下の順にテンプレートを検索します。</p>
+<p>アーティクルに指定されたテンプレート名や、Jinja2の <span class="docutils literal">extends</span> 文や <span class="docutils literal">import</span> 文で、テンプレート名を指定してテンプレートを利用するとき、Miyadaikuでは以下の順にテンプレートを検索します。</p>
 <ol class="arabic simple">
 <li><p>プロジェクトの <span class="docutils literal">templates</span> ディレクトリ</p></li>
 <li><p>テーマとして指定されたパッケージの、<span class="docutils literal">templates</span> ディレクトリ。複数のテーマが指定された場合は、指定された順番に検索します。</p></li>

@@ -122,27 +122,27 @@
                   <ul>
                     
                       <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_2erst_1">プロジェクトの作成</a>
+                        <a href="#create_project">プロジェクトの作成</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_2erst_2">アーティクルの作成</a>
+                        <a href="#create_article">アーティクルの作成</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_2erst_3">サイトのビルド</a>
+                        <a href="#build">サイトのビルド</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_2erst_4">アーティクルのリンク</a>
+                        <a href="#createlinks">アーティクルのリンク</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_2erst_5">テンプレートのカスタマイズ</a>
+                        <a href="#template">テンプレートのカスタマイズ</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_2erst_6">CSSファイルを追加</a>
+                        <a href="#newfile">CSSファイルを追加</a>
                       </li>
                     
                   </ul>
@@ -171,12 +171,15 @@
 <p><a class="reference external" href="https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc">https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc</a></p>
 </blockquote>
 <p>からダウンロードできます。</p>
-<div class="section" id="id2">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_1"></a><h1 id="h_ja_tutorial_tutorial_2erst_1">プロジェクトの作成</h1>
+<div class="header_target" id="create_project"></div><div class="section" id="id2">
+<h1>プロジェクトの作成</h1>
 <p>はじめに、次のコマンドで <span class="docutils literal">first_doc</span> ディレクトリに <span class="docutils literal">miyadaiku</span> のプロジェクトを作成します</p>
+
 <div class="code-block">
+
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-start ./first_doc
 </pre></div>
+
 </div>
 <p>このコマンドで、次のようなディレクトリが作成されます。</p>
 <pre class="literal-block">first_doc/
@@ -187,10 +190,11 @@
      ├─── files/       画像・バイナリファイルなどを格納するディレクトリ
      │
      └─── templates/   jinja2テンプレートファイルを格納するディレクトリ</pre>
-</div>
+<div class="header_target" id="create_article"></div></div>
 <div class="section" id="id3">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_2"></a><h1 id="h_ja_tutorial_tutorial_2erst_2">アーティクルの作成</h1>
+<h1>アーティクルの作成</h1>
 <p>最初のアーティクルとして、reStructuredText形式のファイルを作成しましょう。</p>
+
 <div class="code-block">
 <div class="code-block-caption">first_doc/contents/hello.rst:</div>
 <div class="highlight"><pre><span></span><span class="gh">hello world</span>
@@ -198,21 +202,26 @@
 
 This is my first miyadaiku article.
 </pre></div>
+
 </div>
 <p>上記の内容のテキストファイルを作成し、 <span class="docutils literal">first_doc/contents/hello.rst</span> という名前で保存してください。</p>
-</div>
+<div class="header_target" id="build"></div></div>
 <div class="section" id="id4">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_3"></a><h1 id="h_ja_tutorial_tutorial_2erst_3">サイトのビルド</h1>
+<h1>サイトのビルド</h1>
 <p>テキストファイルを保存したら、次のコマンドでサイトをビルドします。</p>
+
 <div class="code-block">
+
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-build ./first_doc
 </pre></div>
+
 </div>
 <p>正常に終了すれば、<span class="docutils literal">first_doc/output/hello.html</span> ファイルが作成されています。</p>
-</div>
+<div class="header_target" id="createlinks"></div></div>
 <div class="section" id="id5">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_4"></a><h1 id="h_ja_tutorial_tutorial_2erst_4">アーティクルのリンク</h1>
+<h1>アーティクルのリンク</h1>
 <p>もう一つ、新しいアーティクル <span class="docutils literal">first_doc/contents/link.rst</span> を作成します。</p>
+
 <div class="code-block">
 <div class="code-block-caption">first_doc/contents/link.rst:</div>
 <div class="highlight"><pre><span></span><span class="gh">Link test</span>
@@ -220,44 +229,50 @@ This is my first miyadaiku article.
 
 This is a link page.
 
-Link to <span class="na">:jinja:</span><span class="nv">`{{ page.link_to("./hello.rst") }}`</span>.
+Link to <span class="na">:jinja:</span><span class="nv">`&#123;&#123; page.link_to(&quot;./hello.rst&quot;) &#125;&#125;`</span>.
 </pre></div>
+
 </div>
 <p>再び、</p>
+
 <div class="code-block">
+
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-build ./first_doc
 </pre></div>
+
 </div>
 <p>でサイトを構築すると、あらたに <span class="docutils literal">first_doc/output/link.html</span> が作成されます。</p>
 <p><span class="docutils literal">:jinja:</span> ロールで記述した内容は、そのまま <span class="docutils literal">Jinja2</span> のテンプレートとして処理され、HTMLに変換されます。</p>
 <p>ここでは、<span class="docutils literal">page.link_to(ページ名)</span> メソッドを使用して、他のページへのリンクを作成します。リンクのテキストは、リンク先ページのタイトルを使用します。</p>
 <p>変数 <span class="docutils literal">page</span> は、処理中のコンテンツオブジェクトを参照します。<span class="docutils literal">link_to()</span> メソッドの他にも、</p>
 <blockquote>
-<p><a href="../guide/template.html#content_vars">テンプレートのコンテンツ変数</a></p>
+<p><a href='../guide/template.html#content_vars' >テンプレートのコンテンツ変数</a></p>
 </blockquote>
 <p>のメソッドやプロパティを使用できます。</p>
-</div>
+<div class="header_target" id="template"></div></div>
 <div class="section" id="id6">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_5"></a><h1 id="h_ja_tutorial_tutorial_2erst_5">テンプレートのカスタマイズ</h1>
+<h1>テンプレートのカスタマイズ</h1>
 <p>MiyadaikuがアーティクルからHTMLページを生成する時、<span class="docutils literal">page_article.html</span> という名前の Jinja2 テンプレートを検索して使用します。デフォルトでは、<a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates">miyadaiku.themes.base パッケージ</a> の、 <a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates/page_article.html">page_article.html</a> ファイルがテンプレートとなります。</p>
 <p>Jinja2 の継承機能を利用してこのテンプレートをカスタマイズし、独自のテンプレートを作成できます。</p>
 <p>例として、テンプレートディレクトリ <span class="docutils literal">first_doc/templates</span> に、 テンプレートとなる <span class="docutils literal">page_article.html</span> ファイルを作成しましょう。</p>
+
 <div class="code-block">
 <div class="code-block-caption">first_doc/templates/page_article.html:</div>
 <div class="highlight"><pre><span></span><span class="x">&lt;!-- miyadaiku.themes.base パッケージの page_article.html を拡張する --&gt;</span>
-<span class="cp">{%</span> <span class="k">extends</span> <span class="s1">'miyadaiku.themes.base!page_article.html'</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">&#123;%</span> <span class="k">extends</span> <span class="s1">&#39;miyadaiku.themes.base!page_article.html&#39;</span> <span class="cp">%&#125;</span><span class="x"></span>
 
 <span class="x">&lt;!-- bodyブロックをカスタマイズ --&gt;</span>
-<span class="cp">{%</span> <span class="k">block</span> <span class="nv">body</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">&#123;%</span> <span class="k">block</span> <span class="nv">body</span> <span class="cp">%&#125;</span><span class="x"></span>
 
 <span class="x">  &lt;!-- 元のbodyブロックを出力 --&gt;</span>
-<span class="x">  </span><span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">&#123;&#123;</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">&#125;&#125;</span><span class="x"></span>
 
 <span class="x">  &lt;!-- コピーライト表記を追加 --&gt;</span>
-<span class="x">  &lt;div class="copyright"&gt;Copyright(c) 2017 miyadaiku ALL RIGHTS RESERVED.&lt;/div&gt;</span>
+<span class="x">  &lt;div class=&quot;copyright&quot;&gt;Copyright(c) 2017 miyadaiku ALL RIGHTS RESERVED.&lt;/div&gt;</span>
 
-<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">body</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">&#123;%</span> <span class="k">endblock</span> <span class="nv">body</span> <span class="cp">%&#125;</span><span class="x"></span>
 </pre></div>
+
 </div>
 <p><span class="docutils literal">page_article.html</span> には、<span class="docutils literal">head</span> ブロックと <span class="docutils literal">body</span> ブロックがあり、それぞれ <span class="docutils literal">&lt;head&gt;</span> 要素と <span class="docutils literal">&lt;body&gt;</span> 要素を出力します。ここでは <span class="docutils literal">body</span> ブロックをオーバライドして、<span class="docutils literal">body</span> 要素にコピーライト表記を追加します。</p>
 <p>Pythonパッケージの <span class="docutils literal">templates</span> ディレクトリにあるテンプレートを使用するときは、パッケージ名とファイル名を <span class="docutils literal">!</span> 記号で区切って指定します。</p>
@@ -269,49 +284,53 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ page.link_to("./hell
 <p><span class="docutils literal">miyadaiku.themes.base!page_article.html</span></p>
 </blockquote>
 <p>は、<span class="docutils literal">miyadaiku.themes.base</span> パッケージの <span class="docutils literal">page_article.html</span> ファイルを指定しています。</p>
-</div>
+<div class="header_target" id="newfile"></div></div>
 <div class="section" id="css">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_2erst_6"></a><h1 id="h_ja_tutorial_tutorial_2erst_6">CSSファイルを追加</h1>
+<h1>CSSファイルを追加</h1>
 <p>プロジェクトの <span class="docutils literal">files/</span> ディレクトリにあるファイルは、HTMLに変換せずにそのまま <span class="docutils literal">outputs</span> ディレクトリにコピーされます。</p>
 <p><span class="docutils literal">first_doc/files/static/css</span> ディレクトリに、以下の内容の <span class="docutils literal">copyright.css</span> ファイルを追加します。</p>
+
 <div class="code-block">
 <div class="code-block-caption">first_doc/files/static/css/copyright.css:</div>
-<div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">copyright</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">copyright</span> <span class="p">&#123;</span>
   <span class="k">text-align</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="p">&#125;</span>
 </pre></div>
+
 </div>
 <p>前節で作成したテンプレート <span class="docutils literal">first_doc/templetes/page_article.html</span> を、次のように修正します。</p>
+
 <div class="code-block">
 <div class="code-block-caption">first_doc/templetes/page_article.html:</div>
 <div class="highlight"><pre><span></span><span class="x">&lt;!-- miyadaiku.themes.base パッケージの page_article.html を拡張する --&gt;</span>
-<span class="cp">{%</span> <span class="k">extends</span> <span class="s1">'miyadaiku.themes.base!page_article.html'</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">&#123;%</span> <span class="k">extends</span> <span class="s1">&#39;miyadaiku.themes.base!page_article.html&#39;</span> <span class="cp">%&#125;</span><span class="x"></span>
 
 <span class="x">&lt;!-- テンプレート追加 - ここから --&gt;</span>
 
 <span class="x">&lt;!-- headブロックをカスタマイズ --&gt;</span>
-<span class="cp">{%</span> <span class="k">block</span> <span class="nv">head</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">&#123;%</span> <span class="k">block</span> <span class="nv">head</span> <span class="cp">%&#125;</span><span class="x"></span>
 
 <span class="x">  &lt;!-- 元のheadブロックを出力 --&gt;</span>
-<span class="x">  </span><span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">&#123;&#123;</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">&#125;&#125;</span><span class="x"></span>
 
 <span class="x">   &lt;!-- link要素を追加 --&gt;</span>
-<span class="x">   &lt;link rel="stylesheet" href="</span><span class="cp">{{</span> <span class="nv">page.path_to</span><span class="o">(</span><span class="s1">'/static/css/copyright.css'</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;</span>
-<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">head</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">   &lt;link rel=&quot;stylesheet&quot; href=&quot;</span><span class="cp">&#123;&#123;</span> <span class="nv">page.path_to</span><span class="o">(</span><span class="s1">&#39;/static/css/copyright.css&#39;</span><span class="o">)</span><span class="cp">&#125;&#125;</span><span class="x">&quot;&gt;</span>
+<span class="cp">&#123;%</span> <span class="k">endblock</span> <span class="nv">head</span> <span class="cp">%&#125;</span><span class="x"></span>
 
 <span class="x">&lt;!-- テンプレート追加 - ここまで --&gt;</span>
 
 <span class="x">&lt;!-- bodyブロックをカスタマイズ --&gt;</span>
-<span class="cp">{%</span> <span class="k">block</span> <span class="nv">body</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">&#123;%</span> <span class="k">block</span> <span class="nv">body</span> <span class="cp">%&#125;</span><span class="x"></span>
 
 <span class="x">  &lt;!-- 元のbodyブロックを出力 --&gt;</span>
-<span class="x">  </span><span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">&#123;&#123;</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">&#125;&#125;</span><span class="x"></span>
 
 <span class="x">  &lt;!-- コピーライト表記を追加 --&gt;</span>
-<span class="x">  &lt;div class="copyright"&gt;Copyright(c) 2017 miyadaiku ALL RIGHTS RESERVED.&lt;/div&gt;</span>
+<span class="x">  &lt;div class=&quot;copyright&quot;&gt;Copyright(c) 2017 miyadaiku ALL RIGHTS RESERVED.&lt;/div&gt;</span>
 
-<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">body</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">&#123;%</span> <span class="k">endblock</span> <span class="nv">body</span> <span class="cp">%&#125;</span><span class="x"></span>
 </pre></div>
+
 </div>
 <p><span class="docutils literal">head</span> ブロックのオーバライドを追加し、<span class="docutils literal">&lt;link&gt;</span> 要素でCSSの読み込みを指定します。<span class="docutils literal">page.path_to(ページ名)</span> メソッドは、指定したページへの相対パスを返します。</p>
 </div>

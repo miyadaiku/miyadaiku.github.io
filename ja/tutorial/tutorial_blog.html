@@ -128,22 +128,6 @@
 
                   <ul>
                     
-                      <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_blog_2erst_1">プロジェクトの作成</a>
-                      </li>
-                    
-                      <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_blog_2erst_2">プロジェクト設定</a>
-                      </li>
-                    
-                      <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_blog_2erst_3">記事の作成</a>
-                      </li>
-                    
-                      <li class="header_h1">
-                        <a href="#a_h_ja_tutorial_tutorial_blog_2erst_4">サイトのビルド</a>
-                      </li>
-                    
                   </ul>
                 </div>
             
@@ -164,16 +148,20 @@
 </blockquote>
 <p>からダウンロードできます。</p>
 <div class="section" id="id1">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_blog_2erst_1"></a><h1 id="h_ja_tutorial_tutorial_blog_2erst_1">プロジェクトの作成</h1>
+<h1>プロジェクトの作成</h1>
 <p>はじめに、次のコマンドで <span class="docutils literal">first_blog</span> ディレクトリに <span class="docutils literal">miyadaiku</span> のプロジェクトを作成します</p>
+
 <div class="code-block">
+
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-start ./first_blog
 </pre></div>
+
 </div>
 </div>
 <div class="section" id="id2">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_blog_2erst_2"></a><h1 id="h_ja_tutorial_tutorial_blog_2erst_2">プロジェクト設定</h1>
+<h1>プロジェクト設定</h1>
 <p>初期設定では、プロジェクト設定ファイル <span class="docutils literal">first_blog/config.yml</span> ファイルは次のようになっています。</p>
+
 <div class="code-block">
 <div class="code-block-caption">first_blog/config.yml:</div>
 <div class="highlight"><pre><span></span><span class="c1"># Miyadaiku config file</span>
@@ -197,8 +185,10 @@
 <span class="c1"># themes:</span>
 <span class="c1">#   - miyadaiku.themes.sample.blog</span>
 </pre></div>
+
 </div>
 <p><span class="docutils literal">first_blog/config.yml</span> の <span class="docutils literal">themes</span> を修正し、組み込みテーマ <span class="docutils literal">miyadaiku.themes.sample.blog</span> を使用するように設定します。</p>
+
 <div class="code-block">
 <div class="code-block-caption">first_blog/config.yml:</div>
 <div class="highlight"><pre><span></span><span class="c1"># Title of the site</span>
@@ -217,11 +207,13 @@
 <span class="l l-Scalar l-Scalar-Plain">themes</span><span class="p p-Indicator">:</span>                            <span class="c1"># &lt;--- この行を修正</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">miyadaiku.themes.sample.blog</span>   <span class="c1"># &lt;--- この行を修正</span>
 </pre></div>
+
 </div>
 </div>
 <div class="section" id="id3">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_blog_2erst_3"></a><h1 id="h_ja_tutorial_tutorial_blog_2erst_3">記事の作成</h1>
+<h1>記事の作成</h1>
 <p>ブログの記事として、<span class="docutils literal">first_blog/contents/first_entry.rst</span> ファイルを作成します。</p>
+
 <div class="code-block">
 <div class="code-block-caption">first_blog/contents/first_entry.rst:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
@@ -234,9 +226,11 @@
 
 This is my first blog entry.
 </pre></div>
+
 </div>
 <p>ブログの日付、カテゴリなどの記事情報を、<span class="docutils literal">article</span> ロールに記述します。ここでは、記事の日付、カテゴリ、タグを指定しています。</p>
 <p>同様に、二つ目の記事 <span class="docutils literal">first_blog/contents/second_entry.rst</span> ファイルを作成します。</p>
+
 <div class="code-block">
 <div class="code-block-caption">first_blog/contents/second_entry.rst:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
@@ -249,14 +243,18 @@ This is my first blog entry.
 
 This is my second blog entry.
 </pre></div>
+
 </div>
 </div>
 <div class="section" id="id4">
-<a class="header_anchor" id="a_h_ja_tutorial_tutorial_blog_2erst_4"></a><h1 id="h_ja_tutorial_tutorial_blog_2erst_4">サイトのビルド</h1>
+<h1>サイトのビルド</h1>
 <p>次のコマンドでサイトをビルドします。</p>
+
 <div class="code-block">
+
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-build ./first_blog
 </pre></div>
+
 </div>
 <p>正常に終了すると、<span class="docutils literal">first_blog/outputs/index.html</span> にBlogが出力されます。</p>
 </div>

@@ -121,18 +121,6 @@
 
                   <ul>
                     
-                      <li class="header_h1">
-                        <a href="#a_h_ja_guide_project_2erst_1">ディレクトリ構成</a>
-                      </li>
-                    
-                      <li class="header_h1">
-                        <a href="#a_h_ja_guide_project_2erst_2">コンテンツファイル</a>
-                      </li>
-                    
-                      <li class="header_h1">
-                        <a href="#a_h_ja_guide_project_2erst_3">テンプレート</a>
-                      </li>
-                    
                   </ul>
                 </div>
             
@@ -197,15 +185,17 @@
 
       <div class='article-content'>
         <p>Miyadaikuのドキュメントプロジェクトは、<span class="docutils literal"><span class="pre">miyadaiku-start</span></span> コマンドで作成します。</p>
+
 <div class="code-block">
 <div class="code-block-caption">Creating new miyadaiku project:</div>
 <div class="highlight"><pre><span></span>$ miyadaiku-start new-project
 $ ls new-project/
 config.yml   contents        files           templates
 </pre></div>
+
 </div>
 <div class="section" id="id1">
-<a class="header_anchor" id="a_h_ja_guide_project_2erst_1"></a><h1 id="h_ja_guide_project_2erst_1">ディレクトリ構成</h1>
+<h1>ディレクトリ構成</h1>
 <p>ドキュメントプロジェクトは、次のようなファイルから構成されます。</p>
 <pre class="literal-block">ドキュメントプロジェクト/
      │
@@ -237,7 +227,7 @@ config.yml   contents        files           templates
 </dl>
 </div>
 <div class="section" id="id2">
-<a class="header_anchor" id="a_h_ja_guide_project_2erst_2"></a><h1 id="h_ja_guide_project_2erst_2">コンテンツファイル</h1>
+<h1>コンテンツファイル</h1>
 <p><span class="docutils literal"><span class="pre">miyadaiku-build</span></span> コマンドは、miyadaikuプロジェクトの <span class="docutils literal">contents</span> ディレクトリの次の形式のファイルをコンテンツファイルとして処理し、HTMLファイルを作成します。</p>
 <ul class="simple">
 <li><p>*.yml ファイル</p></li>
@@ -248,9 +238,9 @@ config.yml   contents        files           templates
 <p>処理結果は output ディレクトリに出力します。上記以外の画像ファイルなどは、ソースファイルとして処理をせず、そのままoutput ディレクトリにコピーします。</p>
 </div>
 <div class="section" id="id3">
-<a class="header_anchor" id="a_h_ja_guide_project_2erst_3"></a><h1 id="h_ja_guide_project_2erst_3">テンプレート</h1>
+<h1>テンプレート</h1>
 <p><span class="docutils literal">contents</span> ディレクトリのコンテンツファイルは、Markdownパーザなどで変換してから、Jinjaテンプレート部分を実行してHTMLに変換されます。生成されたHTMLは、<span class="docutils literal">templates</span> ディレクトリの Jinjaテンプレートで最終的なHTMLファイルを作成し、<span class="docutils literal">outputs</span> ディレクトリに出力されます。</p>
-<p><img src="../../img/process.png" width="500px"/></p>
+<p><img src="../../img/process.png" width=500px></p>
 </div>
       </div>
     </div>

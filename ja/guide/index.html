@@ -149,18 +149,6 @@
 
                   <ul>
                     
-                      <li class="header_h1">
-                        <a href="#a_h_ja_guide_index_2erst_1">インデックスのプロパティ</a>
-                      </li>
-                    
-                      <li class="header_h1">
-                        <a href="#a_h_ja_guide_index_2erst_2">グループ別インデックス</a>
-                      </li>
-                    
-                      <li class="header_h2">
-                        <a href="#a_h_ja_guide_index_2erst_3">グループ別インデックスのプロパティ</a>
-                      </li>
-                    
                   </ul>
                 </div>
             
@@ -198,6 +186,7 @@
       <div class='article-content'>
         <p>Blogサイトなどでは、新着記事ページや、記事カテゴリ別の一覧ページなど、アーティクルの一覧からなるページが必要となります。Miyadaikuでは、このようなアーティクルの一覧を <strong>インデックスオブジェクト</strong> から作成します。</p>
 <p>インデックスオブジェクトは、<span class="docutils literal">contents</span> ディレクトリのYAMLファイルで作成します。</p>
+
 <div class="code-block">
 <div class="code-block-caption">contents/index_ja.yml</div>
 <div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>   <span class="c1"># YAMLファイルのタイプを index に指定</span>
@@ -205,33 +194,38 @@
 <span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>      <span class="c1"># langが日本語のアーティクルの一覧を作成</span>
   <span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">ja</span><span class="p p-Indicator">]</span>
 </pre></div>
+
 </div>
 <div class="section" id="id2">
-<a class="header_anchor" id="a_h_ja_guide_index_2erst_1"></a><h1 id="h_ja_guide_index_2erst_1">インデックスのプロパティ</h1>
-<p>インデックスオブジェクトには、<a href="config.html#standardprofs">標準プロパティ</a> に加え、以下のプロパティを指定できます。</p>
+<h1>インデックスのプロパティ</h1>
+<p>インデックスオブジェクトには、<a href='config.html#standardprofs' >標準プロパティ</a> に加え、以下のプロパティを指定できます。</p>
 <dl>
 <dt>filters</dt>
 <dd><p>表示するアーティクルの検索条件を指定します。検索する文書プロパティ名をキー、表示対象のプロパティ値のリストを値とする辞書を指定します。</p>
 <p>省略時は、文書プロパティ <span class="docutils literal">draft</span> が <span class="docutils literal">true</span> ではない、すべてのアーティクルを表示します。</p>
+
 <div class="code-block">
-<div class="code-block-caption">'news' または 'event' カテゴリの日本語アーティクルのみを表示</div>
+<div class="code-block-caption">&#39;news&#39; または &#39;event&#39; カテゴリの日本語アーティクルのみを表示</div>
 <div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>   <span class="c1"># YAMLファイルのタイプを index に指定</span>
 <span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">ja</span><span class="p p-Indicator">]</span>  <span class="c1"># langが日本語</span>
   <span class="l l-Scalar l-Scalar-Plain">category</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">news</span><span class="p p-Indicator">,</span> <span class="nv">event</span><span class="p p-Indicator">]</span>  <span class="c1"># カテゴリが news または events</span>
 </pre></div>
+
 </div>
 </dd>
 <dt>indexpage_filename_templ</dt>
-<dd><p>インデックスの先頭ページのファイル名を、Jina2テンプレートで指定します。未指定の場合は <span class="docutils literal"><span class="pre">'{{page.stem}}.html'</span></span> となります。</p>
+<dd><p>インデックスの先頭ページのファイル名を、Jina2テンプレートで指定します。未指定の場合は <span class="docutils literal"><span class="pre">'&#123;&#123;page.stem&#125;&#125;.html'</span></span> となります。</p>
 <blockquote>
+
 <div class="code-block">
 <div class="code-block-caption">Sample of indexpage_filename_templ</div>
 <div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>
 <span class="c1"># 先頭ページのファイル名は `ファイル名_言語.html`、2ページ目以降は `ファイル名_言語_ページ.html`</span>
-<span class="l l-Scalar l-Scalar-Plain">indexpage_filename_templ</span><span class="p p-Indicator">:</span> <span class="s">'{{page.stem}}_{{page.lang}}.html'</span>
-<span class="l l-Scalar l-Scalar-Plain">indexpage_filename_templ2</span><span class="p p-Indicator">:</span> <span class="s">'{{page.stem}}_{{page.lang}}_{{cur_page}}.html'</span>
+<span class="l l-Scalar l-Scalar-Plain">indexpage_filename_templ</span><span class="p p-Indicator">:</span> <span class="s">&#39;&#123;&#123;page.stem&#125;&#125;_&#123;&#123;page.lang&#125;&#125;.html&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">indexpage_filename_templ2</span><span class="p p-Indicator">:</span> <span class="s">&#39;&#123;&#123;page.stem&#125;&#125;_&#123;&#123;page.lang&#125;&#125;_&#123;&#123;cur_page&#125;&#125;.html&#39;</span>
 </pre></div>
+
 </div>
 </blockquote>
 <p>テンプレートでは、次の変数を使用できます。</p>
@@ -245,7 +239,7 @@
 </dl>
 </dd>
 <dt>indexpage_filename_templ2</dt>
-<dd><p>インデックスの2ページ目以降のファイル名を、Jina2テンプレートで指定します。未指定の場合は、<span class="docutils literal"><span class="pre">'{{page.stem}}_{{cur_page}}.html'</span></span> となります。</p>
+<dd><p>インデックスの2ページ目以降のファイル名を、Jina2テンプレートで指定します。未指定の場合は、<span class="docutils literal"><span class="pre">'&#123;&#123;page.stem&#125;&#125;_&#123;&#123;cur_page&#125;&#125;.html'</span></span> となります。</p>
 <p>テンプレートでは、<span class="docutils literal">indexpage_filename_templ</span> と同じ変数を使用できます。</p>
 </dd>
 <dt>indexpage_max_articles</dt>
@@ -270,32 +264,38 @@
 </dl>
 </div>
 <div class="section" id="id3">
-<a class="header_anchor" id="a_h_ja_guide_index_2erst_2"></a><h1 id="h_ja_guide_index_2erst_2">グループ別インデックス</h1>
+<h1>グループ別インデックス</h1>
 <p>アーティクルのカテゴリやタグなど、プロパティ別の一覧を作成する場合は、インデックスオブジェクトの <span class="docutils literal">groupby</span> 属性に対象となるプロパティの名前を指定します。</p>
 <p>ex) <span class="docutils literal">contents/index_category.yml</span></p>
+
 <div class="code-block">
+
 <div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>   <span class="c1"># YAMLファイルのタイプを index に指定</span>
 <span class="l l-Scalar l-Scalar-Plain">groupby</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">category</span>  <span class="c1"># カテゴリ別のインデックスを作成</span>
 </pre></div>
+
 </div>
 <div class="section" id="id4">
-<a class="header_anchor" id="a_h_ja_guide_index_2erst_3"></a><h2 id="h_ja_guide_index_2erst_3">グループ別インデックスのプロパティ</h2>
+<h2>グループ別インデックスのプロパティ</h2>
 <p>グループ別インデックスでは、通常のインデックスに加えて、次のプロパティを指定できます。</p>
 <dl>
 <dt>groupby</dt>
 <dd><p>アーティクルを分類するプロパティの名前を指定します。e.g. <span class="docutils literal">'category'</span></p>
 </dd>
 <dt>indexpage_group_filename_templ</dt>
-<dd><p>インデックスの先頭ページのファイル名を、Jina2テンプレートで指定します。未指定の場合は <span class="docutils literal"><span class="pre">'{{page.stem}}_{{page.groupby}}_{{value}}.html'</span></span> となります。</p>
+<dd><p>インデックスの先頭ページのファイル名を、Jina2テンプレートで指定します。未指定の場合は <span class="docutils literal"><span class="pre">'&#123;&#123;page.stem&#125;&#125;_&#123;&#123;page.groupby&#125;&#125;_&#123;&#123;value&#125;&#125;.html'</span></span> となります。</p>
 <blockquote>
+
 <div class="code-block">
+
 <div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>
 <span class="l l-Scalar l-Scalar-Plain">groupby</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">tags</span>  <span class="c1"># タグ別のインデックスを作成</span>
 
 <span class="c1"># 先頭ページのファイル名は `tags_タグ名.html`、2ページ目以降は `tags_タグ名_ページ.html`</span>
-<span class="l l-Scalar l-Scalar-Plain">indexpage_group_filename_templ</span><span class="p p-Indicator">:</span> <span class="s">'tags_{{value}}.html'</span>
-<span class="l l-Scalar l-Scalar-Plain">indexpage_group_filename_templ2</span><span class="p p-Indicator">:</span> <span class="s">'tags_{{value}}_{{cur_page}}.html'</span>
+<span class="l l-Scalar l-Scalar-Plain">indexpage_group_filename_templ</span><span class="p p-Indicator">:</span> <span class="s">&#39;tags_&#123;&#123;value&#125;&#125;.html&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">indexpage_group_filename_templ2</span><span class="p p-Indicator">:</span> <span class="s">&#39;tags_&#123;&#123;value&#125;&#125;_&#123;&#123;cur_page&#125;&#125;.html&#39;</span>
 </pre></div>
+
 </div>
 </blockquote>
 <p>テンプレートでは、次の変数を使用できます。</p>
@@ -312,7 +312,7 @@
 </dl>
 </dd>
 <dt>indexpage_group_filename_templ2</dt>
-<dd><p>インデックスの2ページ目以降のファイル名を、Jina2テンプレートで指定します。未指定の場合は <span class="docutils literal"><span class="pre">'{{page.stem}}_{{page.groupby}}_{{value}}_{{cur_page}}.html'</span></span> となります。</p>
+<dd><p>インデックスの2ページ目以降のファイル名を、Jina2テンプレートで指定します。未指定の場合は <span class="docutils literal"><span class="pre">'&#123;&#123;page.stem&#125;&#125;_&#123;&#123;page.groupby&#125;&#125;_&#123;&#123;value&#125;&#125;_&#123;&#123;cur_page&#125;&#125;.html'</span></span> となります。</p>
 <p>テンプレートでは、<span class="docutils literal">indexpage_group_filename_templ</span> と同じ変数を使用できます。</p>
 </dd>
 </dl>

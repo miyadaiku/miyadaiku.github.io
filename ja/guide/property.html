@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-  フィード
+  プロパティ
 </title>
   
 
@@ -28,14 +28,14 @@
   <!-- include font awesome -->
   <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
   
-  <meta property="og:url" content="http://localhost:8888/ja/guide/feed.html" />
+  <meta property="og:url" content="http://localhost:8888/ja/guide/property.html" />
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="フィード - (FIXME-site_title)" />
+<meta property="og:title" content="プロパティ - (FIXME-site_title)" />
 
-<meta name="description" content="Atom/RSSフィードは、フィードオブジェクト で作成します。フィードオブジェクトは contents ディレクトリのYAMLファイルで定義します。 contents/atom.yml type: feed # YAMLファイルのタイプを feed に指定 feedtype: atom # Atomフィードを作成 feed_num_articles: 10 フィードオブジェクトには、標準プロパティ に加え、以下のプロパティを設定できます。 type YAMLファイルのタイプを指定します。インデックスページの場合は feed を指定します。"/>
-<meta property="og:description" content="Atom/RSSフィードは、フィードオブジェクト で作成します。フィードオブジェクトは contents ディレクトリのYAMLファイルで定義します。 contents/atom.yml type: feed # YAMLファイルのタイプを feed に指定 feedtype: atom # Atomフィードを作成 feed_num_articles: 10 フィードオブジェクトには、標準プロパティ に加え、以下のプロパティを設定できます。 type YAMLファイルのタイプを指定します。インデックスページの場合は feed を指定します。" />
+<meta name="description" content="コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。 標準プロパティ 標準プロパティとして、すべてのコンテンツに以下の値が設定されています。 abstract_length インデックスファイルやRSSの摘要として使用するテキストの長さを、文字数で指定します。長さとして 0 を指定すると、本文すべてを摘要とします。未指定の場合は、500 文字となります。 cagegory コンテンツのカテゴリを指定します。未指定の場合は"/>
+<meta property="og:description" content="コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。 標準プロパティ 標準プロパティとして、すべてのコンテンツに以下の値が設定されています。 abstract_length インデックスファイルやRSSの摘要として使用するテキストの長さを、文字数で指定します。長さとして 0 を指定すると、本文すべてを摘要とします。未指定の場合は、500 文字となります。 cagegory コンテンツのカテゴリを指定します。未指定の場合は" />
 
 
 
@@ -138,13 +138,9 @@
             
           
             
-                <div class="current article-block">
+                <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                    <a href='feed.html' >フィード</a></div>
-
-                  <ul>
-                    
-                  </ul>
+                  <a href='feed.html' >フィード</a></div>
                 </div>
             
           
@@ -170,9 +166,17 @@
             
           
             
-                <div class="article-block">
+                <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='property.html' >プロパティ</a></div>
+                    <a href='property.html' >プロパティ</a></div>
+
+                  <ul>
+                    
+                      <li class="header_h1">
+                        <a href="#standardprofs">標準プロパティ</a>
+                      </li>
+                    
+                  </ul>
                 </div>
             
           
@@ -189,44 +193,55 @@
     <div class='col-md-9 article-body'>
       <a id='page_title' class='header_target'></a>
       <h1>
-        フィード
+        プロパティ
       </h1>
 
       <div class='article-content'>
-        <p>Atom/RSSフィードは、<strong>フィードオブジェクト</strong> で作成します。フィードオブジェクトは <span class="docutils literal">contents</span> ディレクトリのYAMLファイルで定義します。</p>
-<div class="code-block">
-<div class="code-block-caption">contents/atom.yml</div>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">feed</span>   <span class="c1"># YAMLファイルのタイプを feed に指定</span>
-<span class="l l-Scalar l-Scalar-Plain">feedtype</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">atom</span>  <span class="c1"># Atomフィードを作成</span>
-<span class="l l-Scalar l-Scalar-Plain">feed_num_articles</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
-</pre></div>
-</div>
-<p>フィードオブジェクトには、<a href="config.html#standardprofs">標準プロパティ</a> に加え、以下のプロパティを設定できます。</p>
+        <p>コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。</p>
+<div class="header_target" id="standardprofs"></div><div class="section" id="id2">
+<h1>標準プロパティ</h1>
+<p>標準プロパティとして、すべてのコンテンツに以下の値が設定されています。</p>
 <dl>
-<dt>type</dt>
-<dd><p>YAMLファイルのタイプを指定します。インデックスページの場合は <span class="docutils literal">feed</span> を指定します。</p>
+<dt>abstract_length</dt>
+<dd><p>インデックスファイルやRSSの摘要として使用するテキストの長さを、文字数で指定します。長さとして <span class="docutils literal">0</span> を指定すると、本文すべてを摘要とします。未指定の場合は、<span class="docutils literal">500</span> 文字となります。</p>
 </dd>
-<dt>feedtype</dt>
-<dd><p>フィードの種類を、<span class="docutils literal">atom</span> または <span class="docutils literal">rss</span> で指定します。未指定の場合は <span class="docutils literal">atom</span> となります。</p>
+<dt>cagegory</dt>
+<dd><p>コンテンツのカテゴリを指定します。未指定の場合は <span class="docutils literal">''</span> となります。</p>
 </dd>
-<dt>feed_num_articles</dt>
-<dd><p>フィードに含まれるアーティクルの数を指定します。未指定の場合は <span class="docutils literal">10</span> となります。</p>
+<dt>charset</dt>
+<dd><p>生成されるHTMLの <span class="docutils literal">charset</span> を指定します。未指定の場合は <span class="docutils literal"><span class="pre">'utf-8'</span></span> となります。</p>
 </dd>
-<dt>filename</dt>
-<dd><p>出力ファイル名を指定します。未指定の場合は、YAMLファイルの拡張子を <span class="docutils literal">.atom</span> または <span class="docutils literal">.html</span> としたファイルを作成します。</p>
+<dt>date</dt>
+<dd><p>コンテンツの作成日を指定します。</p>
+<p>e.g.</p>
+<ul class="simple">
+<li><p><span class="docutils literal">2017/01/01</span></p></li>
+<li><p><span class="docutils literal">2017/01/01 12:00:00</span></p></li>
+<li><p><span class="docutils literal">2017/01/01 12:00:00 +0900</span></p></li>
+</ul>
 </dd>
-<dt>filters</dt>
-<dd><p>フィードに登録するアーティクルの検索条件を指定します。検索する文書プロパティ名をキー、表示対象のプロパティ値のリストを値とする辞書を指定します。</p>
-<p>未指定の場合は、すべてのアーティクルを登録します。</p>
-<div class="code-block">
-<div class="code-block-caption">'news' または 'event' カテゴリの日本語アーティクルのみを登録する</div>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">feed</span>   <span class="c1"># YAMLファイルのタイプを index に指定</span>
-<span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">category</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">'news'</span><span class="p p-Indicator">,</span> <span class="s">'event'</span><span class="p p-Indicator">]</span>  <span class="c1"># カテゴリが 'news' または 'events'</span>
-</pre></div>
-</div>
+<dt>lang</dt>
+<dd><p>生成されるHTMLの <span class="docutils literal">lang</span> を指定します。未指定の場合は <span class="docutils literal">'en'</span>  となります。</p>
+</dd>
+<dt>site_title</dt>
+<dd><p>サイトのタイトルを指定します。未指定の場合は <span class="docutils literal"><span class="pre">'(FIXME-site_title)</span></span>  となります。</p>
+</dd>
+<dt>site_url</dt>
+<dd><p>コンテンツの親となるURLを指定します。 e.g. <span class="docutils literal"><span class="pre">https://www.example.com/my-site</span></span></p>
+<p>未指定の場合は <span class="docutils literal"><span class="pre">'http://localhost:8888'</span></span>  となります。</p>
+</dd>
+<dt>tags</dt>
+<dd><p>コンテンツのタグを、<span class="docutils literal">,</span> で区切って指定します。未指定の場合は <span class="docutils literal">''</span> となります。</p>
+</dd>
+<dt>timezone</dt>
+<dd><p>コンテンツの作成日などを表示するタイムゾーンを指定します。e.g. <span class="docutils literal">'Europe/Warsaw'</span>, <span class="docutils literal">'Asia/Tokyo'</span></p>
+<p>未指定の場合は、プラットフォームから取得したタイムゾーンとなります。</p>
+</dd>
+<dt>title</dt>
+<dd><p>コンテンツのタイトルを指定します。未指定の場合は <span class="docutils literal">''</span> となります。</p>
 </dd>
 </dl>
+</div>
       </div>
     </div>
   </div>

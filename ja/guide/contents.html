@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-  Miyadaikuプロジェクト
+  コンテンツ
 </title>
   
 
@@ -28,14 +28,14 @@
   <!-- include font awesome -->
   <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
   
-  <meta property="og:url" content="http://localhost:8888/ja/guide/project.html" />
+  <meta property="og:url" content="http://localhost:8888/ja/guide/contents.html" />
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="Miyadaikuプロジェクト - (FIXME-site_title)" />
+<meta property="og:title" content="コンテンツ - (FIXME-site_title)" />
 
-<meta name="description" content="Miyadaikuのドキュメントプロジェクトは、miyadaiku-start コマンドで作成します。 Creating new miyadaiku project: $ miyadaiku-start new-project $ ls new-project/ config.yml contents files templates ディレクトリ構成 ドキュメントプロジェクトは、次のようなファイルから構成されます。 ドキュメントプロジェクト/ │ ├─── config.yml プロジェクト設定を指定するYAMLファイル │ ├─── contents/ reStructuredText/Markdownなどの文書を格納するディレクトリ │ ├─── files/ 画像・バイナリファイルなどを格納するディレクトリ"/>
-<meta property="og:description" content="Miyadaikuのドキュメントプロジェクトは、miyadaiku-start コマンドで作成します。 Creating new miyadaiku project: $ miyadaiku-start new-project $ ls new-project/ config.yml contents files templates ディレクトリ構成 ドキュメントプロジェクトは、次のようなファイルから構成されます。 ドキュメントプロジェクト/ │ ├─── config.yml プロジェクト設定を指定するYAMLファイル │ ├─── contents/ reStructuredText/Markdownなどの文書を格納するディレクトリ │ ├─── files/ 画像・バイナリファイルなどを格納するディレクトリ" />
+<meta name="description" content="Miyadaikuプロジェクトの contents ディレクトリには、自由にコンテンツファイルを作成できます。contents ディレクトリにサブディレクトリを作成すると、ディレクトリ構造はそのまま outputs ディレクトリにコピーされます。 コンテンツの種類 contents ディレクトリのコンテンツには、次の4種類があります。 アーティクル contents ディレクトリの文書ファイルは、アーティクルとして読み込まれ、Jinja2テンプレートエンジンでHTMLを生成して出力します。 スニペット スニペットはアーティクルと同じく文書ファイルですが、HTMLページには変換されません。他のアーティクルやテンプレートなどから読み込んで使用します。"/>
+<meta property="og:description" content="Miyadaikuプロジェクトの contents ディレクトリには、自由にコンテンツファイルを作成できます。contents ディレクトリにサブディレクトリを作成すると、ディレクトリ構造はそのまま outputs ディレクトリにコピーされます。 コンテンツの種類 contents ディレクトリのコンテンツには、次の4種類があります。 アーティクル contents ディレクトリの文書ファイルは、アーティクルとして読み込まれ、Jinja2テンプレートエンジンでHTMLを生成して出力します。 スニペット スニペットはアーティクルと同じく文書ファイルですが、HTMLページには変換されません。他のアーティクルやテンプレートなどから読み込んで使用します。" />
 
 
 
@@ -78,6 +78,8 @@
           
             <a class="dropdown-item" href="config.html">コンフィグ</a>
           
+            <a class="dropdown-item" href="article.html">アーティクル</a>
+          
             <a class="dropdown-item" href="snippet.html">スニペット</a>
           
             <a class="dropdown-item" href="index.html">インデックス</a>
@@ -92,7 +94,7 @@
           
             <a class="dropdown-item" href="property.html">プロパティ</a>
           
-            <a class="dropdown-item" href="article.html">アーティクル</a>
+            <a class="dropdown-item" href="contents.html">コンテンツ</a>
           
         </div>
       </li>
@@ -120,6 +122,13 @@
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
                   <a href='config.html' >コンフィグ</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='article.html' >アーティクル</a></div>
                 </div>
             
           
@@ -159,25 +168,9 @@
             
           
             
-                <div class="current article-block">
+                <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                    <a href='project.html' >Miyadaikuプロジェクト</a></div>
-
-                  <ul>
-                    
-                      <li class="header_h1">
-                        <a href="#h_ja_guide_project_2erst_1">ディレクトリ構成</a>
-                      </li>
-                    
-                      <li class="header_h1">
-                        <a href="#h_ja_guide_project_2erst_2">コンテンツファイル</a>
-                      </li>
-                    
-                      <li class="header_h1">
-                        <a href="#h_ja_guide_project_2erst_3">テンプレート</a>
-                      </li>
-                    
-                  </ul>
+                  <a href='project.html' >Miyadaikuプロジェクト</a></div>
                 </div>
             
           
@@ -189,9 +182,21 @@
             
           
             
-                <div class="article-block">
+                <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='article.html' >アーティクル</a></div>
+                    <a href='contents.html' >コンテンツ</a></div>
+
+                  <ul>
+                    
+                      <li class="header_h1">
+                        <a href="#h_ja_guide_contents_2erst_1">コンテンツの種類</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#standardprofs">標準プロパティ</a>
+                      </li>
+                    
+                  </ul>
                 </div>
             
           
@@ -201,60 +206,13 @@
     <div class='col-md-9 article-body'>
       <a id='page_title' class='header_target'></a>
       <h1>
-        Miyadaikuプロジェクト
+        コンテンツ
       </h1>
 
       <div class='article-content'>
-        <p>Miyadaikuのドキュメントプロジェクトは、<span class="docutils literal"><span class="pre">miyadaiku-start</span></span> コマンドで作成します。</p>
-<div class="code-block">
-<div class="code-block-caption">Creating new miyadaiku project:</div>
-<div class="highlight"><pre><span></span>$ miyadaiku-start new-project
-$ ls new-project/
-config.yml   contents        files           templates
-</pre></div>
-</div>
-<div class="section" id="id1">
-<div class="header_target" id="h_ja_guide_project_2erst_1"></div><h1>ディレクトリ構成</h1>
-<p>ドキュメントプロジェクトは、次のようなファイルから構成されます。</p>
-<pre class="literal-block">ドキュメントプロジェクト/
-     │
-     ├─── config.yml   プロジェクト設定を指定するYAMLファイル
-     │
-     ├─── contents/    reStructuredText/Markdownなどの文書を格納するディレクトリ
-     │
-     ├─── files/       画像・バイナリファイルなどを格納するディレクトリ
-     │
-     ├─── templates/   jinja2テンプレートファイルを格納するディレクトリ
-     │
-     └─── outputs/      HTMLなどの出力ファイルを出力するディクレクトリ</pre>
-<dl class="field-list simple">
-<dt>config.yml ファイル</dt>
-<dd><p>プロジェクト全体のデフォルトとなるプロパティを指定する YAMLファイルです。</p>
-</dd>
-<dt>contents ディレクトリ</dt>
-<dd><p>reStructuredText/Markdownなどによる文書ファイルや設定ファイルなど、 HTMLに変換するソースファイルを格納します。</p>
-</dd>
-<dt>files ディレクトリ</dt>
-<dd><p><span class="docutils literal"><span class="pre">miyadaiku-build</span></span> コマンドで変換せずに、そのまま <span class="docutils literal">outputs</span> ディレクトリにコピーするファイルを格納します。</p>
-</dd>
-<dt>templates ディレクトリ</dt>
-<dd><p>jinja2テンプレートファイルを格納します。</p>
-</dd>
-<dt>outputs ディレクトリ</dt>
-<dd><p><span class="docutils literal"><span class="pre">miyadaiku-build</span></span> コマンドで生成したHTMLなどのファイルを格納します。</p>
-</dd>
-</dl>
-</div>
+        <p>Miyadaikuプロジェクトの <span class="docutils literal">contents</span> ディレクトリには、自由にコンテンツファイルを作成できます。<span class="docutils literal">contents</span> ディレクトリにサブディレクトリを作成すると、ディレクトリ構造はそのまま <span class="docutils literal">outputs</span> ディレクトリにコピーされます。</p>
 <div class="section" id="id2">
-<div class="header_target" id="h_ja_guide_project_2erst_2"></div><h1>コンテンツファイル</h1>
-<p><span class="docutils literal"><span class="pre">miyadaiku-build</span></span> コマンドは、miyadaikuプロジェクトの <span class="docutils literal">contents</span> ディレクトリの次の形式のファイルをコンテンツファイルとして処理し、HTMLファイルを作成します。</p>
-<ul class="simple">
-<li><p>*.yml ファイル</p></li>
-<li><p>*.rst ファイル</p></li>
-<li><p>*.md ファイル</p></li>
-<li><p>*.html ファイル</p></li>
-</ul>
-<p>処理結果は output ディレクトリに出力します。上記以外の画像ファイルなどは、ソースファイルとして処理をせず、そのままoutput ディレクトリにコピーします。</p>
+<div class="header_target" id="h_ja_guide_contents_2erst_1"></div><h1>コンテンツの種類</h1>
 <p><span class="docutils literal">contents</span> ディレクトリのコンテンツには、次の4種類があります。</p>
 <dl class="simple">
 <dt>アーティクル</dt>
@@ -270,11 +228,50 @@ config.yml   contents        files           templates
 <dd><p>コンフィグファイルは、Miyadaikuプロジェクト全体の設定や、文書プロパティのデフォルト値をディレクトリごとに指定する YAMLファイルです。HTMLファイルは出力しません。</p>
 </dd>
 </dl>
-</div>
+<div class="header_target" id="standardprofs"></div></div>
 <div class="section" id="id3">
-<div class="header_target" id="h_ja_guide_project_2erst_3"></div><h1>テンプレート</h1>
-<p><span class="docutils literal">contents</span> ディレクトリのコンテンツファイルは、Markdownパーザなどで変換してから、Jinja2テンプレートエンジンによってHTMLに変換されます。生成されたHTMLから、<span class="docutils literal">templates</span> ディレクトリの Jinjaテンプレートで最終的なHTMLファイルを作成し、<span class="docutils literal">outputs</span> ディレクトリに出力されます。</p>
-<p><img src="../../img/process.png" width="500px"/></p>
+<h1>標準プロパティ</h1>
+<p>コンテンツには自由にプロパティは自由に項目を指定できます。標準プロパティとして以下の項目が設定されています。</p>
+<dl>
+<dt>abstract_length</dt>
+<dd><p>インデックスファイルやRSSの摘要として使用するテキストの長さを、文字数で指定します。長さとして <span class="docutils literal">0</span> を指定すると、本文すべてを摘要とします。未指定の場合は、<span class="docutils literal">500</span> 文字となります。</p>
+</dd>
+<dt>cagegory</dt>
+<dd><p>コンテンツのカテゴリを指定します。未指定の場合は <span class="docutils literal">''</span> となります。</p>
+</dd>
+<dt>charset</dt>
+<dd><p>生成されるHTMLの <span class="docutils literal">charset</span> を指定します。未指定の場合は <span class="docutils literal"><span class="pre">'utf-8'</span></span> となります。</p>
+</dd>
+<dt>date</dt>
+<dd><p>コンテンツの作成日を指定します。</p>
+<p>e.g.</p>
+<ul class="simple">
+<li><p><span class="docutils literal">2017/01/01</span></p></li>
+<li><p><span class="docutils literal">2017/01/01 12:00:00</span></p></li>
+<li><p><span class="docutils literal">2017/01/01 12:00:00 +0900</span></p></li>
+</ul>
+</dd>
+<dt>lang</dt>
+<dd><p>生成されるHTMLの <span class="docutils literal">lang</span> を指定します。未指定の場合は <span class="docutils literal">'en'</span>  となります。</p>
+</dd>
+<dt>site_title</dt>
+<dd><p>サイトのタイトルを指定します。未指定の場合は <span class="docutils literal"><span class="pre">'(FIXME-site_title)</span></span>  となります。</p>
+</dd>
+<dt>site_url</dt>
+<dd><p>サイトのルートとなるURLを指定します。 e.g. <span class="docutils literal"><span class="pre">https://www.example.com/my-site</span></span></p>
+<p>未指定の場合は <span class="docutils literal"><span class="pre">'http://localhost:8888'</span></span>  となります。</p>
+</dd>
+<dt>tags</dt>
+<dd><p>コンテンツのタグを、<span class="docutils literal">,</span> で区切って指定します。未指定の場合は <span class="docutils literal">''</span> となります。</p>
+</dd>
+<dt>timezone</dt>
+<dd><p>コンテンツの作成日などを表示するタイムゾーンを指定します。e.g. <span class="docutils literal">'Europe/Warsaw'</span>, <span class="docutils literal">'Asia/Tokyo'</span></p>
+<p>未指定の場合は、プラットフォームから取得したタイムゾーンとなります。</p>
+</dd>
+<dt>title</dt>
+<dd><p>コンテンツのタイトルを指定します。未指定の場合は <span class="docutils literal">''</span> となります。</p>
+</dd>
+</dl>
 </div>
       </div>
     </div>

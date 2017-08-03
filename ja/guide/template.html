@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="テンプレート - (FIXME-site_title)" />
 
-<meta name="description" content="contents ディレクトリのアーティクルやインデックスは、Jinja2テンプレートを適用して最終的なHTMLファイルを出力します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに保存します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 Sample of article template: &lt;!DOCTYPE html&gt; &lt;html lang=&#34;"/>
-<meta property="og:description" content="contents ディレクトリのアーティクルやインデックスは、Jinja2テンプレートを適用して最終的なHTMLファイルを出力します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに保存します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 Sample of article template: &lt;!DOCTYPE html&gt; &lt;html lang=&#34;" />
+<meta name="description" content="contents ディレクトリのアーティクルやインデックスは、Jinja2テンプレートを適用して最終的なHTMLファイルとなります。テンプレートは、プロジェクトディレクトリの templates ディレクトリに保存します。 アーティクルテンプレート アーティクルテンプレートは、アーティクルをHTMLに変換するJinja2テンプレートファイルです。通常、page オブジェクトの html プロパティなどを参照してHTMLを作成します。 Sample of article template: &lt;!DOCTYPE html&gt;"/>
+<meta property="og:description" content="contents ディレクトリのアーティクルやインデックスは、Jinja2テンプレートを適用して最終的なHTMLファイルとなります。テンプレートは、プロジェクトディレクトリの templates ディレクトリに保存します。 アーティクルテンプレート アーティクルテンプレートは、アーティクルをHTMLに変換するJinja2テンプレートファイルです。通常、page オブジェクトの html プロパティなどを参照してHTMLを作成します。 Sample of article template: &lt;!DOCTYPE html&gt;" />
 
 
 
@@ -76,16 +76,6 @@
           
 
           
-            <a class="dropdown-item" href="config.html">コンフィグ</a>
-          
-            <a class="dropdown-item" href="snippet.html">スニペット</a>
-          
-            <a class="dropdown-item" href="index.html">インデックス</a>
-          
-            <a class="dropdown-item" href="feed.html">フィード</a>
-          
-            <a class="dropdown-item" href="template.html">テンプレート</a>
-          
             <a class="dropdown-item" href="themes.html">テーマ</a>
           
             <a class="dropdown-item" href="project.html">Miyadaikuプロジェクト</a>
@@ -93,6 +83,16 @@
             <a class="dropdown-item" href="property.html">プロパティ</a>
           
             <a class="dropdown-item" href="article.html">アーティクル</a>
+          
+            <a class="dropdown-item" href="snippet.html">スニペット</a>
+          
+            <a class="dropdown-item" href="index.html">インデックス</a>
+          
+            <a class="dropdown-item" href="feed.html">フィード</a>
+          
+            <a class="dropdown-item" href="config.html">コンフィグ</a>
+          
+            <a class="dropdown-item" href="template.html">テンプレート</a>
           
         </div>
       </li>
@@ -115,69 +115,6 @@
       
           
 
-          
-            
-                <div class="article-block">
-                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='config.html' >コンフィグ</a></div>
-                </div>
-            
-          
-            
-                <div class="article-block">
-                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='snippet.html' >スニペット</a></div>
-                </div>
-            
-          
-            
-                <div class="article-block">
-                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='index.html' >インデックス</a></div>
-                </div>
-            
-          
-            
-                <div class="article-block">
-                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='feed.html' >フィード</a></div>
-                </div>
-            
-          
-            
-                <div class="current article-block">
-                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                    <a href='template.html' >テンプレート</a></div>
-
-                  <ul>
-                    
-                      <li class="header_h1">
-                        <a href="#h_ja_guide_template_2erst_1">アーティクルテンプレート</a>
-                      </li>
-                    
-                      <li class="header_h2">
-                        <a href="#content_vars">コンテント変数</a>
-                      </li>
-                    
-                      <li class="header_h3">
-                        <a href="#h_ja_guide_template_2erst_2">page オブジェクト</a>
-                      </li>
-                    
-                      <li class="header_h1">
-                        <a href="#h_ja_guide_template_2erst_3">インデックステンプレート</a>
-                      </li>
-                    
-                      <li class="header_h2">
-                        <a href="#jinja_vars">テンプレート変数</a>
-                      </li>
-                    
-                      <li class="header_h1">
-                        <a href="#template_names">テンプレート名の解決</a>
-                      </li>
-                    
-                  </ul>
-                </div>
-            
           
             
                 <div class="article-block">
@@ -207,6 +144,69 @@
                 </div>
             
           
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='snippet.html' >スニペット</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='index.html' >インデックス</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='feed.html' >フィード</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='config.html' >コンフィグ</a></div>
+                </div>
+            
+          
+            
+                <div class="current article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                    <a href='template.html' >テンプレート</a></div>
+
+                  <ul>
+                    
+                      <li class="header_h1">
+                        <a href="#h_ja_guide_template_2erst_1">アーティクルテンプレート</a>
+                      </li>
+                    
+                      <li class="header_h2">
+                        <a href="#content_vars">テンプレート変数</a>
+                      </li>
+                    
+                      <li class="header_h3">
+                        <a href="#h_ja_guide_template_2erst_2">page オブジェクト</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#h_ja_guide_template_2erst_3">インデックステンプレート</a>
+                      </li>
+                    
+                      <li class="header_h2">
+                        <a href="#jinja_vars">テンプレート変数</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#template_names">テンプレート名の解決</a>
+                      </li>
+                    
+                  </ul>
+                </div>
+            
+          
       
     </div>
 
@@ -217,10 +217,10 @@
       </h1>
 
       <div class='article-content'>
-        <p><span class="docutils literal">contents</span> ディレクトリのアーティクルやインデックスは、Jinja2テンプレートを適用して最終的なHTMLファイルを出力します。テンプレートは、プロジェクトディレクトリの <span class="docutils literal">templates</span> ディレクトリに保存します。</p>
+        <p><span class="docutils literal">contents</span> ディレクトリのアーティクルやインデックスは、Jinja2テンプレートを適用して最終的なHTMLファイルとなります。テンプレートは、プロジェクトディレクトリの <span class="docutils literal">templates</span> ディレクトリに保存します。</p>
 <div class="section" id="id2">
 <div class="header_target" id="h_ja_guide_template_2erst_1"></div><h1>アーティクルテンプレート</h1>
-<p>アーティクルに適用するテンプレートは、<span class="docutils literal">article_template</span> プロパティで指定します。未指定の場合は、<span class="docutils literal">'page_article.html'</span> となります。</p>
+<p>アーティクルテンプレートは、アーティクルをHTMLに変換するJinja2テンプレートファイルです。通常、<span class="docutils literal">page</span> オブジェクトの <span class="docutils literal">html</span> プロパティなどを参照してHTMLを作成します。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of article template:</div>
 <div class="highlight"><pre><span></span><span class="x">&lt;!DOCTYPE html&gt;</span>
@@ -236,13 +236,63 @@
 <span class="x">&lt;/html&gt;</span>
 </pre></div>
 </div>
+<p>アーティクルに適用するテンプレートは、アーティクルの <span class="docutils literal">article_template</span> プロパティで指定します。未指定の場合は、<span class="docutils literal">'page_article.html'</span> となります。</p>
+<div class="code-block">
+<div class="code-block-caption">Using custom article template</div>
+<div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
+   <span class="nc">:article_template:</span> <span class="nf">my_special_article_template.html</span>
+
+<span class="gh">My special article</span>
+<span class="gh">-------------------------</span>
+</pre></div>
+</div>
 <div class="header_target" id="content_vars"></div><div class="section" id="id3">
-<h2>コンテント変数</h2>
-<p>テンプレート内では、作成中のHTMLページのアーティクルオブジェクトを <span class="docutils literal">page</span> 変数で参照できます。</p>
-<p>例えば <span class="docutils literal">contents</span> ディレクトリの <span class="docutils literal">article1.rst</span> からHTMLページを作成する場合、テンプレートファイル <span class="docutils literal">page_article.html</span> では、 <span class="docutils literal">page</span> 変数は <span class="docutils literal">article1.rst</span> オブジェクトとなります。</p>
+<h2>テンプレート変数</h2>
+<p>Jinjaテンプレート内では、次の変数を使用できます。</p>
+<dl class="simple">
+<dt>content</dt>
+<dd><p>アーティクルオブジェクト自身を参照します。</p>
+</dd>
+<dt>page</dt>
+<dd><p>アーティクルを呼び出しているコンテンツオブジェクトを参照します。</p>
+</dd>
+</dl>
+<p>例えば、次のような2つのアーティクル <span class="docutils literal">parent.rst</span> と <span class="docutils literal">child.rst</span> があった場合</p>
+<div class="code-block">
+<div class="code-block-caption">parent.rst:</div>
+<div class="highlight"><pre><span></span><span class="x">This is parent.rst</span>
+
+<span class="x">page: </span><span class="cp">{{</span> <span class="nv">page.name</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">content: </span><span class="cp">{{</span> <span class="nv">content.name</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="x">---</span>
+
+<span class="cp">{{</span> <span class="nv">page.load</span><span class="o">(</span><span class="s1">'./child.rst'</span><span class="o">)</span><span class="nv">.html</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<div class="code-block">
+<div class="code-block-caption">child.rst:</div>
+<div class="highlight"><pre><span></span><span class="x">This is child.rst</span>
+
+<span class="x">page: </span><span class="cp">{{</span> <span class="nv">page.name</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">content: </span><span class="cp">{{</span> <span class="nv">content.name</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<p><span class="docutils literal">parent.rst</span> をHTMLに変換する際、 <span class="docutils literal">{{ <span class="pre">page.load('./child.rst').html</span> }}</span> で <span class="docutils literal">child.rst</span> が読み込まれます。</p>
+<p>この時、<span class="docutils literal">parent.rst</span> 内では、</p>
+<ul class="simple">
+<li><p><span class="docutils literal">page</span> は <span class="docutils literal">parent.rst</span> オブジェクト</p></li>
+<li><p><span class="docutils literal">content</span> は <span class="docutils literal">parent.rst</span> オブジェクト</p></li>
+</ul>
+<p><span class="docutils literal">child.rst</span> 内では、</p>
+<ul class="simple">
+<li><p><span class="docutils literal">page</span> は <span class="docutils literal">parent.rst</span> オブジェクト</p></li>
+<li><p><span class="docutils literal">content</span> は <span class="docutils literal">child.rst</span> オブジェクト</p></li>
+</ul>
+<p>となります。</p>
 <div class="section" id="page">
 <div class="header_target" id="h_ja_guide_template_2erst_2"></div><h3>page オブジェクト</h3>
-<p><span class="docutils literal">page</span> オブジェクトは、現在テンプレートでHTMLページを作成しているコンテントオブジェクトで、アーティクルなどのコンテントに設定された <a href="article.html#propsofarticle">アーティクル</a> と、次のプロパティ/メソッドを使用できます。</p>
+<p><span class="docutils literal">page</span> オブジェクトは、現在テンプレートでHTMLページを作成しているコンテントオブジェクトで、アーティクルなどのコンテントに設定された <a href="article.html#propsofarticle">アーティクルのプロパティ</a> と、次のプロパティ/メソッドを使用できます。</p>
 <dl>
 <dt>abstract</dt>
 <dd><p>HTMLに変換したアーティクルを、 <span class="docutils literal">abstract_length</span> プロパティで指定した文字数分取得します。<span class="docutils literal">abstract_length</span> が <span class="docutils literal">0</span> の場合、全文を返します。</p>
@@ -307,50 +357,7 @@
 </div>
 <div class="header_target" id="jinja_vars"></div><div class="section" id="id5">
 <h2>テンプレート変数</h2>
-<p>Jinjaテンプレート内では、次の変数を使用できます。</p>
-<dl class="simple">
-<dt>content</dt>
-<dd><p>アーティクルオブジェクト自身を参照します。</p>
-</dd>
-<dt>page</dt>
-<dd><p>アーティクルを呼び出しているコンテンツオブジェクトを参照します。</p>
-</dd>
-</dl>
-<p><span class="docutils literal">content</span> と <span class="docutils literal">page</span> はどちらもコンテンツオブジェクトです。コンテンツオブジェクトの詳細は、<a href="template.html#content_vars">コンテント変数</a> を参照してください。</p>
-<p>例えば、次のような2つのアーティクル <span class="docutils literal">parent.rst</span> と <span class="docutils literal">child.rst</span> があった場合</p>
-<div class="code-block">
-<div class="code-block-caption">parent.rst:</div>
-<div class="highlight"><pre><span></span><span class="x">This is parent.rst</span>
-
-<span class="x">page: </span><span class="cp">{{</span> <span class="nv">page.name</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">content: </span><span class="cp">{{</span> <span class="nv">content.name</span> <span class="cp">}}</span><span class="x"></span>
-
-<span class="x">---</span>
-
-<span class="cp">{{</span> <span class="nv">page.load</span><span class="o">(</span><span class="s1">'./child.rst'</span><span class="o">)</span><span class="nv">.html</span> <span class="cp">}}</span><span class="x"></span>
-</pre></div>
-</div>
-<div class="code-block">
-<div class="code-block-caption">child.rst:</div>
-<div class="highlight"><pre><span></span><span class="x">This is child.rst</span>
-
-<span class="x">page: </span><span class="cp">{{</span> <span class="nv">page.name</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">content: </span><span class="cp">{{</span> <span class="nv">content.name</span> <span class="cp">}}</span><span class="x"></span>
-</pre></div>
-</div>
-<p><span class="docutils literal">parent.rst</span> をHTMLに変換する際、 <span class="docutils literal">{{ <span class="pre">page.load('./child.rst').html</span> }}</span> で <span class="docutils literal">child.rst</span> が読み込まれます。</p>
-<p>この時、<span class="docutils literal">parent.rst</span> 内では、</p>
-<ul class="simple">
-<li><p><span class="docutils literal">page</span> は <span class="docutils literal">parent.rst</span> オブジェクト</p></li>
-<li><p><span class="docutils literal">content</span> は <span class="docutils literal">parent.rst</span> オブジェクト</p></li>
-</ul>
-<p><span class="docutils literal">child.rst</span> 内では、</p>
-<ul class="simple">
-<li><p><span class="docutils literal">page</span> は <span class="docutils literal">parent.rst</span> オブジェクト</p></li>
-<li><p><span class="docutils literal">content</span> は <span class="docutils literal">child.rst</span> オブジェクト</p></li>
-</ul>
-<p>となります。</p>
-<p>インデックステンプレートでは、<a href="template.html#content_vars">コンテント変数</a> に加え、以下の変数を使用できます。</p>
+<p>インデックステンプレートでは、<a href="template.html#content_vars">テンプレート変数</a> に加え、以下の変数を使用できます。</p>
 <dl class="simple">
 <dt>cur_page</dt>
 <dd><p>ページ番号を指定します。</p>

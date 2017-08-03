@@ -76,16 +76,6 @@
           
 
           
-            <a class="dropdown-item" href="config.html">コンフィグ</a>
-          
-            <a class="dropdown-item" href="snippet.html">スニペット</a>
-          
-            <a class="dropdown-item" href="index.html">インデックス</a>
-          
-            <a class="dropdown-item" href="feed.html">フィード</a>
-          
-            <a class="dropdown-item" href="template.html">テンプレート</a>
-          
             <a class="dropdown-item" href="themes.html">テーマ</a>
           
             <a class="dropdown-item" href="project.html">Miyadaikuプロジェクト</a>
@@ -93,6 +83,16 @@
             <a class="dropdown-item" href="property.html">プロパティ</a>
           
             <a class="dropdown-item" href="article.html">アーティクル</a>
+          
+            <a class="dropdown-item" href="snippet.html">スニペット</a>
+          
+            <a class="dropdown-item" href="index.html">インデックス</a>
+          
+            <a class="dropdown-item" href="feed.html">フィード</a>
+          
+            <a class="dropdown-item" href="config.html">コンフィグ</a>
+          
+            <a class="dropdown-item" href="template.html">テンプレート</a>
           
         </div>
       </li>
@@ -119,7 +119,28 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='config.html' >コンフィグ</a></div>
+                  <a href='themes.html' >テーマ</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='project.html' >Miyadaikuプロジェクト</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='property.html' >プロパティ</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='article.html' >アーティクル</a></div>
                 </div>
             
           
@@ -159,35 +180,14 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='config.html' >コンフィグ</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
                   <a href='template.html' >テンプレート</a></div>
-                </div>
-            
-          
-            
-                <div class="article-block">
-                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='themes.html' >テーマ</a></div>
-                </div>
-            
-          
-            
-                <div class="article-block">
-                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='project.html' >Miyadaikuプロジェクト</a></div>
-                </div>
-            
-          
-            
-                <div class="article-block">
-                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='property.html' >プロパティ</a></div>
-                </div>
-            
-          
-            
-                <div class="article-block">
-                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='article.html' >アーティクル</a></div>
                 </div>
             
           
@@ -210,6 +210,7 @@
 <li><p>reStructuredTextのスニペット</p>
 <blockquote>
 <div class="code-block">
+<div class="code-block-caption">Sample of snippet in reST:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
    <span class="nc">:type:</span> <span class="nf">snippet</span>
    <span class="nc">:title:</span> <span class="nf">Snippet in reST</span>
@@ -222,6 +223,7 @@ This is a snippet in reST.
 <li><p>Markdownのスニペット</p>
 <blockquote>
 <div class="code-block">
+<div class="code-block-caption">Sample of snippet in Markdown:</div>
 <div class="highlight"><pre><span></span>type: snippet
 title: Snippet in Markdown
 
@@ -233,6 +235,7 @@ This is a snippet in Markdown.
 <li><p>HTMLのスニペット</p>
 <blockquote>
 <div class="code-block">
+<div class="code-block-caption">Sample of snippet in HTML:</div>
 <div class="highlight"><pre><span></span>type: snippet
 title: Snippet in HTML
 
@@ -245,7 +248,7 @@ title: Snippet in HTML
 </div>
 <div class="section" id="id3">
 <div class="header_target" id="h_ja_guide_snippet_2erst_2"></div><h1>スニペットの読み込み</h1>
-<p>スニペットの内容は、<span class="docutils literal">html</span> プロパティで取得できます。</p>
+<p>スニペットは、<span class="docutils literal">html</span> プロパティを利用して他のアーティクルやテンプレートで表示できます。<span class="docutils literal">title</span> などの <a href="article.html#propsofarticle">アーティクルのプロパティ</a> も使用できます。</p>
 <div class="code-block">
 <div class="highlight"><pre><span></span><span class="gh">Test article</span>
 <span class="gh">-------------</span>

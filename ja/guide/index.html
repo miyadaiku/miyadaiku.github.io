@@ -76,8 +76,6 @@
           
 
           
-            <a class="dropdown-item" href="themes.html">テーマ</a>
-          
             <a class="dropdown-item" href="project.html">Miyadaikuプロジェクト</a>
           
             <a class="dropdown-item" href="property.html">プロパティ</a>
@@ -88,11 +86,13 @@
           
             <a class="dropdown-item" href="index.html">インデックス</a>
           
-            <a class="dropdown-item" href="feed.html">フィード</a>
-          
             <a class="dropdown-item" href="config.html">コンフィグ</a>
           
+            <a class="dropdown-item" href="feed.html">フィード</a>
+          
             <a class="dropdown-item" href="template.html">テンプレート</a>
+          
+            <a class="dropdown-item" href="themes.html">テーマ</a>
           
         </div>
       </li>
@@ -115,13 +115,6 @@
       
           
 
-          
-            
-                <div class="article-block">
-                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='themes.html' >テーマ</a></div>
-                </div>
-            
           
             
                 <div class="article-block">
@@ -177,13 +170,6 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='feed.html' >フィード</a></div>
-                </div>
-            
-          
-            
-                <div class="article-block">
-                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
                   <a href='config.html' >コンフィグ</a></div>
                 </div>
             
@@ -191,7 +177,21 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='feed.html' >フィード</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
                   <a href='template.html' >テンプレート</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='themes.html' >テーマ</a></div>
                 </div>
             
           
@@ -217,7 +217,7 @@
 </div>
 <div class="header_target" id="propertyofindex"></div><div class="section" id="id2">
 <h1>インデックスのプロパティ</h1>
-<p>インデックスオブジェクトには、<a href="config.html#standardprofs">コンフィグ</a> に加えて、以下のプロパティを指定できます。</p>
+<p>インデックスオブジェクトには、<a href="property.html#standardprofs">標準プロパティ</a> に加えて、以下のプロパティを指定できます。</p>
 <dl>
 <dt>filters</dt>
 <dd><p>表示するアーティクルの検索条件を指定します。検索する文書プロパティ名をキー、表示対象のプロパティ値のリストを値とする辞書を指定します。</p>
@@ -286,12 +286,12 @@
 <span class="l l-Scalar l-Scalar-Plain">groupby</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">category</span>  <span class="c1"># カテゴリ別のインデックスを作成</span>
 </pre></div>
 </div>
-<p><span class="docutils literal">groupby</span> プロパティを指定すると、指定されたプロパティの値ごとにインデックスページを作成します。この例では、カテゴリが <span class="docutils literal">categoryA</span> のアーティクルと <span class="docutils literal">categoryB</span> のアーティクルが存在する場合、</p>
+<p><span class="docutils literal">groupby</span> プロパティを指定すると、指定されたプロパティの値ごとにインデックスページを作成します。この例では、カテゴリが <span class="docutils literal">catA</span> のアーティクルと <span class="docutils literal">catB</span> のアーティクルが存在する場合、</p>
 <ul class="simple">
-<li><p><span class="docutils literal">index_category_categoryA.html</span>、<span class="docutils literal">index_category_categoryA_2.html</span>、<span class="docutils literal">index_category_categoryA_3.html</span> ...</p></li>
-<li><p><span class="docutils literal">index_category_categoryB.html</span>、<span class="docutils literal">index_category_categoryB_2.html</span>、<span class="docutils literal">index_category_categoryB_3.html</span> ...</p></li>
+<li><p><span class="docutils literal">index_category_catA.html</span>、<span class="docutils literal">index_category_catA_2.html</span>、<span class="docutils literal">index_category_catA_3.html</span> ...</p></li>
+<li><p><span class="docutils literal">index_category_catB.html</span>、<span class="docutils literal">index_category_catB_2.html</span>、<span class="docutils literal">index_category_catB_3.html</span> ...</p></li>
 </ul>
-<p>のように2種類のインデックスページを作成します。</p>
+<p>の2種類のインデックスページを作成します。</p>
 <div class="section" id="id4">
 <div class="header_target" id="h_ja_guide_index_2erst_2"></div><h2>グループ別インデックスのプロパティ</h2>
 <p>グループ別インデックスでは、<a href="index.html#propertyofindex">通常のインデックス</a> に加えて、次のプロパティを指定できます。</p>

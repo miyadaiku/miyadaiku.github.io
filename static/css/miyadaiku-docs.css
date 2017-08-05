@@ -18,8 +18,8 @@ li p {
 dt {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  padding-left: 0.1rem;
-}
+  text-indent: -1rem;
+  padding-left: 1rem;}
 
 dt:before {
     content: "\025B8";

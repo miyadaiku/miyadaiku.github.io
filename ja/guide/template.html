@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="テンプレート - (FIXME-site_title)" />
 
-<meta name="description" content="contents ディレクトリのアーティクルやインデックスは、Jinja2テンプレートを適用して最終的なHTMLファイルを出力します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに保存します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 Sample of article template: &lt;!DOCTYPE html&gt; &lt;html lang=&#34;"/>
-<meta property="og:description" content="contents ディレクトリのアーティクルやインデックスは、Jinja2テンプレートを適用して最終的なHTMLファイルを出力します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに保存します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 Sample of article template: &lt;!DOCTYPE html&gt; &lt;html lang=&#34;" />
+<meta name="description" content="Miyadaikuは、contents ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに作成します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 テンプレート内では、次の変数を参照できます。 page 作成中のHTMLページのアーティクルオブジェクトを参照します。通常、アーティクルテンプレートでは、"/>
+<meta property="og:description" content="Miyadaikuは、contents ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに作成します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 テンプレート内では、次の変数を参照できます。 page 作成中のHTMLページのアーティクルオブジェクトを参照します。通常、アーティクルテンプレートでは、" />
 
 
 
@@ -91,6 +91,8 @@
             <a class="dropdown-item" href="feed.html">フィード</a>
           
             <a class="dropdown-item" href="template.html">テンプレート</a>
+          
+            <a class="dropdown-item" href="objects.html">オブジェクト</a>
           
             <a class="dropdown-item" href="themes.html">テーマ</a>
           
@@ -176,16 +178,8 @@
                         <a href="#h_ja_guide_template_2erst_1">アーティクルテンプレート</a>
                       </li>
                     
-                      <li class="header_h2">
-                        <a href="#content_vars">コンテント変数</a>
-                      </li>
-                    
-                      <li class="header_h3">
-                        <a href="#h_ja_guide_template_2erst_2">page オブジェクト</a>
-                      </li>
-                    
                       <li class="header_h1">
-                        <a href="#h_ja_guide_template_2erst_3">インデックステンプレート</a>
+                        <a href="#h_ja_guide_template_2erst_2">インデックステンプレート</a>
                       </li>
                     
                       <li class="header_h2">
@@ -197,6 +191,13 @@
                       </li>
                     
                   </ul>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='objects.html' >オブジェクト</a></div>
                 </div>
             
           
@@ -217,10 +218,19 @@
       </h1>
 
       <div class='article-content'>
-        <p><span class="docutils literal">contents</span> ディレクトリのアーティクルやインデックスは、Jinja2テンプレートを適用して最終的なHTMLファイルを出力します。テンプレートは、プロジェクトディレクトリの <span class="docutils literal">templates</span> ディレクトリに保存します。</p>
+        <p>Miyadaikuは、<span class="docutils literal">contents</span> ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの <span class="docutils literal">templates</span> ディレクトリに作成します。</p>
 <div class="section" id="id2">
 <div class="header_target" id="h_ja_guide_template_2erst_1"></div><h1>アーティクルテンプレート</h1>
 <p>アーティクルに適用するテンプレートは、<span class="docutils literal">article_template</span> プロパティで指定します。未指定の場合は、<span class="docutils literal">'page_article.html'</span> となります。</p>
+<p>テンプレート内では、次の変数を参照できます。</p>
+<dl class="simple">
+<dt>page</dt>
+<dd><p>作成中のHTMLページのアーティクルオブジェクトを参照します。通常、アーティクルテンプレートでは、<span class="docutils literal">page</span> 変数の <span class="docutils literal">html</span> プロパティからHTMLを取得して表示します。</p>
+</dd>
+<dt>contents</dt>
+<dd><p>プロジェクトのコンテンツコレクションを参照します。</p>
+</dd>
+</dl>
 <div class="code-block">
 <div class="code-block-caption">Sample of article template:</div>
 <div class="highlight"><pre><span></span><span class="x">&lt;!DOCTYPE html&gt;</span>
@@ -231,46 +241,34 @@
 <span class="x">&lt;/head&gt;</span>
 
 <span class="x">&lt;body&gt;</span>
-<span class="x">  </span><span class="cp">{{</span><span class="nv">page.html</span><span class="cp">}}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{{</span> <span class="nv">page.html</span> <span class="cp">}}</span><span class="x"></span>
 <span class="x">&lt;/body&gt;</span>
 <span class="x">&lt;/html&gt;</span>
 </pre></div>
 </div>
-<div class="header_target" id="content_vars"></div><div class="section" id="id3">
-<h2>コンテント変数</h2>
-<p>テンプレート内では、作成中のHTMLページのアーティクルオブジェクトを <span class="docutils literal">page</span> 変数で参照できます。</p>
-<p>例えば <span class="docutils literal">contents</span> ディレクトリの <span class="docutils literal">article1.rst</span> からHTMLページを作成する場合、テンプレートファイル <span class="docutils literal">page_article.html</span> では、 <span class="docutils literal">page</span> 変数は <span class="docutils literal">article1.rst</span> オブジェクトとなります。</p>
-<div class="section" id="page">
-<div class="header_target" id="h_ja_guide_template_2erst_2"></div><h3>page オブジェクト</h3>
-<p><span class="docutils literal">page</span> オブジェクトは、現在テンプレートでHTMLページを作成しているコンテントオブジェクトで、アーティクルなどのコンテントに設定された <a href="article.html#propsofarticle">アーティクルのプロパティ</a> と、次のプロパティ/メソッドを使用できます。</p>
-<dl>
-<dt>abstract</dt>
-<dd><p>HTMLに変換したアーティクルを、 <span class="docutils literal">abstract_length</span> プロパティで指定した文字数分取得します。<span class="docutils literal">abstract_length</span> が <span class="docutils literal">0</span> の場合、全文を返します。</p>
+</div>
+<div class="section" id="id3">
+<div class="header_target" id="h_ja_guide_template_2erst_2"></div><h1>インデックステンプレート</h1>
+<p>アーティクルの一覧を出力するインデックスの場合、生成されるHTMLファイルは複数ページとなる場合があり、1ページ目と2ページ目以降でそれぞれ別のテンプレートを指定できます。</p>
+<p>1ページ目のテンプレートは <span class="docutils literal">indexpage_template</span> プロパティで指定します。未指定の場合は、<span class="docutils literal">'page_index.html'</span> となります。2ページ目以降は <span class="docutils literal">indexpage_template2</span> プロパティで指定し、未指定の場合は、<span class="docutils literal">'page_index.html'</span> となります。</p>
+<p>インデックステンプレートでは、インデックスオブジェクトを 変数 <span class="docutils literal">page</span> で参照できます。</p>
+<dl class="simple">
+<dt>page</dt>
+<dd><p>作成中のHTMLページのインデックスオブジェクトを参照します。</p>
 </dd>
-<dt>html</dt>
-<dd><p>HTMLに変換したアーティクル全文を返します</p>
+<dt>contents</dt>
+<dd><p>プロジェクトのコンテンツコレクションを参照します。</p>
 </dd>
-<dt>url</dt>
-<dd><p>アーティクルのURL</p>
+<dt>cur_page</dt>
+<dd><p>ページ番号を指定します。</p>
 </dd>
-<dt>load(target)</dt>
-<dd><p><span class="docutils literal">target</span> で指定したパスのコンテンツオブジェクトを取得します。<span class="docutils literal">target</span> には、<span class="docutils literal">'/'</span> から始まる絶対パス、または相対パスを指定できます。絶対パスのルート、はプロジェクトの <span class="docutils literal">contents</span> ディレクトリです。</p>
+<dt>is_last</dt>
+<dd><p>最後のページなら <span class="docutils literal">True</span>、そうでなければ <span class="docutils literal">False</span> となります。</p>
 </dd>
-<dt>path_to(target):</dt>
-<dd><p><span class="docutils literal">target</span> で指定したパスのコンテンツオブジェクトへのリンクファイル名を取得します。<span class="docutils literal">target</span> には、<span class="docutils literal">'/'</span> から始まる絶対パス、または相対パスを指定できます。絶対パスのルート、はプロジェクトの <span class="docutils literal">contents</span> ディレクトリです。</p>
-</dd>
-<dt>link_to(target, text=None, fragment=None):</dt>
-<dd><p><span class="docutils literal">target</span> で指定したパスのコンテンツオブジェクトへのリンクする&lt;a&gt;要素を取得します。<span class="docutils literal">target</span> には、<span class="docutils literal">'/'</span> から始まる絶対パス、または相対パスを指定できます。絶対パスのルートはプロジェクトの <span class="docutils literal">contents</span> ディレクトリです。</p>
-<p><span class="docutils literal">text</span> は、リンク文字列を指定します。省略時は、<span class="docutils literal">target</span> のタイトルとなります。</p>
-<p><span class="docutils literal">fragment</span> は、リンク先ページ内の要素idを指定します。</p>
+<dt>articles</dt>
+<dd><p>表示対象のアーティクルのリストを参照します。</p>
 </dd>
 </dl>
-</div>
-</div>
-</div>
-<div class="section" id="id4">
-<div class="header_target" id="h_ja_guide_template_2erst_3"></div><h1>インデックステンプレート</h1>
-<p>アーティクルの一覧を出力するインデックスの場合、生成されるHTMLファイルは複数ページとなる場合があり、1ページ目と2ページ目以降でそれぞれ別のテンプレートを指定できます。1ページ目のテンプレートは <span class="docutils literal">indexpage_template</span> プロパティで指定します。未指定の場合は、<span class="docutils literal">'page_index.html'</span> となります。2ページ目以降は <span class="docutils literal">indexpage_template2</span> プロパティで指定し、未指定の場合は、<span class="docutils literal">'page_index.html'</span> となります。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of index template:</div>
 <div class="highlight"><pre><span></span><span class="x">&lt;!DOCTYPE html&gt;</span>
@@ -287,7 +285,7 @@
 
 <span class="x">  &lt;div&gt;</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">article</span> <span class="k">in</span> <span class="nv">articles</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">      &lt;h2&gt;&lt;a href="</span><span class="cp">{{</span><span class="nv">page.path_to</span><span class="o">(</span><span class="nv">article</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;</span><span class="cp">{{</span> <span class="nv">article.title</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;&lt;/h2&gt;</span>
+<span class="x">      &lt;h2&gt;&lt;a href="</span><span class="cp">{{</span><span class="nv">article.path</span><span class="o">(</span><span class="nv">article</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;</span><span class="cp">{{</span> <span class="nv">article.title</span> <span class="cp">}}</span><span class="x">&lt;/a&gt;&lt;/h2&gt;</span>
 <span class="x">      &lt;div&gt;</span><span class="cp">{{</span> <span class="nv">article.abstract</span> <span class="cp">}}</span><span class="x">&lt;/div&gt;</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">  &lt;/div&gt;</span>
@@ -295,17 +293,17 @@
 <span class="x">  &lt;hr&gt;</span>
 <span class="x">  &lt;div&gt;</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">cur_page</span> <span class="p">!</span><span class="o">=</span> <span class="m">1</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">page.path_to</span><span class="o">(</span><span class="nv">page</span><span class="o">,</span> <span class="nv">values</span><span class="o">=</span><span class="nv">group_names</span><span class="o">,</span> <span class="nv">npage</span><span class="o">=</span><span class="nv">cur_page-1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Prev page&lt;/a&gt;</span>
+<span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">page.path</span><span class="o">(</span><span class="nv">values</span><span class="o">=</span><span class="nv">group_names</span><span class="o">,</span> <span class="nv">npage</span><span class="o">=</span><span class="nv">cur_page-1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Prev page&lt;/a&gt;</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nv">is_last</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">page.path_to</span><span class="o">(</span><span class="nv">page</span><span class="o">,</span> <span class="nv">groups</span><span class="o">=</span><span class="nv">group_names</span><span class="o">,</span> <span class="nv">npage</span><span class="o">=</span><span class="nv">cur_page</span><span class="o">+</span><span class="m">1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Next page&lt;/a&gt;</span>
+<span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">page.path</span><span class="o">(</span><span class="nv">values</span><span class="o">=</span><span class="nv">group_names</span><span class="o">,</span> <span class="nv">npage</span><span class="o">=</span><span class="nv">cur_page</span><span class="o">+</span><span class="m">1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Next page&lt;/a&gt;</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">  &lt;/div&gt;</span>
 <span class="x">&lt;/body&gt;</span>
 <span class="x">&lt;/html&gt;</span>
 </pre></div>
 </div>
-<div class="header_target" id="jinja_vars"></div><div class="section" id="id5">
+<div class="header_target" id="jinja_vars"></div><div class="section" id="id4">
 <h2>テンプレート変数</h2>
 <p>Jinjaテンプレート内では、次の変数を使用できます。</p>
 <dl class="simple">
@@ -313,58 +311,12 @@
 <dd><p>アーティクルオブジェクト自身を参照します。</p>
 </dd>
 <dt>page</dt>
-<dd><p>アーティクルを呼び出しているコンテンツオブジェクトを参照します。</p>
-</dd>
-</dl>
-<p><span class="docutils literal">content</span> と <span class="docutils literal">page</span> はどちらもコンテンツオブジェクトです。コンテンツオブジェクトの詳細は、<a href="template.html#content_vars">コンテント変数</a> を参照してください。</p>
-<p>例えば、次のような2つのアーティクル <span class="docutils literal">parent.rst</span> と <span class="docutils literal">child.rst</span> があった場合</p>
-<div class="code-block">
-<div class="code-block-caption">parent.rst:</div>
-<div class="highlight"><pre><span></span><span class="x">This is parent.rst</span>
-
-<span class="x">page: </span><span class="cp">{{</span> <span class="nv">page.name</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">content: </span><span class="cp">{{</span> <span class="nv">content.name</span> <span class="cp">}}</span><span class="x"></span>
-
-<span class="x">---</span>
-
-<span class="cp">{{</span> <span class="nv">page.load</span><span class="o">(</span><span class="s1">'./child.rst'</span><span class="o">)</span><span class="nv">.html</span> <span class="cp">}}</span><span class="x"></span>
-</pre></div>
-</div>
-<div class="code-block">
-<div class="code-block-caption">child.rst:</div>
-<div class="highlight"><pre><span></span><span class="x">This is child.rst</span>
-
-<span class="x">page: </span><span class="cp">{{</span> <span class="nv">page.name</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">content: </span><span class="cp">{{</span> <span class="nv">content.name</span> <span class="cp">}}</span><span class="x"></span>
-</pre></div>
-</div>
-<p><span class="docutils literal">parent.rst</span> をHTMLに変換する際、 <span class="docutils literal">{{ <span class="pre">page.load('./child.rst').html</span> }}</span> で <span class="docutils literal">child.rst</span> が読み込まれます。</p>
-<p>この時、<span class="docutils literal">parent.rst</span> 内では、</p>
-<ul class="simple">
-<li><p><span class="docutils literal">page</span> は <span class="docutils literal">parent.rst</span> オブジェクト</p></li>
-<li><p><span class="docutils literal">content</span> は <span class="docutils literal">parent.rst</span> オブジェクト</p></li>
-</ul>
-<p><span class="docutils literal">child.rst</span> 内では、</p>
-<ul class="simple">
-<li><p><span class="docutils literal">page</span> は <span class="docutils literal">parent.rst</span> オブジェクト</p></li>
-<li><p><span class="docutils literal">content</span> は <span class="docutils literal">child.rst</span> オブジェクト</p></li>
-</ul>
-<p>となります。</p>
-<p>インデックステンプレートでは、<a href="template.html#content_vars">コンテント変数</a> に加え、以下の変数を使用できます。</p>
-<dl class="simple">
-<dt>cur_page</dt>
-<dd><p>ページ番号を指定します。</p>
-</dd>
-<dt>is_last</dt>
-<dd><p>最後のページなら <span class="docutils literal">True</span>、そうでなければ <span class="docutils literal">False</span> となります。</p>
-</dd>
-<dt>articles</dt>
-<dd><p>表示対象のアーティクルのリストを返します。</p>
+<dd><p>アーティクルを呼び出しているコンテントオブジェクトを参照します。</p>
 </dd>
 </dl>
 <div class="header_target" id="template_names"></div></div>
 </div>
-<div class="section" id="id6">
+<div class="section" id="id5">
 <h1>テンプレート名の解決</h1>
 <p>アーティクルに指定されたテンプレート名や、Jinja2の <span class="docutils literal">extends</span> 文や <span class="docutils literal">import</span> 文で、テンプレート名を指定してテンプレートを利用するとき、Miyadaikuでは以下の順にテンプレートを検索します。</p>
 <ol class="arabic simple">

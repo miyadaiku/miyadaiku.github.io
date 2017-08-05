@@ -311,11 +311,11 @@
 <div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">items</span> <span class="o">=</span> <span class="nv">contents.get_contents</span><span class="o">(</span><span class="nv">subdirs</span><span class="o">=[</span><span class="s1">'./myfolder'</span><span class="o">],</span> <span class="nv">base</span><span class="o">=</span><span class="nv">content</span><span class="o">)</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
 </div>
-<p><span class="docutils literal">filtes</span> は、表示するアーティクルの検索条件を指定します。検索する文書プロパティ名をキー、表示対象のプロパティ値のリストを値とする辞書を指定します。</p>
-<p>省略時は、文書プロパティ <span class="docutils literal">draft</span> が <span class="docutils literal">true</span> ではない、すべてのアーティクルを検索します。</p>
+<p><span class="docutils literal">filtes</span> は、コンテンツの検索条件を指定します。検索する文書プロパティ名をキー、表示対象のプロパティ値のリストを値とする辞書を指定します。</p>
+<p>省略時は、文書プロパティ <span class="docutils literal">draft</span> が <span class="docutils literal">false</span> かつ <span class="docutils literal">type</span> が <span class="docutils literal">article</span> のコンテントオブジェクトを検索します。</p>
 <div class="code-block">
 <div class="code-block-caption">カテゴリが 'news' または 'event' のアーティクルを検索</div>
-<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">items</span> <span class="o">=</span> <span class="nv">contents.get_contents</span><span class="o">(</span><span class="nv">filters</span><span class="o">={</span><span class="s1">'category'</span><span class="o">:</span> <span class="o">[</span><span class="s1">'news'</span><span class="o">,</span> <span class="s1">'event'</span><span class="o">]})</span> <span class="cp">%}</span><span class="x"></span>
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">items</span> <span class="o">=</span> <span class="nv">contents.get_contents</span><span class="o">(</span><span class="nv">filters</span><span class="o">={</span><span class="s1">'type'</span><span class="o">:[</span><span class="s1">'artile'</span><span class="o">],</span> <span class="s1">'category'</span><span class="o">:</span> <span class="o">[</span><span class="s1">'news'</span><span class="o">,</span> <span class="s1">'event'</span><span class="o">]})</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
 </div>
 </dd>

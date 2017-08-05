@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="テンプレート - (FIXME-site_title)" />
 
-<meta name="description" content="Miyadaikuは、contents ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに作成します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 テンプレート内では、次の変数を参照できます。 page 作成中のHTMLページのアーティクルオブジェクトを参照します。通常、アーティクルテンプレートでは、"/>
-<meta property="og:description" content="Miyadaikuは、contents ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに作成します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 テンプレート内では、次の変数を参照できます。 page 作成中のHTMLページのアーティクルオブジェクトを参照します。通常、アーティクルテンプレートでは、" />
+<meta name="description" content="Miyadaikuは、contents ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに作成します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 テンプレート変数 テンプレート内では、次の変数を参照できます。 page 処理対象となるアーティクルの"/>
+<meta property="og:description" content="Miyadaikuは、contents ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに作成します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 テンプレート変数 テンプレート内では、次の変数を参照できます。 page 処理対象となるアーティクルの" />
 
 
 
@@ -92,7 +92,7 @@
           
             <a class="dropdown-item" href="template.html">テンプレート</a>
           
-            <a class="dropdown-item" href="objects.html">オブジェクト</a>
+            <a class="dropdown-item" href="objects.html">オブジェクトリファレンス</a>
           
             <a class="dropdown-item" href="themes.html">テーマ</a>
           
@@ -178,12 +178,16 @@
                         <a href="#h_ja_guide_template_2erst_1">アーティクルテンプレート</a>
                       </li>
                     
+                      <li class="header_h2">
+                        <a href="#h_ja_guide_template_2erst_2">テンプレート変数</a>
+                      </li>
+                    
                       <li class="header_h1">
-                        <a href="#h_ja_guide_template_2erst_2">インデックステンプレート</a>
+                        <a href="#h_ja_guide_template_2erst_3">インデックステンプレート</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#jinja_vars">テンプレート変数</a>
+                        <a href="#h_ja_guide_template_2erst_4">テンプレート変数</a>
                       </li>
                     
                       <li class="header_h1">
@@ -197,7 +201,7 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='objects.html' >オブジェクト</a></div>
+                  <a href='objects.html' >オブジェクトリファレンス</a></div>
                 </div>
             
           
@@ -222,13 +226,15 @@
 <div class="section" id="id2">
 <div class="header_target" id="h_ja_guide_template_2erst_1"></div><h1>アーティクルテンプレート</h1>
 <p>アーティクルに適用するテンプレートは、<span class="docutils literal">article_template</span> プロパティで指定します。未指定の場合は、<span class="docutils literal">'page_article.html'</span> となります。</p>
+<div class="section" id="id3">
+<div class="header_target" id="h_ja_guide_template_2erst_2"></div><h2>テンプレート変数</h2>
 <p>テンプレート内では、次の変数を参照できます。</p>
 <dl class="simple">
 <dt>page</dt>
-<dd><p>作成中のHTMLページのアーティクルオブジェクトを参照します。通常、アーティクルテンプレートでは、<span class="docutils literal">page</span> 変数の <span class="docutils literal">html</span> プロパティからHTMLを取得して表示します。</p>
+<dd><p>処理対象となるアーティクルの <a href="objects.html#content_obj">コンテントオブジェクト</a> を参照します。通常、アーティクルテンプレートでは、<span class="docutils literal">page</span> 変数の <span class="docutils literal">html</span> プロパティからHTMLを取得して表示します。</p>
 </dd>
 <dt>contents</dt>
-<dd><p>プロジェクトのコンテンツコレクションを参照します。</p>
+<dd><p>プロジェクトの <a href="objects.html#contents_collection">コンテンツコレクション</a> を参照します。</p>
 </dd>
 </dl>
 <div class="code-block">
@@ -247,17 +253,20 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id3">
-<div class="header_target" id="h_ja_guide_template_2erst_2"></div><h1>インデックステンプレート</h1>
+</div>
+<div class="section" id="id4">
+<div class="header_target" id="h_ja_guide_template_2erst_3"></div><h1>インデックステンプレート</h1>
 <p>アーティクルの一覧を出力するインデックスの場合、生成されるHTMLファイルは複数ページとなる場合があり、1ページ目と2ページ目以降でそれぞれ別のテンプレートを指定できます。</p>
 <p>1ページ目のテンプレートは <span class="docutils literal">indexpage_template</span> プロパティで指定します。未指定の場合は、<span class="docutils literal">'page_index.html'</span> となります。2ページ目以降は <span class="docutils literal">indexpage_template2</span> プロパティで指定し、未指定の場合は、<span class="docutils literal">'page_index.html'</span> となります。</p>
-<p>インデックステンプレートでは、インデックスオブジェクトを 変数 <span class="docutils literal">page</span> で参照できます。</p>
+<div class="section" id="id5">
+<div class="header_target" id="h_ja_guide_template_2erst_4"></div><h2>テンプレート変数</h2>
+<p>テンプレート内では、次の変数を参照できます。</p>
 <dl class="simple">
 <dt>page</dt>
-<dd><p>作成中のHTMLページのインデックスオブジェクトを参照します。</p>
+<dd><p>処理対象となるインデックスの <a href="objects.html#content_obj">コンテントオブジェクト</a> を参照します。</p>
 </dd>
 <dt>contents</dt>
-<dd><p>プロジェクトのコンテンツコレクションを参照します。</p>
+<dd><p>プロジェクトの <a href="objects.html#contents_collection">コンテンツコレクション</a> を参照します。</p>
 </dd>
 <dt>cur_page</dt>
 <dd><p>ページ番号を指定します。</p>
@@ -266,7 +275,7 @@
 <dd><p>最後のページなら <span class="docutils literal">True</span>、そうでなければ <span class="docutils literal">False</span> となります。</p>
 </dd>
 <dt>articles</dt>
-<dd><p>表示対象のアーティクルのリストを参照します。</p>
+<dd><p>インデックスの表示対象となる <a href="objects.html#content_obj">コンテントオブジェクト</a> のリストを参照します。</p>
 </dd>
 </dl>
 <div class="code-block">
@@ -303,20 +312,9 @@
 <span class="x">&lt;/html&gt;</span>
 </pre></div>
 </div>
-<div class="header_target" id="jinja_vars"></div><div class="section" id="id4">
-<h2>テンプレート変数</h2>
-<p>Jinjaテンプレート内では、次の変数を使用できます。</p>
-<dl class="simple">
-<dt>content</dt>
-<dd><p>アーティクルオブジェクト自身を参照します。</p>
-</dd>
-<dt>page</dt>
-<dd><p>アーティクルを呼び出しているコンテントオブジェクトを参照します。</p>
-</dd>
-</dl>
 <div class="header_target" id="template_names"></div></div>
 </div>
-<div class="section" id="id5">
+<div class="section" id="id6">
 <h1>テンプレート名の解決</h1>
 <p>アーティクルに指定されたテンプレート名や、Jinja2の <span class="docutils literal">extends</span> 文や <span class="docutils literal">import</span> 文で、テンプレート名を指定してテンプレートを利用するとき、Miyadaikuでは以下の順にテンプレートを検索します。</p>
 <ol class="arabic simple">

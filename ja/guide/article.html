@@ -504,7 +504,7 @@ tags: タグ1, タグ2
 </div>
 <div class="section" id="content-page">
 <div class="header_target" id="h_ja_guide_article_2erst_14"></div><h1>content と page</h1>
-<p>Miyadaikuは、<span class="docutils literal">contents</span> ディレクトリを走査し、見つかったアーティクル中をJinja2テンプレートに渡し、HTMLを作成します。このアーティクル内にあるJinja2テンプレートでは、アーティクル自身は変数 <span class="docutils literal">content</span> と <span class="docutils literal">page</span> で参照できます。</p>
+<p>Miyadaikuは、<span class="docutils literal">contents</span> ディレクトリを走査し、見つかったアーティクル中をJinja2テンプレートに渡し、HTMLを作成します。この時、アーティクルにあるJinja2テンプレートでは、変数 <span class="docutils literal">content</span> と <span class="docutils literal">page</span> はどちらもHTMLを作成しているアーティクルオブジェクト自身を参照します。</p>
 <p>このアーティクルが、文章中で別のアーティクルを読み込んでいる場合、読み込まれているアーティクル内のJinja2テンプレートでは、読み込み元のアーティクルは変数 <span class="docutils literal">page</span>、読み込まれているアーティクル自身は 変数 <span class="docutils literal">content</span> で参照できます。</p>
 <p>例えば次のような2つのアーティクル <span class="docutils literal">parent.rst</span> と <span class="docutils literal">child.rst</span> がある場合</p>
 <div class="code-block">

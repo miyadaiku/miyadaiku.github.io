@@ -516,7 +516,7 @@ tags: タグ1, タグ2
 
 <span class="x">---</span>
 
-<span class="cp">{{</span> <span class="nv">content.load</span><span class="o">(</span><span class="s1">'./child.rst'</span><span class="o">)</span><span class="nv">.html</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">page.load</span><span class="o">(</span><span class="s1">'./child.rst'</span><span class="o">)</span><span class="nv">.html</span> <span class="cp">}}</span><span class="x"></span>
 </pre></div>
 </div>
 <div class="code-block">
@@ -527,7 +527,7 @@ tags: タグ1, タグ2
 <span class="x">content: </span><span class="cp">{{</span> <span class="nv">content.name</span> <span class="cp">}}</span><span class="x"></span>
 </pre></div>
 </div>
-<p><span class="docutils literal">parent.rst</span> をHTMLに変換する際、 <span class="docutils literal">{{ <span class="pre">content.load('./child.rst').html</span> }}</span> で <span class="docutils literal">child.rst</span> が読み込まれます。</p>
+<p><span class="docutils literal">parent.rst</span> をHTMLに変換する際、 <span class="docutils literal">{{ <span class="pre">page.load('./child.rst').html</span> }}</span> で <span class="docutils literal">child.rst</span> が読み込まれます。</p>
 <p>この時、<span class="docutils literal">parent.rst</span> 内では、</p>
 <ul class="simple">
 <li><p><span class="docutils literal">page</span> は <span class="docutils literal">parent.rst</span> オブジェクト</p></li>

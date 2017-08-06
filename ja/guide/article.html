@@ -32,7 +32,7 @@
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="アーティクル - Miyadaiku" />
+<meta property="og:title" content="アーティクル - (FIXME-site_title)" />
 
 <meta name="description" content="contents ディレクトリの reStructuredTextファイル/Markdownファイル/HTMLファイルは、アーティクルオブジェクト として読み込まれます。アーティクルオブジェクトはJinja2テンプレートを適用し、outputs ディレクトリにHTMLファイルを出力します。 アーティクルのプロパティ アーティクルオブジェクトは、標準プロパティ に加え、以下のプロパティを指定できます。 abstract HTMLに変換したアーティクルを、 abstract_length プロパティで指定した文字数分取得します。"/>
 <meta property="og:description" content="contents ディレクトリの reStructuredTextファイル/Markdownファイル/HTMLファイルは、アーティクルオブジェクト として読み込まれます。アーティクルオブジェクトはJinja2テンプレートを適用し、outputs ディレクトリにHTMLファイルを出力します。 アーティクルのプロパティ アーティクルオブジェクトは、標準プロパティ に加え、以下のプロパティを指定できます。 abstract HTMLに変換したアーティクルを、 abstract_length プロパティで指定した文字数分取得します。" />
@@ -365,7 +365,7 @@ This is a miyadaiku article in reST.
 <div class="highlight"><pre><span></span><span class="gh">Link test</span>
 <span class="gh">-------------</span>
 
-Link to <span class="na">:jinja:</span><span class="nv">`{{ page.link_to("./hello.rst") }}`</span>.
+Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./hello.rst") }}`</span>.
 </pre></div>
 </div>
 </div>
@@ -397,7 +397,7 @@ Body of section I.
 <span class="gh">Section II</span>
 <span class="gh">------------------</span>
 
-Link to <span class="na">:jinja:</span><span class="nv">`page.link_to(content, fragment='id_of_this_section1')`</span>.
+Link to <span class="na">:jinja:</span><span class="nv">`content.link_to(content, fragment='id_of_this_section1')`</span>.
 </pre></div>
 </div>
 </div>
@@ -432,7 +432,7 @@ This is a Miyadaiku article in Markdown.
 <div class="code-block-caption">Sample of Jinja role in Markdown:</div>
 <div class="highlight"><pre><span></span><span class="gh">#</span> Link test
 
-Link to :jinja:`{{ page.link_to("./hello.rst") }}`.
+Link to :jinja:`{{ content.link_to("./hello.rst") }}`.
 </pre></div>
 </div>
 </div>
@@ -449,7 +449,7 @@ Body of section I.
 
 <span class="gh">#</span> Section II
 
-Link to :jinja:`page.link_to(content, fragment='id_of_this_section1')`.
+Link to :jinja:`content.link_to(content, fragment='id_of_this_section1')`.
 </pre></div>
 </div>
 </div>
@@ -482,7 +482,7 @@ tags: タグ1, タグ2
 </dl>
 <div class="code-block">
 <div class="code-block-caption">Sample of Jinja template in HTML:</div>
-<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Link to <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">'{{ page.link_to("./hello.rst") }}'</span><span class="p">&gt;</span>hello<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Link to <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">'{{ content.link_to("./hello.rst") }}'</span><span class="p">&gt;</span>hello<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <div class="header_target" id="jinja_vars"></div></div>

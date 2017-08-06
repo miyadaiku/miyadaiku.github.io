@@ -32,7 +32,7 @@
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="オブジェクトリファレンス - Miyadaiku" />
+<meta property="og:title" content="オブジェクトリファレンス - (FIXME-site_title)" />
 
 <meta name="description" content="コンテントオブジェクト Miyadaikuで、contents ディレクトリや files ディレクトリのファイルは、コンテントオブジェクト として読み込まれます。アーティクルやインデックスなどのファイルだけでなく、CSSや画像ファイルなどのMiyadaikuで処理されないファイルも、コンテントオブジェクトとして参照できます。 コンテントオブジェクトは、アーティクルのプロパティ や インデックスのプロパティ に加え、次のメソッドを使用できます。 load(target) target で指定したパスのコンテントオブジェクトを取得します。"/>
 <meta property="og:description" content="コンテントオブジェクト Miyadaikuで、contents ディレクトリや files ディレクトリのファイルは、コンテントオブジェクト として読み込まれます。アーティクルやインデックスなどのファイルだけでなく、CSSや画像ファイルなどのMiyadaikuで処理されないファイルも、コンテントオブジェクトとして参照できます。 コンテントオブジェクトは、アーティクルのプロパティ や インデックスのプロパティ に加え、次のメソッドを使用できます。 load(target) target で指定したパスのコンテントオブジェクトを取得します。" />
@@ -277,7 +277,7 @@
 <p><span class="docutils literal">npage</span> は、インデックスページの、リンク先ページ番号を指定します。インデックスページでのみ指定できます。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of content.link_to() method</div>
-<div class="highlight"><pre><span></span><span class="cp">{{</span> <span class="nv">page.link_to</span><span class="o">(</span><span class="s2">"../page1.rst"</span><span class="o">,</span> <span class="nv">fragment</span><span class="o">=</span><span class="s2">"id_in_page"</span><span class="o">,</span>
+<div class="highlight"><pre><span></span><span class="cp">{{</span> <span class="nv">content.link_to</span><span class="o">(</span><span class="s2">"../page1.rst"</span><span class="o">,</span> <span class="nv">fragment</span><span class="o">=</span><span class="s2">"id_in_page"</span><span class="o">,</span>
                 <span class="nv">attrs</span><span class="o">={</span><span class="s2">"class":"class_a"</span><span class="o">,</span> <span class="s2">"style":"border:solid;"</span><span class="o">})</span> <span class="cp">}}</span><span class="x"></span>
 </pre></div>
 </div>

@@ -32,7 +32,7 @@
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="サイトの作成 - Miyadaiku" />
+<meta property="og:title" content="サイトの作成 - (FIXME-site_title)" />
 
 <meta name="description" content="このチュートリアルで作成するソースコードは、 https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc からダウンロードできます。 プロジェクトの作成 はじめに、次のコマンドで first_doc ディレクトリに miyadaiku のプロジェクトを作成します $ miyadaiku-start ./first_doc このコマンドで、次のようなディレクトリが作成されます。 first_doc/ ├─── config.yml プロジェクト設定を指定するYAMLファイル │ ├─── contents/ reStructuredText/Markdownなどの文書を格納するディレクトリ │ ├─── files/ 画像・バイナリファイルなどを格納するディレクトリ │ └─── templates/ jinja2テンプレートファイルを格納するディレクトリ"/>
 <meta property="og:description" content="このチュートリアルで作成するソースコードは、 https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc からダウンロードできます。 プロジェクトの作成 はじめに、次のコマンドで first_doc ディレクトリに miyadaiku のプロジェクトを作成します $ miyadaiku-start ./first_doc このコマンドで、次のようなディレクトリが作成されます。 first_doc/ ├─── config.yml プロジェクト設定を指定するYAMLファイル │ ├─── contents/ reStructuredText/Markdownなどの文書を格納するディレクトリ │ ├─── files/ 画像・バイナリファイルなどを格納するディレクトリ │ └─── templates/ jinja2テンプレートファイルを格納するディレクトリ" />
@@ -224,7 +224,7 @@ This is my first miyadaiku article.
 
 This is a link page.
 
-Link to <span class="na">:jinja:</span><span class="nv">`{{ page.link_to("./hello.rst") }}`</span>.
+Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./hello.rst") }}`</span>.
 </pre></div>
 </div>
 <p>再び、</p>
@@ -234,12 +234,8 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ page.link_to("./hell
 </div>
 <p>でサイトを構築すると、あらたに <span class="docutils literal">first_doc/output/link.html</span> が作成されます。</p>
 <p><span class="docutils literal">:jinja:</span> ロールで記述した内容は、そのまま <span class="docutils literal">Jinja2</span> のテンプレートとして処理され、HTMLに変換されます。</p>
-<p>ここでは、<span class="docutils literal">page.link_to(ページ名)</span> メソッドを使用して、他のページへのリンクを作成します。リンクのテキストは、リンク先ページのタイトルを使用します。</p>
-<p>変数 <span class="docutils literal">page</span> は、処理中のコンテントオブジェクトを参照します。<span class="docutils literal">link_to()</span> メソッドの他にも、</p>
-<blockquote>
-<p><a href="../guide/template.html#content_vars">テンプレートのコンテンツ変数</a></p>
-</blockquote>
-<p>のメソッドやプロパティを使用できます。</p>
+<p>ここでは、<span class="docutils literal">content.link_to(ページ名)</span> メソッドを使用して、他のページへのリンクを作成します。リンクのテキストは、リンク先ページのタイトルを使用します。</p>
+<p>変数 <span class="docutils literal">page</span> は、処理中のコンテントオブジェクトを参照します。<span class="docutils literal">link_to()</span> メソッドの他にも、<a href="../guide/objects.html#content_obj">コンテントオブジェクト</a> のメソッドやプロパティを使用できます。</p>
 <div class="header_target" id="template"></div></div>
 <div class="section" id="id6">
 <h1>テンプレートのカスタマイズ</h1>

@@ -479,11 +479,7 @@ tags: タグ1, タグ2
 </div>
 <div class="section" id="id11">
 <div class="header_target" id="h_ja_guide_article_2erst_13"></div><h2>Jinja2テンプレート</h2>
-<dl class="simple">
-<dt>HTMLファイルは、Jinja2テンプレートエンジンでHTMLに変換されます。HTMLファイル内では、Jinja2タグを使って</dt>
-<dd><p><a href="article.html#jinja_vars">テンプレート変数</a> を参照できます。</p>
-</dd>
-</dl>
+<p>HTMLファイルは、Jinja2テンプレートエンジンでHTMLに変換されます。HTMLファイル内では、Jinja2タグを使って <a href="article.html#jinja_vars">テンプレート変数</a> を参照できます。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of Jinja template in HTML:</div>
 <div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Link to <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">'{{ content.link_to("./hello.rst") }}'</span><span class="p">&gt;</span>hello<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -493,7 +489,7 @@ tags: タグ1, タグ2
 </div>
 <div class="section" id="id12">
 <h1>テンプレート変数</h1>
-<p>アーティクルのJinjaテンプレートでは、次の変数を使用できます。</p>
+<p>reStructuredText/Markdown/HTMLのいずれのアーティクルでも、内部に記述するJinjaテンプレートでは、次の変数を使用できます。</p>
 <dl class="simple">
 <dt>content</dt>
 <dd><p>現在のアーティクルの <a href="objects.html#content_obj">コンテントオブジェクト</a> を参照します。</p>
@@ -546,7 +542,7 @@ tags: タグ1, タグ2
 <div class="header_target" id="import_templ"></div></div>
 <div class="section" id="id13">
 <h1>インポート済みテンプレート</h1>
-<p><a href="property.html#prop_imports">importsプロパティ</a> に指定したJinja2テンプレートは、自動的に <a class="reference external" href="http://jinja.pocoo.org/docs/2.9/templates/#import">import</a> されます。モジュール名は、パッケージ名の拡張子を除いたファイル名となります。</p>
+<p>アーティクルの <a href="property.html#prop_imports">importsプロパティ</a> に指定したJinja2テンプレートは、自動的に <a class="reference external" href="http://jinja.pocoo.org/docs/2.9/templates/#import">import</a> され、天レートに記述されたマクロなどを使用できます。テンプレートのモジュール名は、テンプレートの名の拡張子を除いたファイル名となります。</p>
 <div class="code-block">
 <div class="code-block-caption">Using Jinja2 macros:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>

@@ -152,47 +152,47 @@
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_ja_guide_article_2erst_3">jinjaディレクティブ</a>
+                        <a href="#jinjadirective">jinjaディレクティブ</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_ja_guide_article_2erst_4">jinjaロール</a>
+                        <a href="#h_ja_guide_article_2erst_3">jinjaロール</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_ja_guide_article_2erst_5">code-blockディレクティブ</a>
+                        <a href="#h_ja_guide_article_2erst_4">code-blockディレクティブ</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_ja_guide_article_2erst_6">targetディレクティブ</a>
+                        <a href="#targetdirective">targetディレクティブ</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_guide_article_2erst_7">Markdown</a>
+                        <a href="#h_ja_guide_article_2erst_5">Markdown</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_ja_guide_article_2erst_8">プロパティ</a>
+                        <a href="#h_ja_guide_article_2erst_6">プロパティ</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_ja_guide_article_2erst_9">Jinja2テンプレート</a>
+                        <a href="#h_ja_guide_article_2erst_7">Jinja2テンプレート</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_ja_guide_article_2erst_10">target</a>
+                        <a href="#h_ja_guide_article_2erst_8">target</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_guide_article_2erst_11">HTML</a>
+                        <a href="#h_ja_guide_article_2erst_9">HTML</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_ja_guide_article_2erst_12">プロパティ</a>
+                        <a href="#h_ja_guide_article_2erst_10">プロパティ</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_ja_guide_article_2erst_13">Jinja2テンプレート</a>
+                        <a href="#h_ja_guide_article_2erst_11">Jinja2テンプレート</a>
                       </li>
                     
                       <li class="header_h1">
@@ -200,7 +200,7 @@
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_guide_article_2erst_14">content と page</a>
+                        <a href="#h_ja_guide_article_2erst_12">content と page</a>
                       </li>
                     
                       <li class="header_h1">
@@ -341,9 +341,9 @@ This is a miyadaiku article in reST.
 </div>
 <p>この例では、文書のプロパティとして <span class="docutils literal">date</span>、<span class="docutils literal">title</span>、<span class="docutils literal">category</span>、<span class="docutils literal">tags</span> を指定しています。</p>
 <p>プロパティとして、任意の項目を指定できます。プロパティ設定については、<a href="#propsofarticle">アーティクルのプロパティ</a> を参照してください。</p>
-</div>
+<div class="header_target" id="jinjadirective"></div></div>
 <div class="section" id="jinja">
-<div class="header_target" id="h_ja_guide_article_2erst_3"></div><h2>jinjaディレクティブ</h2>
+<h2>jinjaディレクティブ</h2>
 <p><span class="docutils literal">jinja</span> ディレクティブに記述した内容は、Jinja2テンプレートエンジンによってHTMLに変換されます。テンプレートでは、 <a href="article.html#jinja_vars">テンプレート変数</a> を参照できます。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of Jinja directive in reST:</div>
@@ -362,7 +362,7 @@ This is a miyadaiku article in reST.
 </div>
 </div>
 <div class="section" id="id6">
-<div class="header_target" id="h_ja_guide_article_2erst_4"></div><h2>jinjaロール</h2>
+<div class="header_target" id="h_ja_guide_article_2erst_3"></div><h2>jinjaロール</h2>
 <p><span class="docutils literal">:jinja:</span> ロールで指定した文字列は、Jinja2テンプレートエンジンによってHTMLに変換されます。テンプレートでは、 <a href="article.html#jinja_vars">テンプレート変数</a> を参照できます。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of Jinja role in reST:</div>
@@ -374,7 +374,7 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 </div>
 </div>
 <div class="section" id="code-block">
-<div class="header_target" id="h_ja_guide_article_2erst_5"></div><h2>code-blockディレクティブ</h2>
+<div class="header_target" id="h_ja_guide_article_2erst_4"></div><h2>code-blockディレクティブ</h2>
 <p>プログラムのソースコードなどは、<span class="docutils literal"><span class="pre">code-block</span></span> ディレクティブで記述します。<span class="docutils literal">.. <span class="pre">code-block::</span> lang</span> のように言語を指定すると、<a class="reference external" href="http://pygments.org/">Pygments</a> による構文ハイライトが行われます。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of code-block directive:</div>
@@ -385,9 +385,9 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
       pass
 </pre></div>
 </div>
-</div>
+<div class="header_target" id="targetdirective"></div></div>
 <div class="section" id="target">
-<div class="header_target" id="h_ja_guide_article_2erst_6"></div><h2>targetディレクティブ</h2>
+<h2>targetディレクティブ</h2>
 <p>HTMLに <span class="docutils literal">&lt;div&gt;</span> 要素を埋め込み、リンクのターゲットとして指定できるようにします。<span class="docutils literal">&lt;div&gt;</span> 要素の <span class="docutils literal">id</span> として、ディレクティブの引数を指定します。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of target role:</div>
@@ -407,12 +407,12 @@ Link to <span class="na">:jinja:</span><span class="nv">`content.link_to(content
 </div>
 </div>
 <div class="section" id="markdown">
-<div class="header_target" id="h_ja_guide_article_2erst_7"></div><h1>Markdown</h1>
+<div class="header_target" id="h_ja_guide_article_2erst_5"></div><h1>Markdown</h1>
 <p>拡張子が <span class="docutils literal">.md</span> のファイルは、 <a class="reference external" href="https://pypi.python.org/pypi/Markdown">Markdownモジュール</a> でHTMLに変換されます。</p>
 <p>デフォルトでは、Markdownモジュールの <a class="reference external" href="http://pythonhosted.org/Markdown/extensions/extra.html">Extra 拡張</a> が有効になっています。</p>
 <p>また、Miyadaikuは、Markdownモジュールを独自に拡張しており、文書プロパティの指定・Jinja2テンプレートの埋め込みなどを行えます。</p>
 <div class="section" id="id8">
-<div class="header_target" id="h_ja_guide_article_2erst_8"></div><h2>プロパティ</h2>
+<div class="header_target" id="h_ja_guide_article_2erst_6"></div><h2>プロパティ</h2>
 <p>文書ファイルの先頭に、プロパティ名とプロパティ値を指定できます。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of document properties in Markdown:</div>
@@ -430,7 +430,7 @@ This is a Miyadaiku article in Markdown.
 <p>プロパティとして、任意の項目を指定できます。プロパティ設定については、<a href="#propsofarticle">アーティクルのプロパティ</a> を参照してください。</p>
 </div>
 <div class="section" id="jinja2">
-<div class="header_target" id="h_ja_guide_article_2erst_9"></div><h2>Jinja2テンプレート</h2>
+<div class="header_target" id="h_ja_guide_article_2erst_7"></div><h2>Jinja2テンプレート</h2>
 <p>Markdownでも、reStructuredTextと同様、<em>:jinja:` Jinja2タグ `</em> の形式で、Jinja2テンプレートを指定できます。テンプレートでは、 <a href="article.html#jinja_vars">テンプレート変数</a> を参照できます。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of Jinja role in Markdown:</div>
@@ -441,7 +441,7 @@ Link to :jinja:`{{ content.link_to("./hello.rst") }}`.
 </div>
 </div>
 <div class="section" id="id9">
-<div class="header_target" id="h_ja_guide_article_2erst_10"></div><h2>target</h2>
+<div class="header_target" id="h_ja_guide_article_2erst_8"></div><h2>target</h2>
 <p><em>:target:`id_of_div`</em> の形式で記述し、HTMLに <span class="docutils literal">&lt;div&gt;</span> 要素を埋め込み、リンクのターゲットとして指定できるようにします。<span class="docutils literal">&lt;div&gt;</span> 要素の <span class="docutils literal">id</span> として、<span class="docutils literal">id_of_div</span> を指定します。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of target :</div>
@@ -459,10 +459,10 @@ Link to :jinja:`content.link_to(content, fragment='id_of_this_section1')`.
 </div>
 </div>
 <div class="section" id="html">
-<div class="header_target" id="h_ja_guide_article_2erst_11"></div><h1>HTML</h1>
+<div class="header_target" id="h_ja_guide_article_2erst_9"></div><h1>HTML</h1>
 <p>拡張子が <span class="docutils literal">.html</span> のファイルは、文書の先頭に文書プロパティを指定したHTMLファイルとして読み込み、Jinja2テンプレートエンジンでHTMLとして出力します。</p>
 <div class="section" id="id10">
-<div class="header_target" id="h_ja_guide_article_2erst_12"></div><h2>プロパティ</h2>
+<div class="header_target" id="h_ja_guide_article_2erst_10"></div><h2>プロパティ</h2>
 <p>文書ファイルの先頭に、プロパティ名とプロパティ値を指定できます。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of document properties in HTML:</div>
@@ -478,7 +478,7 @@ tags: タグ1, タグ2
 <p>プロパティとして、任意の項目を指定できます。プロパティ設定については、<a href="#propsofarticle">アーティクルのプロパティ</a> を参照してください。</p>
 </div>
 <div class="section" id="id11">
-<div class="header_target" id="h_ja_guide_article_2erst_13"></div><h2>Jinja2テンプレート</h2>
+<div class="header_target" id="h_ja_guide_article_2erst_11"></div><h2>Jinja2テンプレート</h2>
 <p>HTMLファイルは、Jinja2テンプレートエンジンでHTMLに変換されます。HTMLファイル内では、Jinja2タグを使って <a href="article.html#jinja_vars">テンプレート変数</a> を参照できます。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of Jinja template in HTML:</div>
@@ -503,7 +503,7 @@ tags: タグ1, タグ2
 </dl>
 </div>
 <div class="section" id="content-page">
-<div class="header_target" id="h_ja_guide_article_2erst_14"></div><h1>content と page</h1>
+<div class="header_target" id="h_ja_guide_article_2erst_12"></div><h1>content と page</h1>
 <p>Miyadaikuは、<span class="docutils literal">contents</span> ディレクトリを走査し、見つかったアーティクル中をJinja2テンプレートに渡し、HTMLを作成します。この時、アーティクルにあるJinja2テンプレートでは、変数 <span class="docutils literal">content</span> と <span class="docutils literal">page</span> はどちらもHTMLを作成しているアーティクルオブジェクト自身を参照します。</p>
 <p>このアーティクルが、文章中で別のアーティクルを読み込んでいる場合、読み込まれているアーティクル内のJinja2テンプレートでは、読み込み元のアーティクルは変数 <span class="docutils literal">page</span>、読み込まれているアーティクル自身は 変数 <span class="docutils literal">content</span> で参照できます。</p>
 <p>例えば次のような2つのアーティクル <span class="docutils literal">parent.rst</span> と <span class="docutils literal">child.rst</span> がある場合</p>

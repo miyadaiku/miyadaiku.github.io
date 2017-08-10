@@ -28,6 +28,17 @@
   <!-- include font awesome -->
   <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
   
+  <meta property="og:url" content="https://miyadaiku.github.io/ja/guide/config.html" />
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+
+<meta property="og:title" content="コンフィグ - Miyadaiku" />
+
+<meta name="description" content="コンフィグファイルは、Miyadaikuプロジェクト全体の設定や、文書プロパティのデフォルト値の指定する YAMLファイルです。 アーティクルやインデックスなどのプロパティのデフォルト値は、ルートディレクトリの config.yml ファイルで指定します。 また、contents ディレクトリ内のサブディレクトリにYAMLファイルを作成し、ディレクトリ別のデフォルト値を指定できます。contents ディレクトリ内の、以下の条件を満たすファイルは、コンフィグファイルとして読み込まれます。 拡張子が .yml である"/>
+<meta property="og:description" content="コンフィグファイルは、Miyadaikuプロジェクト全体の設定や、文書プロパティのデフォルト値の指定する YAMLファイルです。 アーティクルやインデックスなどのプロパティのデフォルト値は、ルートディレクトリの config.yml ファイルで指定します。 また、contents ディレクトリ内のサブディレクトリにYAMLファイルを作成し、ディレクトリ別のデフォルト値を指定できます。contents ディレクトリ内の、以下の条件を満たすファイルは、コンフィグファイルとして読み込まれます。 拡張子が .yml である" />
+
+
+
   <link rel="stylesheet" href="../../static/css/miyadaiku-docs.css">
 
 
@@ -67,7 +78,7 @@
           
             <a class="dropdown-item" href="project.html">Miyadaikuプロジェクト</a>
           
-            <a class="dropdown-item" href="config.html">コンフィグ</a>
+            <a class="dropdown-item" href="property.html">プロパティ</a>
           
             <a class="dropdown-item" href="article.html">アーティクル</a>
           
@@ -75,9 +86,13 @@
           
             <a class="dropdown-item" href="index.html">インデックス</a>
           
+            <a class="dropdown-item" href="config.html">コンフィグ</a>
+          
             <a class="dropdown-item" href="feed.html">フィード</a>
           
             <a class="dropdown-item" href="template.html">テンプレート</a>
+          
+            <a class="dropdown-item" href="objects.html">オブジェクトリファレンス</a>
           
             <a class="dropdown-item" href="themes.html">テーマ</a>
           
@@ -111,13 +126,9 @@
             
           
             
-                <div class="current article-block">
+                <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                    <a href='config.html' >コンフィグ</a></div>
-
-                  <ul>
-                    
-                  </ul>
+                  <a href='property.html' >プロパティ</a></div>
                 </div>
             
           
@@ -143,6 +154,17 @@
             
           
             
+                <div class="current article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                    <a href='config.html' >コンフィグ</a></div>
+
+                  <ul>
+                    
+                  </ul>
+                </div>
+            
+          
+            
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
                   <a href='feed.html' >フィード</a></div>
@@ -159,6 +181,13 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='objects.html' >オブジェクトリファレンス</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
                   <a href='themes.html' >テーマ</a></div>
                 </div>
             
@@ -167,72 +196,34 @@
     </div>
 
     <div class='col-md-9 article-body'>
-      <a id='page_title' class='header_anchor'></a>
+      <a id='page_title' class='header_target'></a>
       <h1>
         コンフィグ
       </h1>
 
       <div class='article-content'>
-        <p>アーティクルやインデックスなどのプロパティのデフォルト値は、ルートディレクトリの <span class="docutils literal">config.yml</span> ファイルで指定します。</p>
-<p>また、<span class="docutils literal">contents</span> ディレクトリ内のサブディレクトリにYAMLファイルを作成し、ディレクトリ別のデフォルト値を指定できます。</p>
+        <p>コンフィグファイルは、Miyadaikuプロジェクト全体の設定や、文書プロパティのデフォルト値の指定する YAMLファイルです。</p>
+<p>アーティクルやインデックスなどのプロパティのデフォルト値は、ルートディレクトリの <span class="docutils literal">config.yml</span> ファイルで指定します。</p>
+<p>また、<span class="docutils literal">contents</span> ディレクトリ内のサブディレクトリにYAMLファイルを作成し、ディレクトリ別のデフォルト値を指定できます。<span class="docutils literal">contents</span> ディレクトリ内の、以下の条件を満たすファイルは、コンフィグファイルとして読み込まれます。</p>
+<ul class="simple">
+<li><p>拡張子が <span class="docutils literal">.yml</span> である</p></li>
+<li><p><span class="docutils literal">type</span> キーの値が <span class="docutils literal">config</span> と指定されている</p></li>
+</ul>
+<p>例として、<span class="docutils literal">/dir1/config_dir1.yml</span> と <span class="docutils literal">/dir1/dir2/config_dir2.yml</span> の2つのコンフィグファイルを作成します。</p>
 <div class="code-block">
-<div class="code-block-caption">contents/dir1/config.yml</div>
+<div class="code-block-caption">contents/dir1/config_dir1.yml</div>
 <div class="highlight"><pre><span></span>type: config   # YAMLファイルのタイプを config に指定
 lang: ja       # lang のデフォルト値を ja に設定
 </pre></div>
 </div>
 <div class="code-block">
-<div class="code-block-caption">contents/dir1/dir2/config.yml</div>
+<div class="code-block-caption">contents/dir1/dir2/config_dir2.yml</div>
 <div class="highlight"><pre><span></span>type: config   # YAMLファイルのタイプを config に指定
 category: tutorial # categoryのデフォルト値を tutorial に設定
 </pre></div>
 </div>
-<p>上のように2つの <span class="docutils literal">config</span> ファイルを指定した場合、 <span class="docutils literal">dir1</span> と <span class="docutils literal">dir2</span> ディレクトリ の <span class="docutils literal">lang</span> プロパティのデフォルト値は <span class="docutils literal">ja</span> となります。また、<span class="docutils literal">dir2</span> ディレクトリの <span class="docutils literal">category</span> プロパティのデフォルト値は <span class="docutils literal">tutorial</span> となります。</p>
-<a class="header_anchor" id="standardprofs"></a><div class="section" id="id2">
-<div class="header_target" id="h_ja_guide_config_2erst_1"></div><h1>標準プロパティ</h1>
-<dl>
-<dt>abstract_length</dt>
-<dd><p>インデックスファイルやRSSの摘要として使用するテキストの長さを、文字数で指定します。長さとして <span class="docutils literal">0</span> を指定すると、本文すべてを摘要とします。未指定の場合は、<span class="docutils literal">500</span> 文字となります。</p>
-</dd>
-<dt>cagegory</dt>
-<dd><p>コンテンツのカテゴリを指定します。</p>
-</dd>
-<dt>charset</dt>
-<dd><p>生成されるHTMLの <span class="docutils literal">charset</span> を指定します。未指定の場合は <span class="docutils literal"><span class="pre">'utf-8'</span></span> となります。</p>
-</dd>
-<dt>date</dt>
-<dd><p>コンテンツの作成日を指定します。</p>
-<p>e.g.</p>
-<ul class="simple">
-<li><p><span class="docutils literal">2017/01/01</span></p></li>
-<li><p><span class="docutils literal">2017/01/01 12:00:00</span></p></li>
-<li><p><span class="docutils literal">2017/01/01 12:00:00 +0900</span></p></li>
-</ul>
-</dd>
-<dt>lang</dt>
-<dd><p>生成されるHTMLの <span class="docutils literal">lang</span> を指定します。未指定の場合は <span class="docutils literal">'en'</span>  となります。</p>
-</dd>
-<dt>site_title</dt>
-<dd><p>値: <span class="docutils literal"><span class="pre">'(FIXME-site_title)'</span></span></p>
-<p>サイトのタイトルを指定します。未指定の場合は <span class="docutils literal"><span class="pre">'(FIXME-site_title)</span></span>  となります。</p>
-</dd>
-<dt>site_url</dt>
-<dd><p>値: <span class="docutils literal"><span class="pre">'http://localhost:8888'</span></span></p>
-<p>コンテンツの親となるURLを指定します。 e.g. <span class="docutils literal"><span class="pre">https://www.example.com/my-site</span></span></p>
-<p>未指定の場合は <span class="docutils literal"><span class="pre">'http://localhost:8888'</span></span>  となります。</p>
-</dd>
-<dt>tags</dt>
-<dd><p>コンテンツのタグを、<span class="docutils literal">,</span> で区切って指定します。</p>
-</dd>
-<dt>timezone</dt>
-<dd><p>コンテンツの作成日などを表示するタイムゾーンを指定します。e.g. <span class="docutils literal">'Europe/Warsaw'</span>, <span class="docutils literal">'Asia/Tokyo'</span></p>
-<p>未指定の場合は、プラットフォームから取得したタイムゾーンとなります。</p>
-</dd>
-<dt>title:</dt>
-<dd><p>コンテンツのタイトルを指定します。</p>
-</dd>
-</dl>
-</div>
+<p><span class="docutils literal">/dir1</span> 以下のディレクトリでは、アーティクルの <span class="docutils literal">lang</span> プロパティは <span class="docutils literal">ja</span> がデフォルト値となります。</p>
+<p>また、<span class="docutils literal">/dir1/dir2</span> 以下のディレクトリでは、アーティクルの <span class="docutils literal">category</span> プロパティは <span class="docutils literal">tutorial</span> がデフォルト値となります。</p>
       </div>
     </div>
   </div>

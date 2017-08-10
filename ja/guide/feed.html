@@ -28,6 +28,17 @@
   <!-- include font awesome -->
   <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
   
+  <meta property="og:url" content="https://miyadaiku.github.io/ja/guide/feed.html" />
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+
+<meta property="og:title" content="フィード - Miyadaiku" />
+
+<meta name="description" content="Atom/RSSフィードは、フィードオブジェクト で作成します。フィードオブジェクトは contents ディレクトリのYAMLファイルで定義します。 contents/atom.yml type: feed # YAMLファイルのタイプを feed に指定 feedtype: atom # Atomフィードを作成 feed_num_articles: 10 フィードオブジェクトには、標準プロパティ に加え、以下のプロパティを設定できます。 type YAMLファイルのタイプを指定します。インデックスページの場合は feed を指定します。"/>
+<meta property="og:description" content="Atom/RSSフィードは、フィードオブジェクト で作成します。フィードオブジェクトは contents ディレクトリのYAMLファイルで定義します。 contents/atom.yml type: feed # YAMLファイルのタイプを feed に指定 feedtype: atom # Atomフィードを作成 feed_num_articles: 10 フィードオブジェクトには、標準プロパティ に加え、以下のプロパティを設定できます。 type YAMLファイルのタイプを指定します。インデックスページの場合は feed を指定します。" />
+
+
+
   <link rel="stylesheet" href="../../static/css/miyadaiku-docs.css">
 
 
@@ -67,7 +78,7 @@
           
             <a class="dropdown-item" href="project.html">Miyadaikuプロジェクト</a>
           
-            <a class="dropdown-item" href="config.html">コンフィグ</a>
+            <a class="dropdown-item" href="property.html">プロパティ</a>
           
             <a class="dropdown-item" href="article.html">アーティクル</a>
           
@@ -75,9 +86,13 @@
           
             <a class="dropdown-item" href="index.html">インデックス</a>
           
+            <a class="dropdown-item" href="config.html">コンフィグ</a>
+          
             <a class="dropdown-item" href="feed.html">フィード</a>
           
             <a class="dropdown-item" href="template.html">テンプレート</a>
+          
+            <a class="dropdown-item" href="objects.html">オブジェクトリファレンス</a>
           
             <a class="dropdown-item" href="themes.html">テーマ</a>
           
@@ -113,7 +128,7 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='config.html' >コンフィグ</a></div>
+                  <a href='property.html' >プロパティ</a></div>
                 </div>
             
           
@@ -139,6 +154,13 @@
             
           
             
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='config.html' >コンフィグ</a></div>
+                </div>
+            
+          
+            
                 <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
                     <a href='feed.html' >フィード</a></div>
@@ -159,6 +181,13 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='objects.html' >オブジェクトリファレンス</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
                   <a href='themes.html' >テーマ</a></div>
                 </div>
             
@@ -167,7 +196,7 @@
     </div>
 
     <div class='col-md-9 article-body'>
-      <a id='page_title' class='header_anchor'></a>
+      <a id='page_title' class='header_target'></a>
       <h1>
         フィード
       </h1>
@@ -181,7 +210,7 @@
 <span class="l l-Scalar l-Scalar-Plain">feed_num_articles</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
 </pre></div>
 </div>
-<p>フィードオブジェクトには、<a href="config.html#standardprofs">標準プロパティ</a> に加え、以下のプロパティを設定できます。</p>
+<p>フィードオブジェクトには、<a href="property.html#standardprofs">標準プロパティ</a> に加え、以下のプロパティを設定できます。</p>
 <dl>
 <dt>type</dt>
 <dd><p>YAMLファイルのタイプを指定します。インデックスページの場合は <span class="docutils literal">feed</span> を指定します。</p>

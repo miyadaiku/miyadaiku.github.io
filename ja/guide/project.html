@@ -28,6 +28,17 @@
   <!-- include font awesome -->
   <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
   
+  <meta property="og:url" content="https://miyadaiku.github.io/ja/guide/project.html" />
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+
+<meta property="og:title" content="Miyadaikuプロジェクト - Miyadaiku" />
+
+<meta name="description" content="Miyadaikuのドキュメントプロジェクトは、miyadaiku-start コマンドで作成します。 Creating new miyadaiku project: $ miyadaiku-start new-project $ ls new-project/ config.yml contents files templates ディレクトリ構成 ドキュメントプロジェクトは、次のようなファイルから構成されます。 ドキュメントプロジェクト/ │ ├─── config.yml プロジェクト設定を指定するYAMLファイル │ ├─── contents/ reStructuredText/Markdownなどの文書を格納するディレクトリ │ ├─── files/ 画像・バイナリファイルなどを格納するディレクトリ"/>
+<meta property="og:description" content="Miyadaikuのドキュメントプロジェクトは、miyadaiku-start コマンドで作成します。 Creating new miyadaiku project: $ miyadaiku-start new-project $ ls new-project/ config.yml contents files templates ディレクトリ構成 ドキュメントプロジェクトは、次のようなファイルから構成されます。 ドキュメントプロジェクト/ │ ├─── config.yml プロジェクト設定を指定するYAMLファイル │ ├─── contents/ reStructuredText/Markdownなどの文書を格納するディレクトリ │ ├─── files/ 画像・バイナリファイルなどを格納するディレクトリ" />
+
+
+
   <link rel="stylesheet" href="../../static/css/miyadaiku-docs.css">
 
 
@@ -67,7 +78,7 @@
           
             <a class="dropdown-item" href="project.html">Miyadaikuプロジェクト</a>
           
-            <a class="dropdown-item" href="config.html">コンフィグ</a>
+            <a class="dropdown-item" href="property.html">プロパティ</a>
           
             <a class="dropdown-item" href="article.html">アーティクル</a>
           
@@ -75,9 +86,13 @@
           
             <a class="dropdown-item" href="index.html">インデックス</a>
           
+            <a class="dropdown-item" href="config.html">コンフィグ</a>
+          
             <a class="dropdown-item" href="feed.html">フィード</a>
           
             <a class="dropdown-item" href="template.html">テンプレート</a>
+          
+            <a class="dropdown-item" href="objects.html">オブジェクトリファレンス</a>
           
             <a class="dropdown-item" href="themes.html">テーマ</a>
           
@@ -110,6 +125,18 @@
 
                   <ul>
                     
+                      <li class="header_h1">
+                        <a href="#h_ja_guide_project_2erst_1">ディレクトリ構成</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#h_ja_guide_project_2erst_2">コンテンツファイル</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#h_ja_guide_project_2erst_3">テンプレート</a>
+                      </li>
+                    
                   </ul>
                 </div>
             
@@ -117,7 +144,7 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='config.html' >コンフィグ</a></div>
+                  <a href='property.html' >プロパティ</a></div>
                 </div>
             
           
@@ -145,6 +172,13 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='config.html' >コンフィグ</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
                   <a href='feed.html' >フィード</a></div>
                 </div>
             
@@ -159,6 +193,13 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='objects.html' >オブジェクトリファレンス</a></div>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
                   <a href='themes.html' >テーマ</a></div>
                 </div>
             
@@ -167,7 +208,7 @@
     </div>
 
     <div class='col-md-9 article-body'>
-      <a id='page_title' class='header_anchor'></a>
+      <a id='page_title' class='header_target'></a>
       <h1>
         Miyadaikuプロジェクト
       </h1>
@@ -197,16 +238,16 @@ config.yml   contents        files           templates
      └─── outputs/      HTMLなどの出力ファイルを出力するディクレクトリ</pre>
 <dl class="field-list simple">
 <dt>config.yml ファイル</dt>
-<dd><p>プロジェクト全体のデフォルトとなるプロパティを指定する <span class="docutils literal">YAML</span> ファイルです。</p>
+<dd><p>プロジェクト全体のデフォルトとなるプロパティを指定する YAMLファイルです。</p>
 </dd>
 <dt>contents ディレクトリ</dt>
-<dd><p>reStructuredText/Markdownなどによる文書ファイルや設定ファイルなど、 <span class="docutils literal"><span class="pre">miyadaiku-build</span></span> コマンドが処理するソースファイルを格納します。</p>
+<dd><p>reStructuredText/Markdownなどによる文書ファイルや設定ファイルなど、 HTMLに変換するソースファイルを格納します。</p>
 </dd>
 <dt>files ディレクトリ</dt>
 <dd><p><span class="docutils literal"><span class="pre">miyadaiku-build</span></span> コマンドで変換せずに、そのまま <span class="docutils literal">outputs</span> ディレクトリにコピーするファイルを格納します。</p>
 </dd>
 <dt>templates ディレクトリ</dt>
-<dd><p><span class="docutils literal">jinja2</span> テンプレートファイルを格納します。</p>
+<dd><p>jinja2テンプレートファイルを格納します。</p>
 </dd>
 <dt>outputs ディレクトリ</dt>
 <dd><p><span class="docutils literal"><span class="pre">miyadaiku-build</span></span> コマンドで生成したHTMLなどのファイルを格納します。</p>
@@ -223,10 +264,25 @@ config.yml   contents        files           templates
 <li><p>*.html ファイル</p></li>
 </ul>
 <p>処理結果は output ディレクトリに出力します。上記以外の画像ファイルなどは、ソースファイルとして処理をせず、そのままoutput ディレクトリにコピーします。</p>
+<p><span class="docutils literal">contents</span> ディレクトリのコンテンツには、次の4種類があります。</p>
+<dl class="simple">
+<dt>アーティクル</dt>
+<dd><p><span class="docutils literal">contents</span> ディレクトリの文書ファイルは、アーティクルとして読み込まれ、Jinja2テンプレートエンジンでHTMLを生成して出力します。</p>
+</dd>
+<dt>スニペット</dt>
+<dd><p>スニペットはアーティクルと同じく文書ファイルですが、HTMLページには変換されません。他のアーティクルやテンプレートなどから読み込んで使用します。</p>
+</dd>
+<dt>インデックス</dt>
+<dd><p>Blogサイトのインデックスページなど、アーティクルの一覧ページを作成するコンテンツです。指定した条件のアーティクルを取得し、複数ページのHTMLファイルを出力します。</p>
+</dd>
+<dt>コンフィグ</dt>
+<dd><p>コンフィグファイルは、Miyadaikuプロジェクト全体の設定や、文書プロパティのデフォルト値をディレクトリごとに指定する YAMLファイルです。HTMLファイルは出力しません。</p>
+</dd>
+</dl>
 </div>
 <div class="section" id="id3">
 <div class="header_target" id="h_ja_guide_project_2erst_3"></div><h1>テンプレート</h1>
-<p><span class="docutils literal">contents</span> ディレクトリのコンテンツファイルは、Markdownパーザなどで変換してから、Jinjaテンプレート部分を実行してHTMLに変換されます。生成されたHTMLは、<span class="docutils literal">templates</span> ディレクトリの Jinjaテンプレートで最終的なHTMLファイルを作成し、<span class="docutils literal">outputs</span> ディレクトリに出力されます。</p>
+<p><span class="docutils literal">contents</span> ディレクトリのコンテンツファイルは、Markdownパーザなどで変換してから、Jinja2テンプレートエンジンによってHTMLに変換されます。生成されたHTMLから、<span class="docutils literal">templates</span> ディレクトリの Jinjaテンプレートで最終的なHTMLファイルを作成し、<span class="docutils literal">outputs</span> ディレクトリに出力されます。</p>
 <p><img src="../../img/process.png" width="500px"/></p>
 </div>
       </div>

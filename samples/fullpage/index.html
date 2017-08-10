@@ -5,20 +5,34 @@
   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>index - FIXME - site title</title>
+    <title>fullPage.js sample - FIXME - site title</title>
   
 
   <!-- include jquery.js -->
   <script src="static/jquery/jquery.min.js"></script>
 
-  <!-- include fullPage.js -->
-  <link rel="stylesheet" type="text/css" 
-      href="static/fullpage_js/jquery.fullpage.min.css" />
+  <link rel="stylesheet" type="text/css" href="jquery.fullpage.min.css" />
+  <script type="text/javascript" src="jquery.fullpage.min.js"></script>
 
-<script type="text/javascript"
-        src="static/fullpage_js/jquery.fullpage.min.js"></script>
+  <style>
+  #menu {
+    background-color: black;
+    display: flex;
+  }
 
-  <link rel="stylesheet" href="main.css">
+  #menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0.2rem 0.5rem;
+  }
+
+  #menu .active {
+    color: black;
+    background-color: white;
+  }
+
+  </style>
 
   <script>
   $(document).ready(function() {
@@ -28,23 +42,13 @@
   });
   </script>
 
-  <meta property="og:url" content="http://localhost:8888/index.html" />
-<meta property="og:locale" content="ja" />
-<meta property="og:type" content="article" />
-
-<meta property="og:title" content="index - FIXME - site title" />
-
-<meta name="description" content=".. article:: :title: fullPage.js sample"/>
-<meta property="og:description" content=".. article:: :title: fullPage.js sample" />
-
-
 
 </head>
 
 <body>
   
   
-  <div id='menu'>
+  <div id='menu' style='position:absolute; right:50px; top:50px; z-index:1000;'>
     
       <a data-menuanchor="1" href="#1" data-anchor="1">section 1</a>
     
@@ -53,13 +57,9 @@
       <a data-menuanchor="3" href="#3" data-anchor="3">section 3</a>
     
   </div>
-
   <div id="fullpage">
     
-      <div class="section" data-anchor="1" style="background-color:pink"><p>Content of section 1.</p>
-<blockquote>
-<p><a class="reference external" href="https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/fullpage">https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/fullpage</a></p>
-</blockquote></div>
+      <div class="section" data-anchor="1" style="background-color:pink"><p>Content of section 1.</p></div>
     
       <div class="section" data-anchor="2" style="background-color:yellow"><p>Content of section 2.</p></div>
     

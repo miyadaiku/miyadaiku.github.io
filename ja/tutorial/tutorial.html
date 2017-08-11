@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="サイトの作成 - Miyadaiku" />
 
-<meta name="description" content="このチュートリアルで作成するソースコードは、 https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc からダウンロードできます。 プロジェクトの作成 はじめに、次のコマンドで first_doc ディレクトリに miyadaiku のプロジェクトを作成します $ miyadaiku-start ./first_doc このコマンドで、次のようなディレクトリが作成されます。 first_doc/ ├─── config.yml プロジェクト設定を指定するYAMLファイル │ ├─── contents/ reStructuredText/Markdownなどの文書を格納するディレクトリ │ ├─── files/ 画像・バイナリファイルなどを格納するディレクトリ │ └─── templates/ jinja2テンプレートファイルを格納するディレクトリ"/>
-<meta property="og:description" content="このチュートリアルで作成するソースコードは、 https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc からダウンロードできます。 プロジェクトの作成 はじめに、次のコマンドで first_doc ディレクトリに miyadaiku のプロジェクトを作成します $ miyadaiku-start ./first_doc このコマンドで、次のようなディレクトリが作成されます。 first_doc/ ├─── config.yml プロジェクト設定を指定するYAMLファイル │ ├─── contents/ reStructuredText/Markdownなどの文書を格納するディレクトリ │ ├─── files/ 画像・バイナリファイルなどを格納するディレクトリ │ └─── templates/ jinja2テンプレートファイルを格納するディレクトリ" />
+<meta name="description" content="このチュートリアルで作成するソースコードは、 https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc からダウンロードできます。 プロジェクトの作成 はじめに、次のコマンドで first_doc ディレクトリに miyadaiku のプロジェクトを作成します $ miyadaiku-start ./first_doc 次のようなディレクトリが作成されます。 first_doc/ ├─── config.yml プロジェクト設定を指定するYAMLファイル │ ├─── contents/ reStructuredText/Markdownなどの文書を格納するディレクトリ │ ├─── files/ 画像・バイナリファイルなどを格納するディレクトリ │ └─── templates/ jinja2テンプレートファイルを格納するディレクトリ"/>
+<meta property="og:description" content="このチュートリアルで作成するソースコードは、 https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc からダウンロードできます。 プロジェクトの作成 はじめに、次のコマンドで first_doc ディレクトリに miyadaiku のプロジェクトを作成します $ miyadaiku-start ./first_doc 次のようなディレクトリが作成されます。 first_doc/ ├─── config.yml プロジェクト設定を指定するYAMLファイル │ ├─── contents/ reStructuredText/Markdownなどの文書を格納するディレクトリ │ ├─── files/ 画像・バイナリファイルなどを格納するディレクトリ │ └─── templates/ jinja2テンプレートファイルを格納するディレクトリ" />
 
 
 
@@ -182,7 +182,7 @@
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-start ./first_doc
 </pre></div>
 </div>
-<p>このコマンドで、次のようなディレクトリが作成されます。</p>
+<p>次のようなディレクトリが作成されます。</p>
 <pre class="literal-block">first_doc/
      ├─── config.yml   プロジェクト設定を指定するYAMLファイル
      │
@@ -212,7 +212,7 @@ This is my first miyadaiku article.
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-build ./first_doc
 </pre></div>
 </div>
-<p>正常に終了すれば、<span class="docutils literal">first_doc/output/hello.html</span> ファイルが作成されています。</p>
+<p>正常に終了すれば、<span class="docutils literal">first_doc/output/hello.html</span> ファイルが作成されます。</p>
 <div class="header_target" id="createlinks"></div></div>
 <div class="section" id="id5">
 <h1>アーティクルのリンク</h1>
@@ -234,13 +234,11 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 </div>
 <p>でサイトを構築すると、あらたに <span class="docutils literal">first_doc/output/link.html</span> が作成されます。</p>
 <p><span class="docutils literal">:jinja:</span> ロールで記述した内容は、そのまま <span class="docutils literal">Jinja2</span> のテンプレートとして処理され、HTMLに変換されます。</p>
-<p>ここでは、<span class="docutils literal">content.link_to(ページ名)</span> メソッドを使用して、他のページへのリンクを作成します。リンクのテキストは、リンク先ページのタイトルを使用します。</p>
-<p>変数 <span class="docutils literal">page</span> は、処理中のコンテントオブジェクトを参照します。<span class="docutils literal">link_to()</span> メソッドの他にも、<a href="../guide/objects.html#content_obj">コンテントオブジェクト</a> のメソッドやプロパティを使用できます。</p>
+<p>変数 <span class="docutils literal">content</span> は、処理中のアーティクルを参照する <a href="../guide/objects.html#content_obj">コンテントオブジェクト</a> です。ここでは、<span class="docutils literal">link_to(ページ名)</span> メソッドを使用して、他のページへのリンクを作成します。リンク先ページのタイトルが、リンクのテキストとなります。</p>
 <div class="header_target" id="template"></div></div>
 <div class="section" id="id6">
 <h1>テンプレートのカスタマイズ</h1>
-<p>MiyadaikuがアーティクルからHTMLページを生成する時、<span class="docutils literal">page_article.html</span> という名前の Jinja2 テンプレートを検索して使用します。デフォルトでは、<a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates">miyadaiku.themes.base パッケージ</a> の、 <a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates/page_article.html">page_article.html</a> ファイルがテンプレートとなります。</p>
-<p>Jinja2 の継承機能を利用してこのテンプレートをカスタマイズし、独自のテンプレートを作成できます。</p>
+<p>アーティクルは、<span class="docutils literal">page_article.html</span> という名前の Jinja2 テンプレートでHTMLに変換されます。</p>
 <p>例として、テンプレートディレクトリ <span class="docutils literal">first_doc/templates</span> に、 テンプレートとなる <span class="docutils literal">page_article.html</span> ファイルを作成しましょう。</p>
 <div class="code-block">
 <div class="code-block-caption">first_doc/templates/page_article.html:</div>
@@ -259,8 +257,8 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">body</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
 </div>
-<p><span class="docutils literal">page_article.html</span> には、<span class="docutils literal">head</span> ブロックと <span class="docutils literal">body</span> ブロックがあり、それぞれ <span class="docutils literal">&lt;head&gt;</span> 要素と <span class="docutils literal">&lt;body&gt;</span> 要素を出力します。ここでは <span class="docutils literal">body</span> ブロックをオーバライドして、<span class="docutils literal">body</span> 要素にコピーライト表記を追加します。</p>
-<p>Pythonパッケージの <span class="docutils literal">templates</span> ディレクトリにあるテンプレートを使用するときは、パッケージ名とファイル名を <span class="docutils literal">!</span> 記号で区切って指定します。</p>
+<p>Miyadaikuでは、デフォルトのテンプレートとして、<a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates">miyadaiku.themes.base</a>  パッケージに <a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates/page_article.html">page_article.html</a> を提供しています。ここでは、Jinja2 の継承機能を利用してこのテンプレートをカスタマイズし、独自のテンプレートを作成します。</p>
+<p>Pythonパッケージの <span class="docutils literal">templates</span> ディレクトリにあるテンプレートを使用するときは、次のようにパッケージ名とファイル名を <span class="docutils literal">!</span> 記号で区切って指定します。</p>
 <blockquote>
 <p><span class="docutils literal">パッケージ名!テンプレートファイル名</span></p>
 </blockquote>
@@ -269,6 +267,7 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 <p><span class="docutils literal">miyadaiku.themes.base!page_article.html</span></p>
 </blockquote>
 <p>は、<span class="docutils literal">miyadaiku.themes.base</span> パッケージの <span class="docutils literal">page_article.html</span> ファイルを指定しています。</p>
+<p><span class="docutils literal">page_article.html</span> には、<span class="docutils literal">head</span> ブロックと <span class="docutils literal">body</span> ブロックがあり、それぞれ <span class="docutils literal">&lt;head&gt;</span> 要素と <span class="docutils literal">&lt;body&gt;</span> 要素を出力します。この例では、<span class="docutils literal">body</span> ブロックをオーバライドして、<span class="docutils literal">body</span> 要素にコピーライト表記を追加しています。</p>
 <div class="header_target" id="newfile"></div></div>
 <div class="section" id="css">
 <h1>CSSファイルを追加</h1>
@@ -313,7 +312,7 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">body</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
 </div>
-<p><span class="docutils literal">head</span> ブロックのオーバライドを追加し、<span class="docutils literal">&lt;link&gt;</span> 要素でCSSの読み込みを指定します。<span class="docutils literal">page.path_to(ページ名)</span> メソッドは、指定したページへの相対パスを返します。</p>
+<p><span class="docutils literal">head</span> ブロックのオーバライドを追加し、<span class="docutils literal">&lt;link&gt;</span> 要素でCSSの読み込みを指定します。<span class="docutils literal">content.path_to(ページ名)</span> メソッドは、指定したページのパスを返します。</p>
 </div>
       </div>
     </div>

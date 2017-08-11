@@ -190,8 +190,12 @@
                         <a href="#h_ja_guide_template_2erst_4">テンプレート変数</a>
                       </li>
                     
+                      <li class="header_h2">
+                        <a href="#template_names">グループ別インデックス</a>
+                      </li>
+                    
                       <li class="header_h1">
-                        <a href="#template_names">テンプレート名の解決</a>
+                        <a href="#h_ja_guide_template_2erst_5">テンプレート名の解決</a>
                       </li>
                     
                   </ul>
@@ -302,10 +306,10 @@
 <span class="x">  &lt;hr&gt;</span>
 <span class="x">  &lt;div&gt;</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">cur_page</span> <span class="p">!</span><span class="o">=</span> <span class="m">1</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">content.path</span><span class="o">(</span><span class="nv">values</span><span class="o">=</span><span class="nv">group_names</span><span class="o">,</span> <span class="nv">npage</span><span class="o">=</span><span class="nv">cur_page-1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Prev page&lt;/a&gt;</span>
+<span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">content.path</span><span class="o">(</span><span class="nv">values</span><span class="o">=</span><span class="nv">group_values</span><span class="o">,</span> <span class="nv">npage</span><span class="o">=</span><span class="nv">cur_page-1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Prev page&lt;/a&gt;</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nv">is_last</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">content.path</span><span class="o">(</span><span class="nv">values</span><span class="o">=</span><span class="nv">group_names</span><span class="o">,</span> <span class="nv">npage</span><span class="o">=</span><span class="nv">cur_page</span><span class="o">+</span><span class="m">1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Next page&lt;/a&gt;</span>
+<span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">content.path</span><span class="o">(</span><span class="nv">values</span><span class="o">=</span><span class="nv">group_values</span><span class="o">,</span> <span class="nv">npage</span><span class="o">=</span><span class="nv">cur_page</span><span class="o">+</span><span class="m">1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Next page&lt;/a&gt;</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">  &lt;/div&gt;</span>
 <span class="x">&lt;/body&gt;</span>
@@ -313,9 +317,12 @@
 </pre></div>
 </div>
 <div class="header_target" id="template_names"></div></div>
-</div>
 <div class="section" id="id6">
-<h1>テンプレート名の解決</h1>
+<h2>グループ別インデックス</h2>
+</div>
+</div>
+<div class="section" id="id7">
+<div class="header_target" id="h_ja_guide_template_2erst_5"></div><h1>テンプレート名の解決</h1>
 <p>アーティクルに指定されたテンプレート名や、Jinja2の <span class="docutils literal">extends</span> 文や <span class="docutils literal">import</span> 文で、テンプレート名を指定してテンプレートを利用するとき、Miyadaikuでは以下の順にテンプレートを検索します。</p>
 <ol class="arabic simple">
 <li><p>プロジェクトの <span class="docutils literal">templates</span> ディレクトリ</p></li>

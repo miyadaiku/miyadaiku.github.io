@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="アーティクル - Miyadaiku" />
 
-<meta name="description" content="contents ディレクトリの reStructuredTextファイル/Markdownファイル/HTMLファイルは、アーティクルオブジェクト として読み込まれます。アーティクルオブジェクトはJinja2テンプレートを適用し、outputs ディレクトリにHTMLファイルを出力します。 アーティクルのプロパティ アーティクルオブジェクトは、標準プロパティ に加え、以下のプロパティを指定できます。 abstract HTMLに変換したアーティクルを、 abstract_length プロパティで指定した文字数分取得します。"/>
-<meta property="og:description" content="contents ディレクトリの reStructuredTextファイル/Markdownファイル/HTMLファイルは、アーティクルオブジェクト として読み込まれます。アーティクルオブジェクトはJinja2テンプレートを適用し、outputs ディレクトリにHTMLファイルを出力します。 アーティクルのプロパティ アーティクルオブジェクトは、標準プロパティ に加え、以下のプロパティを指定できます。 abstract HTMLに変換したアーティクルを、 abstract_length プロパティで指定した文字数分取得します。" />
+<meta name="description" content="contents ディレクトリの reStructuredTextファイル Markdownファイル HTMLファイル ipynbファイル は、アーティクルオブジェクト として読み込まれます。アーティクルオブジェクトはHTMLに変換し、outputs ディレクトリに出力されます。 アーティクルのプロパティ アーティクルオブジェクトは、標準プロパティ に加え、以下のプロパティを指定できます。 abstract HTMLに変換したアーティクルを、 abstract_length プロパティで指定した文字数分取得します。abstract_length"/>
+<meta property="og:description" content="contents ディレクトリの reStructuredTextファイル Markdownファイル HTMLファイル ipynbファイル は、アーティクルオブジェクト として読み込まれます。アーティクルオブジェクトはHTMLに変換し、outputs ディレクトリに出力されます。 アーティクルのプロパティ アーティクルオブジェクトは、標準プロパティ に加え、以下のプロパティを指定できます。 abstract HTMLに変換したアーティクルを、 abstract_length プロパティで指定した文字数分取得します。abstract_length" />
 
 
 
@@ -270,13 +270,23 @@
       </h1>
 
       <div class='article-content'>
-        <p><span class="docutils literal">contents</span> ディレクトリの reStructuredTextファイル/Markdownファイル/HTMLファイルは、<strong>アーティクルオブジェクト</strong> として読み込まれます。アーティクルオブジェクトはJinja2テンプレートを適用し、<span class="docutils literal">outputs</span> ディレクトリにHTMLファイルを出力します。</p>
+        <p><span class="docutils literal">contents</span> ディレクトリの</p>
+<ul class="simple">
+<li><p>reStructuredTextファイル</p></li>
+<li><p>Markdownファイル</p></li>
+<li><p>HTMLファイル</p></li>
+<li><p>ipynbファイル</p></li>
+</ul>
+<p>は、<strong>アーティクルオブジェクト</strong> として読み込まれます。アーティクルオブジェクトはHTMLに変換し、<span class="docutils literal">outputs</span> ディレクトリに出力されます。</p>
 <div class="header_target" id="propsofarticle"></div><div class="section" id="id2">
 <h1>アーティクルのプロパティ</h1>
 <p>アーティクルオブジェクトは、<a href="property.html#standardprofs">標準プロパティ</a> に加え、以下のプロパティを指定できます。</p>
 <dl>
 <dt>abstract</dt>
 <dd><p>HTMLに変換したアーティクルを、 <span class="docutils literal">abstract_length</span> プロパティで指定した文字数分取得します。<span class="docutils literal">abstract_length</span> が <span class="docutils literal">0</span> の場合、全文を返します。</p>
+</dd>
+<dt>abstract_length</dt>
+<dd><p>インデックスファイルやRSSの摘要として使用するテキストの長さを、文字数で指定します。長さとして <span class="docutils literal">0</span> を指定すると、本文すべてを摘要とします。未指定の場合は、<span class="docutils literal">500</span> 文字となります。</p>
 </dd>
 <dt>article_template</dt>
 <dd><p>アーティクルのHTMLページを生成するJinja2テンプレートの名前を指定します。未指定の場合は、<span class="docutils literal">page_article.html</span> となります。</p>
@@ -285,17 +295,17 @@
 <dd><p>未公開状態のアーティクルは <span class="docutils literal">true</span>、公開中のアーティクルは <span class="docutils literal">false</span> を指定します。未指定の場合は <span class="docutils literal">false</span> となります。</p>
 </dd>
 <dt>ext</dt>
-<dd><p>アーティクルの出力ファイル名の拡張子。未指定の場合は、<span class="docutils literal">'.html'</span> となります。</p>
+<dd><p>アーティクルの出力ファイル名の拡張子を指定します。未指定の場合は、<span class="docutils literal">'.html'</span> となります。</p>
 </dd>
 <dt>filename</dt>
-<dd><p>出力ファイル名を指定します。未指定の場合は、アーティクルのファイル名の拡張子を <span class="docutils literal">.html</span> としたファイルを作成します。</p>
+<dd><p>出力ファイル名を指定します。未指定の場合は、<span class="docutils literal">filename_templ</span> でファイル名を生成します。</p>
 <p><span class="docutils literal">filename</span> には、相対ディレクトリ名も指定できます。ex) <span class="docutils literal">subdir/article1.html</span>,  <span class="docutils literal"><span class="pre">../subdir/article1.html</span></span></p>
 </dd>
 <dt>filename_templ</dt>
 <dd><p>出力HTMLファイルのファイル名を、Jina2テンプレートで指定します。未指定の場合は、<span class="docutils literal">'{{ content.stem <span class="pre">}}.{{</span> content.ext }}'</span> となります。テンプレートでは、 <a href="article.html#jinja_vars">テンプレート変数</a> を参照できます。</p>
 </dd>
 <dt>header</dt>
-<dd><p>アーティクルのヘッダ要素のリストを取得します。リストの要素は、(ヘッダのid, ヘッダ要素名, ヘッダテキスト) のタプルです。</p>
+<dd><p>アーティクルのヘッダ要素のリストを取得します。リストの要素は、<cite>(ヘッダのid, ヘッダ要素名, ヘッダテキスト)</cite> のタプルとなります。。</p>
 </dd>
 <dt>html</dt>
 <dd><p>ページの内容をHTMLで取得します。</p>
@@ -304,7 +314,7 @@
 <dd><p>アーティクルの順序を数値で指定します。</p>
 </dd>
 <dt>stem</dt>
-<dd><p>アーティクルの出力ファイル名(拡張子以外)。未指定の場合は、アーティクルソースファイルのファイル名(拡張子以外)となります。</p>
+<dd><p>アーティクルの出力ファイル名(拡張子以外)を指定します。未指定の場合は、アーティクルソースファイルのファイル名(拡張子以外)となります。</p>
 </dd>
 </dl>
 </div>
@@ -442,7 +452,7 @@ Link to :jinja:`{{ content.link_to("./hello.rst") }}`.
 </div>
 <div class="section" id="id9">
 <div class="header_target" id="h_ja_guide_article_2erst_8"></div><h2>target</h2>
-<p><em>:target:`id_of_div`</em> の形式で記述し、HTMLに <span class="docutils literal">&lt;div&gt;</span> 要素を埋め込み、リンクのターゲットとして指定できるようにします。<span class="docutils literal">&lt;div&gt;</span> 要素の <span class="docutils literal">id</span> として、<span class="docutils literal">id_of_div</span> を指定します。</p>
+<p><em>:target:`id_of_div`</em> の形式で記述し、HTMLに <span class="docutils literal">&lt;div&gt;</span> 要素を埋め込み、リンクのターゲットとして指定できるようにします。次の例では、<span class="docutils literal">&lt;div&gt;</span> 要素の <span class="docutils literal">id</span> として、<span class="docutils literal">id_of_div</span> を指定します。</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of target :</div>
 <div class="highlight"><pre><span></span>:target:`id_of_this_section1`
@@ -504,8 +514,8 @@ tags: タグ1, タグ2
 </div>
 <div class="section" id="content-page">
 <div class="header_target" id="h_ja_guide_article_2erst_12"></div><h1>content と page</h1>
-<p>Miyadaikuは、<span class="docutils literal">contents</span> ディレクトリを走査し、見つかったアーティクル中をJinja2テンプレートに渡し、HTMLを作成します。この時、アーティクルにあるJinja2テンプレートでは、変数 <span class="docutils literal">content</span> と <span class="docutils literal">page</span> はどちらもHTMLを作成しているアーティクルオブジェクト自身を参照します。</p>
-<p>このアーティクルが、文章中で別のアーティクルを読み込んでいる場合、読み込まれているアーティクル内のJinja2テンプレートでは、読み込み元のアーティクルは変数 <span class="docutils literal">page</span>、読み込まれているアーティクル自身は 変数 <span class="docutils literal">content</span> で参照できます。</p>
+<p>Miyadaikuは、<span class="docutils literal">contents</span> ディレクトリを走査し、すべてのアーティクルをロードしてHTMLを作成します。この時、<em>:jinja:</em> ロールなどでアーティクル内に記述したJinja2テンプレートでは、変数 <span class="docutils literal">content</span> と <span class="docutils literal">page</span> はどちらもHTMLを作成しているアーティクルオブジェクト自身を参照します。</p>
+<p>アーティクルが、文章中で別のアーティクルを読み込んでいる場合、読み込まれているアーティクル内のJinja2テンプレートでは、読み込み元のアーティクルは変数 <span class="docutils literal">page</span>、読み込まれているアーティクル自身は 変数 <span class="docutils literal">content</span> で参照できます。</p>
 <p>例えば次のような2つのアーティクル <span class="docutils literal">parent.rst</span> と <span class="docutils literal">child.rst</span> がある場合</p>
 <div class="code-block">
 <div class="code-block-caption">parent.rst:</div>
@@ -528,12 +538,12 @@ tags: タグ1, タグ2
 </pre></div>
 </div>
 <p><span class="docutils literal">parent.rst</span> をHTMLに変換する際、 <span class="docutils literal">{{ <span class="pre">content.load('./child.rst').html</span> }}</span> で <span class="docutils literal">child.rst</span> が読み込まれます。</p>
-<p>この時、<span class="docutils literal">parent.rst</span> 内では、</p>
+<p>この時、<span class="docutils literal">parent.rst</span> 内のテンプレートでは、</p>
 <ul class="simple">
 <li><p><span class="docutils literal">page</span> は <span class="docutils literal">parent.rst</span> オブジェクト</p></li>
 <li><p><span class="docutils literal">content</span> は <span class="docutils literal">parent.rst</span> オブジェクト</p></li>
 </ul>
-<p><span class="docutils literal">child.rst</span> 内では、</p>
+<p><span class="docutils literal">child.rst</span> 内のテンプレートでは、</p>
 <ul class="simple">
 <li><p><span class="docutils literal">page</span> は <span class="docutils literal">parent.rst</span> オブジェクト</p></li>
 <li><p><span class="docutils literal">content</span> は <span class="docutils literal">child.rst</span> オブジェクト</p></li>
@@ -542,7 +552,8 @@ tags: タグ1, タグ2
 <div class="header_target" id="import_templ"></div></div>
 <div class="section" id="id13">
 <h1>インポート済みテンプレート</h1>
-<p>アーティクルの <a href="property.html#prop_imports">importsプロパティ</a> に指定したJinja2テンプレートは、自動的に <a class="reference external" href="http://jinja.pocoo.org/docs/2.9/templates/#import">import</a> され、天レートに記述されたマクロなどを使用できます。テンプレートのモジュール名は、テンプレートの名の拡張子を除いたファイル名となります。</p>
+<p>アーティクルの <a href="property.html#prop_imports">importsプロパティ</a> に指定したJinja2テンプレートは、自動的に <a class="reference external" href="http://jinja.pocoo.org/docs/2.9/templates/#import">import</a> され、内部のマクロなどを使用できます。</p>
+<p>テンプレートのモジュール名は、テンプレートの名の拡張子を除いたファイル名となります。</p>
 <div class="code-block">
 <div class="code-block-caption">Using Jinja2 macros:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   
   
@@ -28,8 +28,8 @@
   <!-- include font awesome -->
   <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
   
-  <meta property="og:url" content="https://miyadaiku.github.io/ja/guide/themes.html" />
-<meta property="og:locale" content="ja" />
+  <meta property="og:url" content="https://miyadaiku.github.io/en/guide/themes.html" />
+<meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 
 <meta property="og:title" content="テーマ - Miyadaiku" />
@@ -59,20 +59,20 @@
 
       <li class="nav-item dropdown">
         
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown">チュートリアル</a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Tutorial</a>
         <div class="dropdown-menu">
           
 
           
-            <a class="dropdown-item" href="../tutorial/tutorial.html">サイトの作成</a>
+            <a class="dropdown-item" href="../tutorial/tutorial.html">Create a site</a>
           
-            <a class="dropdown-item" href="../tutorial/tutorial_blog.html">Blogサイトの作成</a>
+            <a class="dropdown-item" href="../tutorial/tutorial_blog.html">Create a blog site</a>
           
         </div>
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown">ガイド</a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Guide</a>
         <div class="dropdown-menu">
           
 
@@ -101,7 +101,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="../samples.html">サンプル</a>
+        <a class="nav-link" href="../samples.html">Samples</a>
       </li>
 
       <li class="nav-item">
@@ -190,15 +190,15 @@
                   <ul>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_guide_themes_2erst_1">テーマの使用</a>
+                        <a href="#h_en_guide_themes_2erst_1">テーマの使用</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_guide_themes_2erst_2">テンプレート</a>
+                        <a href="#h_en_guide_themes_2erst_2">テンプレート</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_guide_themes_2erst_3">load_package()</a>
+                        <a href="#h_en_guide_themes_2erst_3">load_package()</a>
                       </li>
                     
                   </ul>
@@ -218,7 +218,7 @@
         <p>テーマは、 サイトのコンテンツやデザインなどをまとめたPythonのパッケージです。テーマに含まれるファイルは、プロジェクトの通常のファイルと同じように <span class="docutils literal">outputs</span> ディレクトリにコンテンツとして出力されます。</p>
 <p><img src="../../img/themes.png" width="500px"/></p>
 <div class="section" id="id2">
-<div class="header_target" id="h_ja_guide_themes_2erst_1"></div><h1>テーマの使用</h1>
+<div class="header_target" id="h_en_guide_themes_2erst_1"></div><h1>テーマの使用</h1>
 <p>テーマは、通常のパッケージと同じようように、PyPIなどから事前にインストールする必要があります。</p>
 <div class="code-block">
 <div class="code-block-caption">Install miyadaiku themes with pip</div>
@@ -237,13 +237,13 @@
 <p>テーマが別のテーマを使用する場合、そのテーマは再帰的に読み込まれます。また、Miyadaikuの組み込みテーマ <span class="docutils literal">miyadaiku.themes.base</span> は、<span class="docutils literal">themes</span> に指定されなくとも常に読み込まれます。</p>
 </div>
 <div class="section" id="id3">
-<div class="header_target" id="h_ja_guide_themes_2erst_2"></div><h1>テンプレート</h1>
+<div class="header_target" id="h_en_guide_themes_2erst_2"></div><h1>テンプレート</h1>
 <p>テーマに含まれるテンプレートも、プロジェクトのテンプレートと同様に使用できます。</p>
 <p>アーティクルのテンプレート名や、Jinja2の <span class="docutils literal">import</span> 文などでテンプレート名を指定すると、プロジェクトの <span class="docutils literal">templates</span> ディレクトリに続いて、使用中のテーマからテンプレートディレクトリを検索します。</p>
 <p>テンプレート名の検索順序については、<a href="template.html#template_names">テンプレート名の解決</a> を参照してください。</p>
 </div>
 <div class="section" id="load-package">
-<div class="header_target" id="h_ja_guide_themes_2erst_3"></div><h1>load_package()</h1>
+<div class="header_target" id="h_en_guide_themes_2erst_3"></div><h1>load_package()</h1>
 <p>テーマパッケージに <span class="docutils literal">load_package(site)</span> 関数があれば、起動時に呼び出されます。テーマ内でのデータの初期化などが必要であれば、ここで行います。</p>
 <div class="code-block">
 <div class="code-block-caption">sample of __init__.py of theme package</div>

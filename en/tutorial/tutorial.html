@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+  Create a site
+</title>
+  
+
+  <!-- include boolstrap4 -->
+  <link rel="stylesheet" href="../../static/bootstrap4/bootstrap.min.css">
+
+  <!-- include jquery.js -->
+  <script src="../../static/jquery/jquery.min.js"></script>
+
+  <!-- include tether.js -->
+  <script src="../../static/tether/tether.min.js"></script>
+
+  <!-- include boolstrap4 js -->
+  <script src="../../static/bootstrap4/bootstrap.min.js"></script>
+
+  <!-- include pygments css -->
+  <link rel="stylesheet" href="../../static/pygments/css/pygments.css">
+  
+  <!-- include font awesome -->
+  <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  
+  <meta property="og:url" content="https://miyadaiku.github.io/en/tutorial/tutorial.html" />
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+
+<meta property="og:title" content="Create a site - Miyadaiku" />
+
+<meta name="description" content="You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc Create a project At first, create Miyadaiku project in the `` first_doc`` directory with the following command. $ miyadaiku-start ./first_doc"/>
+<meta property="og:description" content="You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc Create a project At first, create Miyadaiku project in the `` first_doc`` directory with the following command. $ miyadaiku-start ./first_doc" />
+
+
+
+  <link rel="stylesheet" href="../../static/css/miyadaiku-docs.css">
+
+
+</head>
+
+<body>
+  
+
+
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html">Miyadaiku</a>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item dropdown">
+        
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Tutorial</a>
+        <div class="dropdown-menu">
+          
+
+          
+            <a class="dropdown-item" href="tutorial.html">Create a site</a>
+          
+            <a class="dropdown-item" href="tutorial_blog.html">Create a blog site</a>
+          
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Guide</a>
+        <div class="dropdown-menu">
+          
+
+          
+            <a class="dropdown-item" href="../guide/project.html">Miyadaikuプロジェクト</a>
+          
+            <a class="dropdown-item" href="../guide/property.html">プロパティ</a>
+          
+            <a class="dropdown-item" href="../guide/article.html">アーティクル</a>
+          
+            <a class="dropdown-item" href="../guide/snippet.html">スニペット</a>
+          
+            <a class="dropdown-item" href="../guide/index.html">インデックス</a>
+          
+            <a class="dropdown-item" href="../guide/config.html">コンフィグ</a>
+          
+            <a class="dropdown-item" href="../guide/feed.html">フィード</a>
+          
+            <a class="dropdown-item" href="../guide/template.html">テンプレート</a>
+          
+            <a class="dropdown-item" href="../guide/objects.html">オブジェクトリファレンス</a>
+          
+            <a class="dropdown-item" href="../guide/themes.html">テーマ</a>
+          
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="../samples.html">Samples</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-3 toc'>
+      
+          
+
+          
+            
+                <div class="current article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                    <a href='tutorial.html' >Create a site</a></div>
+
+                  <ul>
+                    
+                      <li class="header_h1">
+                        <a href="#create_project">Create a project</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#create_article">Create an article</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#build">Building the site</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#createlinks">Article link</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#template">Customizing templates</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#newfile">Add a CSS file</a>
+                      </li>
+                    
+                  </ul>
+                </div>
+            
+          
+            
+                <div class="article-block">
+                  <div class="article-title"><i class="fa fa-file-text-o"></i>            
+                  <a href='tutorial_blog.html' >Create a blog site</a></div>
+                </div>
+            
+          
+      
+    </div>
+
+    <div class='col-md-9 article-body'>
+      <a id='page_title' class='header_target'></a>
+      <h1>
+        Create a site
+      </h1>
+
+      <div class='article-content'>
+        <p>You can download source files in this tutorial from:</p>
+<blockquote>
+<p><a class="reference external" href="https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc">https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc</a></p>
+</blockquote>
+<div class="header_target" id="create_project"></div><div class="section" id="create-a-project">
+<h1>Create a project</h1>
+<p>At first, create Miyadaiku project in the `` first_doc`` directory with the following command.</p>
+<div class="code-block">
+<div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-start ./first_doc
+</pre></div>
+</div>
+<p>This command creates following directories.</p>
+<pre class="literal-block">first_doc/
+     ├─── config.yml   YAML file to specify project settings.
+     │
+     ├─── contents/    Directory to store contents such as reStructuredText/Markdown files.
+     │
+     ├─── files/       Directory to store files such as images.
+     │
+     └─── templates/   Directory to store Jinja2 template files.</pre>
+<div class="header_target" id="create_article"></div></div>
+<div class="section" id="create-an-article">
+<h1>Create an article</h1>
+<p>Let's create a file in reStructuredText format as the first article.</p>
+<div class="code-block">
+<div class="code-block-caption">first_doc/contents/hello.rst:</div>
+<div class="highlight"><pre><span></span><span class="gh">hello world</span>
+<span class="gh">-------------</span>
+
+This is my first miyadaiku article.
+</pre></div>
+</div>
+<p>Create a text file with the above contents and save it as <span class="docutils literal">first_doc/contents/hello.rst</span>.</p>
+<div class="header_target" id="build"></div></div>
+<div class="section" id="building-the-site">
+<h1>Building the site</h1>
+<p>After saving the text file, build the site with the following command.</p>
+<div class="code-block">
+<div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-build ./first_doc
+</pre></div>
+</div>
+<p>If the command succeeds, the <span class="docutils literal">first_doc/output/hello.html</span> file will be created.</p>
+<div class="header_target" id="createlinks"></div></div>
+<div class="section" id="article-link">
+<h1>Article link</h1>
+<p>Create the another article <span class="docutils literal">first_doc/contents/link.rst</span>.</p>
+<div class="code-block">
+<div class="code-block-caption">first_doc/contents/link.rst:</div>
+<div class="highlight"><pre><span></span><span class="gh">Link test</span>
+<span class="gh">-------------</span>
+
+This is a link page.
+
+Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./hello.rst") }}`</span>.
+</pre></div>
+</div>
+<p>Again,</p>
+<div class="code-block">
+<div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-build ./first_doc
+</pre></div>
+</div>
+<p>This command creates <span class="docutils literal">first_doc/output/link.html</span> file.</p>
+<p>Content written in the <span class="docutils literal">:jinja:</span> role is processed as <span class="docutils literal">Jinja2</span> template and converted to HTML.</p>
+<p>The variable `` content`` is <a href="../guide/objects.html#content_obj">コンテントオブジェクト</a> refers to the article being processed. Here we use the <span class="docutils literal">link_to(page name)</span> method to create a link to another page. The title of the landing page is used as the text of the link.</p>
+<div class="header_target" id="template"></div></div>
+<div class="section" id="customizing-templates">
+<h1>Customizing templates</h1>
+<p>Article files are converted to HTML with a Jinja 2 template named <span class="docutils literal">page_article.html</span>.</p>
+<p>As an example, let's create a template <span class="docutils literal">page_article.html</span> in the template directory <span class="docutils literal">first_doc/templates</span>.</p>
+<div class="code-block">
+<div class="code-block-caption">first_doc/templates/page_article.html:</div>
+<div class="highlight"><pre><span></span><span class="x">&lt;!-- Extends page_article.html in miyadaiku.themes.base package --&gt;</span>
+<span class="cp">{%</span> <span class="k">extends</span> <span class="s1">'miyadaiku.themes.base!page_article.html'</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="x">&lt;!-- Customize body block --&gt;</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">body</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="x">  &lt;!-- Render contents of the parent block --&gt;</span>
+<span class="x">  </span><span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="x">  &lt;!-- Add copyright notation  --&gt;</span>
+<span class="x">  &lt;div class="copyright"&gt;Copyright(c) 2017 miyadaiku ALL RIGHTS RESERVED.&lt;/div&gt;</span>
+
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">body</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>Miyadaiku provides <a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates/page_article.html">page_article.html</a> file in <a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates">miyadaiku.themes.base</a> package as default article template. Here, we customize this template with Jinja2's inheritance to create a new template.</p>
+<p>To use templates in the <span class="docutils literal">templates</span> directory of the Python package, specify the package name and file name separated by the <span class="docutils literal">!</span> as follows.</p>
+<blockquote>
+<p><span class="docutils literal">package!filename</span></p>
+</blockquote>
+<p>In the code above, we wrote</p>
+<blockquote>
+<p><span class="docutils literal">miyadaiku.themes.base!page_article.html</span></p>
+</blockquote>
+<p>to refer <span class="docutils literal">page_article.html</span> file in <span class="docutils literal">miyadaiku.themes.base</span> package.</p>
+<p><span class="docutils literal">page_article.html</span> has a <span class="docutils literal">head</span> block and a <span class="docutils literal">body</span> block, which generates <span class="docutils literal">&lt;head&gt;</span> element and <span class="docutils literal">&lt;body&gt;</span> element, respectively. In this example, we override the <span class="docutils literal">body</span> block and add copyright notation to the <span class="docutils literal">body</span> element.</p>
+<div class="header_target" id="newfile"></div></div>
+<div class="section" id="add-a-css-file">
+<h1>Add a CSS file</h1>
+<p>Files in the <span class="docutils literal">files/</span> directory of the project are copied directly to the <span class="docutils literal">outputs</span> directory without converting them to HTML.</p>
+<p>Let's add `` copyright.css`` file to the <span class="docutils literal">first_doc/files/static/css</span> directory.</p>
+<div class="code-block">
+<div class="code-block-caption">first_doc/files/static/css/copyright.css:</div>
+<div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">copyright</span> <span class="p">{</span>
+  <span class="k">text-align</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Modify the template <span class="docutils literal">first_doc/templetes/page_article.html</span> created in the previous section as follows.</p>
+<div class="code-block">
+<div class="code-block-caption">first_doc/templetes/page_article.html:</div>
+<div class="highlight"><pre><span></span><span class="x">&lt;!-- Extends page_article.html in miyadaiku.themes.base package --&gt;</span>
+<span class="cp">{%</span> <span class="k">extends</span> <span class="s1">'miyadaiku.themes.base!page_article.html'</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>   &lt;! - Add template - begin -&gt;</p>
+<blockquote>
+<p>&lt;!-- Customize head block --&gt;
+{% block head %}</p>
+<blockquote>
+<p>&lt;!-- Render contents of the parent block --&gt;
+{{ super() }}</p>
+<blockquote>
+<p>&lt;!-- Add link element --&gt;
+&lt;link rel="stylesheet" href="{{ page.path_to('/static/css/copyright.css')}}"&gt;</p>
+</blockquote>
+</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/ishimoto/src/miyadaiku/miyadaiku-docs/doc/contents/en/tutorial/tutorial.rst</span>, line 203)</p>
+<p>Block quote ends without a blank line; unexpected unindent.</p>
+</div>
+<p>{% endblock head %}</p>
+</blockquote>
+<p>   &lt;! - Add template - end -&gt;</p>
+<blockquote>
+<p>&lt;!-- Customize body block --&gt;
+{% block body %}</p>
+<blockquote>
+<p>&lt;!-- Render contents of the parent block --&gt;
+{{ super() }}</p>
+<p>&lt;!-- Add copyright notation  --&gt;
+&lt;div class="copyright"&gt;Copyright(c) 2017 miyadaiku ALL RIGHTS RESERVED.&lt;/div&gt;</p>
+</blockquote>
+<p>{% endblock body %}</p>
+</blockquote>
+<p>We added an override for the <span class="docutils literal">head</span> block and specify the CSS to load with the <span class="docutils literal">&lt;link&gt;</span> element. The <span class="docutils literal">content.path_to(pagename)</span> method returns the path to the page specified.</p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+<footer>
+Copyright &copy; 2017 Atsuo Ishimoto
+</footer>
+
+
+</body>
+</html>

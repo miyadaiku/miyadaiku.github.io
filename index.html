@@ -3,10 +3,13 @@
 <script>
   var language = (window.navigator.languages 
       || [window.navigator.language || window.navigator.userLanguage])[0].substring(0, 2);
-  var pages = { ja: './ja/index.html' };
+  var pages = { ja: './ja/index.html',
+  en: './en/index.html',
+};
+  console.log(language)
   var page = pages[language];
   if (!page) {
-    page = './ja/index.html';
+    page = './en/index.html';
   }
   window.location.href=page;
 </script>

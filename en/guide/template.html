@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   
   
@@ -28,8 +28,8 @@
   <!-- include font awesome -->
   <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
   
-  <meta property="og:url" content="https://miyadaiku.github.io/ja/guide/template.html" />
-<meta property="og:locale" content="ja" />
+  <meta property="og:url" content="https://miyadaiku.github.io/en/guide/template.html" />
+<meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 
 <meta property="og:title" content="テンプレート - Miyadaiku" />
@@ -59,20 +59,20 @@
 
       <li class="nav-item dropdown">
         
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown">チュートリアル</a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Tutorial</a>
         <div class="dropdown-menu">
           
 
           
-            <a class="dropdown-item" href="../tutorial/tutorial.html">サイトの作成</a>
+            <a class="dropdown-item" href="../tutorial/tutorial.html">Create a site</a>
           
-            <a class="dropdown-item" href="../tutorial/tutorial_blog.html">Blogサイトの作成</a>
+            <a class="dropdown-item" href="../tutorial/tutorial_blog.html">Create a blog site</a>
           
         </div>
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown">ガイド</a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Guide</a>
         <div class="dropdown-menu">
           
 
@@ -101,7 +101,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="../samples.html">サンプル</a>
+        <a class="nav-link" href="../samples.html">Samples</a>
       </li>
 
       <li class="nav-item">
@@ -176,19 +176,19 @@
                   <ul>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_guide_template_2erst_1">アーティクルテンプレート</a>
+                        <a href="#h_en_guide_template_2erst_1">アーティクルテンプレート</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_ja_guide_template_2erst_2">テンプレート変数</a>
+                        <a href="#h_en_guide_template_2erst_2">テンプレート変数</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_guide_template_2erst_3">インデックステンプレート</a>
+                        <a href="#h_en_guide_template_2erst_3">インデックステンプレート</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_ja_guide_template_2erst_4">テンプレート変数</a>
+                        <a href="#h_en_guide_template_2erst_4">テンプレート変数</a>
                       </li>
                     
                       <li class="header_h1">
@@ -225,10 +225,10 @@
       <div class='article-content'>
         <p>Miyadaikuは、<span class="docutils literal">contents</span> ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの <span class="docutils literal">templates</span> ディレクトリに作成します。</p>
 <div class="section" id="id2">
-<div class="header_target" id="h_ja_guide_template_2erst_1"></div><h1>アーティクルテンプレート</h1>
+<div class="header_target" id="h_en_guide_template_2erst_1"></div><h1>アーティクルテンプレート</h1>
 <p>アーティクルに適用するテンプレートは、<span class="docutils literal">article_template</span> プロパティで指定します。未指定の場合は、<span class="docutils literal">'page_article.html'</span> となります。</p>
 <div class="section" id="id3">
-<div class="header_target" id="h_ja_guide_template_2erst_2"></div><h2>テンプレート変数</h2>
+<div class="header_target" id="h_en_guide_template_2erst_2"></div><h2>テンプレート変数</h2>
 <p>テンプレート内では、次の変数を参照できます。</p>
 <dl class="simple">
 <dt>page</dt>
@@ -256,11 +256,11 @@
 </div>
 </div>
 <div class="section" id="id4">
-<div class="header_target" id="h_ja_guide_template_2erst_3"></div><h1>インデックステンプレート</h1>
+<div class="header_target" id="h_en_guide_template_2erst_3"></div><h1>インデックステンプレート</h1>
 <p>アーティクルの一覧を出力するインデックスの場合、生成されるHTMLファイルは複数ページとなる場合があり、1ページ目と2ページ目以降でそれぞれ別のテンプレートを指定できます。</p>
 <p>1ページ目のテンプレートは <span class="docutils literal">indexpage_template</span> プロパティで指定します。未指定の場合は、<span class="docutils literal">'page_index.html'</span> となります。2ページ目以降は <span class="docutils literal">indexpage_template2</span> プロパティで指定し、未指定の場合は、<span class="docutils literal">'page_index.html'</span> となります。</p>
 <div class="section" id="id5">
-<div class="header_target" id="h_ja_guide_template_2erst_4"></div><h2>テンプレート変数</h2>
+<div class="header_target" id="h_en_guide_template_2erst_4"></div><h2>テンプレート変数</h2>
 <p>テンプレート内では、次の変数を参照できます。</p>
 <dl>
 <dt>page</dt>

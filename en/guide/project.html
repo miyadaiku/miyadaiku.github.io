@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   
   
@@ -28,8 +28,8 @@
   <!-- include font awesome -->
   <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
   
-  <meta property="og:url" content="https://miyadaiku.github.io/ja/guide/project.html" />
-<meta property="og:locale" content="ja" />
+  <meta property="og:url" content="https://miyadaiku.github.io/en/guide/project.html" />
+<meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 
 <meta property="og:title" content="Miyadaikuプロジェクト - Miyadaiku" />
@@ -59,20 +59,20 @@
 
       <li class="nav-item dropdown">
         
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown">チュートリアル</a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Tutorial</a>
         <div class="dropdown-menu">
           
 
           
-            <a class="dropdown-item" href="../tutorial/tutorial.html">サイトの作成</a>
+            <a class="dropdown-item" href="../tutorial/tutorial.html">Create a site</a>
           
-            <a class="dropdown-item" href="../tutorial/tutorial_blog.html">Blogサイトの作成</a>
+            <a class="dropdown-item" href="../tutorial/tutorial_blog.html">Create a blog site</a>
           
         </div>
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown">ガイド</a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Guide</a>
         <div class="dropdown-menu">
           
 
@@ -101,7 +101,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="../samples.html">サンプル</a>
+        <a class="nav-link" href="../samples.html">Samples</a>
       </li>
 
       <li class="nav-item">
@@ -127,15 +127,15 @@
                   <ul>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_guide_project_2erst_1">ディレクトリ構成</a>
+                        <a href="#h_en_guide_project_2erst_1">ディレクトリ構成</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_guide_project_2erst_2">コンテンツファイル</a>
+                        <a href="#h_en_guide_project_2erst_2">コンテンツファイル</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_guide_project_2erst_3">テンプレート</a>
+                        <a href="#h_en_guide_project_2erst_3">テンプレート</a>
                       </li>
                     
                   </ul>
@@ -224,7 +224,7 @@ config.yml   contents        files           templates
 </pre></div>
 </div>
 <div class="section" id="id1">
-<div class="header_target" id="h_ja_guide_project_2erst_1"></div><h1>ディレクトリ構成</h1>
+<div class="header_target" id="h_en_guide_project_2erst_1"></div><h1>ディレクトリ構成</h1>
 <p>ドキュメントプロジェクトは、次のようなファイルから構成されます。</p>
 <pre class="literal-block">ドキュメントプロジェクト/
      │
@@ -256,7 +256,7 @@ config.yml   contents        files           templates
 </dl>
 </div>
 <div class="section" id="id2">
-<div class="header_target" id="h_ja_guide_project_2erst_2"></div><h1>コンテンツファイル</h1>
+<div class="header_target" id="h_en_guide_project_2erst_2"></div><h1>コンテンツファイル</h1>
 <p><span class="docutils literal"><span class="pre">miyadaiku-build</span></span> コマンドは、miyadaikuプロジェクトの <span class="docutils literal">contents</span> ディレクトリの次の形式のファイルをコンテンツファイルとして処理し、HTMLファイルを作成します。</p>
 <ul class="simple">
 <li><p>*.yml ファイル</p></li>
@@ -283,7 +283,7 @@ config.yml   contents        files           templates
 </dl>
 </div>
 <div class="section" id="id3">
-<div class="header_target" id="h_ja_guide_project_2erst_3"></div><h1>テンプレート</h1>
+<div class="header_target" id="h_en_guide_project_2erst_3"></div><h1>テンプレート</h1>
 <p><span class="docutils literal">contents</span> ディレクトリのコンテンツファイルは、reSTやMarkdownパーザなどで処理してから、Jinja2テンプレートエンジンによってHTMLに変換されます。生成されたHTMLから、<span class="docutils literal">templates</span> ディレクトリの Jinjaテンプレートで最終的なHTMLファイルを作成し、<span class="docutils literal">outputs</span> ディレクトリに出力されます。</p>
 <p><img src="../../img/process.png" width="500px"/></p>
 </div>

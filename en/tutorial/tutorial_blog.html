@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   
   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-  Blogサイトの作成
+  Create a blog site
 </title>
   
 
@@ -28,14 +28,14 @@
   <!-- include font awesome -->
   <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
   
-  <meta property="og:url" content="https://miyadaiku.github.io/ja/tutorial/tutorial_blog.html" />
-<meta property="og:locale" content="ja" />
+  <meta property="og:url" content="https://miyadaiku.github.io/en/tutorial/tutorial_blog.html" />
+<meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="Blogサイトの作成 - Miyadaiku" />
+<meta property="og:title" content="Create a blog site - Miyadaiku" />
 
-<meta name="description" content="このチュートリアルで作成するソースコードは、 https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog からダウンロードできます。 プロジェクトの作成 はじめに、次のコマンドで first_blog ディレクトリに miyadaiku のプロジェクトを作成します $ miyadaiku-start ./first_blog プロジェクト設定 初期設定では、プロジェクト設定ファイル first_blog/config.yml ファイルは次のようになっています。"/>
-<meta property="og:description" content="このチュートリアルで作成するソースコードは、 https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog からダウンロードできます。 プロジェクトの作成 はじめに、次のコマンドで first_blog ディレクトリに miyadaiku のプロジェクトを作成します $ miyadaiku-start ./first_blog プロジェクト設定 初期設定では、プロジェクト設定ファイル first_blog/config.yml ファイルは次のようになっています。" />
+<meta name="description" content="You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog Create a project At first, create Miyadaiku project in the first_blog directory with the following command. $ miyadaiku-start ./first_blog"/>
+<meta property="og:description" content="You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog Create a project At first, create Miyadaiku project in the first_blog directory with the following command. $ miyadaiku-start ./first_blog" />
 
 
 
@@ -59,20 +59,20 @@
 
       <li class="nav-item dropdown">
         
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown">チュートリアル</a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Tutorial</a>
         <div class="dropdown-menu">
           
 
           
-            <a class="dropdown-item" href="tutorial.html">サイトの作成</a>
+            <a class="dropdown-item" href="tutorial.html">Create a site</a>
           
-            <a class="dropdown-item" href="tutorial_blog.html">Blogサイトの作成</a>
+            <a class="dropdown-item" href="tutorial_blog.html">Create a blog site</a>
           
         </div>
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown">ガイド</a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">Guide</a>
         <div class="dropdown-menu">
           
 
@@ -101,7 +101,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="../samples.html">サンプル</a>
+        <a class="nav-link" href="../samples.html">Samples</a>
       </li>
 
       <li class="nav-item">
@@ -122,31 +122,31 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='tutorial.html' >サイトの作成</a></div>
+                  <a href='tutorial.html' >Create a site</a></div>
                 </div>
             
           
             
                 <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                    <a href='tutorial_blog.html' >Blogサイトの作成</a></div>
+                    <a href='tutorial_blog.html' >Create a blog site</a></div>
 
                   <ul>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_tutorial_tutorial_blog_2erst_1">プロジェクトの作成</a>
+                        <a href="#h_en_tutorial_tutorial_blog_2erst_1">Create a project</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_tutorial_tutorial_blog_2erst_2">プロジェクト設定</a>
+                        <a href="#h_en_tutorial_tutorial_blog_2erst_2">Project setting</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_tutorial_tutorial_blog_2erst_3">記事の作成</a>
+                        <a href="#h_en_tutorial_tutorial_blog_2erst_3">Create an article</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_ja_tutorial_tutorial_blog_2erst_4">サイトのビルド</a>
+                        <a href="#h_en_tutorial_tutorial_blog_2erst_4">Building the site</a>
                       </li>
                     
                   </ul>
@@ -159,26 +159,25 @@
     <div class='col-md-9 article-body'>
       <a id='page_title' class='header_target'></a>
       <h1>
-        Blogサイトの作成
+        Create a blog site
       </h1>
 
       <div class='article-content'>
-        <p>このチュートリアルで作成するソースコードは、</p>
+        <p>You can download source files in this tutorial from:</p>
 <blockquote>
 <p><a class="reference external" href="https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog">https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog</a></p>
 </blockquote>
-<p>からダウンロードできます。</p>
-<div class="section" id="id1">
-<div class="header_target" id="h_ja_tutorial_tutorial_blog_2erst_1"></div><h1>プロジェクトの作成</h1>
-<p>はじめに、次のコマンドで <span class="docutils literal">first_blog</span> ディレクトリに <span class="docutils literal">miyadaiku</span> のプロジェクトを作成します</p>
+<div class="section" id="create-a-project">
+<div class="header_target" id="h_en_tutorial_tutorial_blog_2erst_1"></div><h1>Create a project</h1>
+<p>At first, create Miyadaiku project in the <span class="docutils literal">first_blog</span> directory with the following command.</p>
 <div class="code-block">
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-start ./first_blog
 </pre></div>
 </div>
 </div>
-<div class="section" id="id2">
-<div class="header_target" id="h_ja_tutorial_tutorial_blog_2erst_2"></div><h1>プロジェクト設定</h1>
-<p>初期設定では、プロジェクト設定ファイル <span class="docutils literal">first_blog/config.yml</span> ファイルは次のようになっています。</p>
+<div class="section" id="project-setting">
+<div class="header_target" id="h_en_tutorial_tutorial_blog_2erst_2"></div><h1>Project setting</h1>
+<p>By default, the project configuration file <span class="docutils literal">first_blog/config.yml</span> file looks like this:</p>
 <div class="code-block">
 <div class="code-block-caption">first_blog/config.yml:</div>
 <div class="highlight"><pre><span></span><span class="c1"># Miyadaiku config file</span>
@@ -203,7 +202,7 @@
 <span class="c1">#   - miyadaiku.themes.sample.blog</span>
 </pre></div>
 </div>
-<p><span class="docutils literal">first_blog/config.yml</span> の <span class="docutils literal">themes</span> を修正し、組み込みテーマ <span class="docutils literal">miyadaiku.themes.sample.blog</span> を使用するように設定します。</p>
+<p>Modify <span class="docutils literal">themes</span> in <span class="docutils literal">first_blog/config.yml</span> file to use the built-in theme `` miyadaiku.themes.sample.blog``.</p>
 <div class="code-block">
 <div class="code-block-caption">first_blog/config.yml:</div>
 <div class="highlight"><pre><span></span><span class="c1"># Title of the site</span>
@@ -219,20 +218,20 @@
 <span class="l l-Scalar l-Scalar-Plain">timezone</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Asia/Tokyo</span>
 
 <span class="c1"># List of site theme</span>
-<span class="l l-Scalar l-Scalar-Plain">themes</span><span class="p p-Indicator">:</span>                            <span class="c1"># &lt;--- この行を修正</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">miyadaiku.themes.sample.blog</span>   <span class="c1"># &lt;--- この行を修正</span>
+<span class="l l-Scalar l-Scalar-Plain">themes</span><span class="p p-Indicator">:</span>                            <span class="c1"># &lt;--- FIX HERE</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">miyadaiku.themes.sample.blog</span>   <span class="c1"># &lt;--- FIX HERE</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id3">
-<div class="header_target" id="h_ja_tutorial_tutorial_blog_2erst_3"></div><h1>記事の作成</h1>
-<p>ブログの記事として、<span class="docutils literal">first_blog/contents/first_entry.rst</span> ファイルを作成します。</p>
+<div class="section" id="create-an-article">
+<div class="header_target" id="h_en_tutorial_tutorial_blog_2erst_3"></div><h1>Create an article</h1>
+<p>Create an  article file <span class="docutils literal">first_blog/contents/first_entry.rst</span>.</p>
 <div class="code-block">
 <div class="code-block-caption">first_blog/contents/first_entry.rst:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
    <span class="nc">:date:</span> <span class="nf">2017-01-01</span>
-   <span class="nc">:category:</span> <span class="nf">カテゴリ1</span>
-   <span class="nc">:tags:</span> <span class="nf">タグ1, タグ2</span>
+   <span class="nc">:category:</span> <span class="nf">Category1</span>
+   <span class="nc">:tags:</span> <span class="nf">tag1, tag2</span>
 
 <span class="gh">First entry</span>
 <span class="gh">-------------</span>
@@ -240,14 +239,14 @@
 This is my first blog entry.
 </pre></div>
 </div>
-<p>ブログの日付、カテゴリなどのプロパティを、<span class="docutils literal">article</span> ロールに記述します。ここでは、記事の日付、カテゴリ、タグを指定しています。</p>
-<p>同様に、二つ目の記事 <span class="docutils literal">first_blog/contents/second_entry.rst</span> ファイルを作成します。</p>
+<p>Write properties such as blog date and category in the <span class="docutils literal">article</span> role. Here, we specify the date, category, tag of the article.</p>
+<p>Create the second article `` first_blog / contents / second_entry.rst`` file.</p>
 <div class="code-block">
 <div class="code-block-caption">first_blog/contents/second_entry.rst:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
    <span class="nc">:date:</span> <span class="nf">2017-01-01</span>
-   <span class="nc">:category:</span> <span class="nf">カテゴリ2</span>
-   <span class="nc">:tags:</span> <span class="nf">タグ3</span>
+   <span class="nc">:category:</span> <span class="nf">Category2</span>
+   <span class="nc">:tags:</span> <span class="nf">tag3</span>
 
 <span class="gh">Second entry</span>
 <span class="gh">-------------</span>
@@ -256,14 +255,14 @@ This is my second blog entry.
 </pre></div>
 </div>
 </div>
-<div class="section" id="id4">
-<div class="header_target" id="h_ja_tutorial_tutorial_blog_2erst_4"></div><h1>サイトのビルド</h1>
-<p>次のコマンドでサイトをビルドします。</p>
+<div class="section" id="building-the-site">
+<div class="header_target" id="h_en_tutorial_tutorial_blog_2erst_4"></div><h1>Building the site</h1>
+<p>Build the site with the following command.</p>
 <div class="code-block">
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-build ./first_blog
 </pre></div>
 </div>
-<p>正常に終了すると、<span class="docutils literal">first_blog/outputs/index.html</span> にBlogが出力されます。</p>
+<p>If the command succeeds, the <span class="docutils literal">first_blog/outputs/index.html</span> file will be created.</p>
 </div>
       </div>
     </div>

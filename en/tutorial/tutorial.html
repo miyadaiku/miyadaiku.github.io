@@ -227,14 +227,14 @@ This is a link page.
 Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./hello.rst") }}`</span>.
 </pre></div>
 </div>
-<p>Again,</p>
+<p>Let's build the project again.</p>
 <div class="code-block">
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-build ./first_doc
 </pre></div>
 </div>
 <p>This command creates <span class="docutils literal">first_doc/output/link.html</span> file.</p>
 <p>Content written in the <span class="docutils literal">:jinja:</span> role is processed as <span class="docutils literal">Jinja2</span> template and converted to HTML.</p>
-<p>The variable `` content`` is <a href="../guide/objects.html#content_obj">コンテントオブジェクト</a> refers to the article being processed. Here we use the <span class="docutils literal">link_to(page name)</span> method to create a link to another page. The title of the landing page is used as the text of the link.</p>
+<p>The variable <span class="docutils literal">content</span> is <a href="../guide/objects.html#content_obj">コンテントオブジェクト</a> refers to the article being processed. Here we use the <span class="docutils literal">link_to(pagename)</span> method to create a link to another page. The title of the landing page is used as the text of the link.</p>
 <div class="header_target" id="template"></div></div>
 <div class="section" id="customizing-templates">
 <h1>Customizing templates</h1>
@@ -272,7 +272,7 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 <div class="section" id="add-a-css-file">
 <h1>Add a CSS file</h1>
 <p>Files in the <span class="docutils literal">files/</span> directory of the project are copied directly to the <span class="docutils literal">outputs</span> directory without converting them to HTML.</p>
-<p>Let's add `` copyright.css`` file to the <span class="docutils literal">first_doc/files/static/css</span> directory.</p>
+<p>Let's add <span class="docutils literal">copyright.css</span> file to the <span class="docutils literal">first_doc/files/static/css</span> directory.</p>
 <div class="code-block">
 <div class="code-block-caption">first_doc/files/static/css/copyright.css:</div>
 <div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">copyright</span> <span class="p">{</span>
@@ -285,38 +285,33 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 <div class="code-block-caption">first_doc/templetes/page_article.html:</div>
 <div class="highlight"><pre><span></span><span class="x">&lt;!-- Extends page_article.html in miyadaiku.themes.base package --&gt;</span>
 <span class="cp">{%</span> <span class="k">extends</span> <span class="s1">'miyadaiku.themes.base!page_article.html'</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="x">&lt;! - Add template - begin -&gt;</span>
+
+<span class="x">&lt;!-- Customize head block --&gt;</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">head</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="x">  &lt;!-- Render contents of the parent block --&gt;</span>
+<span class="x">  </span><span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="x">   &lt;!-- Add link element --&gt;</span>
+<span class="x">   &lt;link rel="stylesheet" href="</span><span class="cp">{{</span> <span class="nv">page.path_to</span><span class="o">(</span><span class="s1">'/static/css/copyright.css'</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">head</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="x">&lt;! - Add template - end -&gt;</span>
+
+<span class="x">&lt;!-- Customize body block --&gt;</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">body</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="x">  &lt;!-- Render contents of the parent block --&gt;</span>
+<span class="x">  </span><span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="x">  &lt;!-- Add copyright notation  --&gt;</span>
+<span class="x">  &lt;div class="copyright"&gt;Copyright(c) 2017 miyadaiku ALL RIGHTS RESERVED.&lt;/div&gt;</span>
+
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">body</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
 </div>
-<p>   &lt;! - Add template - begin -&gt;</p>
-<blockquote>
-<p>&lt;!-- Customize head block --&gt;
-{% block head %}</p>
-<blockquote>
-<p>&lt;!-- Render contents of the parent block --&gt;
-{{ super() }}</p>
-<blockquote>
-<p>&lt;!-- Add link element --&gt;
-&lt;link rel="stylesheet" href="{{ page.path_to('/static/css/copyright.css')}}"&gt;</p>
-</blockquote>
-</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/ubuntu/miyadaiku-docs/doc/contents/en/tutorial/tutorial.rst</span>, line 203)</p>
-<p>Block quote ends without a blank line; unexpected unindent.</p>
-</div>
-<p>{% endblock head %}</p>
-</blockquote>
-<p>   &lt;! - Add template - end -&gt;</p>
-<blockquote>
-<p>&lt;!-- Customize body block --&gt;
-{% block body %}</p>
-<blockquote>
-<p>&lt;!-- Render contents of the parent block --&gt;
-{{ super() }}</p>
-<p>&lt;!-- Add copyright notation  --&gt;
-&lt;div class="copyright"&gt;Copyright(c) 2017 miyadaiku ALL RIGHTS RESERVED.&lt;/div&gt;</p>
-</blockquote>
-<p>{% endblock body %}</p>
-</blockquote>
 <p>We added an override for the <span class="docutils literal">head</span> block and specify the CSS to load with the <span class="docutils literal">&lt;link&gt;</span> element. The <span class="docutils literal">content.path_to(pagename)</span> method returns the path to the page specified.</p>
 </div>
       </div>

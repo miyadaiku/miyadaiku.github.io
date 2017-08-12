@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="Property - Miyadaiku" />
 
-<meta name="description" content="Contents has property values to keep extra values. The syntax to provide properties differ to document format such as reStructuredText, Markdown. Standard properties Following properties are standard property which are defined for all contents. cagegory Category of content. Default value is"/>
-<meta property="og:description" content="Contents has property values to keep extra values. The syntax to provide properties differ to document format such as reStructuredText, Markdown. Standard properties Following properties are standard property which are defined for all contents. cagegory Category of content. Default value is" />
+<meta name="description" content="Contents has property values to keep extra values. The syntax to provide properties differ to document format such as reStructuredText, Markdown. Standard properties Following properties are standard property which are defined for all contents. abstract Short summary of the article. Default is taken from beggining of the HTML of the article. Length of letters taken from HTML is specified by"/>
+<meta property="og:description" content="Contents has property values to keep extra values. The syntax to provide properties differ to document format such as reStructuredText, Markdown. Standard properties Following properties are standard property which are defined for all contents. abstract Short summary of the article. Default is taken from beggining of the HTML of the article. Length of letters taken from HTML is specified by" />
 
 
 
@@ -83,9 +83,9 @@
           
             <a class="dropdown-item" href="article.html">Article</a>
           
-            <a class="dropdown-item" href="snippet.html">スニペット</a>
+            <a class="dropdown-item" href="snippet.html">Snippet</a>
           
-            <a class="dropdown-item" href="index.html">インデックス</a>
+            <a class="dropdown-item" href="index.html">Index</a>
           
             <a class="dropdown-item" href="config.html">コンフィグ</a>
           
@@ -151,14 +151,14 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='snippet.html' >スニペット</a></div>
+                  <a href='snippet.html' >Snippet</a></div>
                 </div>
             
           
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='index.html' >インデックス</a></div>
+                  <a href='index.html' >Index</a></div>
                 </div>
             
           
@@ -212,6 +212,15 @@
 <h1>Standard properties</h1>
 <p>Following properties are standard property which are defined for all contents.</p>
 <dl>
+<dt>abstract</dt>
+<dd><p>Short summary of the article. Default is taken from beggining of the HTML of the article. Length of letters taken from HTML is specified by <span class="docutils literal">abstract_length</span> property.</p>
+</dd>
+<dt>abstract_length</dt>
+<dd><p>Specify the number of characters of the text to be used as <span class="docutils literal">abstract</span>. If <span class="docutils literal">0</span> is specified, all the text is used. Default value is <span class="docutils literal">500</span> characters.</p>
+</dd>
+<dt>article_template</dt>
+<dd><p>Name of the Jinja2 template that generates the HTML page of the article. Default value is <span class="docutils literal">page_article.html</span>.</p>
+</dd>
 <dt>cagegory</dt>
 <dd><p>Category of content. Default value is <span class="docutils literal">''</span>.</p>
 </dd>
@@ -229,6 +238,25 @@
 </dd>
 </dl>
 <div class="header_target" id="prop_imports"></div><dl>
+<dt>draft</dt>
+<dd><p><span class="docutils literal">true</span> if the article is unpublished. Default value is <span class="docutils literal">false</span>.</p>
+</dd>
+<dt>ext</dt>
+<dd><p>Extension of the article's output file name. Default value is <span class="docutils literal">'.html'</span>.</p>
+</dd>
+<dt>filename</dt>
+<dd><p>Specify the output file name. If unspecified, file name is generated with <span class="docutils literal">filename_templ</span>.</p>
+<p><span class="docutils literal">Filename</span> can be a relative path. Ex) <span class="docutils literal">subdir/article1.html</span>, <span class="docutils literal"><span class="pre">../subdir/article1.html</span></span></p>
+</dd>
+<dt>filename_templ</dt>
+<dd><p>Specify the file name of the output HTML file with Jina 2 template. Default value is <span class="docutils literal"><span class="pre">'{{content.stem}}.{{Content.ext}}'</span></span>. In the template you can reference <a href="property.html#jinja_vars">Property</a>.</p>
+</dd>
+<dt>header</dt>
+<dd><p>Gets a list of the header elements of an article. The elements of the list are tuples of <cite>(header id, header element name, header text)</cite>.</p>
+</dd>
+<dt>html</dt>
+<dd><p>Get article in HTML.</p>
+</dd>
 <dt>imports</dt>
 <dd><p>File names of templates to be imported as Jinja2 modules. File names are separated by <span class="docutils literal">,</span>. Specified modules can be used as <a href="article.html#import_templ">Imported template</a>.</p>
 <blockquote>
@@ -241,11 +269,17 @@
 <dt>lang</dt>
 <dd><p>Language code of output HTML. Default values is <span class="docutils literal">'en'</span>.</p>
 </dd>
+<dt>order</dt>
+<dd><p>Numeric order of the article. Default value is <span class="docutils literal">0</span>.</p>
+</dd>
 <dt>site_title</dt>
 <dd><p>Title of the site. Defautl value is <span class="docutils literal">'(FIXME - site_title)'</span>.</p>
 </dd>
 <dt>site_url</dt>
 <dd><p>Base URL of the site. Defautl value is <span class="docutils literal"><span class="pre">'http://localhost:8888'</span></span>.</p>
+</dd>
+<dt>stem</dt>
+<dd><p>Specify the output file name without extension of the article. Default value is same as file name name without extension of article.</p>
 </dd>
 <dt>tags</dt>
 <dd><p>Tags of the content, separeted by <span class="docutils literal">,</span>. Default value is <span class="docutils literal">''</span>.</p>

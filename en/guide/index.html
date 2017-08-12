@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-  インデックス
+  Index
 </title>
   
 
@@ -32,10 +32,10 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="インデックス - Miyadaiku" />
+<meta property="og:title" content="Index - Miyadaiku" />
 
-<meta name="description" content="Blogサイトなどでは、新着記事ページや、記事カテゴリ別の一覧ページなど、アーティクルの一覧からなるページが必要となります。Miyadaikuでは、このようなアーティクルの一覧ページを、インデックスオブジェクト から作成します。 インデックスオブジェクトは、contents ディレクトリのYAMLファイルで作成します。 表示対象のアーティクルが1ページに収まらない場合は、複数ページのHTMLファイルを出力します。 contents/index_ja.yml type: index # YAMLファイルのタイプを index に指定"/>
-<meta property="og:description" content="Blogサイトなどでは、新着記事ページや、記事カテゴリ別の一覧ページなど、アーティクルの一覧からなるページが必要となります。Miyadaikuでは、このようなアーティクルの一覧ページを、インデックスオブジェクト から作成します。 インデックスオブジェクトは、contents ディレクトリのYAMLファイルで作成します。 表示対象のアーティクルが1ページに収まらない場合は、複数ページのHTMLファイルを出力します。 contents/index_ja.yml type: index # YAMLファイルのタイプを index に指定" />
+<meta name="description" content="Web sites like blog require index pages, which is a list of articles in the site. Miyadaiku creates index pages from index object. Index objects are created by YAML file which type is index. contents/index_ja.yml type: index # Set type of YAML file as &#39;index&#39;"/>
+<meta property="og:description" content="Web sites like blog require index pages, which is a list of articles in the site. Miyadaiku creates index pages from index object. Index objects are created by YAML file which type is index. contents/index_ja.yml type: index # Set type of YAML file as &#39;index&#39;" />
 
 
 
@@ -83,9 +83,9 @@
           
             <a class="dropdown-item" href="article.html">Article</a>
           
-            <a class="dropdown-item" href="snippet.html">スニペット</a>
+            <a class="dropdown-item" href="snippet.html">Snippet</a>
           
-            <a class="dropdown-item" href="index.html">インデックス</a>
+            <a class="dropdown-item" href="index.html">Index</a>
           
             <a class="dropdown-item" href="config.html">コンフィグ</a>
           
@@ -143,27 +143,27 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='snippet.html' >スニペット</a></div>
+                  <a href='snippet.html' >Snippet</a></div>
                 </div>
             
           
             
                 <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                    <a href='index.html' >インデックス</a></div>
+                    <a href='index.html' >Index</a></div>
 
                   <ul>
                     
                       <li class="header_h1">
-                        <a href="#propertyofindex">インデックスのプロパティ</a>
+                        <a href="#propertyofindex">Property of index</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_en_guide_index_2erst_1">グループ別インデックス</a>
+                        <a href="#h_en_guide_index_2erst_1">Grouped index</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_en_guide_index_2erst_2">グループ別インデックスのプロパティ</a>
+                        <a href="#h_en_guide_index_2erst_2">Property of Grouped index</a>
                       </li>
                     
                   </ul>
@@ -211,136 +211,138 @@
     <div class='col-md-9 article-body'>
       <a id='page_title' class='header_target'></a>
       <h1>
-        インデックス
+        Index
       </h1>
 
       <div class='article-content'>
-        <p>Blogサイトなどでは、新着記事ページや、記事カテゴリ別の一覧ページなど、アーティクルの一覧からなるページが必要となります。Miyadaikuでは、このようなアーティクルの一覧ページを、<strong>インデックスオブジェクト</strong> から作成します。</p>
-<p>インデックスオブジェクトは、<span class="docutils literal">contents</span> ディレクトリのYAMLファイルで作成します。 表示対象のアーティクルが1ページに収まらない場合は、複数ページのHTMLファイルを出力します。</p>
+        <p>Web sites like blog require index pages, which is a list of articles in the site. Miyadaiku creates index pages from <strong>index object</strong>.</p>
+<p>Index objects are created by YAML file which type is <span class="docutils literal">index</span>.</p>
 <div class="code-block">
 <div class="code-block-caption">contents/index_ja.yml</div>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>   <span class="c1"># YAMLファイルのタイプを index に指定</span>
-<span class="l l-Scalar l-Scalar-Plain">indexpage_max_articles</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>  <span class="c1"># 1ページにアーティクルを10件表示</span>
-<span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>      <span class="c1"># langが日本語のアーティクルの一覧を作成</span>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>   <span class="c1"># Set type of YAML file as 'index'</span>
+<span class="l l-Scalar l-Scalar-Plain">indexpage_max_articles</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>  <span class="c1"># Display 10 article in a page</span>
+<span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>      <span class="c1"># List articles where lang is 'ja'</span>
   <span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">ja</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
-<div class="header_target" id="propertyofindex"></div><div class="section" id="id2">
-<h1>インデックスのプロパティ</h1>
-<p>インデックスオブジェクトには、<a href="property.html#standardprofs">Standard properties</a> に加えて、以下のプロパティを指定できます。</p>
-<dl>
+<p>Index object may output multiple pages of HTML file if the article to be displayed does not fit on one page.</p>
+<div class="header_target" id="propertyofindex"></div><div class="section" id="property-of-index">
+<h1>Property of index</h1>
+<p>Index object has following properties, in addition to <a href="property.html#standardprofs">Standard properties</a>.</p>
+<dl class="simple">
 <dt>filters</dt>
-<dd><p>表示するアーティクルの検索条件を指定します。検索する文書プロパティ名をキー、表示対象のプロパティ値のリストを値とする辞書を指定します。</p>
-<p>省略時は、プロパティ <span class="docutils literal">draft</span> が <span class="docutils literal">true</span> の、すべてのアーティクルを表示します。</p>
+<dd><p>Specify search criteria for the article to be displayed as a dictionary. The keys of the dictionary are name of property to search, and the values is a list of values to be selected.</p>
+</dd>
+</dl>
+<p>   If omitted, all articles whose property `` draft`` is `` true`` are displayed.</p>
+<blockquote>
 <div class="code-block">
-<div class="code-block-caption">カテゴリが 'news' または 'event' の日本語アーティクルのみを表示</div>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>   <span class="c1"># YAMLファイルのタイプを index に指定</span>
+<div class="code-block-caption">Display only Japanese articles with category 'news' or 'event'</div>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>   <span class="c1"># Set the type of YAML file as index</span>
 <span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">ja</span><span class="p p-Indicator">]</span>  <span class="c1"># langが日本語</span>
-  <span class="l l-Scalar l-Scalar-Plain">category</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">news</span><span class="p p-Indicator">,</span> <span class="nv">event</span><span class="p p-Indicator">]</span>  <span class="c1"># カテゴリが news または events</span>
+  <span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">ja</span><span class="p p-Indicator">]</span>  <span class="c1"># Seearch articles where lang is Japanese</span>
+  <span class="l l-Scalar l-Scalar-Plain">category</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">news</span><span class="p p-Indicator">,</span> <span class="nv">event</span><span class="p p-Indicator">]</span>  <span class="c1"># Category is news or event</span>
 </pre></div>
 </div>
-</dd>
+</blockquote>
+<dl>
 <dt>indexpage_filename_templ</dt>
-<dd><p>インデックスの先頭ページのファイル名を、Jina2テンプレートで指定します。未指定の場合は <span class="docutils literal"><span class="pre">'{{content.stem}}.html'</span></span> となります。</p>
+<dd><p>File name of the first page of the index with the Jina2 template. Default value is <span class="docutils literal"><span class="pre">'{{content.stem}}.html'</span></span>.</p>
 <blockquote>
 <div class="code-block">
 <div class="code-block-caption">Sample of indexpage_filename_templ</div>
 <div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>
-<span class="c1"># 先頭ページのファイル名は `ファイル名_言語.html`、2ページ目以降は `ファイル名_言語_ページ.html`</span>
-<span class="l l-Scalar l-Scalar-Plain">indexpage_filename_templ</span><span class="p p-Indicator">:</span> <span class="s">'{{content.stem}}_{{content.lang}}.html'</span>
-<span class="l l-Scalar l-Scalar-Plain">indexpage_filename_templ2</span><span class="p p-Indicator">:</span> <span class="s">'{{content.stem}}_{{content.lang}}_{{content}}.html'</span>
+<span class="l l-Scalar l-Scalar-Plain">indexpage_filename_templ</span><span class="p p-Indicator">:</span> <span class="s">'{{content.stem}}_{{content.lang}}.html'</span>   <span class="c1"># template of first page</span>
+<span class="l l-Scalar l-Scalar-Plain">indexpage_filename_templ2</span><span class="p p-Indicator">:</span> <span class="s">'{{content.stem}}_{{content.lang}}_{{content}}.html'</span> <span class="c1"># template of second page</span>
 </pre></div>
 </div>
 </blockquote>
-<p>テンプレートでは、次の変数を使用できます。</p>
+<p>The following variables can be used in the template.</p>
 <dl class="simple">
 <dt>cur_page</dt>
-<dd><p>ページ番号を指定します。</p>
+<dd><p>Current page number。</p>
 </dd>
 <dt>page</dt>
-<dd><p>インデックスページの <a href="objects.html#content_obj">コンテントオブジェクト</a></p>
+<dd><p>Refers <a href="objects.html#content_obj">コンテントオブジェクト</a> of the index.</p>
 </dd>
 </dl>
 </dd>
 <dt>indexpage_filename_templ2</dt>
-<dd><p>インデックスの2ページ目以降のファイル名を、Jina2テンプレートで指定します。未指定の場合は、<span class="docutils literal"><span class="pre">'{{content.stem}}_{{cur_page}}.html'</span></span> となります。</p>
+<dd><p>File name of the second and subsequent pages of the index with the Jina2 template. Default value is <span class="docutils literal"><span class="pre">'{{content.stem}}</span> <span class="pre">_{{cur_page}}.html'</span></span>.</p>
 </dd>
 <dt>indexpage_max_articles</dt>
-<dd><p>インデックスページに表示する、1ページあたりのアーティクル数を指定します。未指定の場合は <span class="docutils literal">5</span> となります。</p>
+<dd><p>Number of articles to be displayed on the index page per page. Default value is <span class="docutils literal">5</span>.</p>
 </dd>
 <dt>indexpage_max_num_pages</dt>
-<dd><p>インデックスの最大ページ数を指定します。<span class="docutils literal">0</span> の場合は、すべてのページを出力します。未指定の場合は <span class="docutils literal">0</span> となります。</p>
+<dd><p>Maximum number of pages of the index. If <span class="docutils literal">0</span>, all pages are output. Default value is <span class="docutils literal">0</span>.</p>
 </dd>
 <dt>indexpage_template</dt>
-<dd><p>インデックスの先頭ページを生成する Jinja2 テンプレート名を指定します。未指定の場合は <span class="docutils literal">page_index.html</span> となります。</p>
+<dd><p>Name of the Jinja2 template file to generate the first page of the index. Default value is <span class="docutils literal">page_index.html</span>.</p>
 </dd>
 <dt>indexpage_template2</dt>
-<dd><p>インデックスの2ページ目以降を生成する Jinja2 テンプレート名を指定します。未指定の場合は <span class="docutils literal">page_index.html</span> となります。</p>
+<dd><p>Name of Jinja2 template file to generate the second and subsequent pages of the index. Default value is <span class="docutils literal">page_index.html</span>.</p>
 </dd>
 <dt>indexpage_orphan</dt>
-<dd><p>最終インデックスページのアーティクル数が <span class="docutils literal">indexpage_orphan</span> 以下なら、新たなページを作成せずに前のページに統合します。</p>
-<p>例えばアーティクルが7件あり、<span class="docutils literal">index_max_page</span> が <span class="docutils literal">3</span> なら、3ページ目のアーティクル数は <span class="docutils literal">1</span> となります。この場合、<span class="docutils literal">indexpage_orphan</span> が <span class="docutils literal">1</span> なら、3ページ目は生成されず、2ページ目のアーティクル数が <span class="docutils literal">4</span> となります。</p>
+<dd><p>If the number of articles on the final index page is less than <span class="docutils literal">indexpage_orphan</span>, articles on the last page are merged into previous page.</p>
+<p>For example, if there are seven articles and <span class="docutils literal">index_max_page</span> is <span class="docutils literal">3</span>, the number of articles on the third page is <span class="docutils literal">1</span>. In this case, if <span class="docutils literal">indexpage_orphan</span> is <span class="docutils literal">1</span>, ​​the third page is not generated and the number of articles on the second page is <span class="docutils literal">4</span>.</p>
 </dd>
 <dt>type</dt>
-<dd><p>YAMLファイルのタイプを指定します。インデックスページの場合は <span class="docutils literal">index</span> を指定します。</p>
+<dd><p>Type of YAML file. For index object, specify <span class="docutils literal">index</span>.</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="id3">
-<div class="header_target" id="h_en_guide_index_2erst_1"></div><h1>グループ別インデックス</h1>
-<p>アーティクルのカテゴリやタグなど、プロパティ別の一覧を作成する場合は、インデックスオブジェクトの <span class="docutils literal">groupby</span> 属性に対象となるプロパティの名前を指定します。</p>
+<div class="section" id="grouped-index">
+<div class="header_target" id="h_en_guide_index_2erst_1"></div><h1>Grouped index</h1>
+<p>To create index grouped by property value, specify the name of the property to classify as <span class="docutils literal">groupby</span> property of the index object.</p>
 <div class="code-block">
 <div class="code-block-caption">contents/index_category.yml</div>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>   <span class="c1"># YAMLファイルのタイプを index に指定</span>
-<span class="l l-Scalar l-Scalar-Plain">groupby</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">category</span>  <span class="c1"># カテゴリ別のインデックスを作成</span>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>        <span class="c1"># Set the type of YAML file as index</span>
+<span class="l l-Scalar l-Scalar-Plain">groupby</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">category</span>  <span class="c1"># Create index grouped by category name</span>
 </pre></div>
 </div>
-<p><span class="docutils literal">groupby</span> プロパティを指定すると、指定されたプロパティの値ごとにインデックスページを作成します。この例では、カテゴリが <span class="docutils literal">catA</span> のアーティクルと <span class="docutils literal">catB</span> のアーティクルが存在する場合、</p>
+<p>Grouped index creates an index page for each value of the specified property. In this example, if there are articles with category "catA" and articles with "catB", the index creates two groups of subsequent pages.</p>
 <ul class="simple">
 <li><p><span class="docutils literal">index_category_catA.html</span>、<span class="docutils literal">index_category_catA_2.html</span>、<span class="docutils literal">index_category_catA_3.html</span> ...</p></li>
 <li><p><span class="docutils literal">index_category_catB.html</span>、<span class="docutils literal">index_category_catB_2.html</span>、<span class="docutils literal">index_category_catB_3.html</span> ...</p></li>
 </ul>
-<p>の2種類のインデックスページを作成します。</p>
-<div class="section" id="id4">
-<div class="header_target" id="h_en_guide_index_2erst_2"></div><h2>グループ別インデックスのプロパティ</h2>
-<p>グループ別インデックスでは、<a href="index.html#propertyofindex">通常のインデックス</a> に加えて、次のプロパティを指定できます。</p>
+<div class="section" id="property-of-grouped-index">
+<div class="header_target" id="h_en_guide_index_2erst_2"></div><h2>Property of Grouped index</h2>
+<p>Following properties are available for grouped index in addition to <a href="index.html#propertyofindex">Property of index</a>.</p>
 <dl>
 <dt>groupby</dt>
-<dd><p>アーティクルを分類するプロパティの名前を指定します。e.g. <span class="docutils literal">'category'</span></p>
+<dd><p>Name of the property that classifies the article. Eg <span class="docutils literal">'category'</span></p>
 </dd>
 <dt>indexpage_group_filename_templ</dt>
-<dd><p>インデックスの先頭ページのファイル名を、Jina2テンプレートで指定します。未指定の場合は <span class="docutils literal"><span class="pre">'{{content.stem}}_{{content.groupby}}_{{value}}.html'</span></span> となります。</p>
+<dd><p>File name of the first page of the index with the Jina2 template. Default is <span class="docutils literal"><span class="pre">'{{content.stem}}_{{content.groupby}}_{{value}}.html'</span></span>.</p>
 <blockquote>
 <div class="code-block">
 <div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>
-<span class="l l-Scalar l-Scalar-Plain">groupby</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">tags</span>  <span class="c1"># タグ別のインデックスを作成</span>
+<span class="l l-Scalar l-Scalar-Plain">groupby</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">tags</span>  <span class="c1"># create index grouped by tags</span>
 
-<span class="c1"># 先頭ページのファイル名は `tags_タグ名.html`、2ページ目以降は `tags_タグ名_ページ.html`</span>
 <span class="l l-Scalar l-Scalar-Plain">indexpage_group_filename_templ</span><span class="p p-Indicator">:</span> <span class="s">'tags_{{value}}.html'</span>
 <span class="l l-Scalar l-Scalar-Plain">indexpage_group_filename_templ2</span><span class="p p-Indicator">:</span> <span class="s">'tags_{{value}}_{{cur_page}}.html'</span>
 </pre></div>
 </div>
 </blockquote>
-<p>テンプレートでは、次の変数を使用できます。</p>
+<p>The following variables can be used in the template.</p>
 <dl class="simple">
 <dt>cur_page</dt>
-<dd><p>ページ番号を指定します。</p>
+<dd><p>Page number</p>
 </dd>
 <dt>groupby</dt>
-<dd><p>分類するプロパティ名を指定します。</p>
+<dd><p>Name of the property that classifies the article.</p>
 </dd>
 <dt>page</dt>
-<dd><p>インデックスページの <a href="objects.html#content_obj">コンテントオブジェクト</a></p>
+<dd><p>Refer to the <a href="objects.html#content_obj">コンテントオブジェクト</a> of the index.</p>
 </dd>
 <dt>value</dt>
-<dd><p>プロパティの値を指定します。</p>
+<dd><p>Current value of property.</p>
 </dd>
 </dl>
 </dd>
 <dt>indexpage_group_filename_templ2</dt>
-<dd><p>インデックスの2ページ目以降のファイル名を、Jina2テンプレートで指定します。未指定の場合は <span class="docutils literal"><span class="pre">'{{content.stem}}_{{content.groupby}}_{{value}}_{{cur_page}}.html'</span></span> となります。</p>
-<p>テンプレートでは、<span class="docutils literal">indexpage_group_filename_templ</span> と同じ変数を使用できます。</p>
+<dd><p>File name of the second page and  subsequent pages of the index with the Jina2 template. Default is <span class="docutils literal"><span class="pre">'{{content.stem}}_{{content.groupby}}_{{value}}_{{cur_page}}.html'</span></span>.</p>
+<p>Same variable as <span class="docutils literal">indexpage_group_filename_templ</span> are provided.</p>
 </dd>
 </dl>
 </div>

@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="プロパティ - Miyadaiku" />
 
-<meta name="description" content="コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。 標準プロパティ 標準プロパティとして、すべてのコンテンツに以下の値が設定されています。 cagegory コンテンツのカテゴリを指定します。未指定の場合は &#39;&#39; となります。 charset 生成されるHTMLの charset を指定します。未指定の場合は &#39;utf-8&#39; となります。 date コンテンツの作成日を指定します。 e.g. 2017/01/01 2017/01/01 12:00:00"/>
-<meta property="og:description" content="コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。 標準プロパティ 標準プロパティとして、すべてのコンテンツに以下の値が設定されています。 cagegory コンテンツのカテゴリを指定します。未指定の場合は &#39;&#39; となります。 charset 生成されるHTMLの charset を指定します。未指定の場合は &#39;utf-8&#39; となります。 date コンテンツの作成日を指定します。 e.g. 2017/01/01 2017/01/01 12:00:00" />
+<meta name="description" content="コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。 標準プロパティ 標準プロパティとして、すべてのコンテンツに以下の値が設定されています。 abstract HTMLに変換したアーティクルを、 abstract_length プロパティで指定した文字数分取得します。abstract_length が 0 の場合、全文を返します。 abstract_length インデックスファイルやRSSの摘要として使用するテキストの長さを、文字数で指定します。長さとして"/>
+<meta property="og:description" content="コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。 標準プロパティ 標準プロパティとして、すべてのコンテンツに以下の値が設定されています。 abstract HTMLに変換したアーティクルを、 abstract_length プロパティで指定した文字数分取得します。abstract_length が 0 の場合、全文を返します。 abstract_length インデックスファイルやRSSの摘要として使用するテキストの長さを、文字数で指定します。長さとして" />
 
 
 
@@ -212,6 +212,15 @@
 <h1>標準プロパティ</h1>
 <p>標準プロパティとして、すべてのコンテンツに以下の値が設定されています。</p>
 <dl>
+<dt>abstract</dt>
+<dd><p>HTMLに変換したアーティクルを、 <span class="docutils literal">abstract_length</span> プロパティで指定した文字数分取得します。<span class="docutils literal">abstract_length</span> が <span class="docutils literal">0</span> の場合、全文を返します。</p>
+</dd>
+<dt>abstract_length</dt>
+<dd><p>インデックスファイルやRSSの摘要として使用するテキストの長さを、文字数で指定します。長さとして <span class="docutils literal">0</span> を指定すると、本文すべてを摘要とします。未指定の場合は、<span class="docutils literal">500</span> 文字となります。</p>
+</dd>
+<dt>article_template</dt>
+<dd><p>アーティクルのHTMLページを生成するJinja2テンプレートの名前を指定します。未指定の場合は、<span class="docutils literal">page_article.html</span> となります。</p>
+</dd>
 <dt>cagegory</dt>
 <dd><p>コンテンツのカテゴリを指定します。未指定の場合は <span class="docutils literal">''</span> となります。</p>
 </dd>
@@ -227,6 +236,25 @@
 <li><p><span class="docutils literal">2017/01/01 12:00:00 +0900</span></p></li>
 </ul>
 </dd>
+<dt>draft</dt>
+<dd><p>未公開状態のアーティクルは <span class="docutils literal">true</span>、公開中のアーティクルは <span class="docutils literal">false</span> を指定します。未指定の場合は <span class="docutils literal">false</span> となります。</p>
+</dd>
+<dt>ext</dt>
+<dd><p>アーティクルの出力ファイル名の拡張子を指定します。未指定の場合は、<span class="docutils literal">'.html'</span> となります。</p>
+</dd>
+<dt>filename</dt>
+<dd><p>出力ファイル名を指定します。未指定の場合は、<span class="docutils literal">filename_templ</span> でファイル名を生成します。</p>
+<p><span class="docutils literal">filename</span> には、相対ディレクトリ名も指定できます。ex) <span class="docutils literal">subdir/article1.html</span>,  <span class="docutils literal"><span class="pre">../subdir/article1.html</span></span></p>
+</dd>
+<dt>filename_templ</dt>
+<dd><p>出力HTMLファイルのファイル名を、Jina2テンプレートで指定します。未指定の場合は、<span class="docutils literal">'{{ content.stem <span class="pre">}}.{{</span> content.ext }}'</span> となります。テンプレートでは、 <a href="property.html#jinja_vars">プロパティ</a> を参照できます。</p>
+</dd>
+<dt>header</dt>
+<dd><p>アーティクルのヘッダ要素のリストを取得します。リストの要素は、<cite>(ヘッダのid, ヘッダ要素名, ヘッダテキスト)</cite> のタプルとなります。</p>
+</dd>
+<dt>html</dt>
+<dd><p>ページの内容をHTMLで取得します。</p>
+</dd>
 </dl>
 <div class="header_target" id="prop_imports"></div><dl>
 <dt>imports</dt>
@@ -239,12 +267,18 @@
 <dt>lang</dt>
 <dd><p>生成されるHTMLの <span class="docutils literal">lang</span> を指定します。未指定の場合は <span class="docutils literal">'en'</span>  となります。</p>
 </dd>
+<dt>order</dt>
+<dd><p>アーティクルの順序を数値で指定します。</p>
+</dd>
 <dt>site_title</dt>
 <dd><p>サイトのタイトルを指定します。未指定の場合は <span class="docutils literal"><span class="pre">'(FIXME-site_title)</span></span>  となります。</p>
 </dd>
 <dt>site_url</dt>
 <dd><p>コンテンツの親となるURLを指定します。 e.g. <span class="docutils literal"><span class="pre">https://www.example.com/my-site</span></span></p>
 <p>未指定の場合は <span class="docutils literal"><span class="pre">'http://localhost:8888'</span></span>  となります。</p>
+</dd>
+<dt>stem</dt>
+<dd><p>アーティクルの出力ファイル名(拡張子以外)を指定します。未指定の場合は、アーティクルソースファイルのファイル名(拡張子以外)となります。</p>
 </dd>
 <dt>tags</dt>
 <dd><p>コンテンツのタグを、<span class="docutils literal">,</span> で区切って指定します。未指定の場合は <span class="docutils literal">''</span> となります。</p>

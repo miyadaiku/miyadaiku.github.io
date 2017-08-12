@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-  プロパティ
+  Property
 </title>
   
 
@@ -32,10 +32,10 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="プロパティ - Miyadaiku" />
+<meta property="og:title" content="Property - Miyadaiku" />
 
-<meta name="description" content="コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。 標準プロパティ 標準プロパティとして、すべてのコンテンツに以下の値が設定されています。 cagegory コンテンツのカテゴリを指定します。未指定の場合は &#39;&#39; となります。 charset 生成されるHTMLの charset を指定します。未指定の場合は &#39;utf-8&#39; となります。 date コンテンツの作成日を指定します。 e.g. 2017/01/01 2017/01/01 12:00:00"/>
-<meta property="og:description" content="コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。 標準プロパティ 標準プロパティとして、すべてのコンテンツに以下の値が設定されています。 cagegory コンテンツのカテゴリを指定します。未指定の場合は &#39;&#39; となります。 charset 生成されるHTMLの charset を指定します。未指定の場合は &#39;utf-8&#39; となります。 date コンテンツの作成日を指定します。 e.g. 2017/01/01 2017/01/01 12:00:00" />
+<meta name="description" content="Contents has property values to keep extra values. The syntax to provide properties differ to document format such as reStructuredText, Markdown. Standard properties Following properties are standard property which are defined for all contents. cagegory Category of content. Default value is"/>
+<meta property="og:description" content="Contents has property values to keep extra values. The syntax to provide properties differ to document format such as reStructuredText, Markdown. Standard properties Following properties are standard property which are defined for all contents. cagegory Category of content. Default value is" />
 
 
 
@@ -79,9 +79,9 @@
           
             <a class="dropdown-item" href="project.html">Miyadaiku project</a>
           
-            <a class="dropdown-item" href="property.html">プロパティ</a>
+            <a class="dropdown-item" href="property.html">Property</a>
           
-            <a class="dropdown-item" href="article.html">アーティクル</a>
+            <a class="dropdown-item" href="article.html">Article</a>
           
             <a class="dropdown-item" href="snippet.html">スニペット</a>
           
@@ -129,12 +129,12 @@
             
                 <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                    <a href='property.html' >プロパティ</a></div>
+                    <a href='property.html' >Property</a></div>
 
                   <ul>
                     
                       <li class="header_h1">
-                        <a href="#standardprofs">標準プロパティ</a>
+                        <a href="#standardprofs">Standard properties</a>
                       </li>
                     
                   </ul>
@@ -144,7 +144,7 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='article.html' >アーティクル</a></div>
+                  <a href='article.html' >Article</a></div>
                 </div>
             
           
@@ -203,23 +203,23 @@
     <div class='col-md-9 article-body'>
       <a id='page_title' class='header_target'></a>
       <h1>
-        プロパティ
+        Property
       </h1>
 
       <div class='article-content'>
-        <p>コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。</p>
-<div class="header_target" id="standardprofs"></div><div class="section" id="id2">
-<h1>標準プロパティ</h1>
-<p>標準プロパティとして、すべてのコンテンツに以下の値が設定されています。</p>
+        <p>Contents has property values to keep extra values. The syntax to provide properties differ to document format such as reStructuredText, Markdown.</p>
+<div class="header_target" id="standardprofs"></div><div class="section" id="standard-properties">
+<h1>Standard properties</h1>
+<p>Following properties are standard property which are defined for all contents.</p>
 <dl>
 <dt>cagegory</dt>
-<dd><p>コンテンツのカテゴリを指定します。未指定の場合は <span class="docutils literal">''</span> となります。</p>
+<dd><p>Category of content. Default value is <span class="docutils literal">''</span>.</p>
 </dd>
 <dt>charset</dt>
-<dd><p>生成されるHTMLの <span class="docutils literal">charset</span> を指定します。未指定の場合は <span class="docutils literal"><span class="pre">'utf-8'</span></span> となります。</p>
+<dd><p>Character set of output HTML. Default values is <span class="docutils literal"><span class="pre">'utf-8'</span></span>.</p>
 </dd>
 <dt>date</dt>
-<dd><p>コンテンツの作成日を指定します。</p>
+<dd><p>Created date of the content. Default value is <span class="docutils literal">None</span>.</p>
 <p>e.g.</p>
 <ul class="simple">
 <li><p><span class="docutils literal">2017/01/01</span></p></li>
@@ -230,32 +230,35 @@
 </dl>
 <div class="header_target" id="prop_imports"></div><dl>
 <dt>imports</dt>
-<dd><p>Jinja2のモジュールとして import するテンプレートを、<span class="docutils literal">,</span> 区切りで指定します。指定したモジュールは、<a href="article.html#import_templ">インポート済みテンプレート</a> として使用できます。</p>
+<dd><p>File names of templates to be imported as Jinja2 modules. File names are separated by <span class="docutils literal">,</span>. Specified modules can be used as <a href="article.html#import_templ">Imported template</a>.</p>
+<blockquote>
 <p>e.g.</p>
+<blockquote>
 <p><span class="docutils literal">macro1.html, other.package!macro2.html</span></p>
+</blockquote>
+</blockquote>
 </dd>
 <dt>lang</dt>
-<dd><p>生成されるHTMLの <span class="docutils literal">lang</span> を指定します。未指定の場合は <span class="docutils literal">'en'</span>  となります。</p>
+<dd><p>Language code of output HTML. Default values is <span class="docutils literal">'en'</span>.</p>
 </dd>
 <dt>site_title</dt>
-<dd><p>サイトのタイトルを指定します。未指定の場合は <span class="docutils literal"><span class="pre">'(FIXME-site_title)</span></span>  となります。</p>
+<dd><p>Title of the site. Defautl value is <span class="docutils literal">'(FIXME - site_title)'</span>.</p>
 </dd>
 <dt>site_url</dt>
-<dd><p>コンテンツの親となるURLを指定します。 e.g. <span class="docutils literal"><span class="pre">https://www.example.com/my-site</span></span></p>
-<p>未指定の場合は <span class="docutils literal"><span class="pre">'http://localhost:8888'</span></span>  となります。</p>
+<dd><p>Base URL of the site. Defautl value is <span class="docutils literal"><span class="pre">'http://localhost:8888'</span></span>.</p>
 </dd>
 <dt>tags</dt>
-<dd><p>コンテンツのタグを、<span class="docutils literal">,</span> で区切って指定します。未指定の場合は <span class="docutils literal">''</span> となります。</p>
+<dd><p>Tags of the content, separeted by <span class="docutils literal">,</span>. Default value is <span class="docutils literal">''</span>.</p>
 </dd>
 <dt>timezone</dt>
-<dd><p>コンテンツの作成日などを表示するタイムゾーンを指定します。e.g. <span class="docutils literal">'Europe/Warsaw'</span>, <span class="docutils literal">'Asia/Tokyo'</span></p>
-<p>未指定の場合は、プラットフォームから取得したタイムゾーンとなります。</p>
+<dd><p>Timezone of the content. e.g. <span class="docutils literal">'Europe/Warsaw'</span>, <span class="docutils literal">'Asia/Tokyo'</span></p>
+<p>Default is taken from the platform.</p>
 </dd>
 <dt>title</dt>
-<dd><p>コンテンツのタイトルを指定します。未指定の場合は <span class="docutils literal">''</span> となります。</p>
+<dd><p>Title of the content. Default value is <span class="docutils literal">''</span>.</p>
 </dd>
 <dt>url</dt>
-<dd><p>アーティクルのURLを指定します。</p>
+<dd><p>Url of the content. Default value is <span class="docutils literal">site_url</span> + <span class="docutils literal">path_from_the_root</span>.</p>
 </dd>
 </dl>
 </div>

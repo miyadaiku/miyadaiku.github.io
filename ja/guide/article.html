@@ -306,7 +306,7 @@
 <dd><p>出力HTMLファイルのファイル名を、Jina2テンプレートで指定します。未指定の場合は、<span class="docutils literal">'{{ content.stem <span class="pre">}}.{{</span> content.ext }}'</span> となります。テンプレートでは、 <a href="article.html#jinja_vars">テンプレート変数</a> を参照できます。</p>
 </dd>
 <dt>header</dt>
-<dd><p>アーティクルのヘッダ要素のリストを取得します。リストの要素は、<cite>(ヘッダのid, ヘッダ要素名, ヘッダテキスト)</cite> のタプルとなります。。</p>
+<dd><p>アーティクルのヘッダ要素のリストを取得します。リストの要素は、<cite>(ヘッダのid, ヘッダ要素名, ヘッダテキスト)</cite> のタプルとなります。</p>
 </dd>
 <dt>html</dt>
 <dd><p>ページの内容をHTMLで取得します。</p>
@@ -351,7 +351,7 @@ This is a miyadaiku article in reST.
 </pre></div>
 </div>
 <p>この例では、文書のプロパティとして <span class="docutils literal">date</span>、<span class="docutils literal">title</span>、<span class="docutils literal">category</span>、<span class="docutils literal">tags</span> を指定しています。</p>
-<p>プロパティとして、任意の項目を指定できます。プロパティ設定については、<a href="#propsofarticle">アーティクルのプロパティ</a> を参照してください。</p>
+<p>プロパティとして、任意の項目を指定できます。プロパティ設定については、<a href="article.html#propsofarticle">アーティクルのプロパティ</a> を参照してください。</p>
 <div class="header_target" id="jinjadirective"></div></div>
 <div class="section" id="jinja">
 <h2>jinjaディレクティブ</h2>
@@ -515,8 +515,8 @@ tags: タグ1, タグ2
 </div>
 <div class="section" id="content-page">
 <div class="header_target" id="h_ja_guide_article_2erst_12"></div><h1>content と page</h1>
-<p>Miyadaikuは、<span class="docutils literal">contents</span> ディレクトリを走査し、すべてのアーティクルをロードしてHTMLを作成します。この時、<em>:jinja:</em> ロールなどでアーティクル内に記述したJinja2テンプレートでは、変数 <span class="docutils literal">content</span> と <span class="docutils literal">page</span> はどちらもHTMLを作成しているアーティクルオブジェクト自身を参照します。</p>
-<p>アーティクルが、文章中で別のアーティクルを読み込んでいる場合、読み込まれているアーティクル内のJinja2テンプレートでは、読み込み元のアーティクルは変数 <span class="docutils literal">page</span>、読み込まれているアーティクル自身は 変数 <span class="docutils literal">content</span> で参照できます。</p>
+<p>アーティクルをHTMLに変換する時、アーティクル内のJinja2テンプレートでは、変数 <span class="docutils literal">content</span> と <span class="docutils literal">page</span> はどちらも同じ、現在処理中のアーティクルオブジェクトを参照します。この場合、 <span class="docutils literal">content</span> と <span class="docutils literal">page</span> が参照しているのは同じオブジェクトです。</p>
+<p>しかし、アーティクルが、文章中で別のアーティクルを読み込んでいる場合、読み込まれているアーティクル内のJinja2テンプレートでは、読み込み元のアーティクルは変数 <span class="docutils literal">page</span>、読み込まれているアーティクル自身は 変数 <span class="docutils literal">content</span> で参照できます。</p>
 <p>例えば次のような2つのアーティクル <span class="docutils literal">parent.rst</span> と <span class="docutils literal">child.rst</span> がある場合</p>
 <div class="code-block">
 <div class="code-block-caption">parent.rst:</div>

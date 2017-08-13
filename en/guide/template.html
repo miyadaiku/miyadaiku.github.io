@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-  テンプレート
+  Template
 </title>
   
 
@@ -32,10 +32,10 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="テンプレート - Miyadaiku" />
+<meta property="og:title" content="Template - Miyadaiku" />
 
-<meta name="description" content="Miyadaikuは、contents ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに作成します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 テンプレート変数 テンプレート内では、次の変数を参照できます。 page 処理対象となるアーティクルの"/>
-<meta property="og:description" content="Miyadaikuは、contents ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに作成します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 テンプレート変数 テンプレート内では、次の変数を参照できます。 page 処理対象となるアーティクルの" />
+<meta name="description" content="Content files in the contents directory are converted with Jinja2 template file. The template is created in the templates directory of the project directory. Aritcle template The template applied to the article is specified by the article_template property. Default template name is"/>
+<meta property="og:description" content="Content files in the contents directory are converted with Jinja2 template file. The template is created in the templates directory of the project directory. Aritcle template The template applied to the article is specified by the article_template property. Default template name is" />
 
 
 
@@ -87,13 +87,13 @@
           
             <a class="dropdown-item" href="index.html">Index</a>
           
-            <a class="dropdown-item" href="config.html">コンフィグ</a>
+            <a class="dropdown-item" href="config.html">Config</a>
           
-            <a class="dropdown-item" href="feed.html">フィード</a>
+            <a class="dropdown-item" href="feed.html">Feed</a>
           
-            <a class="dropdown-item" href="template.html">テンプレート</a>
+            <a class="dropdown-item" href="template.html">Template</a>
           
-            <a class="dropdown-item" href="objects.html">オブジェクトリファレンス</a>
+            <a class="dropdown-item" href="objects.html">Object reference</a>
           
             <a class="dropdown-item" href="themes.html">テーマ</a>
           
@@ -157,42 +157,42 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='config.html' >コンフィグ</a></div>
+                  <a href='config.html' >Config</a></div>
                 </div>
             
           
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='feed.html' >フィード</a></div>
+                  <a href='feed.html' >Feed</a></div>
                 </div>
             
           
             
                 <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                    <a href='template.html' >テンプレート</a></div>
+                    <a href='template.html' >Template</a></div>
 
                   <ul>
                     
                       <li class="header_h1">
-                        <a href="#h_en_guide_template_2erst_1">アーティクルテンプレート</a>
+                        <a href="#h_en_guide_template_2erst_1">Aritcle template</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_en_guide_template_2erst_2">テンプレート変数</a>
+                        <a href="#h_en_guide_template_2erst_2">Template variable</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_en_guide_template_2erst_3">インデックステンプレート</a>
+                        <a href="#h_en_guide_template_2erst_3">Index template</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_en_guide_template_2erst_4">テンプレート変数</a>
+                        <a href="#h_en_guide_template_2erst_4">Template variables</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#template_names">テンプレート名の解決</a>
+                        <a href="#template_names">Template name resolution</a>
                       </li>
                     
                   </ul>
@@ -202,7 +202,7 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='objects.html' >オブジェクトリファレンス</a></div>
+                  <a href='objects.html' >Object reference</a></div>
                 </div>
             
           
@@ -219,23 +219,22 @@
     <div class='col-md-9 article-body'>
       <a id='page_title' class='header_target'></a>
       <h1>
-        テンプレート
+        Template
       </h1>
 
       <div class='article-content'>
-        <p>Miyadaikuは、<span class="docutils literal">contents</span> ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの <span class="docutils literal">templates</span> ディレクトリに作成します。</p>
-<div class="section" id="id2">
-<div class="header_target" id="h_en_guide_template_2erst_1"></div><h1>アーティクルテンプレート</h1>
-<p>アーティクルに適用するテンプレートは、<span class="docutils literal">article_template</span> プロパティで指定します。未指定の場合は、<span class="docutils literal">'page_article.html'</span> となります。</p>
-<div class="section" id="id3">
-<div class="header_target" id="h_en_guide_template_2erst_2"></div><h2>テンプレート変数</h2>
-<p>テンプレート内では、次の変数を参照できます。</p>
+        <p>Content files in the <span class="docutils literal">contents</span> directory are converted with Jinja2 template file. The template is created in the <span class="docutils literal">templates</span> directory of the project directory.</p>
+<div class="section" id="aritcle-template">
+<div class="header_target" id="h_en_guide_template_2erst_1"></div><h1>Aritcle template</h1>
+<p>The template applied to the article is specified by the <span class="docutils literal">article_template</span> property. Default template name is <span class="docutils literal">'page_article.html'</span>.</p>
+<div class="section" id="template-variable">
+<div class="header_target" id="h_en_guide_template_2erst_2"></div><h2>Template variable</h2>
+<p>Within the template, you can refer to the following variables.</p>
+<p>page</p>
+<p>   Refer to <a href="objects.html#content_obj">Content object</a> of the article to be processed. Most article templates get the HTML to render from the <span class="docutils literal">html</span> property of the <span class="docutils literal">page</span> variable.</p>
 <dl class="simple">
-<dt>page</dt>
-<dd><p>処理対象となるアーティクルの <a href="objects.html#content_obj">コンテントオブジェクト</a> を参照します。通常、アーティクルテンプレートでは、<span class="docutils literal">page</span> 変数の <span class="docutils literal">html</span> プロパティからHTMLを取得して表示します。</p>
-</dd>
 <dt>contents</dt>
-<dd><p>プロジェクトの <a href="objects.html#contents_collection">コンテンツコレクション</a> を参照します。</p>
+<dd><p>Refer to <a href="objects.html#contents_collection">Contents collection</a> of the project.</p>
 </dd>
 </dl>
 <div class="code-block">
@@ -255,35 +254,32 @@
 </div>
 </div>
 </div>
-<div class="section" id="id4">
-<div class="header_target" id="h_en_guide_template_2erst_3"></div><h1>インデックステンプレート</h1>
-<p>アーティクルの一覧を出力するインデックスの場合、生成されるHTMLファイルは複数ページとなる場合があり、1ページ目と2ページ目以降でそれぞれ別のテンプレートを指定できます。</p>
-<p>1ページ目のテンプレートは <span class="docutils literal">indexpage_template</span> プロパティで指定します。未指定の場合は、<span class="docutils literal">'page_index.html'</span> となります。2ページ目以降は <span class="docutils literal">indexpage_template2</span> プロパティで指定し、未指定の場合は、<span class="docutils literal">'page_index.html'</span> となります。</p>
-<div class="section" id="id5">
-<div class="header_target" id="h_en_guide_template_2erst_4"></div><h2>テンプレート変数</h2>
-<p>テンプレート内では、次の変数を参照できます。</p>
+<div class="section" id="index-template">
+<div class="header_target" id="h_en_guide_template_2erst_3"></div><h1>Index template</h1>
+<p>For an index that outputs a list of articles, the generated HTML file may be multiple pages. You can specify different templates for the first page, and the second and subsequent pages.</p>
+<p>The template of the first page is specified by the <span class="docutils literal">indexpage_template</span> property. Default template name is <span class="docutils literal">'page_index.html'</span>.  The template pf the second and subsequent pages are specified with the <span class="docutils literal">indexpage_template2</span> property. Default template name is <span class="docutils literal">'page_index.html'</span>.</p>
+<div class="section" id="template-variables">
+<div class="header_target" id="h_en_guide_template_2erst_4"></div><h2>Template variables</h2>
+<p>Within the template, you can refer to the following variables.</p>
 <dl>
 <dt>page</dt>
-<dd><p>処理対象となるインデックスの <a href="objects.html#content_obj">コンテントオブジェクト</a> を参照します。</p>
+<dd><p>Refer to <a href="objects.html#content_obj">Content object</a> of the index to be processed.</p>
 </dd>
 <dt>contents</dt>
-<dd><p>プロジェクトの <a href="objects.html#contents_collection">コンテンツコレクション</a> を参照します。</p>
+<dd><p>Refer to <a href="objects.html#contents_collection">Contents collection</a> of the project.</p>
 </dd>
 <dt>cur_page</dt>
-<dd><p>ページ番号を指定します。</p>
+<dd><p>Current page number.</p>
 </dd>
 <dt>is_last</dt>
-<dd><p>最後のページなら <span class="docutils literal">True</span>、そうでなければ <span class="docutils literal">False</span> となります。</p>
+<dd><p><span class="docutils literal">True</span> if this is last page, <span class="docutils literal">False</span> otherwise.</p>
 </dd>
 <dt>articles</dt>
-<dd><p>インデックスの表示対象となる <a href="objects.html#content_obj">コンテントオブジェクト</a> のリストを参照します。</p>
+<dd><p>List of <a href="objects.html#content_obj">Content object</a> of article to be displayed in the index page.</p>
 </dd>
 <dt>group_values</dt>
-<dd><p><span class="docutils literal">groupby</span> プロパティを指定したグループ別インデックスでは、グループの値のリストを返します。</p>
-<blockquote>
+<dd><p>List of property values specified in <span class="docutils literal">groupby</span> property of index.</p>
 <p>e.g. <span class="docutils literal">['category 1']</span></p>
-</blockquote>
-<p><span class="docutils literal">groupby</span> プロパティを指定なければ、<span class="docutils literal">[]</span> となります。</p>
 </dd>
 </dl>
 <div class="code-block">
@@ -322,15 +318,15 @@
 </div>
 <div class="header_target" id="template_names"></div></div>
 </div>
-<div class="section" id="id6">
-<h1>テンプレート名の解決</h1>
-<p>アーティクルに指定されたテンプレート名や、Jinja2の <span class="docutils literal">extends</span> 文や <span class="docutils literal">import</span> 文で、テンプレート名を指定してテンプレートを利用するとき、Miyadaikuでは以下の順にテンプレートを検索します。</p>
+<div class="section" id="template-name-resolution">
+<h1>Template name resolution</h1>
+<p>Miyadaiku searches Jinja2 template in the following order.</p>
 <ol class="arabic simple">
-<li><p>プロジェクトの <span class="docutils literal">templates</span> ディレクトリ</p></li>
-<li><p>テーマとして指定されたパッケージの、<span class="docutils literal">templates</span> ディレクトリ。複数のテーマが指定された場合は、指定された順番に検索します。</p></li>
+<li><p>The project's <span class="docutils literal">templates</span> directory</p></li>
+<li><p>The <span class="docutils literal">templates</span> directory of the package specified as the theme. When multiple themes are specified, search is performed in the specified order.</p></li>
 </ol>
-<p>ただし、 テンプレート名に <span class="docutils literal">!</span> が含まれていたら、上記の検索は行わず、<span class="docutils literal">!</span> の左側をパッケージ名とし、そのパッケージの <span class="docutils literal">templates</span> ディレクトリを検索します。</p>
-<p>e.g. <span class="docutils literal">miyadaiku.themes.sample.blog!test.html</span> というテンプレート名なら、<span class="docutils literal">miyadaiku.themes.sample.blog</span> パッケージの、<span class="docutils literal">templates/test.html</span> を取得します。</p>
+<p>However, if <span class="docutils literal">!</span> Is included in the template name, it does not perform the above search, searches the <span class="docutils literal">templates</span> directory of the package with the package name on the left side of <span class="docutils literal">!</span>.</p>
+<p>e.g.  <span class="docutils literal">{% import 'miyadaiku.themes.sample.blog!Test.html' %}</span> imports <span class="docutils literal">templates/test.html</span> in the <span class="docutils literal">miyadaiku.themes.sample.blog</span> package.</p>
 </div>
       </div>
     </div>

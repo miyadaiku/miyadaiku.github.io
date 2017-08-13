@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-  コンフィグ
+  Config
 </title>
   
 
@@ -32,10 +32,10 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="コンフィグ - Miyadaiku" />
+<meta property="og:title" content="Config - Miyadaiku" />
 
-<meta name="description" content="コンフィグファイルは、Miyadaikuプロジェクト全体の設定や、文書プロパティのデフォルト値の指定する YAMLファイルです。 アーティクルやインデックスなどのプロパティのデフォルト値は、ルートディレクトリの config.yml ファイルで指定します。 また、contents ディレクトリ内のサブディレクトリにYAMLファイルを作成し、ディレクトリ別のデフォルト値を指定できます。contents ディレクトリ内の、以下の条件を満たすファイルは、コンフィグファイルとして読み込まれます。 拡張子が .yml である"/>
-<meta property="og:description" content="コンフィグファイルは、Miyadaikuプロジェクト全体の設定や、文書プロパティのデフォルト値の指定する YAMLファイルです。 アーティクルやインデックスなどのプロパティのデフォルト値は、ルートディレクトリの config.yml ファイルで指定します。 また、contents ディレクトリ内のサブディレクトリにYAMLファイルを作成し、ディレクトリ別のデフォルト値を指定できます。contents ディレクトリ内の、以下の条件を満たすファイルは、コンフィグファイルとして読み込まれます。 拡張子が .yml である" />
+<meta name="description" content="The config file is a YAML file that specifies settings of the entire Miyadaiku project and default values ​​of document properties. The default values ​​of propertieof contents are specified in the `` config.yml`` file in the root directory. You can also create a YAML file in a subdirectory within the"/>
+<meta property="og:description" content="The config file is a YAML file that specifies settings of the entire Miyadaiku project and default values ​​of document properties. The default values ​​of propertieof contents are specified in the `` config.yml`` file in the root directory. You can also create a YAML file in a subdirectory within the" />
 
 
 
@@ -87,13 +87,13 @@
           
             <a class="dropdown-item" href="index.html">Index</a>
           
-            <a class="dropdown-item" href="config.html">コンフィグ</a>
+            <a class="dropdown-item" href="config.html">Config</a>
           
-            <a class="dropdown-item" href="feed.html">フィード</a>
+            <a class="dropdown-item" href="feed.html">Feed</a>
           
-            <a class="dropdown-item" href="template.html">テンプレート</a>
+            <a class="dropdown-item" href="template.html">Template</a>
           
-            <a class="dropdown-item" href="objects.html">オブジェクトリファレンス</a>
+            <a class="dropdown-item" href="objects.html">Object reference</a>
           
             <a class="dropdown-item" href="themes.html">テーマ</a>
           
@@ -157,7 +157,7 @@
             
                 <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                    <a href='config.html' >コンフィグ</a></div>
+                    <a href='config.html' >Config</a></div>
 
                   <ul>
                     
@@ -168,21 +168,21 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='feed.html' >フィード</a></div>
+                  <a href='feed.html' >Feed</a></div>
                 </div>
             
           
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='template.html' >テンプレート</a></div>
+                  <a href='template.html' >Template</a></div>
                 </div>
             
           
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='objects.html' >オブジェクトリファレンス</a></div>
+                  <a href='objects.html' >Object reference</a></div>
                 </div>
             
           
@@ -199,32 +199,32 @@
     <div class='col-md-9 article-body'>
       <a id='page_title' class='header_target'></a>
       <h1>
-        コンフィグ
+        Config
       </h1>
 
       <div class='article-content'>
-        <p>コンフィグファイルは、Miyadaikuプロジェクト全体の設定や、文書プロパティのデフォルト値の指定する YAMLファイルです。</p>
-<p>アーティクルやインデックスなどのプロパティのデフォルト値は、ルートディレクトリの <span class="docutils literal">config.yml</span> ファイルで指定します。</p>
-<p>また、<span class="docutils literal">contents</span> ディレクトリ内のサブディレクトリにYAMLファイルを作成し、ディレクトリ別のデフォルト値を指定できます。<span class="docutils literal">contents</span> ディレクトリ内の、以下の条件を満たすファイルは、コンフィグファイルとして読み込まれます。</p>
+        <p>The config file is a YAML file that specifies settings of the entire Miyadaiku project and default values ​​of document properties.</p>
+<p>The default values ​​of propertieof contents are specified in the `` config.yml`` file in the root directory.</p>
+<p>You can also create a YAML file in a subdirectory within the <span class="docutils literal">contents</span> directory and specify a default value for each directory. Files that satisfy the following conditions in the <span class="docutils literal">contents</span> directory are read as config files.</p>
 <ul class="simple">
-<li><p>拡張子が <span class="docutils literal">.yml</span> である</p></li>
-<li><p><span class="docutils literal">type</span> キーの値が <span class="docutils literal">config</span> と指定されている</p></li>
+<li><p>Extension of file name is <span class="docutils literal">.yml</span></p></li>
+<li><p><span class="docutils literal">type</span> key value specified as <span class="docutils literal">config</span></p></li>
 </ul>
-<p>例として、<span class="docutils literal">/dir1/config_dir1.yml</span> と <span class="docutils literal">/dir1/dir2/config_dir2.yml</span> の2つのコンフィグファイルを作成します。</p>
+<p>As an example, we create two config files <span class="docutils literal">/dir1/config_dir1.yml</span> and <span class="docutils literal">/dir1/dir2/config_dir2.yml</span>.</p>
 <div class="code-block">
 <div class="code-block-caption">contents/dir1/config_dir1.yml</div>
-<div class="highlight"><pre><span></span>type: config   # YAMLファイルのタイプを config に指定
-lang: ja       # lang のデフォルト値を ja に設定
+<div class="highlight"><pre><span></span>type: config   # Specify YAML file type as config
+lang: ja       # Set the default value of lang to ja
 </pre></div>
 </div>
 <div class="code-block">
 <div class="code-block-caption">contents/dir1/dir2/config_dir2.yml</div>
-<div class="highlight"><pre><span></span>type: config   # YAMLファイルのタイプを config に指定
-category: tutorial # categoryのデフォルト値を tutorial に設定
+<div class="highlight"><pre><span></span>type: config   # Specify YAML file type as config
+category: tutorial # Set the default value of category to tutorial
 </pre></div>
 </div>
-<p><span class="docutils literal">/dir1</span> 以下のディレクトリでは、アーティクルの <span class="docutils literal">lang</span> プロパティは <span class="docutils literal">ja</span> がデフォルト値となります。</p>
-<p>また、<span class="docutils literal">/dir1/dir2</span> 以下のディレクトリでは、アーティクルの <span class="docutils literal">category</span> プロパティは <span class="docutils literal">tutorial</span> がデフォルト値となります。</p>
+<p>In the <span class="docutils literal">/dir1</span> directories and below, the article's <span class="docutils literal">lang</span> property defaults to <span class="docutils literal">ja</span>.</p>
+<p>Also, in the directories under <span class="docutils literal">/dir1/dir2</span>, the <span class="docutils literal">category</span> property of the article defaults to <span class="docutils literal">tutorial</span>.</p>
       </div>
     </div>
   </div>

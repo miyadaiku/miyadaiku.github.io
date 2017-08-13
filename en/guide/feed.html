@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-  フィード
+  Feed
 </title>
   
 
@@ -32,10 +32,10 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="フィード - Miyadaiku" />
+<meta property="og:title" content="Feed - Miyadaiku" />
 
-<meta name="description" content="Atom/RSSフィードは、フィードオブジェクト で作成します。フィードオブジェクトは contents ディレクトリのYAMLファイルで定義します。 contents/atom.yml type: feed # YAMLファイルのタイプを feed に指定 feedtype: atom # Atomフィードを作成 feed_num_articles: 10 フィードオブジェクトには、Standard properties に加え、以下のプロパティを設定できます。 type YAMLファイルのタイプを指定します。インデックスページの場合は"/>
-<meta property="og:description" content="Atom/RSSフィードは、フィードオブジェクト で作成します。フィードオブジェクトは contents ディレクトリのYAMLファイルで定義します。 contents/atom.yml type: feed # YAMLファイルのタイプを feed に指定 feedtype: atom # Atomフィードを作成 feed_num_articles: 10 フィードオブジェクトには、Standard properties に加え、以下のプロパティを設定できます。 type YAMLファイルのタイプを指定します。インデックスページの場合は" />
+<meta name="description" content="The Atom / RSS feed is created with the feed object. Feed objects are defined in the YAML file in the `` contents`` directory. contents/atom.yml type: feed # Specify YAML file type as feed feedtype: atom # Create an Atom feed feed_num_articles: 10 In addition to"/>
+<meta property="og:description" content="The Atom / RSS feed is created with the feed object. Feed objects are defined in the YAML file in the `` contents`` directory. contents/atom.yml type: feed # Specify YAML file type as feed feedtype: atom # Create an Atom feed feed_num_articles: 10 In addition to" />
 
 
 
@@ -87,13 +87,13 @@
           
             <a class="dropdown-item" href="index.html">Index</a>
           
-            <a class="dropdown-item" href="config.html">コンフィグ</a>
+            <a class="dropdown-item" href="config.html">Config</a>
           
-            <a class="dropdown-item" href="feed.html">フィード</a>
+            <a class="dropdown-item" href="feed.html">Feed</a>
           
-            <a class="dropdown-item" href="template.html">テンプレート</a>
+            <a class="dropdown-item" href="template.html">Template</a>
           
-            <a class="dropdown-item" href="objects.html">オブジェクトリファレンス</a>
+            <a class="dropdown-item" href="objects.html">Object reference</a>
           
             <a class="dropdown-item" href="themes.html">テーマ</a>
           
@@ -157,14 +157,14 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='config.html' >コンフィグ</a></div>
+                  <a href='config.html' >Config</a></div>
                 </div>
             
           
             
                 <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                    <a href='feed.html' >フィード</a></div>
+                    <a href='feed.html' >Feed</a></div>
 
                   <ul>
                     
@@ -175,14 +175,14 @@
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='template.html' >テンプレート</a></div>
+                  <a href='template.html' >Template</a></div>
                 </div>
             
           
             
                 <div class="article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                  <a href='objects.html' >オブジェクトリファレンス</a></div>
+                  <a href='objects.html' >Object reference</a></div>
                 </div>
             
           
@@ -199,40 +199,41 @@
     <div class='col-md-9 article-body'>
       <a id='page_title' class='header_target'></a>
       <h1>
-        フィード
+        Feed
       </h1>
 
       <div class='article-content'>
-        <p>Atom/RSSフィードは、<strong>フィードオブジェクト</strong> で作成します。フィードオブジェクトは <span class="docutils literal">contents</span> ディレクトリのYAMLファイルで定義します。</p>
+        <p>The Atom / RSS feed is created with the <strong>feed object</strong>. Feed objects are defined in the YAML file in the `` contents`` directory.</p>
 <div class="code-block">
 <div class="code-block-caption">contents/atom.yml</div>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">feed</span>   <span class="c1"># YAMLファイルのタイプを feed に指定</span>
-<span class="l l-Scalar l-Scalar-Plain">feedtype</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">atom</span>  <span class="c1"># Atomフィードを作成</span>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">feed</span>   <span class="c1">#  Specify YAML file type as feed</span>
+<span class="l l-Scalar l-Scalar-Plain">feedtype</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">atom</span>  <span class="c1"># Create an Atom feed</span>
 <span class="l l-Scalar l-Scalar-Plain">feed_num_articles</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
 </pre></div>
 </div>
-<p>フィードオブジェクトには、<a href="property.html#standardprofs">Standard properties</a> に加え、以下のプロパティを設定できます。</p>
+<p>In addition to <a href="property.html#standardprofs">Standard properties</a>, you can set the following properties for the feed object.</p>
 <dl>
 <dt>type</dt>
-<dd><p>YAMLファイルのタイプを指定します。インデックスページの場合は <span class="docutils literal">feed</span> を指定します。</p>
+<dd><p>Specify the type of YAML file. For index pages, specify <span class="docutils literal">feed</span>.</p>
 </dd>
 <dt>feedtype</dt>
-<dd><p>フィードの種類を、<span class="docutils literal">atom</span> または <span class="docutils literal">rss</span> で指定します。未指定の場合は <span class="docutils literal">atom</span> となります。</p>
+<dd><p>Specify the feed type as <span class="docutils literal">atom</span> or <span class="docutils literal">rss</span>. Default value is <span class="docutils literal">atom</span>.</p>
 </dd>
 <dt>feed_num_articles</dt>
-<dd><p>フィードに含まれるアーティクルの数を指定します。未指定の場合は <span class="docutils literal">10</span> となります。</p>
+<dd><p>Specify the number of articles included in the feed. Default value <span class="docutils literal">10</span>.</p>
 </dd>
 <dt>filename</dt>
-<dd><p>出力ファイル名を指定します。未指定の場合は、YAMLファイルの拡張子を <span class="docutils literal">.atom</span> または <span class="docutils literal">.html</span> としたファイルを作成します。</p>
+<dd><p>File name of feed file. Default value is name of the YAML file with the extension is <span class="docutils literal">.atom</span> or <span class="docutils literal">.html</span>.</p>
 </dd>
 <dt>filters</dt>
-<dd><p>フィードに登録するアーティクルの検索条件を指定します。検索する文書プロパティ名をキー、表示対象のプロパティ値のリストを値とする辞書を指定します。</p>
-<p>省略時は、プロパティ <span class="docutils literal">draft</span> が <span class="docutils literal">true</span> の、すべてのアーティクルを表示します。</p>
+<dd><p>Specify search conditions for articles to be registered in the feed. Specify a dictionary whose value is the document property name to be searched and whose value is the list of property values ​​to be displayed.</p>
+<p>If omitted, all articles whose property <span class="docutils literal">draft</span> is <span class="docutils literal">true</span> are displayed.</p>
 <div class="code-block">
-<div class="code-block-caption">'news' または 'event' カテゴリの日本語アーティクルのみを登録する</div>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">feed</span>   <span class="c1"># YAMLファイルのタイプを index に指定</span>
+<div class="code-block-caption">Register only Japanese articles in 'news' or 'event' category</div>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">feed</span>
 <span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">category</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">'news'</span><span class="p p-Indicator">,</span> <span class="s">'event'</span><span class="p p-Indicator">]</span>  <span class="c1"># カテゴリが 'news' または 'events'</span>
+  <span class="l l-Scalar l-Scalar-Plain">category</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">news</span><span class="p p-Indicator">,</span> <span class="nv">event</span><span class="p p-Indicator">]</span>
+  <span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">ja</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
 </dd>

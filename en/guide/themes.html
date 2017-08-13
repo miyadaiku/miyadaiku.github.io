@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-  テーマ
+  Themes
 </title>
   
 
@@ -32,10 +32,10 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 
-<meta property="og:title" content="テーマ - Miyadaiku" />
+<meta property="og:title" content="Themes - Miyadaiku" />
 
-<meta name="description" content="テーマは、 サイトのコンテンツやデザインなどをまとめたPythonのパッケージです。テーマに含まれるファイルは、プロジェクトの通常のファイルと同じように outputs ディレクトリにコンテンツとして出力されます。 テーマの使用 テーマは、通常のパッケージと同じようように、PyPIなどから事前にインストールする必要があります。 Install miyadaiku themes with pip $ pip install miyadaiku.themes.bootstrap4 $ pip install miyadaiku.themes.fontawesome"/>
-<meta property="og:description" content="テーマは、 サイトのコンテンツやデザインなどをまとめたPythonのパッケージです。テーマに含まれるファイルは、プロジェクトの通常のファイルと同じように outputs ディレクトリにコンテンツとして出力されます。 テーマの使用 テーマは、通常のパッケージと同じようように、PyPIなどから事前にインストールする必要があります。 Install miyadaiku themes with pip $ pip install miyadaiku.themes.bootstrap4 $ pip install miyadaiku.themes.fontawesome" />
+<meta name="description" content="The theme is Python&#39;s package which contains the contents and design of the site. Files included in the theme are used to generate outputs just like regular contents in project. Using themes The theme needs to be installed in advance from PyPI or the like, just like a regular package."/>
+<meta property="og:description" content="The theme is Python&#39;s package which contains the contents and design of the site. Files included in the theme are used to generate outputs just like regular contents in project. Using themes The theme needs to be installed in advance from PyPI or the like, just like a regular package." />
 
 
 
@@ -95,7 +95,7 @@
           
             <a class="dropdown-item" href="objects.html">Object reference</a>
           
-            <a class="dropdown-item" href="themes.html">テーマ</a>
+            <a class="dropdown-item" href="themes.html">Themes</a>
           
         </div>
       </li>
@@ -107,6 +107,20 @@
       <li class="nav-item">
         <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
       </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown">en</a>
+        <div class="dropdown-menu">
+          
+            
+          
+            
+              <a class="dropdown-item" href="../../ja/index.html">ja</a>
+            
+          
+        </div>
+      </li>
+
 
     </ul>
   </div>
@@ -185,16 +199,16 @@
             
                 <div class="current article-block">
                   <div class="article-title"><i class="fa fa-file-text-o"></i>            
-                    <a href='themes.html' >テーマ</a></div>
+                    <a href='themes.html' >Themes</a></div>
 
                   <ul>
                     
                       <li class="header_h1">
-                        <a href="#h_en_guide_themes_2erst_1">テーマの使用</a>
+                        <a href="#h_en_guide_themes_2erst_1">Using themes</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#h_en_guide_themes_2erst_2">テンプレート</a>
+                        <a href="#h_en_guide_themes_2erst_2">Templates</a>
                       </li>
                     
                       <li class="header_h1">
@@ -211,22 +225,22 @@
     <div class='col-md-9 article-body'>
       <a id='page_title' class='header_target'></a>
       <h1>
-        テーマ
+        Themes
       </h1>
 
       <div class='article-content'>
-        <p>テーマは、 サイトのコンテンツやデザインなどをまとめたPythonのパッケージです。テーマに含まれるファイルは、プロジェクトの通常のファイルと同じように <span class="docutils literal">outputs</span> ディレクトリにコンテンツとして出力されます。</p>
+        <p>The theme is Python's package which contains the contents and design of the site. Files included in the theme are used to generate outputs just like regular contents in project.</p>
 <p><img src="../../img/themes.png" width="500px"/></p>
-<div class="section" id="id2">
-<div class="header_target" id="h_en_guide_themes_2erst_1"></div><h1>テーマの使用</h1>
-<p>テーマは、通常のパッケージと同じようように、PyPIなどから事前にインストールする必要があります。</p>
+<div class="section" id="using-themes">
+<div class="header_target" id="h_en_guide_themes_2erst_1"></div><h1>Using themes</h1>
+<p>The theme needs to be installed in advance from PyPI or the like, just like a regular package.</p>
 <div class="code-block">
 <div class="code-block-caption">Install miyadaiku themes with pip</div>
 <div class="highlight"><pre><span></span><span class="gp">$</span> pip install miyadaiku.themes.bootstrap4
 <span class="gp">$</span> pip install miyadaiku.themes.fontawesome
 </pre></div>
 </div>
-<p>プロジェクトで使用するテーマは、プロジェクト設定ファイル <span class="docutils literal">config.yml</span> の <span class="docutils literal">themes</span> に指定します。</p>
+<p>The themes used in the project are specified in <span class="docutils literal">themes</span> of the project configuration file <span class="docutils literal">config.yml</span>.</p>
 <div class="code-block">
 <div class="code-block-caption">config.yml: Using two themes in the project</div>
 <div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">themes</span><span class="p p-Indicator">:</span>
@@ -234,17 +248,17 @@
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">miyadaiku.themes.fontawesome</span>
 </pre></div>
 </div>
-<p>テーマが別のテーマを使用する場合、そのテーマは再帰的に読み込まれます。また、Miyadaikuの組み込みテーマ <span class="docutils literal">miyadaiku.themes.base</span> は、<span class="docutils literal">themes</span> に指定されなくとも常に読み込まれます。</p>
+<p>If the theme uses an another theme, that theme is recursively loaded.</p>
+<p>Miyadaiku's built-in theme <span class="docutils literal">miyadaiku.themes.base</span> is always loaded even if it is not specified in <span class="docutils literal">themes</span>.</p>
 </div>
-<div class="section" id="id3">
-<div class="header_target" id="h_en_guide_themes_2erst_2"></div><h1>テンプレート</h1>
-<p>テーマに含まれるテンプレートも、プロジェクトのテンプレートと同様に使用できます。</p>
-<p>アーティクルのテンプレート名や、Jinja2の <span class="docutils literal">import</span> 文などでテンプレート名を指定すると、プロジェクトの <span class="docutils literal">templates</span> ディレクトリに続いて、使用中のテーマからテンプレートディレクトリを検索します。</p>
-<p>テンプレート名の検索順序については、<a href="template.html#template_names">Template name resolution</a> を参照してください。</p>
+<div class="section" id="templates">
+<div class="header_target" id="h_en_guide_themes_2erst_2"></div><h1>Templates</h1>
+<p>Templates included in themes can also be used like templates in the project.</p>
+<p>If you specify a template name in the article's template name, Miyadaiku search the project's <span class="docutils literal">templates</span> directory, then the template directory from the theme in use. See  <a href="template.html#template_names">Template name resolution</a> for details.</p>
 </div>
 <div class="section" id="load-package">
 <div class="header_target" id="h_en_guide_themes_2erst_3"></div><h1>load_package()</h1>
-<p>テーマパッケージに <span class="docutils literal">load_package(site)</span> 関数があれば、起動時に呼び出されます。テーマ内でのデータの初期化などが必要であれば、ここで行います。</p>
+<p>If there is a `` load_package (site) `` in the theme package, it will be called at startup. If you need to initialize the data within the theme, do it here.</p>
 <div class="code-block">
 <div class="code-block-caption">sample of __init__.py of theme package</div>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>

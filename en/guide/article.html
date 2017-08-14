@@ -207,11 +207,23 @@
                       </li>
                     
                       <li class="header_h1">
+                        <a href="#h_en_guide_article_2erst_12">Jupyter notebook</a>
+                      </li>
+                    
+                      <li class="header_h2">
+                        <a href="#h_en_guide_article_2erst_13">Property</a>
+                      </li>
+                    
+                      <li class="header_h3">
+                        <a href="#h_en_guide_article_2erst_14">Jupyter notebook metadata settings</a>
+                      </li>
+                    
+                      <li class="header_h1">
                         <a href="#jinja_vars">Template variables</a>
                       </li>
                     
                       <li class="header_h2">
-                        <a href="#h_en_guide_article_2erst_12">Content and page</a>
+                        <a href="#h_en_guide_article_2erst_15">Content and page</a>
                       </li>
                     
                       <li class="header_h2">
@@ -463,7 +475,44 @@ tags: Tag1, Tag2
 <div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Link to <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">'{{ content.link_to("./hello.rst") }}'</span><span class="p">&gt;</span>hello<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="section" id="jupyter-notebook">
+<div class="header_target" id="h_en_guide_article_2erst_12"></div><h1>Jupyter notebook</h1>
+<p>Files with extension ".ipynb" are read as <a class="reference external" href="http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/">Jupyter notebook</a>.</p>
+<div class="section" id="id4">
+<div class="header_target" id="h_en_guide_article_2erst_13"></div><h2>Property</h2>
+<p>Jupyter notebook properties are specified as: jinja:<cite>{{content.link_to('./config.rst', fragment= 'external_prop_file')}}</cite> or as notebook metadata.</p>
+<div class="section" id="jupyter-notebook-metadata-settings">
+<div class="header_target" id="h_en_guide_article_2erst_14"></div><h3>Jupyter notebook metadata settings</h3>
+<ol class="arabic">
+<li><p>Select <strong>Edit -&gt; Edit Notebook Metadata</strong> on the Jupyter.</p>
+<p><img src="../../img/jupyter-metadata.png" width="400px"/></p>
+</li>
+<li><p>Add the <span class="docutils literal">miyadaiku</span> key to JSON and specify the property value. The following example specifies the <span class="docutils literal">title</span> property and <span class="docutils literal">date</span> property.</p>
+<div class="code-block">
+<div class="code-block-caption">Sample property of Jupyter notebook:</div>
+<div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">"kernelspec"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"python3"</span><span class="p">,</span>
+    <span class="nt">"display_name"</span><span class="p">:</span> <span class="s2">"Python 3"</span><span class="p">,</span>
+
+    <span class="nt">""</span><span class="p">:</span>
+    <span class="s2">" ommit inrelevant lines"</span>
+    <span class="s2">" ... "</span>
+    <span class="s2">" ... "</span>
+
+  <span class="s2">"miyadaiku"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">"title"</span><span class="p">:</span> <span class="s2">"Title of Jupyter notebook"</span><span class="p">,</span>
+    <span class="nt">"date"</span><span class="p">:</span> <span class="s2">"2017-01-01"</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
 <div class="header_target" id="jinja_vars"></div></div>
+</div>
 </div>
 <div class="section" id="template-variables">
 <h1>Template variables</h1>
@@ -480,7 +529,7 @@ tags: Tag1, Tag2
 </dd>
 </dl>
 <div class="section" id="content-and-page">
-<div class="header_target" id="h_en_guide_article_2erst_12"></div><h2>Content and page</h2>
+<div class="header_target" id="h_en_guide_article_2erst_15"></div><h2>Content and page</h2>
 <p>When converting an article to HTML, in the Jinja 2 template in the article, the variables <span class="docutils literal">content</span> and <span class="docutils literal">page</span> both refer to the same article object currently being processed. In this case <span class="docutils literal">content</span> and <span class="docutils literal">page</span> refer to the same object.</p>
 <p>However, if the article is loading another article, in the Jinja 2 template in the article being loaded, the article is referenced by the variable <span class="docutils literal">content</span>, and the article loading another article is referred by variable <span class="docutils literal">page</span>.</p>
 <div class="code-block">

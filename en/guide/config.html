@@ -175,6 +175,10 @@
 
                   <ul>
                     
+                      <li class="header_h1">
+                        <a href="#external_prop_file">External property file</a>
+                      </li>
+                    
                   </ul>
                 </div>
             
@@ -239,6 +243,14 @@ category: tutorial # Set the default value of category to tutorial
 </div>
 <p>In the <span class="docutils literal">/dir1</span> directories and below, the article's <span class="docutils literal">lang</span> property defaults to <span class="docutils literal">ja</span>.</p>
 <p>Also, in the directories under <span class="docutils literal">/dir1/dir2</span>, the <span class="docutils literal">category</span> property of the article defaults to <span class="docutils literal">tutorial</span>.</p>
+<div class="header_target" id="external_prop_file"></div><div class="section" id="external-property-file">
+<h1>External property file</h1>
+<p>For content such as articles and images, you can create an external properties file to specify properties.</p>
+<p>The external property file is a YAML file whose file name is <span class="docutils literal">destination_file_name.props.yml</span>. You can specify properties even for binary files such as images.</p>
+<p>Automatic generation of external property file
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=</p>
+<p>In articles with the <span class="docutils literal">generate_metadata_file</span> property set to <span class="docutils literal">true</span>, external property file for the article is created if the article does not have a <span class="docutils literal">date</span> property.</p>
+</div>
       </div>
     </div>
   </div>

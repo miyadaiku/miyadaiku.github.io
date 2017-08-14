@@ -175,6 +175,14 @@
 
                   <ul>
                     
+                      <li class="header_h1">
+                        <a href="#external_prop_file">外部プロパティファイル</a>
+                      </li>
+                    
+                      <li class="header_h2">
+                        <a href="#h_ja_guide_config_2erst_1">外部プロパティファイルの自動生成</a>
+                      </li>
+                    
                   </ul>
                 </div>
             
@@ -239,6 +247,15 @@ category: tutorial # categoryのデフォルト値を tutorial に設定
 </div>
 <p><span class="docutils literal">/dir1</span> 以下のディレクトリでは、アーティクルの <span class="docutils literal">lang</span> プロパティは <span class="docutils literal">ja</span> がデフォルト値となります。</p>
 <p>また、<span class="docutils literal">/dir1/dir2</span> 以下のディレクトリでは、アーティクルの <span class="docutils literal">category</span> プロパティは <span class="docutils literal">tutorial</span> がデフォルト値となります。</p>
+<div class="header_target" id="external_prop_file"></div><div class="section" id="id2">
+<h1>外部プロパティファイル</h1>
+<p>アーティクル・画像などのコンテンツは、外部プロパティファイルを作成してプロパティを指定できます。</p>
+<p>外部プロパティファイルは、ファイル名が <span class="docutils literal">設定先ファイル名 + props.yml</span> という名前のYAMLファイルで、画像などのバイナリファイルでもプロパティを指定できます。</p>
+<div class="section" id="id3">
+<div class="header_target" id="h_ja_guide_config_2erst_1"></div><h2>外部プロパティファイルの自動生成</h2>
+<p><span class="docutils literal">generate_metadata_file</span> プロパティが <span class="docutils literal">true</span> のアーティクルでは、アーティクルに <span class="docutils literal">date</span> プロパティが指定されていない場合、自動的に外部プロパティファイルが作成されます。</p>
+</div>
+</div>
       </div>
     </div>
   </div>

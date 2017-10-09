@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="Create a site - Miyadaiku" />
 
-<meta name="description" content="You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc Create a project At first, create Miyadaiku project in the `` first_doc`` directory with the following command. $ miyadaiku-start ./first_doc"/>
-<meta property="og:description" content="You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc Create a project At first, create Miyadaiku project in the `` first_doc`` directory with the following command. $ miyadaiku-start ./first_doc" />
+<meta name="description" content="You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc Create a project At first, create Miyadaiku project to the first_doc directory with the following command. $ miyadaiku-start ./first_doc"/>
+<meta property="og:description" content="You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_doc Create a project At first, create Miyadaiku project to the first_doc directory with the following command. $ miyadaiku-start ./first_doc" />
 
 
 
@@ -195,7 +195,7 @@
 </blockquote>
 <div class="header_target" id="create_project"></div><div class="section" id="create-a-project">
 <h1>Create a project</h1>
-<p>At first, create Miyadaiku project in the `` first_doc`` directory with the following command.</p>
+<p>At first, create Miyadaiku project to the <span class="docutils literal">first_doc</span> directory with the following command.</p>
 <div class="code-block">
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-start ./first_doc
 </pre></div>
@@ -212,7 +212,7 @@
 <div class="header_target" id="create_article"></div></div>
 <div class="section" id="create-an-article">
 <h1>Create an article</h1>
-<p>Let's create a file in reStructuredText format as the first article.</p>
+<p>Let's create the your first article in reStructuredText format.</p>
 <div class="code-block">
 <div class="code-block-caption">first_doc/contents/hello.rst:</div>
 <div class="highlight"><pre><span></span><span class="gh">hello world</span>
@@ -234,7 +234,7 @@ This is my first miyadaiku article.
 <div class="header_target" id="createlinks"></div></div>
 <div class="section" id="article-link">
 <h1>Article link</h1>
-<p>Create the another article <span class="docutils literal">first_doc/contents/link.rst</span>.</p>
+<p>Create the another article file <span class="docutils literal">first_doc/contents/link.rst</span>.</p>
 <div class="code-block">
 <div class="code-block-caption">first_doc/contents/link.rst:</div>
 <div class="highlight"><pre><span></span><span class="gh">Link test</span>
@@ -252,11 +252,11 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 </div>
 <p>This command creates <span class="docutils literal">first_doc/output/link.html</span> file.</p>
 <p>Content written in the <span class="docutils literal">:jinja:</span> role is processed as <span class="docutils literal">Jinja2</span> template and converted to HTML.</p>
-<p>The variable <span class="docutils literal">content</span> is <a href="../guide/objects.html#content_obj">Content object</a> refers to the article being processed. Here we use the <span class="docutils literal">link_to(pagename)</span> method to create a link to another page. The title of the landing page is used as the text of the link.</p>
+<p>The variable <span class="docutils literal">content</span> is <a href="../guide/objects.html#content_obj">Content object</a> refers to the article being processed. We use the <span class="docutils literal">link_to(pagename)</span> method to create a link to another page. The title of the landing page is used as the text of the link.</p>
 <div class="header_target" id="template"></div></div>
 <div class="section" id="customizing-templates">
 <h1>Customizing templates</h1>
-<p>Article files are converted to HTML with a Jinja 2 template named <span class="docutils literal">page_article.html</span>.</p>
+<p>Article files are converted to HTML with a Jinja2 template named <span class="docutils literal">page_article.html</span>.</p>
 <p>As an example, let's create a template <span class="docutils literal">page_article.html</span> in the template directory <span class="docutils literal">first_doc/templates</span>.</p>
 <div class="code-block">
 <div class="code-block-caption">first_doc/templates/page_article.html:</div>
@@ -289,7 +289,7 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 <div class="header_target" id="newfile"></div></div>
 <div class="section" id="add-a-css-file">
 <h1>Add a CSS file</h1>
-<p>Files in the <span class="docutils literal">files/</span> directory of the project are copied directly to the <span class="docutils literal">outputs</span> directory without converting them to HTML.</p>
+<p>Files in the <span class="docutils literal">files/</span> directory of the project are copied to the <span class="docutils literal">outputs</span> directory directly without converting them to HTML.</p>
 <p>Let's add <span class="docutils literal">copyright.css</span> file to the <span class="docutils literal">first_doc/files/static/css</span> directory.</p>
 <div class="code-block">
 <div class="code-block-caption">first_doc/files/static/css/copyright.css:</div>

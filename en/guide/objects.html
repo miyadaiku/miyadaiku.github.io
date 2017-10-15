@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="Object reference - Miyadaiku" />
 
-<meta name="description" content="Content object In Miyadaiku, the files in the contents directory and the files directory are loaded as Content object. This is true not only for articles and indexes in the contents directory, but files that are not processed by Miyadaiku such as CSS and image files.."/>
-<meta property="og:description" content="Content object In Miyadaiku, the files in the contents directory and the files directory are loaded as Content object. This is true not only for articles and indexes in the contents directory, but files that are not processed by Miyadaiku such as CSS and image files.." />
+<meta name="description" content="Content object In Miyadaiku, the files in the contents directory and the files directory are loaded as Content object. Content object provides attributes listed Property or Property of index, and followinng methods. load(target) Load the content object specified by"/>
+<meta property="og:description" content="Content object In Miyadaiku, the files in the contents directory and the files directory are loaded as Content object. Content object provides attributes listed Property or Property of index, and followinng methods. load(target) Load the content object specified by" />
 
 
 
@@ -246,11 +246,11 @@
         <!-- blank -->
 <div class="header_target" id="content_obj"></div><div class="section" id="content-object">
 <h1>Content object</h1>
-<p>In Miyadaiku, the files in the <span class="docutils literal">contents</span> directory and the <span class="docutils literal">files</span> directory are loaded as <a href="objects.html#content_obj">Content object</a>.  This is true not only for articles and indexes in the <span class="docutils literal">contents</span> directory, but files that are not processed by Miyadaiku such as CSS and image files..</p>
-<p>Content object provides attributes listed <a href="property.html">Property</a> や <a href="index.html#propertyofindex">Property of index</a>, and followinng methods.</p>
+<p>In Miyadaiku, the files in the <span class="docutils literal">contents</span> directory and the <span class="docutils literal">files</span> directory are loaded as <a href="objects.html#content_obj">Content object</a>.</p>
+<p>Content object provides attributes listed <a href="property.html">Property</a> or <a href="index.html#propertyofindex">Property of index</a>, and followinng methods.</p>
 <dl>
 <dt>load(target)</dt>
-<dd><p>Load the content object of the path specified by <span class="docutils literal">target</span>. <span class="docutils literal">target</span> can be absolute path which starts with <span class="docutils literal">'/'</span>, or relative path.</p>
+<dd><p>Load the content object specified by <span class="docutils literal">target</span>. <span class="docutils literal">target</span> can be absolute path which starts with <span class="docutils literal">'/'</span>, or relative path.</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of content.load() method</div>
 <div class="highlight"><pre><span></span><span class="x">&lt;p&gt; Renders abstract of /page1.rst&lt;/p&gt;</span>
@@ -260,11 +260,11 @@
 </div>
 </dd>
 <dt>path(fragment=None, abs_path=False, values=None, npage=None):</dt>
-<dd><p>Get the path from the current page. <span class="docutils literal">target</span> can be absolute path which starts with <span class="docutils literal">'/'</span>, or relative path.</p>
-<p><span class="docutils literal">fragment</span> specifies the element id in the page.</p>
+<dd><p>Get the path from the current page to the content..</p>
+<p><span class="docutils literal">fragment</span> specifies the element id in the content.</p>
 <p>If <span class="docutils literal">abs_path</span> is <span class="docutils literal">True</span>, it returns the complete URL starting with the protocol.</p>
-<p><span class="docutils literal">values</span> specifies the value of the group on the grouped index page. It can be specified only on the index page.</p>
-<p><span class="docutils literal">npage</span> specifies the landing page number of the index page. It can be specified only on the index page.</p>
+<p><span class="docutils literal">values</span> specifies the value of the group on the grouped index page. It can be specified if content is the index page.</p>
+<p><span class="docutils literal">npage</span> specifies the landing page number of the index page. It can be specified if content is the index page.</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of content.path() method</div>
 <div class="highlight"><pre><span></span><span class="x">&lt;a href='</span><span class="cp">{{</span> <span class="nv">content.path</span><span class="o">()</span> <span class="cp">}}</span><span class="x">'&gt;</span>
@@ -274,21 +274,21 @@
 </dd>
 <dt>path_to(target, fragment=None, abs_path=False, values=None, npage=None):</dt>
 <dd><p>Get the path to the content object specified by <span class="docutils literal">target</span>. <span class="docutils literal">target</span> can be absolute path which starts with <span class="docutils literal">'/'</span>, or relative path.</p>
-<p><span class="docutils literal">fragment</span> specifies the element id in the page.</p>
+<p><span class="docutils literal">fragment</span> specifies the element id in the target.</p>
 <p>If <span class="docutils literal">abs_path</span> is <span class="docutils literal">True</span>, it returns the complete URL starting with the protocol.</p>
 <p><span class="docutils literal">values</span> specifies the value of the group on the grouped index page. It can be specified only on the index page.</p>
 <p><span class="docutils literal">npage</span> specifies the landing page number of the index page. It can be specified only on the index page.</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of content.path_to() method</div>
 <div class="highlight"><pre><span></span><span class="x">&lt;a href='</span><span class="cp">{{</span> <span class="nv">page.path_to</span><span class="o">(</span><span class="s1">'../page1.rst'</span><span class="o">)</span> <span class="cp">}}</span><span class="x">'&gt;</span>
-<span class="x">   親ディレクトリのpage1.html&lt;/a&gt;</span>
+<span class="x">   Link to the page1.html in the parent directory&lt;/a&gt;</span>
 </pre></div>
 </div>
 </dd>
 <dt>link(text=None, fragment=None, abs_path=False, attrs=None, values=None, npage=None):</dt>
-<dd><p>Get the <span class="docutils literal">&lt;a&gt;</span> element to link to the object.</p>
+<dd><p>Get the <span class="docutils literal">&lt;a&gt;</span> element to link to the content.</p>
 <p><span class="docutils literal">text</span> specifies the link text in the <span class="docutils literal">&lt;a&gt;</span> element. If omitted, it is the text of the header element specified by <span class="docutils literal">fragment</span>, or the title of the object.</p>
-<p><span class="docutils literal">fragment</span> specifies the element id in the page.</p>
+<p><span class="docutils literal">fragment</span> specifies the element id in the content.</p>
 <p>If <span class="docutils literal">abs_path</span> is <span class="docutils literal">True</span>, it returns the complete URL starting with the protocol.</p>
 <p><span class="docutils literal">attrs</span> specifies the dictionary of attribute of <span class="docutils literal">&lt;a&gt;</span> elements.</p>
 <p><span class="docutils literal">values</span> specifies the value of the group on the grouped index page. It can be specified only on the index page.</p>
@@ -301,9 +301,9 @@
 </div>
 </dd>
 <dt>link_to(target, text=None, fragment=None, abs_path=False, attrs=None, values=None, npage=None):</dt>
-<dd><p>Get the <span class="docutils literal">&lt;a&gt;</span> element to link to the object specified by <span class="docutils literal">target</span>. <span class="docutils literal">target</span> can be absolute path which starts with <span class="docutils literal">'/'</span>, or relative path.</p>
+<dd><p>Get the <span class="docutils literal">&lt;a&gt;</span> element to link to the content specified by <span class="docutils literal">target</span>. <span class="docutils literal">target</span> can be absolute path which starts with <span class="docutils literal">'/'</span>, or relative path.</p>
 <p><span class="docutils literal">text</span> specifies the link text in the <span class="docutils literal">&lt;a&gt;</span> element. If omitted, it is the text of the header element specified by <span class="docutils literal">fragment</span>, or the title of the object.</p>
-<p><span class="docutils literal">fragment</span> specifies the element id in the page.</p>
+<p><span class="docutils literal">fragment</span> specifies the element id in the target content.</p>
 <p>If <span class="docutils literal">abs_path</span> is <span class="docutils literal">True</span>, it returns the complete URL starting with the protocol.</p>
 <p><span class="docutils literal">attrs</span> specifies the dictionary of attribute of <span class="docutils literal">&lt;a&gt;</span> elements.</p>
 <p><span class="docutils literal">values</span> specifies the value of the group on the grouped index page. It can be specified only on the index page.</p>
@@ -319,11 +319,11 @@
 <div class="header_target" id="contents_collection"></div></div>
 <div class="section" id="contents-collection">
 <h1>Contents collection</h1>
-<p>Content collection is the object that manages all contents of Miyadaiku project.</p>
+<p>Content collection is the object that manages all contents in the Miyadaiku project.</p>
 <dl>
 <dt>get_content(key, base=None)</dt>
-<dd><p>Load the content object of the path specified by <span class="docutils literal">key</span>. <span class="docutils literal">key</span> can be absolute path which starts with <span class="docutils literal">'/'</span>, or relative path.</p>
-<p>If <span class="docutils literal">key</span> is relative path,  specify <span class="docutils literal">base</span> as the originating content object.</p>
+<dd><p>Load the content object specified by <span class="docutils literal">key</span>. <span class="docutils literal">key</span> can be absolute path which starts with <span class="docutils literal">'/'</span>, or relative path.</p>
+<p>If <span class="docutils literal">key</span> is relative path,  <span class="docutils literal">base</span> should be the current content object.</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of contents.get_content() method</div>
 <div class="highlight"><pre><span></span><span class="x">Link to 'page1.rst' of the parent directory</span>
@@ -336,14 +336,14 @@
 <dd><p>Search <a href="objects.html#content_obj">Content object</a> from the collection on the specified condition.</p>
 </dd>
 </dl>
-<p>   If you want to retrieve only the content contained in a specific directory, specify a list of directory names in <span class="docutils literal">subdirs</span>. The directory name is specified as an absolute path starting with <span class="docutils literal">/</span> or a relative path. If specified as a relative path, specify <span class="docutils literal">base</span> as the originating content object.</p>
+<p>   If you want to search in specific directories, specify a list of directory names in <span class="docutils literal">subdirs</span>. The directory name is specified as an absolute path starting with <span class="docutils literal">/</span> or a relative path. If specified as a relative path, <span class="docutils literal">base</span> should be the current content object.</p>
 <blockquote>
 <div class="code-block">
 <div class="code-block-caption">Search for articles in the ./myfolder</div>
 <div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">items</span> <span class="o">=</span> <span class="nv">contents.get_contents</span><span class="o">(</span><span class="nv">subdirs</span><span class="o">=[</span><span class="s1">'./myfolder'</span><span class="o">],</span> <span class="nv">base</span><span class="o">=</span><span class="nv">content</span><span class="o">)</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
 </div>
-<p><span class="docutils literal">Filtes</span> specifies search criteria for content. Specify a dictionary whose key is the document property name to be searched and whose value is the list of property values to be displayed. By default, <span class="docutils literal">get_content()</span> searches article object with <span class="docutils literal">draft</span> is <span class="docutils literal">false</span>.</p>
+<p><span class="docutils literal">filters</span> specifies search criteria for content. Specify a dictionary whose key is the document property name and whose value is the list of property values to match. By default, <span class="docutils literal">get_content()</span> searches article object with <span class="docutils literal">draft</span> is <span class="docutils literal">false</span>.</p>
 <div class="code-block">
 <div class="code-block-caption">Search articles with category 'news' or 'event'</div>
 <div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">items</span> <span class="o">=</span> <span class="nv">contents.get_contents</span><span class="o">(</span><span class="nv">filters</span><span class="o">={</span><span class="s1">'type'</span><span class="o">:[</span><span class="s1">'artile'</span><span class="o">],</span> <span class="s1">'category'</span><span class="o">:</span> <span class="o">[</span><span class="s1">'news'</span><span class="o">,</span> <span class="s1">'event'</span><span class="o">]})</span> <span class="cp">%}</span><span class="x"></span>
@@ -352,7 +352,7 @@
 </blockquote>
 <dl>
 <dt>group_items(group, subdirs=None, base=None, filters=None):</dt>
-<dd><p>Search <a href="objects.html#content_obj">Content object</a> from the collection on the specified condition like <span class="docutils literal">contents.get_contents()</span>. Search results are classified by the value of the property name specified by <span class="docutils literal">group</span>.</p>
+<dd><p>Search <a href="objects.html#content_obj">Content object</a> from the collection on the specified condition as <span class="docutils literal">contents.get_contents()</span>. Search results are classified by the value of the property name specified by <span class="docutils literal">group</span>.</p>
 <p>Return value is list of tuple of property value and list of articles.</p>
 <div class="code-block">
 <div class="code-block-caption">Return value of group_items()</div>
@@ -360,7 +360,7 @@
  <span class="p">([</span><span class="s1">'property value 2'</span><span class="p">],</span> <span class="p">[</span><span class="n">article3</span><span class="p">,</span> <span class="n">article4</span><span class="p">,</span> <span class="n">article5</span><span class="p">]),]</span>
 </pre></div>
 </div>
-<p>Usage of <span class="docutils literal">subdirs</span>, <span class="docutils literal">base</span>, <span class="docutils literal">filters</span> is the same as <span class="docutils literal">contents.get_contents ()</span>.</p>
+<p>Usage of <span class="docutils literal">subdirs</span>, <span class="docutils literal">base</span>, <span class="docutils literal">filters</span> are the same as <span class="docutils literal">contents.get_contents ()</span>.</p>
 <div class="code-block">
 <div class="code-block-caption">Group articles in '/dir1' directory with 'tags' property</div>
 <div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">items</span> <span class="o">=</span> <span class="nv">contents.group_items</span><span class="o">(</span><span class="nv">group</span><span class="o">=</span><span class="s1">'tags'</span><span class="o">,</span> <span class="nv">subdirs</span><span class="o">=[</span><span class="s1">'/dir1'</span><span class="o">])</span> <span class="cp">%}</span><span class="x"></span>

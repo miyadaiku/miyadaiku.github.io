@@ -275,11 +275,14 @@
 <dd><p>アーティクルの出力ファイル名の拡張子を指定します。未指定の場合は、<span class="docutils literal">'.html'</span> となります。</p>
 </dd>
 <dt>filename</dt>
-<dd><p>出力ファイル名を指定します。未指定の場合は、<span class="docutils literal">filename_templ</span> でファイル名を生成します。</p>
+<dd><p>出力ファイル名を指定します。未指定の場合は、<span class="docutils literal">filename_templ</span> プロパティでファイル名を生成します。</p>
 <p><span class="docutils literal">filename</span> には、相対ディレクトリ名も指定できます。ex) <span class="docutils literal">subdir/article1.html</span>,  <span class="docutils literal"><span class="pre">../subdir/article1.html</span></span></p>
 </dd>
 <dt>filename_templ</dt>
 <dd><p>出力HTMLファイルのファイル名を、Jina2テンプレートで指定します。未指定の場合は、<span class="docutils literal">'{{ content.stem <span class="pre">}}.{{</span> content.ext }}'</span> となります。テンプレートでは、 <a href="property.html#jinja_vars">プロパティ</a> を参照できます。</p>
+</dd>
+<dt>generate_metadata_file</dt>
+<dd><p><span class="docutils literal">true</span> の場合は、アーティクルに <span class="docutils literal">date</span> プロパティが指定されていなければ自動的に <a href="config.html#external_prop_file">外部プロパティファイル</a> を生成します。未指定の場合は <span class="docutils literal">false</span> となります。</p>
 </dd>
 <dt>header</dt>
 <dd><p>アーティクルのヘッダ要素のリストを取得します。リストの要素は、<cite>(ヘッダのid, ヘッダ要素名, ヘッダテキスト)</cite> のタプルとなります。</p>

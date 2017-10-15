@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="Config - Miyadaiku" />
 
-<meta name="description" content="The config file is a YAML file that specifies settings of the entire Miyadaiku project and default values ​​of document properties. The default values ​​of propertieof contents are specified in the `` config.yml`` file in the root directory. You can also create a YAML file in a subdirectory within the"/>
-<meta property="og:description" content="The config file is a YAML file that specifies settings of the entire Miyadaiku project and default values ​​of document properties. The default values ​​of propertieof contents are specified in the `` config.yml`` file in the root directory. You can also create a YAML file in a subdirectory within the" />
+<meta name="description" content="The config file is a YAML file that specifies default values ​​of document properties. The default values ​​of properts are specified in the config.yml file in the root directory. You can also create a YAML file in a subdirectory within the contents directory and specify a default value for each directory. Files that satisfy the following conditions in the"/>
+<meta property="og:description" content="The config file is a YAML file that specifies default values ​​of document properties. The default values ​​of properts are specified in the config.yml file in the root directory. You can also create a YAML file in a subdirectory within the contents directory and specify a default value for each directory. Files that satisfy the following conditions in the" />
 
 
 
@@ -183,6 +183,10 @@
                         <a href="#external_prop_file">External property file</a>
                       </li>
                     
+                      <li class="header_h2">
+                        <a href="#h_en_guide_config_2erst_1">Automatic generation of external property file</a>
+                      </li>
+                    
                   </ul>
                 </div>
             
@@ -239,8 +243,8 @@
       </h1>
 
       <div class='article-content'>
-        <p>The config file is a YAML file that specifies settings of the entire Miyadaiku project and default values ​​of document properties.</p>
-<p>The default values ​​of propertieof contents are specified in the `` config.yml`` file in the root directory.</p>
+        <p>The config file is a YAML file that specifies default values ​​of document properties.</p>
+<p>The default values ​​of properts are specified in the <span class="docutils literal">config.yml</span> file in the root directory.</p>
 <p>You can also create a YAML file in a subdirectory within the <span class="docutils literal">contents</span> directory and specify a default value for each directory. Files that satisfy the following conditions in the <span class="docutils literal">contents</span> directory are read as config files.</p>
 <ul class="simple">
 <li><p>Extension of file name is <span class="docutils literal">.yml</span></p></li>
@@ -263,11 +267,12 @@ category: tutorial # Set the default value of category to tutorial
 <p>Also, in the directories under <span class="docutils literal">/dir1/dir2</span>, the <span class="docutils literal">category</span> property of the article defaults to <span class="docutils literal">tutorial</span>.</p>
 <div class="header_target" id="external_prop_file"></div><div class="section" id="external-property-file">
 <h1>External property file</h1>
-<p>For content such as articles and images, you can create an external properties file to specify properties.</p>
+<p>To specify properties For content such as articles and images, you can create an external properties file .</p>
 <p>The external property file is a YAML file whose file name is <span class="docutils literal">destination_file_name.props.yml</span>. You can specify properties even for binary files such as images.</p>
-<p>Automatic generation of external property file
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=</p>
-<p>In articles with the <span class="docutils literal">generate_metadata_file</span> property set to <span class="docutils literal">true</span>, external property file for the article is created if the article does not have a <span class="docutils literal">date</span> property.</p>
+<div class="section" id="automatic-generation-of-external-property-file">
+<div class="header_target" id="h_en_guide_config_2erst_1"></div><h2>Automatic generation of external property file</h2>
+<p>In articles with the <span class="docutils literal">generate_metadata_file</span> property set to <span class="docutils literal">true</span>, external property file for the article is produced if the article does not have a <span class="docutils literal">date</span> property.</p>
+</div>
 </div>
       </div>
     </div>

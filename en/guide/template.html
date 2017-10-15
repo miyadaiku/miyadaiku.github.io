@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="Template - Miyadaiku" />
 
-<meta name="description" content="Content files in the contents directory are converted with Jinja2 template file. The template is created in the templates directory of the project directory. Aritcle template The template applied to the article is specified by the article_template property. Default template name is"/>
-<meta property="og:description" content="Content files in the contents directory are converted with Jinja2 template file. The template is created in the templates directory of the project directory. Aritcle template The template applied to the article is specified by the article_template property. Default template name is" />
+<meta name="description" content="Content files in the contents directory are converted with Jinja2 template file. The templates are created in the templates directory of the project directory. Aritcle template The template applied to the article is specified by the article_template property. Default template name is"/>
+<meta property="og:description" content="Content files in the contents directory are converted with Jinja2 template file. The templates are created in the templates directory of the project directory. Aritcle template The template applied to the article is specified by the article_template property. Default template name is" />
 
 
 
@@ -255,18 +255,19 @@
       </h1>
 
       <div class='article-content'>
-        <p>Content files in the <span class="docutils literal">contents</span> directory are converted with Jinja2 template file. The template is created in the <span class="docutils literal">templates</span> directory of the project directory.</p>
+        <p>Content files in the <span class="docutils literal">contents</span> directory are converted with Jinja2 template file. The templates are created in the <span class="docutils literal">templates</span> directory of the project directory.</p>
 <div class="section" id="aritcle-template">
 <div class="header_target" id="h_en_guide_template_2erst_1"></div><h1>Aritcle template</h1>
 <p>The template applied to the article is specified by the <span class="docutils literal">article_template</span> property. Default template name is <span class="docutils literal">'page_article.html'</span>.</p>
 <div class="section" id="template-variable">
 <div class="header_target" id="h_en_guide_template_2erst_2"></div><h2>Template variable</h2>
 <p>Within the template, you can refer to the following variables.</p>
-<p>page</p>
-<p>   Refer to <a href="objects.html#content_obj">Content object</a> of the article to be processed. Most article templates get the HTML to render from the <span class="docutils literal">html</span> property of the <span class="docutils literal">page</span> variable.</p>
 <dl class="simple">
+<dt>page</dt>
+<dd><p>Refer to the <a href="objects.html#content_obj">Content object</a> of the article producing current HTML page. Most article templates get the HTML to render from the <span class="docutils literal">html</span> property of the <span class="docutils literal">page</span> variable.</p>
+</dd>
 <dt>contents</dt>
-<dd><p>Refer to <a href="objects.html#contents_collection">Contents collection</a> of the project.</p>
+<dd><p>Refer to the <a href="objects.html#contents_collection">Contents collection</a> of the project.</p>
 </dd>
 </dl>
 <div class="code-block">
@@ -288,14 +289,14 @@
 </div>
 <div class="section" id="index-template">
 <div class="header_target" id="h_en_guide_template_2erst_3"></div><h1>Index template</h1>
-<p>For an index that outputs a list of articles, the generated HTML file may be multiple pages. You can specify different templates for the first page, and the second and subsequent pages.</p>
-<p>The template of the first page is specified by the <span class="docutils literal">indexpage_template</span> property. Default template name is <span class="docutils literal">'page_index.html'</span>.  The template pf the second and subsequent pages are specified with the <span class="docutils literal">indexpage_template2</span> property. Default template name is <span class="docutils literal">'page_index.html'</span>.</p>
+<p>For an index that produces list of articles, the generated HTML file may be multiple pages. You can specify different templates for the first page, and the second and subsequent pages.</p>
+<p>The template of the first page is specified by the <span class="docutils literal">indexpage_template</span> property. Default template name is <span class="docutils literal">'page_index.html'</span>.  The template df the second and subsequent pages are specified with the <span class="docutils literal">indexpage_template2</span> property. Default template name is <span class="docutils literal">'page_index.html'</span>.</p>
 <div class="section" id="template-variables">
 <div class="header_target" id="h_en_guide_template_2erst_4"></div><h2>Template variables</h2>
 <p>Within the template, you can refer to the following variables.</p>
 <dl>
 <dt>page</dt>
-<dd><p>Refer to <a href="objects.html#content_obj">Content object</a> of the index to be processed.</p>
+<dd><p>Refer to the <a href="objects.html#content_obj">Content object</a> of the index producing current HTML page.</p>
 </dd>
 <dt>contents</dt>
 <dd><p>Refer to <a href="objects.html#contents_collection">Contents collection</a> of the project.</p>
@@ -357,7 +358,7 @@
 <li><p>The project's <span class="docutils literal">templates</span> directory</p></li>
 <li><p>The <span class="docutils literal">templates</span> directory of the package specified as the theme. When multiple themes are specified, search is performed in the specified order.</p></li>
 </ol>
-<p>However, if <span class="docutils literal">!</span> Is included in the template name, it does not perform the above search, searches the <span class="docutils literal">templates</span> directory of the package with the package name on the left side of <span class="docutils literal">!</span>.</p>
+<p>However, if <span class="docutils literal">!</span> is included in the template name, templates are obtained from the <span class="docutils literal">templates</span> directory of the package which the package name is the left side of <span class="docutils literal">!</span>.</p>
 <p>e.g.  <span class="docutils literal">{% import 'miyadaiku.themes.sample.blog!Test.html' %}</span> imports <span class="docutils literal">templates/test.html</span> in the <span class="docutils literal">miyadaiku.themes.sample.blog</span> package.</p>
 </div>
       </div>

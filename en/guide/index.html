@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="Index - Miyadaiku" />
 
-<meta name="description" content="Web sites like blog require index pages, which is a list of articles in the site. Miyadaiku creates index pages from index object. Index objects are created by YAML file which type is index. contents/index_ja.yml type: index # Set type of YAML file as &#39;index&#39;"/>
-<meta property="og:description" content="Web sites like blog require index pages, which is a list of articles in the site. Miyadaiku creates index pages from index object. Index objects are created by YAML file which type is index. contents/index_ja.yml type: index # Set type of YAML file as &#39;index&#39;" />
+<meta name="description" content="Web sites like blog sites require index pages, which is a list of articles in the site. Miyadaiku creates index pages from index object. Index objects are produced by YAML file which type is index. contents/index_ja.yml type: index # Set type of YAML file as &#39;index&#39;"/>
+<meta property="og:description" content="Web sites like blog sites require index pages, which is a list of articles in the site. Miyadaiku creates index pages from index object. Index objects are produced by YAML file which type is index. contents/index_ja.yml type: index # Set type of YAML file as &#39;index&#39;" />
 
 
 
@@ -247,8 +247,8 @@
       </h1>
 
       <div class='article-content'>
-        <p>Web sites like blog require index pages, which is a list of articles in the site. Miyadaiku creates index pages from <strong>index object</strong>.</p>
-<p>Index objects are created by YAML file which type is <span class="docutils literal">index</span>.</p>
+        <p>Web sites like blog sites require index pages, which is a list of articles in the site. Miyadaiku creates index pages from <strong>index object</strong>.</p>
+<p>Index objects are produced by YAML file which type is <span class="docutils literal">index</span>.</p>
 <div class="code-block">
 <div class="code-block-caption">contents/index_ja.yml</div>
 <div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>   <span class="c1"># Set type of YAML file as 'index'</span>
@@ -257,19 +257,19 @@
   <span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">ja</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
-<p>Index object may output multiple pages of HTML file if the article to be displayed does not fit on one page.</p>
+<p>Index object may output multiple pages of HTML file if the articles to be displayed does not fit on one page.</p>
 <div class="header_target" id="propertyofindex"></div><div class="section" id="property-of-index">
 <h1>Property of index</h1>
 <p>Index object has following properties, in addition to <a href="property.html#standardprofs">Standard properties</a>.</p>
 <dl class="simple">
 <dt>filters</dt>
-<dd><p>Specify search criteria for the article to be displayed as a dictionary. The keys of the dictionary are name of property to search, and the values is a list of values to be selected.</p>
+<dd><p>Specify search criteria for the article to match as a dictionary. The keys of the dictionary are name of property to search, and the values is a list of values to match.</p>
 </dd>
 </dl>
-<p>   If omitted, all articles whose property `` draft`` is <span class="docutils literal">false</span> are displayed.</p>
+<p>   If omitted, all articles whose property <span class="docutils literal">draft</span> is <span class="docutils literal">false</span> are displayed.</p>
 <blockquote>
 <div class="code-block">
-<div class="code-block-caption">Display only Japanese articles with category 'news' or 'event'</div>
+<div class="code-block-caption">Display Japanese articles with category 'news' or 'event'</div>
 <div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>   <span class="c1"># Set the type of YAML file as index</span>
 <span class="l l-Scalar l-Scalar-Plain">filters</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">ja</span><span class="p p-Indicator">]</span>  <span class="c1"># Seearch articles where lang is Japanese</span>
@@ -325,17 +325,17 @@
 </div>
 <div class="section" id="grouped-index">
 <div class="header_target" id="h_en_guide_index_2erst_1"></div><h1>Grouped index</h1>
-<p>To create index grouped by property value, specify the name of the property to classify as <span class="docutils literal">groupby</span> property of the index object.</p>
+<p>To produce index grouped by property value, specify the name of the property to classify as <span class="docutils literal">groupby</span> property of the index object.</p>
 <div class="code-block">
 <div class="code-block-caption">contents/index_category.yml</div>
 <div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>        <span class="c1"># Set the type of YAML file as index</span>
-<span class="l l-Scalar l-Scalar-Plain">groupby</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">category</span>  <span class="c1"># Create index grouped by category name</span>
+<span class="l l-Scalar l-Scalar-Plain">groupby</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">category</span>  <span class="c1"># Produce index grouped by category name</span>
 </pre></div>
 </div>
-<p>Grouped index creates a series of index page for each value of the specified property. In this example, if there are articles with category "catA" and articles with "catB", the index creates two groups of subsequent pages.</p>
+<p>Grouped index produces a series of index page for each value of the specified property. In this example, if there are articles with category "catA" and articles with "catB", the index produces two groups of subsequent pages as following.</p>
 <ul class="simple">
-<li><p><span class="docutils literal">index_category_catA.html</span>、<span class="docutils literal">index_category_catA_2.html</span>、<span class="docutils literal">index_category_catA_3.html</span> ...</p></li>
-<li><p><span class="docutils literal">index_category_catB.html</span>、<span class="docutils literal">index_category_catB_2.html</span>、<span class="docutils literal">index_category_catB_3.html</span> ...</p></li>
+<li><p><span class="docutils literal">index_category_catA.html</span>, <span class="docutils literal">index_category_catA_2.html</span>, <span class="docutils literal">index_category_catA_3.html</span> ...</p></li>
+<li><p><span class="docutils literal">index_category_catB.html</span>, 、<span class="docutils literal">index_category_catB_2.html</span>, <span class="docutils literal">index_category_catB_3.html</span> ...</p></li>
 </ul>
 <div class="section" id="property-of-grouped-index">
 <div class="header_target" id="h_en_guide_index_2erst_2"></div><h2>Property of Grouped index</h2>
@@ -359,7 +359,7 @@
 <p>The following variables can be used in the template.</p>
 <dl class="simple">
 <dt>cur_page</dt>
-<dd><p>Page number</p>
+<dd><p>Current page number</p>
 </dd>
 <dt>groupby</dt>
 <dd><p>Name of the property that classifies the article.</p>

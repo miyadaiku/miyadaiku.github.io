@@ -330,8 +330,8 @@
 My first article in reStructuredText.
 </pre></div>
 </div>
-<p>As in this example above, if a header is described at the beginning of the document, that header is the document <cite>title</cite> property. The <cite>title</cite> property can also be specified with the` <cite>article`</cite> directive.</p>
-<p>Miyadaiku provides <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">directive</a> and <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/roles.html">role</a> for rst to set properties,  to embed Jinja2 templates, etc.</p>
+<p>As in this example above, a header at the beginning of the document is used as the <cite>title</cite> property of the document. The <cite>title</cite> property can also be specified with the` <cite>article</cite> directive.</p>
+<p>Miyadaiku provides <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">directives</a> and <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/roles.html">roles</a> for rst to specifying propertie, to embedding Jinja2 templates, etc.</p>
 <div class="section" id="article-drective">
 <div class="header_target" id="h_en_guide_article_2erst_2"></div><h2>Article drective</h2>
 <p>The <span class="docutils literal">article</span> directive specifies the properties of the article.</p>
@@ -350,8 +350,8 @@ My first article in reStructuredText.
 This is a miyadaiku article in reST.
 </pre></div>
 </div>
-<p>In this example, we specify <span class="docutils literal">date</span>, <span class="docutils literal">title</span>, <span class="docutils literal">category</span>, <span class="docutils literal">tags</span> as document properties.</p>
-<p>You can specify any item as a property. For property settings, see <a href="property.html">Property</a>.</p>
+<p>In this example, <span class="docutils literal">date</span>, <span class="docutils literal">title</span>, <span class="docutils literal">category</span>, <span class="docutils literal">tags</span> properties are specified.</p>
+<p>You can specify any item as a property. For property, see <a href="property.html">Property</a> for detail.</p>
 <div class="header_target" id="jinjadirective"></div></div>
 <div class="section" id="jinja-directive">
 <h2>Jinja directive</h2>
@@ -386,7 +386,7 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 </div>
 <div class="section" id="code-block-directive">
 <div class="header_target" id="h_en_guide_article_2erst_4"></div><h2>Code-block directive</h2>
-<p>Source code in the `` code-block`` directive is syntax highlighted by <a class="reference external" href="http://pygments.org/">Pygments</a>. You can specify a language in  `` .. code-block :: lang`` form.</p>
+<p>Source code in the <span class="docutils literal"><span class="pre">code-block</span></span> directive is syntax highlighted by <a class="reference external" href="http://pygments.org/">Pygments</a>. You can specify a language as an argument. e.g.  <span class="docutils literal">.. <span class="pre">code-block</span> :: lang</span>.</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of code-block directive:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
@@ -399,7 +399,7 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 <div class="header_target" id="targetdirective"></div></div>
 <div class="section" id="target-directive">
 <h2>Target directive</h2>
-<p>Embed the <span class="docutils literal">&lt;div&gt;</span> element with <span class="docutils literal">id</span> to be specified as the target of the link.</p>
+<p>Creates the <span class="docutils literal">&lt;div&gt;</span> element with <span class="docutils literal">id</span> attribute to be specified as the target of the link.</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of target role:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">target</span><span class="p">::</span> id_of_this_section1
@@ -436,11 +436,11 @@ tags: tag1, tag2
 This is a Miyadaiku article in Markdown.
 </pre></div>
 </div>
-<p>Property values are specified one per line, separating property names and value with <span class="docutils literal">:</span>.</p>
+<p>Property values are specified one per line, separating property name and value with <span class="docutils literal">:</span>.</p>
 </div>
 <div class="section" id="jinja2-template">
 <div class="header_target" id="h_en_guide_article_2erst_7"></div><h2>Jinja2 template</h2>
-<p>Jinja2 templated can be written in the form <strong>:jinja:`Jinja 2 tag`</strong>.</p>
+<p>Jinja2 templated can be written in the form <strong>:jinja:`Jinja 2 tag`</strong>. <cite>Jinja2 tag</cite> can contain newlines.</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of Jinja role in Markdown:</div>
 <div class="highlight"><pre><span></span><span class="gh">#</span> Link test
@@ -451,7 +451,7 @@ Link to :jinja:`{{ content.link_to("./hello.rst") }}`.
 </div>
 <div class="section" id="target">
 <div class="header_target" id="h_en_guide_article_2erst_8"></div><h2>Target</h2>
-<p>You can generate <span class="docutils literal">&lt;div&gt;</span> element with <span class="docutils literal">id</span> with <em>:target:`id_of_div`</em>. The <span class="docutils literal">div</span> could be used as target of the link.</p>
+<p><strong>:target:`id_of_div`</strong> creates the <span class="docutils literal">&lt;div&gt;</span> element with <span class="docutils literal">id</span> attribute to be specified as the target of the link.</p>
 <div class="code-block">
 <div class="code-block-caption">Sample of target :</div>
 <div class="highlight"><pre><span></span>:target:`id_of_this_section1`
@@ -483,7 +483,7 @@ tags: Tag1, Tag2
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is a HTML file<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>Property values are specified one per line, separating property names and value with <span class="docutils literal">:</span>.</p>
+<p>Property values are specified one per line, separating property name and value with <span class="docutils literal">:</span>.</p>
 </div>
 <div class="section" id="id2">
 <div class="header_target" id="h_en_guide_article_2erst_11"></div><h2>Jinja2 template</h2>
@@ -500,7 +500,7 @@ tags: Tag1, Tag2
 <p>Files with extension ".ipynb" are read as <a class="reference external" href="http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/">Jupyter notebook</a>.</p>
 <div class="section" id="id4">
 <div class="header_target" id="h_en_guide_article_2erst_13"></div><h2>Property</h2>
-<p>Jupyter notebook properties are specified as: jinja:<cite>{{content.link_to('./config.rst', fragment= 'external_prop_file')}}</cite> or as notebook metadata.</p>
+<p>Jupyter notebook properties are specified as <a href="config.html#external_prop_file">External property file</a> or as notebook metadata.</p>
 <div class="section" id="jupyter-notebook-metadata-settings">
 <div class="header_target" id="h_en_guide_article_2erst_14"></div><h3>Jupyter notebook metadata settings</h3>
 <ol class="arabic">
@@ -534,13 +534,13 @@ tags: Tag1, Tag2
 </div>
 <div class="section" id="template-variables">
 <h1>Template variables</h1>
-<p>Jinja templates in the articles, following variables can be used.</p>
+<p>In the Jinja2 templates, following variables can be used to refer articles.</p>
 <dl class="simple">
 <dt>content</dt>
 <dd><p>Refer to the <a href="objects.html#content_obj">Content object</a> of current article.</p>
 </dd>
 <dt>page</dt>
-<dd><p>Refer to the <a href="objects.html#content_obj">Content object</a> of the content calling the article.</p>
+<dd><p>Refer to the <a href="objects.html#content_obj">Content object</a> of the article producing current HTML page.</p>
 </dd>
 <dt>contents</dt>
 <dd><p>Refer to the <a href="objects.html#contents_collection">Contents collection</a> of the project.</p>
@@ -548,8 +548,8 @@ tags: Tag1, Tag2
 </dl>
 <div class="section" id="content-and-page">
 <div class="header_target" id="h_en_guide_article_2erst_15"></div><h2>Content and page</h2>
-<p>When converting an article to HTML, in the Jinja 2 template in the article, the variables <span class="docutils literal">content</span> and <span class="docutils literal">page</span> both refer to the same article object currently being processed. In this case <span class="docutils literal">content</span> and <span class="docutils literal">page</span> refer to the same object.</p>
-<p>However, if the article is loading another article, in the Jinja 2 template in the article being loaded, the article is referenced by the variable <span class="docutils literal">content</span>, and the article loading another article is referred by variable <span class="docutils literal">page</span>.</p>
+<p>When converting an article to HTML, in the Jinja 2 template, the variables <span class="docutils literal">content</span> and <span class="docutils literal">page</span> both refer to the same article object currently being processed. In this case <span class="docutils literal">content</span> and <span class="docutils literal">page</span> refer to the same object.</p>
+<p>However, if the article is loaded by another article, variable <span class="docutils literal">page</span> refers the article of the current HTML page, and the variable <span class="docutils literal">content</span> refers the article being loaded.</p>
 <div class="code-block">
 <div class="code-block-caption">parent.rst:</div>
 <div class="highlight"><pre><span></span><span class="x">This is parent.rst</span>

@@ -277,17 +277,20 @@
 <dd><p>Extension of the article's output file name. Default value is <span class="docutils literal">'.html'</span>.</p>
 </dd>
 <dt>filename</dt>
-<dd><p>Specify the output file name. If unspecified, file name is generated with <span class="docutils literal">filename_templ</span>.</p>
+<dd><p>Specify the output file name. If unspecified, file name is generated with <span class="docutils literal">filename_templ</span> property.</p>
 <p><span class="docutils literal">Filename</span> can be a relative path. Ex) <span class="docutils literal">subdir/article1.html</span>, <span class="docutils literal"><span class="pre">../subdir/article1.html</span></span></p>
 </dd>
 <dt>filename_templ</dt>
 <dd><p>Specify the file name of the output HTML file with Jina 2 template. Default value is <span class="docutils literal"><span class="pre">'{{content.stem}}.{{Content.ext}}'</span></span>. In the template you can reference <a href="property.html#jinja_vars">Property</a>.</p>
 </dd>
+<dt>generate_metadata_file</dt>
+<dd><p><span class="docutils literal">true</span> if <a href="config.html#external_prop_file">External property file</a> is produced if the article doesn't has <span class="docutils literal">date</span> property. Default value is <span class="docutils literal">false</span>.</p>
+</dd>
 <dt>header</dt>
-<dd><p>Gets a list of the header elements of an article. The elements of the list are tuples of <cite>(header id, header element name, header text)</cite>.</p>
+<dd><p>Returns a list of the header elements of an article. The items of the list are tuples of <cite>(header id, header element name, header text)</cite>.</p>
 </dd>
 <dt>html</dt>
-<dd><p>Get article in HTML.</p>
+<dd><p>Returns an article in HTML.</p>
 </dd>
 <dt>imports</dt>
 <dd><p>File names of templates to be imported as Jinja2 modules. File names are separated by <span class="docutils literal">,</span>. Specified modules can be used as <a href="article.html#import_templ">Imported template</a>.</p>
@@ -311,7 +314,7 @@
 <dd><p>Base URL of the site. Defautl value is <span class="docutils literal"><span class="pre">'http://localhost:8888'</span></span>.</p>
 </dd>
 <dt>stem</dt>
-<dd><p>Specify the output file name without extension of the article. Default value is same as file name name without extension of article.</p>
+<dd><p>Specify the output file name without extension of the article. Default value is file name of source article  without extension.</p>
 </dd>
 <dt>tags</dt>
 <dd><p>Tags of the content, separeted by <span class="docutils literal">,</span>. Default value is <span class="docutils literal">''</span>.</p>

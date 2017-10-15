@@ -266,17 +266,17 @@
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">miyadaiku.themes.fontawesome</span>
 </pre></div>
 </div>
-<p>If the theme uses an another theme, that theme is recursively loaded.</p>
-<p>Miyadaiku's built-in theme <span class="docutils literal">miyadaiku.themes.base</span> is always loaded even if it is not specified in <span class="docutils literal">themes</span>.</p>
+<p>If the theme uses another themes, these themes are loaded recursively.</p>
+<p>The built-in theme <span class="docutils literal">miyadaiku.themes.base</span> is always loaded even if it is not specified in <span class="docutils literal">themes</span>.</p>
 </div>
 <div class="section" id="templates">
 <div class="header_target" id="h_en_guide_themes_2erst_2"></div><h1>Templates</h1>
-<p>Templates included in themes can also be used like templates in the project.</p>
-<p>If you specify a template name in the article's template name, Miyadaiku search the project's <span class="docutils literal">templates</span> directory, then the template directory from the theme in use. See  <a href="template.html#template_names">Template name resolution</a> for details.</p>
+<p>Templates in themes can also be used just like as templates in the project.</p>
+<p>On searching Jinja2 templates, Miyadaiku searches the project's <span class="docutils literal">templates</span> directory at first, then the template directory of themes in use. See  <a href="template.html#template_names">Template name resolution</a> for details.</p>
 </div>
 <div class="section" id="load-package">
 <div class="header_target" id="h_en_guide_themes_2erst_3"></div><h1>load_package()</h1>
-<p>If there is a `` load_package (site) `` in the theme package, it will be called at startup. If you need to initialize the data within the theme, do it here.</p>
+<p>If there is a <span class="docutils literal">load_package(site)</span> function in the theme package, it will be called at startup. If you need to initialize the data within the theme, do it here.</p>
 <div class="code-block">
 <div class="code-block-caption">sample of __init__.py of theme package</div>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>

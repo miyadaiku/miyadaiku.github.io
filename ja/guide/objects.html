@@ -347,7 +347,7 @@
 <p>省略時は、文書プロパティ <span class="docutils literal">draft</span> が <span class="docutils literal">false</span> かつ <span class="docutils literal">type</span> が <span class="docutils literal">article</span> のコンテントオブジェクトを検索します。</p>
 <div class="code-block">
 <div class="code-block-caption">カテゴリが 'news' または 'event' のアーティクルを検索</div>
-<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">items</span> <span class="o">=</span> <span class="nv">contents.get_contents</span><span class="o">(</span><span class="nv">filters</span><span class="o">={</span><span class="s1">'type'</span><span class="o">:[</span><span class="s1">'artile'</span><span class="o">],</span> <span class="s1">'category'</span><span class="o">:</span> <span class="o">[</span><span class="s1">'news'</span><span class="o">,</span> <span class="s1">'event'</span><span class="o">]})</span> <span class="cp">%}</span><span class="x"></span>
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">items</span> <span class="o">=</span> <span class="nv">contents.get_contents</span><span class="o">(</span><span class="nv">filters</span><span class="o">={</span><span class="s1">'type'</span><span class="o">:[</span><span class="s1">'artile'</span><span class="o">],</span> <span class="s1">'draft'</span><span class="o">:</span> <span class="o">[</span><span class="kp">false</span><span class="o">],</span> <span class="s1">'category'</span><span class="o">:</span> <span class="o">[</span><span class="s1">'news'</span><span class="o">,</span> <span class="s1">'event'</span><span class="o">]})</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
 </div>
 </dd>

@@ -146,6 +146,18 @@
 
                   <ul>
                     
+                      <li class="header_h1">
+                        <a href="#a_Directorystructure">Directory structure</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#a_Contentfiles">Content files</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#a_Templates">Templates</a>
+                      </li>
+                    
                   </ul>
                 </div>
             
@@ -246,7 +258,7 @@ config.yml   contents        files           templates
 </pre></div>
 </div>
 <div class="section" id="directory-structure">
-<div class="header_target" id="h_en_guide_project_2erst_1"></div><h1>Directory structure</h1>
+<div class="md_header_block" id="h_Directorystructure"><a class="md_header_anchor" id="a_Directorystructure"></a><h1>Directory structure</h1></div>
 <p>The document project consists of the following files.</p>
 <pre class="literal-block">first_doc/
      ├─── config.yml   YAML file to specify project settings.
@@ -277,7 +289,7 @@ config.yml   contents        files           templates
 </dl>
 </div>
 <div class="section" id="content-files">
-<div class="header_target" id="h_en_guide_project_2erst_2"></div><h1>Content files</h1>
+<div class="md_header_block" id="h_Contentfiles"><a class="md_header_anchor" id="a_Contentfiles"></a><h1>Content files</h1></div>
 <p>The <span class="docutils literal"><span class="pre">miyadaiku-build</span></span> command processes following type of files in the <span class="docutils literal">contents</span> directory as content files to generate HTML.</p>
 <ul class="simple">
 <li><p>*.yml file</p></li>
@@ -304,7 +316,7 @@ config.yml   contents        files           templates
 </dl>
 </div>
 <div class="section" id="templates">
-<div class="header_target" id="h_en_guide_project_2erst_3"></div><h1>Templates</h1>
+<div class="md_header_block" id="h_Templates"><a class="md_header_anchor" id="a_Templates"></a><h1>Templates</h1></div>
 <p>Content files in the <span class="docutils literal">contents</span> directory are processed by reST, Markdown parser, etc., and then converted to HTML by the Jinja2 template engine. From the generated HTML, the final HTML files are created with the Jinja template in the <span class="docutils literal">templates</span> directory and output to the <span class="docutils literal">outputs</span> directory.</p>
 <p><img src="../../img/process.png" width="500px"/></p>
 </div>

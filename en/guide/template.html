@@ -195,6 +195,26 @@
 
                   <ul>
                     
+                      <li class="header_h1">
+                        <a href="#a_Aritcletemplate">Aritcle template</a>
+                      </li>
+                    
+                      <li class="header_h2">
+                        <a href="#a_Templatevariable">Template variable</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#a_Indextemplate">Index template</a>
+                      </li>
+                    
+                      <li class="header_h2">
+                        <a href="#a_Templatevariables">Template variables</a>
+                      </li>
+                    
+                      <li class="header_h1">
+                        <a href="#a_Templatenameresolution">Template name resolution</a>
+                      </li>
+                    
                   </ul>
                 </div>
             
@@ -239,10 +259,10 @@
       <div class='article-content'>
         <p>Content files in the <span class="docutils literal">contents</span> directory are converted with Jinja2 template file. The templates are created in the <span class="docutils literal">templates</span> directory of the project directory.</p>
 <div class="section" id="aritcle-template">
-<div class="header_target" id="h_en_guide_template_2erst_1"></div><h1>Aritcle template</h1>
+<div class="md_header_block" id="h_Aritcletemplate"><a class="md_header_anchor" id="a_Aritcletemplate"></a><h1>Aritcle template</h1></div>
 <p>The template applied to the article is specified by the <span class="docutils literal">article_template</span> property. Default template name is <span class="docutils literal">'page_article.html'</span>.</p>
 <div class="section" id="template-variable">
-<div class="header_target" id="h_en_guide_template_2erst_2"></div><h2>Template variable</h2>
+<div class="md_header_block" id="h_Templatevariable"><a class="md_header_anchor" id="a_Templatevariable"></a><h2>Template variable</h2></div>
 <p>Within the template, you can refer to the following variables.</p>
 <dl class="simple">
 <dt>page</dt>
@@ -270,11 +290,11 @@
 </div>
 </div>
 <div class="section" id="index-template">
-<div class="header_target" id="h_en_guide_template_2erst_3"></div><h1>Index template</h1>
+<div class="md_header_block" id="h_Indextemplate"><a class="md_header_anchor" id="a_Indextemplate"></a><h1>Index template</h1></div>
 <p>For an index that produces list of articles, the generated HTML file may be multiple pages. You can specify different templates for the first page, and the second and subsequent pages.</p>
 <p>The template of the first page is specified by the <span class="docutils literal">indexpage_template</span> property. Default template name is <span class="docutils literal">'page_index.html'</span>.  The template df the second and subsequent pages are specified with the <span class="docutils literal">indexpage_template2</span> property. Default template name is <span class="docutils literal">'page_index.html'</span>.</p>
 <div class="section" id="template-variables">
-<div class="header_target" id="h_en_guide_template_2erst_4"></div><h2>Template variables</h2>
+<div class="md_header_block" id="h_Templatevariables"><a class="md_header_anchor" id="a_Templatevariables"></a><h2>Template variables</h2></div>
 <p>Within the template, you can refer to the following variables.</p>
 <dl>
 <dt>page</dt>
@@ -334,7 +354,7 @@
 <div class="header_target" id="template_names"></div></div>
 </div>
 <div class="section" id="template-name-resolution">
-<h1>Template name resolution</h1>
+<div class="md_header_block" id="h_Templatenameresolution"><a class="md_header_anchor" id="a_Templatenameresolution"></a><h1>Template name resolution</h1></div>
 <p>Miyadaiku searches Jinja2 template in the following order.</p>
 <ol class="arabic simple">
 <li><p>The project's <span class="docutils literal">templates</span> directory</p></li>

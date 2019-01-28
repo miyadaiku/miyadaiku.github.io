@@ -289,7 +289,7 @@
 <p><span class="docutils literal">Filename</span> can be a relative path. Ex) <span class="docutils literal">subdir/article1.html</span>, <span class="docutils literal"><span class="pre">../subdir/article1.html</span></span></p>
 </dd>
 <dt>filename_templ</dt>
-<dd><p>Specify the file name of the output HTML file with Jina 2 template. Default value is <span class="docutils literal"><span class="pre">'{{content.stem}}.{{Content.ext}}'</span></span>. In the template you can reference <a href="property.html#jinja_vars">Property</a>.</p>
+<dd><p>Specify the file name of the output HTML file with Jina 2 template. Default value is <span class="docutils literal"><span class="pre">'{{content.stem}}.{{Content.ext}}'</span></span>. In the template you can use <a href="article.html#jinja_vars">Template variables</a>.</p>
 </dd>
 <dt>generate_metadata_file</dt>
 <dd><p><span class="docutils literal">true</span> if <a href="config.html#external_prop_file">External property file</a> is produced if the article doesn't has <span class="docutils literal">date</span> property. Default value is <span class="docutils literal">false</span>.</p>

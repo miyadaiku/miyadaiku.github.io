@@ -264,8 +264,9 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 <div class="header_target" id="template"></div></div>
 <div class="section" id="id6">
 <div class="md_header_block" id="h_%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA"><a class="md_header_anchor" id="a_%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA"></a><h1>テンプレートのカスタマイズ</h1></div>
-<p>アーティクルは、<span class="docutils literal">page_article.html</span> という名前の Jinja2 テンプレートでHTMLに変換されます。</p>
-<p>例として、テンプレートディレクトリ <span class="docutils literal">first_doc/templates</span> に、 テンプレートとなる <span class="docutils literal">page_article.html</span> ファイルを作成しましょう。</p>
+<p>アーティクルは、<span class="docutils literal">page_article.html</span> という名前の Jinja2 テンプレートでHTMLに変換されます。 デフォルトでは、<a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates">miyadaiku.themes.base</a>  パッケージの <a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates/page_article.html">page_article.html</a> が使われます。</p>
+<p>独自のテンプレートを使用する場合は、テンプレートディレクトリ <span class="docutils literal">first_doc/templates</span> に <span class="docutils literal">page_article.html</span> ファイルを作成します。</p>
+<p>ここでは、Jinja2 の継承機能を利用して、デフォルトのテンプレートをカスタマイズし、独自のテンプレートを作成します。</p>
 <div class="code-block">
 <div class="code-block-caption">first_doc/templates/page_article.html:</div>
 <div class="highlight"><pre><span></span><span class="x">&lt;!-- miyadaiku.themes.base パッケージの page_article.html を拡張する --&gt;</span>
@@ -283,16 +284,15 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">body</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
 </div>
-<p>Miyadaikuでは、デフォルトのテンプレートとして、<a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates">miyadaiku.themes.base</a>  パッケージに <a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/base/templates/page_article.html">page_article.html</a> を提供しています。ここでは、Jinja2 の継承機能を利用してこのテンプレートをカスタマイズし、独自のテンプレートを作成します。</p>
-<p>Pythonパッケージの <span class="docutils literal">templates</span> ディレクトリにあるテンプレートを使用するときは、次のようにパッケージ名とファイル名を <span class="docutils literal">!</span> 記号で区切って指定します。</p>
-<blockquote>
-<p><span class="docutils literal">パッケージ名!テンプレートファイル名</span></p>
-</blockquote>
-<p>この例で使用している</p>
+<p>この例の</p>
 <blockquote>
 <p><span class="docutils literal">miyadaiku.themes.base!page_article.html</span></p>
 </blockquote>
-<p>は、<span class="docutils literal">miyadaiku.themes.base</span> パッケージの <span class="docutils literal">page_article.html</span> ファイルを指定しています。</p>
+<p>は、<span class="docutils literal">miyadaiku.themes.base</span> テーマの <span class="docutils literal">templates/page_article.html</span> ファイルを指定しています。</p>
+<p>テーマパッケージの <span class="docutils literal">templates</span> ディレクトリにあるテンプレートを使用するときは、次のようにパッケージ名とファイル名を <span class="docutils literal">!</span> 記号で区切って指定します。</p>
+<blockquote>
+<p><span class="docutils literal">パッケージ名!テンプレートファイル名</span></p>
+</blockquote>
 <p><span class="docutils literal">page_article.html</span> には、<span class="docutils literal">head</span> ブロックと <span class="docutils literal">body</span> ブロックがあり、それぞれ <span class="docutils literal">&lt;head&gt;</span> 要素と <span class="docutils literal">&lt;body&gt;</span> 要素を出力します。この例では、<span class="docutils literal">body</span> ブロックをオーバライドして、<span class="docutils literal">body</span> 要素にコピーライト表記を追加しています。</p>
 <div class="header_target" id="newfile"></div></div>
 <div class="section" id="css">

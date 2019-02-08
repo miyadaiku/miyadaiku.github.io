@@ -169,6 +169,10 @@
                         <a href="#a_%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89">サイトのビルド</a>
                       </li>
                     
+                      <li class="header_h1">
+                        <a href="#a_%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA">テンプレートのカスタマイズ</a>
+                      </li>
+                    
                   </ul>
                 </div>
             
@@ -228,7 +232,7 @@
 <span class="c1">#   - miyadaiku.themes.sample.blog</span>
 </pre></div>
 </div>
-<p><span class="docutils literal">first_blog/config.yml</span> の <span class="docutils literal">themes</span> を修正し、組み込みテーマ <span class="docutils literal">miyadaiku.themes.sample.blog</span> を使用するように設定します。</p>
+<p><span class="docutils literal">first_blog/config.yml</span> の <span class="docutils literal">themes</span> を修正し、組み込みテーマ <a class="reference external" href="https://github.com/miyadaiku/miyadaiku/tree/master/miyadaiku/themes/sample/blog">miyadaiku.themes.sample.blog</a> を使用するように設定します。</p>
 <div class="code-block">
 <div class="code-block-caption">first_blog/config.yml:</div>
 <div class="highlight"><pre><span></span><span class="c1"># Title of the site</span>
@@ -289,6 +293,33 @@ This is my second blog entry.
 </pre></div>
 </div>
 <p>正常に終了すると、<span class="docutils literal">first_blog/outputs/index.html</span> にBlogが出力されます。</p>
+</div>
+<div class="section" id="id5">
+<div class="md_header_block" id="h_%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA"><a class="md_header_anchor" id="a_%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA"></a><h1>テンプレートのカスタマイズ</h1></div>
+<p>アーティクルの一覧ページ(インデックス)は、<span class="docutils literal">page_index.html</span> という名前の Jinja2 テンプレートでHTMLに変換されます。 <span class="docutils literal">miyadaiku.themes.sample.blog</span> テーマは、<a class="reference external" href="https://github.com/miyadaiku/miyadaiku/blob/master/miyadaiku/themes/sample/blog/templates/page_index.html">page_index.html</a> を提供しています。</p>
+<p>独自のテンプレートを使用する場合は、テンプレートディレクトリ <span class="docutils literal">first_doc/templates</span> に <span class="docutils literal">page_index.html</span> ファイルを作成します。</p>
+<p>ここでは、Jinja2 の継承機能を利用して、デフォルトのテンプレートをカスタマイズし、独自のテンプレートを作成します。継承元のテンプレートの指定方法は、<a href="tutorial.html#template">テンプレートのカスタマイズ</a> を参照してください。</p>
+<div class="code-block">
+<div class="code-block-caption">first_doc/templates/page_index.html:</div>
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">'miyadaiku.themes.sample.blog!page_index.html'</span> <span class="cp">%}</span><span class="x"></span>
+
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">rightcol</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="x">  Recent entries:</span>
+
+<span class="x">  &lt;ul&gt;</span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">content</span> <span class="k">in</span> <span class="o">(</span><span class="nv">contents.get_contents</span><span class="o">()</span> <span class="o">|</span> <span class="nf">sort</span><span class="o">(</span><span class="nv">reverse</span><span class="o">=</span><span class="kp">True</span><span class="o">,</span> <span class="nv">attribute</span><span class="o">=</span><span class="s1">'date'</span><span class="o">))[:</span><span class="m">3</span><span class="o">]</span>   <span class="cp">%}</span><span class="x"></span>
+
+<span class="x">    &lt;li&gt; </span><span class="cp">{{</span> <span class="nv">page.link_to</span><span class="o">(</span><span class="nv">content</span><span class="o">)</span><span class="cp">}}</span><span class="x"> &lt;/li&gt;</span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  &lt;/ul&gt;</span>
+
+<span class="x">  </span><span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">rightcol</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>このテンプレートでは、<a href="../guide/objects.html#contents_collection">コンテンツ コレクション</a> を参照して最新のアーティクルを3件取得し、表示します。</p>
 </div>
       </div>
     </div>

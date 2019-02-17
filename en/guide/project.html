@@ -34,8 +34,8 @@
 
 <meta property="og:title" content="Miyadaiku project - Miyadaiku" />
 
-<meta name="description" content="Miyadaiku&#39;s document project is created with miyadaiku-start command. Creating new miyadaiku project: $ miyadaiku-start new-project $ ls new-project/ config.yml contents files templates Directory structure The document project consists of the following files."/>
-<meta property="og:description" content="Miyadaiku&#39;s document project is created with miyadaiku-start command. Creating new miyadaiku project: $ miyadaiku-start new-project $ ls new-project/ config.yml contents files templates Directory structure The document project consists of the following files." />
+<meta name="description" content="Miyadaiku&#39;s document project is created with miyadaiku-start command. Creating new miyadaiku project: $ miyadaiku-start new-project $ ls new-project/ config.yml contents files modules templates Directory structure The document project consists of the following files."/>
+<meta property="og:description" content="Miyadaiku&#39;s document project is created with miyadaiku-start command. Creating new miyadaiku project: $ miyadaiku-start new-project $ ls new-project/ config.yml contents files modules templates Directory structure The document project consists of the following files." />
 
 
 
@@ -254,7 +254,7 @@
 <div class="code-block-caption">Creating new miyadaiku project:</div>
 <div class="highlight"><pre><span></span>$ miyadaiku-start new-project
 $ ls new-project/
-config.yml   contents        files           templates
+config.yml   contents        files   modules templates
 </pre></div>
 </div>
 <div class="section" id="directory-structure">
@@ -266,6 +266,8 @@ config.yml   contents        files           templates
      ├─── contents/    Directory to store contents such as reStructuredText/Markdown files.
      │
      ├─── files/       Directory to store files such as images.
+     │
+     ├─── modules/     Directory to store Python modules files.
      │
      ├─── templates/   Directory to store Jinja2 template files.
      │
@@ -279,6 +281,9 @@ config.yml   contents        files           templates
 </dd>
 <dt>files dirctory</dt>
 <dd><p>Files in the directory are not converted by <span class="docutils literal"><span class="pre">miyadaiku-build</span></span> command, but copied to the <span class="docutils literal">outputs</span> directory as is.</p>
+</dd>
+<dt>modules directory</dt>
+<dd><p><span class="docutils literal">*.py</span> files in the directory are imported as Python module. The module names can be refered within jinja2 script.</p>
 </dd>
 <dt>templates directory</dt>
 <dd><p>Stores jinja2 template files.</p>

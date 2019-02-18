@@ -70,6 +70,8 @@
           
             <a class="dropdown-item" href="../tutorial/tutorial_blog.html">Blogサイトの作成</a>
           
+            <a class="dropdown-item" href="../tutorial/tutorial_breadcrumb.html">Breadcrumbの実装</a>
+          
         </div>
       </li>
 
@@ -315,7 +317,14 @@
 <dd><p>生成されるHTMLの <span class="docutils literal">lang</span> を指定します。未指定の場合は <span class="docutils literal">'en'</span>  となります。</p>
 </dd>
 <dt>order</dt>
-<dd><p>アーティクルの順序を数値で指定します。</p>
+<dd><p>コンテンツの順序を数値で指定します。未指定の場合は <span class="docutils literal">0</span> となります。</p>
+</dd>
+<dt>parents_dirs</dt>
+<dd><p>コンテンツの親ディレクトリのリストを返す、読み込み専用のプロパティです。アーティクル <span class="docutils literal">/dir1/dir2/article.rst</span> の <span class="docutils literal">parent_dirs</span> は、</p>
+<blockquote>
+<p><span class="docutils literal"><span class="pre">[(),</span> <span class="pre">('dir1'),</span> ('dir1', <span class="pre">'dir2')]</span></span></p>
+</blockquote>
+<p>となります。</p>
 </dd>
 <dt>site_title</dt>
 <dd><p>サイトのタイトルを指定します。未指定の場合は <span class="docutils literal"><span class="pre">'(FIXME-site_title)</span></span>  となります。</p>

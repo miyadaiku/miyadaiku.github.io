@@ -70,6 +70,8 @@
           
             <a class="dropdown-item" href="../tutorial/tutorial_blog.html">Create a blog site</a>
           
+            <a class="dropdown-item" href="../tutorial/tutorial_breadcrumb.html">Implementing breadcrumbs</a>
+          
         </div>
       </li>
 
@@ -317,7 +319,13 @@
 <dd><p>Language code of output HTML. Default values is <span class="docutils literal">'en'</span>.</p>
 </dd>
 <dt>order</dt>
-<dd><p>Numeric order of the article. Default value is <span class="docutils literal">0</span>.</p>
+<dd><p>Numeric order of the content. Default value is <span class="docutils literal">0</span>.</p>
+</dd>
+<dt>parents_dirs</dt>
+<dd><p>Readonly property returns list of parent directories of the content. The <span class="docutils literal">parent_dirs</span> property of the article at <span class="docutils literal">/dir1/dir2/article.rst</span> is</p>
+<blockquote>
+<p><span class="docutils literal"><span class="pre">[(),</span> <span class="pre">('dir1'),</span> ('dir1', <span class="pre">'dir2')]</span></span></p>
+</blockquote>
 </dd>
 <dt>site_title</dt>
 <dd><p>Title of the site. Defautl value is <span class="docutils literal">'(FIXME - site_title)'</span>.</p>

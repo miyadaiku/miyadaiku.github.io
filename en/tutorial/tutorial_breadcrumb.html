@@ -23,10 +23,11 @@
   <script src="../../static/bootstrap4/bootstrap.min.js"></script>
 
   <!-- include pygments css -->
-  <link rel="stylesheet" href="../../static/pygments/pygments_native.css">
+  <link rel="stylesheet" href="../../static/pygments/native.css">
   
   <!-- include font awesome -->
-  <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  <script defer src="../../static/fontawesome/js/all.min.js"></script>
+  <script defer src="../../static/fontawesome/js/v4-shims.min.js"></script>
   
   <meta property="og:url" content="https://miyadaiku.github.io/en/tutorial/tutorial_breadcrumb.html" />
 <meta property="og:locale" content="en" />
@@ -34,8 +35,8 @@
 
 <meta property="og:title" content="Implementing breadcrumbs - Miyadaiku" />
 
-<meta name="description" content="In this tutorial, we implement a site with breadcrumb using Config. To render breadcrumb, we use Breadclumbs of the Bootstrap4. You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/breadcrumb You can view the created site at:"/>
-<meta property="og:description" content="In this tutorial, we implement a site with breadcrumb using Config. To render breadcrumb, we use Breadclumbs of the Bootstrap4. You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/breadcrumb You can view the created site at:" />
+<meta name="description" content="In this tutorial, we implement a site with breadcrumb using Config. To render breadcrumb, we use Breadclumbs of the Bootstrap4. You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/breadcrumb You can view the created site at: https://miyadaiku.github.io/samples/breadcrumb/index.html Create a project At first, create Miyadaiku project to the breadcrumb directory with the following command. $ miyadaiku-start ./breadcrumb Install Bootstrap4 theme We us"/>
+<meta property="og:description" content="In this tutorial, we implement a site with breadcrumb using Config. To render breadcrumb, we use Breadclumbs of the Bootstrap4. You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/breadcrumb You can view the created site at: https://miyadaiku.github.io/samples/breadcrumb/index.html Create a project At first, create Miyadaiku project to the breadcrumb directory with the following command. $ miyadaiku-start ./breadcrumb Install Bootstrap4 theme We us" />
 
 
 
@@ -113,7 +114,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -246,7 +247,7 @@
 <div class="code-block">
 <div class="code-block-caption">breadcrumb/contents/index.rst:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
-   <span class="nc">:title:</span> <span class="nf">index.rst in the root directory</span>
+   <span class="nc">:title:</span> index.rst in the root directory
 
 This is /index.rst.
 </pre></div>
@@ -254,7 +255,7 @@ This is /index.rst.
 <div class="code-block">
 <div class="code-block-caption">breadcrumb/contents/page1.rst:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
-   <span class="nc">:title:</span> <span class="nf">page1.rst in the root directory</span>
+   <span class="nc">:title:</span> page1.rst in the root directory
 
 This is /page1.rst.
 </pre></div>
@@ -262,7 +263,7 @@ This is /page1.rst.
 <div class="code-block">
 <div class="code-block-caption">breadcrumb/contents/child1/index.rst:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
-   <span class="nc">:title:</span> <span class="nf">index.rst in the child1 directory</span>
+   <span class="nc">:title:</span> index.rst in the child1 directory
 
 Welcome to the child1.
 </pre></div>
@@ -270,7 +271,7 @@ Welcome to the child1.
 <div class="code-block">
 <div class="code-block-caption">breadcrumb/contents/child1/child1-2.rst:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
-   <span class="nc">:title:</span> <span class="nf">child1-2.rst in the child1 directory</span>
+   <span class="nc">:title:</span> child1-2.rst in the child1 directory
 
 This is child1-2.rst file in the /child1 directory.
 </pre></div>
@@ -331,7 +332,7 @@ This is child1-2.rst file in the /child1 directory.
 <span class="x">    &lt;div class="col-sm"&gt;</span>
 <span class="x">      &lt;ul&gt;</span>
 <span class="x">        </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">article</span> <span class="k">in</span> <span class="nv">contents.get_contents</span><span class="o">(</span><span class="nv">subdirs</span><span class="o">=[</span><span class="nv">page.dirname</span><span class="o">])</span> <span class="cp">%}</span><span class="x"></span>
-<span class="x">          &lt;li&gt;</span><span class="cp">{{</span> <span class="nv">article.link</span><span class="o">(</span><span class="nv">text</span><span class="o">=</span><span class="s2">"%s (/%s)"</span> <span class="err">%</span> <span class="o">(</span>
+<span class="x">          &lt;li&gt;</span><span class="cp">{{</span> <span class="nv">article.link</span><span class="o">(</span><span class="nv">text</span><span class="o">=</span><span class="s2">"%s (/%s)"</span> <span class="o">%</span> <span class="o">(</span>
                  <span class="nv">article.title</span><span class="o">,</span>
                  <span class="s2">"/"</span><span class="nv">.join</span><span class="o">(</span><span class="nv">article.dirname</span><span class="o">+(</span><span class="nv">article.name</span><span class="o">,))))</span> <span class="cp">}}</span><span class="x"></span>
 <span class="x">        </span><span class="cp">{%</span><span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>

@@ -23,10 +23,11 @@
   <script src="../../static/bootstrap4/bootstrap.min.js"></script>
 
   <!-- include pygments css -->
-  <link rel="stylesheet" href="../../static/pygments/pygments_native.css">
+  <link rel="stylesheet" href="../../static/pygments/native.css">
   
   <!-- include font awesome -->
-  <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  <script defer src="../../static/fontawesome/js/all.min.js"></script>
+  <script defer src="../../static/fontawesome/js/v4-shims.min.js"></script>
   
   <meta property="og:url" content="https://miyadaiku.github.io/en/guide/snippet.html" />
 <meta property="og:locale" content="en" />
@@ -34,8 +35,8 @@
 
 <meta property="og:title" content="Snippet - Miyadaiku" />
 
-<meta name="description" content="As article object, Snippet objects are created from source files in the contents directory. But unlike article, snippet does not produce HTML file. Snippets are intended to be embedded in the another article objects. Create snipprt As with articles, snippets are created with reStructuredText / Markdown / HTML etc., with a"/>
-<meta property="og:description" content="As article object, Snippet objects are created from source files in the contents directory. But unlike article, snippet does not produce HTML file. Snippets are intended to be embedded in the another article objects. Create snipprt As with articles, snippets are created with reStructuredText / Markdown / HTML etc., with a" />
+<meta name="description" content="As article object, Snippet objects are created from source files in the contents directory. But unlike article, snippet does not produce HTML file. Snippets are intended to be embedded in the another article objects. Create snipprt As with articles, snippets are created with reStructuredText / Markdown / HTML etc., with a type property set to snippet. Snippet in reStructuredText Sample of snippet in reST: .. article:: :type: snippet :title: Snippet in reST This is a snippet in reST. Snippet in Markdown Sample of"/>
+<meta property="og:description" content="As article object, Snippet objects are created from source files in the contents directory. But unlike article, snippet does not produce HTML file. Snippets are intended to be embedded in the another article objects. Create snipprt As with articles, snippets are created with reStructuredText / Markdown / HTML etc., with a type property set to snippet. Snippet in reStructuredText Sample of snippet in reST: .. article:: :type: snippet :title: Snippet in reST This is a snippet in reST. Snippet in Markdown Sample of" />
 
 
 
@@ -113,7 +114,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -257,8 +258,8 @@
 <div class="code-block">
 <div class="code-block-caption">Sample of snippet in reST:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
-   <span class="nc">:type:</span> <span class="nf">snippet</span>
-   <span class="nc">:title:</span> <span class="nf">Snippet in reST</span>
+   <span class="nc">:type:</span> snippet
+   <span class="nc">:title:</span> Snippet in reST
 
 This is a snippet in reST.
 </pre></div>

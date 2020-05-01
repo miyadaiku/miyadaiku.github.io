@@ -23,10 +23,11 @@
   <script src="../../static/bootstrap4/bootstrap.min.js"></script>
 
   <!-- include pygments css -->
-  <link rel="stylesheet" href="../../static/pygments/pygments_native.css">
+  <link rel="stylesheet" href="../../static/pygments/native.css">
   
   <!-- include font awesome -->
-  <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  <script defer src="../../static/fontawesome/js/all.min.js"></script>
+  <script defer src="../../static/fontawesome/js/v4-shims.min.js"></script>
   
   <meta property="og:url" content="https://miyadaiku.github.io/ja/guide/template.html" />
 <meta property="og:locale" content="ja" />
@@ -34,8 +35,8 @@
 
 <meta property="og:title" content="テンプレート - Miyadaiku" />
 
-<meta name="description" content="Miyadaikuは、contents ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに作成します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 テンプレート変数 テンプレート内では、次の変数を参照できます。 page 処理対象となるアーティクルの"/>
-<meta property="og:description" content="Miyadaikuは、contents ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに作成します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 テンプレート変数 テンプレート内では、次の変数を参照できます。 page 処理対象となるアーティクルの" />
+<meta name="description" content="Miyadaikuは、contents ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに作成します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 テンプレート変数 テンプレート内では、次の変数を参照できます。 page 処理対象となるアーティクルの コンテント オブジェクト を参照します。通常、アーティクルテンプレートでは、page 変数の html プロパティからHTMLを取得して表示します。 contents プロジェクトの コンテンツ コレクション を参照します。 Sample of article template: &lt;!DOCTYPE html&gt; &lt;html lang=&#34;{{ page.lang }}&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;{{ page.charset }}&#34;&gt; &lt;title&gt;{{ page.title }}/{{ pa"/>
+<meta property="og:description" content="Miyadaikuは、contents ディレクトリを走査し、アーティクルやインデックスなどのコンテンツをJinja2テンプレートに渡してHTMLを作成します。テンプレートは、プロジェクトディレクトリの templates ディレクトリに作成します。 アーティクルテンプレート アーティクルに適用するテンプレートは、article_template プロパティで指定します。未指定の場合は、&#39;page_article.html&#39; となります。 テンプレート変数 テンプレート内では、次の変数を参照できます。 page 処理対象となるアーティクルの コンテント オブジェクト を参照します。通常、アーティクルテンプレートでは、page 変数の html プロパティからHTMLを取得して表示します。 contents プロジェクトの コンテンツ コレクション を参照します。 Sample of article template: &lt;!DOCTYPE html&gt; &lt;html lang=&#34;{{ page.lang }}&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;{{ page.charset }}&#34;&gt; &lt;title&gt;{{ page.title }}/{{ pa" />
 
 
 
@@ -113,7 +114,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -345,7 +346,7 @@
 
 <span class="x">  &lt;hr&gt;</span>
 <span class="x">  &lt;div&gt;</span>
-<span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">cur_page</span> <span class="p">!</span><span class="o">=</span> <span class="m">1</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">cur_page</span> <span class="o">!=</span> <span class="m">1</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">content.path</span><span class="o">(</span><span class="nv">values</span><span class="o">=</span><span class="nv">group_values</span><span class="o">,</span> <span class="nv">npage</span><span class="o">=</span><span class="nv">cur_page-1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Prev page&lt;/a&gt;</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nv">is_last</span> <span class="cp">%}</span><span class="x"></span>

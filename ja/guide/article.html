@@ -23,10 +23,11 @@
   <script src="../../static/bootstrap4/bootstrap.min.js"></script>
 
   <!-- include pygments css -->
-  <link rel="stylesheet" href="../../static/pygments/pygments_native.css">
+  <link rel="stylesheet" href="../../static/pygments/native.css">
   
   <!-- include font awesome -->
-  <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  <script defer src="../../static/fontawesome/js/all.min.js"></script>
+  <script defer src="../../static/fontawesome/js/v4-shims.min.js"></script>
   
   <meta property="og:url" content="https://miyadaiku.github.io/ja/guide/article.html" />
 <meta property="og:locale" content="ja" />
@@ -34,8 +35,8 @@
 
 <meta property="og:title" content="アーティクル - Miyadaiku" />
 
-<meta name="description" content="contents ディレクトリの reStructuredTextファイル Markdownファイル HTMLファイル ipynbファイル は、アーティクルオブジェクト として読み込まれます。アーティクルオブジェクトはHTMLに変換し、outputs ディレクトリに出力されます。 reStructuredText 拡張子が .rst のファイルは、 reStructuredTextパーザ でHTMLに変換されます。 Sample of article in reStructuredText: Title of the article"/>
-<meta property="og:description" content="contents ディレクトリの reStructuredTextファイル Markdownファイル HTMLファイル ipynbファイル は、アーティクルオブジェクト として読み込まれます。アーティクルオブジェクトはHTMLに変換し、outputs ディレクトリに出力されます。 reStructuredText 拡張子が .rst のファイルは、 reStructuredTextパーザ でHTMLに変換されます。 Sample of article in reStructuredText: Title of the article" />
+<meta name="description" content="contents ディレクトリの reStructuredTextファイル Markdownファイル HTMLファイル ipynbファイル は、アーティクルオブジェクト として読み込まれます。アーティクルオブジェクトはHTMLに変換し、outputs ディレクトリに出力されます。 reStructuredText 拡張子が .rst のファイルは、 reStructuredTextパーザ でHTMLに変換されます。 Sample of article in reStructuredText: Title of the article ------------------------------ My first article in reStructuredText. この例のように、文書の先頭にヘッダが記述されていれば、そのヘッダが文書の title プロパティとなります。title プロパティは、article ディレクティブでも指定できます。 Miyadaikuは、rst用の ディレクティブ と ロール を提供しており、文書のプロパティ設定、Jinja2テンプレートの埋め込みなどを行えます。 articleディレクティブ articleデ"/>
+<meta property="og:description" content="contents ディレクトリの reStructuredTextファイル Markdownファイル HTMLファイル ipynbファイル は、アーティクルオブジェクト として読み込まれます。アーティクルオブジェクトはHTMLに変換し、outputs ディレクトリに出力されます。 reStructuredText 拡張子が .rst のファイルは、 reStructuredTextパーザ でHTMLに変換されます。 Sample of article in reStructuredText: Title of the article ------------------------------ My first article in reStructuredText. この例のように、文書の先頭にヘッダが記述されていれば、そのヘッダが文書の title プロパティとなります。title プロパティは、article ディレクティブでも指定できます。 Miyadaikuは、rst用の ディレクティブ と ロール を提供しており、文書のプロパティ設定、Jinja2テンプレートの埋め込みなどを行えます。 articleディレクティブ articleデ" />
 
 
 
@@ -113,7 +114,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -342,10 +343,10 @@ My first article in reStructuredText.
 <div class="code-block">
 <div class="code-block-caption">Article directive in reStructuredText:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
-   <span class="nc">:date:</span> <span class="nf">2017-01-01</span>
-   <span class="nc">:title:</span> <span class="nf">文書のタイトル</span>
-   <span class="nc">:category:</span> <span class="nf">カテゴリ1</span>
-   <span class="nc">:tags:</span> <span class="nf">タグ1, タグ2</span>
+   <span class="nc">:date:</span> 2017-01-01
+   <span class="nc">:title:</span> 文書のタイトル
+   <span class="nc">:category:</span> カテゴリ1
+   <span class="nc">:tags:</span> タグ1, タグ2
 
 
 <span class="gh">Sample of article directive</span>
@@ -394,7 +395,7 @@ Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to("./h
 <div class="code-block">
 <div class="code-block-caption">Sample of code-block directive:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
-   <span class="nc">:caption:</span> <span class="nf">sample python code</span>
+   <span class="nc">:caption:</span> sample python code
 
    def test():
       pass
@@ -598,7 +599,7 @@ tags: タグ1, タグ2
 <div class="code-block">
 <div class="code-block-caption">Using Jinja2 macros:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
-   <span class="nc">:imports:</span> <span class="nf">my_template.html</span>
+   <span class="nc">:imports:</span> my_template.html
 
 my_template.html をインポートし、my_macroを呼び出す
 

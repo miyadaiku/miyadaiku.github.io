@@ -23,10 +23,11 @@
   <script src="../../static/bootstrap4/bootstrap.min.js"></script>
 
   <!-- include pygments css -->
-  <link rel="stylesheet" href="../../static/pygments/pygments_native.css">
+  <link rel="stylesheet" href="../../static/pygments/native.css">
   
   <!-- include font awesome -->
-  <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  <script defer src="../../static/fontawesome/js/all.min.js"></script>
+  <script defer src="../../static/fontawesome/js/v4-shims.min.js"></script>
   
   <meta property="og:url" content="https://miyadaiku.github.io/ja/tutorial/tutorial_blog.html" />
 <meta property="og:locale" content="ja" />
@@ -34,8 +35,8 @@
 
 <meta property="og:title" content="Blogサイトの作成 - Miyadaiku" />
 
-<meta name="description" content="このチュートリアルで作成するソースコードは、 https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog からダウンロードできます。 作成したサイトは、 https://miyadaiku.github.io/samples/first_blog/index.html で参照できます。 プロジェクトの作成 はじめに、次のコマンドで first_blog ディレクトリに miyadaiku のプロジェクトを作成します $ miyadaiku-start ./first_blog"/>
-<meta property="og:description" content="このチュートリアルで作成するソースコードは、 https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog からダウンロードできます。 作成したサイトは、 https://miyadaiku.github.io/samples/first_blog/index.html で参照できます。 プロジェクトの作成 はじめに、次のコマンドで first_blog ディレクトリに miyadaiku のプロジェクトを作成します $ miyadaiku-start ./first_blog" />
+<meta name="description" content="このチュートリアルで作成するソースコードは、 https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog からダウンロードできます。 作成したサイトは、 https://miyadaiku.github.io/samples/first_blog/index.html で参照できます。 プロジェクトの作成 はじめに、次のコマンドで first_blog ディレクトリに miyadaiku のプロジェクトを作成します $ miyadaiku-start ./first_blog プロジェクト設定 初期設定では、プロジェクト設定ファイル first_blog/config.yml ファイルは次のようになっています。 first_blog/config.yml: # Miyadaiku config file # Base URL of the site site_url: http://localhost:8888/ # Title of the site site_title: FIXME - site title # Default languag"/>
+<meta property="og:description" content="このチュートリアルで作成するソースコードは、 https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog からダウンロードできます。 作成したサイトは、 https://miyadaiku.github.io/samples/first_blog/index.html で参照できます。 プロジェクトの作成 はじめに、次のコマンドで first_blog ディレクトリに miyadaiku のプロジェクトを作成します $ miyadaiku-start ./first_blog プロジェクト設定 初期設定では、プロジェクト設定ファイル first_blog/config.yml ファイルは次のようになっています。 first_blog/config.yml: # Miyadaiku config file # Base URL of the site site_url: http://localhost:8888/ # Title of the site site_title: FIXME - site title # Default languag" />
 
 
 
@@ -113,7 +114,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -268,9 +269,9 @@
 <div class="code-block">
 <div class="code-block-caption">first_blog/contents/first_entry.rst:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
-   <span class="nc">:date:</span> <span class="nf">2017-01-01</span>
-   <span class="nc">:category:</span> <span class="nf">カテゴリ1</span>
-   <span class="nc">:tags:</span> <span class="nf">タグ1, タグ2</span>
+   <span class="nc">:date:</span> 2017-01-01
+   <span class="nc">:category:</span> カテゴリ1
+   <span class="nc">:tags:</span> タグ1, タグ2
 
 <span class="gh">First entry</span>
 <span class="gh">-------------</span>
@@ -283,9 +284,9 @@ This is my first blog entry.
 <div class="code-block">
 <div class="code-block-caption">first_blog/contents/second_entry.rst:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
-   <span class="nc">:date:</span> <span class="nf">2017-01-01</span>
-   <span class="nc">:category:</span> <span class="nf">カテゴリ2</span>
-   <span class="nc">:tags:</span> <span class="nf">タグ3</span>
+   <span class="nc">:date:</span> 2017-01-01
+   <span class="nc">:category:</span> カテゴリ2
+   <span class="nc">:tags:</span> タグ3
 
 <span class="gh">Second entry</span>
 <span class="gh">-------------</span>

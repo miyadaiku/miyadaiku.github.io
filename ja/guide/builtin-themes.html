@@ -23,10 +23,11 @@
   <script src="../../static/bootstrap4/bootstrap.min.js"></script>
 
   <!-- include pygments css -->
-  <link rel="stylesheet" href="../../static/pygments/pygments_native.css">
+  <link rel="stylesheet" href="../../static/pygments/native.css">
   
   <!-- include font awesome -->
-  <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  <script defer src="../../static/fontawesome/js/all.min.js"></script>
+  <script defer src="../../static/fontawesome/js/v4-shims.min.js"></script>
   
   <meta property="og:url" content="https://miyadaiku.github.io/ja/guide/builtin-themes.html" />
 <meta property="og:locale" content="ja" />
@@ -34,8 +35,8 @@
 
 <meta property="og:title" content="組み込みテーマ - Miyadaiku" />
 
-<meta name="description" content="Miyadaiku には、デフォルトで次のテーマが組み込まれています miyadaiku.themes.base miyadaiku.themes.docutils_html5 miyadaiku.themes.ipynb miyadaiku.themes.pygments miyadaiku.themes.sample.blog miyadaiku.themes.base miyadaiku.themes.base は、デフォルトで使用されるHTMLテンプレートを提供するテーマで、プロジェクトの config.yml"/>
-<meta property="og:description" content="Miyadaiku には、デフォルトで次のテーマが組み込まれています miyadaiku.themes.base miyadaiku.themes.docutils_html5 miyadaiku.themes.ipynb miyadaiku.themes.pygments miyadaiku.themes.sample.blog miyadaiku.themes.base miyadaiku.themes.base は、デフォルトで使用されるHTMLテンプレートを提供するテーマで、プロジェクトの config.yml" />
+<meta name="description" content="Miyadaiku には、デフォルトで次のテーマが組み込まれています miyadaiku.themes.base miyadaiku.themes.docutils_html5 miyadaiku.themes.ipynb miyadaiku.themes.pygments miyadaiku.themes.sample.blog miyadaiku.themes.base miyadaiku.themes.base は、デフォルトで使用されるHTMLテンプレートを提供するテーマで、プロジェクトの config.yml でテーマとして指定しなくとも、常に使用されます。 テンプレート 次のテンプレートを提供します。 page_article.html アーティクル のデフォルトJinja2 テンプレートです。 ソースファイル: page_article.html page_index.html インデックス のデフォルトJinja2 テンプレートです。 ソースファイル: page_index.html マクロ macro という名前のモジュールを定義し、以下のマクロを提供します。 macro.image(src, alt=None, _c"/>
+<meta property="og:description" content="Miyadaiku には、デフォルトで次のテーマが組み込まれています miyadaiku.themes.base miyadaiku.themes.docutils_html5 miyadaiku.themes.ipynb miyadaiku.themes.pygments miyadaiku.themes.sample.blog miyadaiku.themes.base miyadaiku.themes.base は、デフォルトで使用されるHTMLテンプレートを提供するテーマで、プロジェクトの config.yml でテーマとして指定しなくとも、常に使用されます。 テンプレート 次のテンプレートを提供します。 page_article.html アーティクル のデフォルトJinja2 テンプレートです。 ソースファイル: page_article.html page_index.html インデックス のデフォルトJinja2 テンプレートです。 ソースファイル: page_index.html マクロ macro という名前のモジュールを定義し、以下のマクロを提供します。 macro.image(src, alt=None, _c" />
 
 
 
@@ -113,7 +114,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
       </li>
 
       <li class="nav-item dropdown">

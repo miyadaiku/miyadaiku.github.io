@@ -23,10 +23,11 @@
   <script src="../../static/bootstrap4/bootstrap.min.js"></script>
 
   <!-- include pygments css -->
-  <link rel="stylesheet" href="../../static/pygments/pygments_native.css">
+  <link rel="stylesheet" href="../../static/pygments/native.css">
   
   <!-- include font awesome -->
-  <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  <script defer src="../../static/fontawesome/js/all.min.js"></script>
+  <script defer src="../../static/fontawesome/js/v4-shims.min.js"></script>
   
   <meta property="og:url" content="https://miyadaiku.github.io/en/guide/objects.html" />
 <meta property="og:locale" content="en" />
@@ -34,8 +35,8 @@
 
 <meta property="og:title" content="Object reference - Miyadaiku" />
 
-<meta name="description" content="Content object In Miyadaiku, the files in the contents directory and the files directory are loaded as Content object. Content object provides attributes listed Property or Property of index, and followinng methods. load(target) Load the content object specified by"/>
-<meta property="og:description" content="Content object In Miyadaiku, the files in the contents directory and the files directory are loaded as Content object. Content object provides attributes listed Property or Property of index, and followinng methods. load(target) Load the content object specified by" />
+<meta name="description" content="Content object In Miyadaiku, the files in the contents directory and the files directory are loaded as Content object. Content object provides attributes listed Property or Property of index, and followinng methods. load(target) Load the content object specified by target. target can be absolute path which starts with &#39;/&#39;, or relative path. Sample of content.load() method &lt;p&gt; Renders abstract of /page1.rst&lt;/p&gt; {{ content.load(&#39;/page1.rst&#39;).abstract }} path(fragment=None, abs_path=False, values=None, npage=None):"/>
+<meta property="og:description" content="Content object In Miyadaiku, the files in the contents directory and the files directory are loaded as Content object. Content object provides attributes listed Property or Property of index, and followinng methods. load(target) Load the content object specified by target. target can be absolute path which starts with &#39;/&#39;, or relative path. Sample of content.load() method &lt;p&gt; Renders abstract of /page1.rst&lt;/p&gt; {{ content.load(&#39;/page1.rst&#39;).abstract }} path(fragment=None, abs_path=False, values=None, npage=None):" />
 
 
 
@@ -113,7 +114,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
       </li>
 
       <li class="nav-item dropdown">

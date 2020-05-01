@@ -23,10 +23,11 @@
   <script src="../../static/bootstrap4/bootstrap.min.js"></script>
 
   <!-- include pygments css -->
-  <link rel="stylesheet" href="../../static/pygments/pygments_native.css">
+  <link rel="stylesheet" href="../../static/pygments/native.css">
   
   <!-- include font awesome -->
-  <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  <script defer src="../../static/fontawesome/js/all.min.js"></script>
+  <script defer src="../../static/fontawesome/js/v4-shims.min.js"></script>
   
   <meta property="og:url" content="https://miyadaiku.github.io/en/guide/template.html" />
 <meta property="og:locale" content="en" />
@@ -34,8 +35,8 @@
 
 <meta property="og:title" content="Template - Miyadaiku" />
 
-<meta name="description" content="Content files in the contents directory are converted with Jinja2 template file. The templates are created in the templates directory of the project directory. Aritcle template The template applied to the article is specified by the article_template property. Default template name is"/>
-<meta property="og:description" content="Content files in the contents directory are converted with Jinja2 template file. The templates are created in the templates directory of the project directory. Aritcle template The template applied to the article is specified by the article_template property. Default template name is" />
+<meta name="description" content="Content files in the contents directory are converted with Jinja2 template file. The templates are created in the templates directory of the project directory. Aritcle template The template applied to the article is specified by the article_template property. Default template name is &#39;page_article.html&#39;. Template variable Within the template, you can refer to the following variables. page Refer to the Content object of the article producing current HTML page. Most article templates get the HTML to render from t"/>
+<meta property="og:description" content="Content files in the contents directory are converted with Jinja2 template file. The templates are created in the templates directory of the project directory. Aritcle template The template applied to the article is specified by the article_template property. Default template name is &#39;page_article.html&#39;. Template variable Within the template, you can refer to the following variables. page Refer to the Content object of the article producing current HTML page. Most article templates get the HTML to render from t" />
 
 
 
@@ -113,7 +114,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -342,7 +343,7 @@
 
 <span class="x">  &lt;hr&gt;</span>
 <span class="x">  &lt;div&gt;</span>
-<span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">cur_page</span> <span class="p">!</span><span class="o">=</span> <span class="m">1</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">cur_page</span> <span class="o">!=</span> <span class="m">1</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">      &lt;a href="</span><span class="cp">{{</span><span class="nv">content.path</span><span class="o">(</span><span class="nv">values</span><span class="o">=</span><span class="nv">group_values</span><span class="o">,</span> <span class="nv">npage</span><span class="o">=</span><span class="nv">cur_page-1</span><span class="o">)</span><span class="cp">}}</span><span class="x">"&gt;Prev page&lt;/a&gt;</span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nv">is_last</span> <span class="cp">%}</span><span class="x"></span>

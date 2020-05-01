@@ -23,10 +23,11 @@
   <script src="../../static/bootstrap4/bootstrap.min.js"></script>
 
   <!-- include pygments css -->
-  <link rel="stylesheet" href="../../static/pygments/pygments_native.css">
+  <link rel="stylesheet" href="../../static/pygments/native.css">
   
   <!-- include font awesome -->
-  <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  <script defer src="../../static/fontawesome/js/all.min.js"></script>
+  <script defer src="../../static/fontawesome/js/v4-shims.min.js"></script>
   
   <meta property="og:url" content="https://miyadaiku.github.io/ja/guide/property.html" />
 <meta property="og:locale" content="ja" />
@@ -34,8 +35,8 @@
 
 <meta property="og:title" content="プロパティ - Miyadaiku" />
 
-<meta name="description" content="コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。コンテンツのプロパティは、外部プロパティファイル でも指定できます。 標準プロパティ 標準プロパティとして、すべてのコンテンツに以下の値が設定されています。 abstract HTMLに変換したアーティクルを、 abstract_length プロパティで指定した文字数分取得します。abstract_length が 0 の場合、全文を返します。 abstract_length"/>
-<meta property="og:description" content="コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。コンテンツのプロパティは、外部プロパティファイル でも指定できます。 標準プロパティ 標準プロパティとして、すべてのコンテンツに以下の値が設定されています。 abstract HTMLに変換したアーティクルを、 abstract_length プロパティで指定した文字数分取得します。abstract_length が 0 の場合、全文を返します。 abstract_length" />
+<meta name="description" content="コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。コンテンツのプロパティは、外部プロパティファイル でも指定できます。 標準プロパティ 標準プロパティとして、すべてのコンテンツに以下の値が設定されています。 abstract HTMLに変換したアーティクルを、 abstract_length プロパティで指定した文字数分取得します。abstract_length が 0 の場合、全文を返します。 abstract_length インデックスファイルやRSSの摘要として使用するテキストの長さを、文字数で指定します。長さとして 0 を指定すると、本文すべてを摘要とします。未指定の場合は、500 文字となります。 article_template アーティクルのHTMLページを生成するJinja2テンプレートの名前を指定します。未指定の場合は、page_article.html となります。 cagegory コンテンツのカテゴリを指定します。未指定の場合は &#39;&#39; となります。 canonical_url コンテンツへの、公"/>
+<meta property="og:description" content="コンテンツには、自由にプロパティを設定できます。プロパティの設定方法は、reStructuredText・Markdownなどの、ドキュメント形式によって異なります。コンテンツのプロパティは、外部プロパティファイル でも指定できます。 標準プロパティ 標準プロパティとして、すべてのコンテンツに以下の値が設定されています。 abstract HTMLに変換したアーティクルを、 abstract_length プロパティで指定した文字数分取得します。abstract_length が 0 の場合、全文を返します。 abstract_length インデックスファイルやRSSの摘要として使用するテキストの長さを、文字数で指定します。長さとして 0 を指定すると、本文すべてを摘要とします。未指定の場合は、500 文字となります。 article_template アーティクルのHTMLページを生成するJinja2テンプレートの名前を指定します。未指定の場合は、page_article.html となります。 cagegory コンテンツのカテゴリを指定します。未指定の場合は &#39;&#39; となります。 canonical_url コンテンツへの、公" />
 
 
 
@@ -113,7 +114,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
       </li>
 
       <li class="nav-item dropdown">

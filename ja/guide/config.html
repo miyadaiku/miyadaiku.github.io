@@ -23,10 +23,11 @@
   <script src="../../static/bootstrap4/bootstrap.min.js"></script>
 
   <!-- include pygments css -->
-  <link rel="stylesheet" href="../../static/pygments/pygments_native.css">
+  <link rel="stylesheet" href="../../static/pygments/native.css">
   
   <!-- include font awesome -->
-  <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  <script defer src="../../static/fontawesome/js/all.min.js"></script>
+  <script defer src="../../static/fontawesome/js/v4-shims.min.js"></script>
   
   <meta property="og:url" content="https://miyadaiku.github.io/ja/guide/config.html" />
 <meta property="og:locale" content="ja" />
@@ -34,8 +35,8 @@
 
 <meta property="og:title" content="コンフィグ - Miyadaiku" />
 
-<meta name="description" content="コンフィグファイルは、文書プロパティのデフォルト値を指定する YAMLファイルです。 アーティクルやインデックスなどのプロパティのデフォルト値は、ルートディレクトリの config.yml ファイルで指定します。 また、contents ディレクトリ内のサブディレクトリにYAMLファイルを作成し、ディレクトリ別のデフォルト値を指定できます。contents ディレクトリ内の、以下の条件を満たすファイルは、コンフィグファイルとして読み込まれます。 拡張子が .yml である type キーの値が config と指定されている"/>
-<meta property="og:description" content="コンフィグファイルは、文書プロパティのデフォルト値を指定する YAMLファイルです。 アーティクルやインデックスなどのプロパティのデフォルト値は、ルートディレクトリの config.yml ファイルで指定します。 また、contents ディレクトリ内のサブディレクトリにYAMLファイルを作成し、ディレクトリ別のデフォルト値を指定できます。contents ディレクトリ内の、以下の条件を満たすファイルは、コンフィグファイルとして読み込まれます。 拡張子が .yml である type キーの値が config と指定されている" />
+<meta name="description" content="コンフィグファイルは、文書プロパティのデフォルト値を指定する YAMLファイルです。 アーティクルやインデックスなどのプロパティのデフォルト値は、ルートディレクトリの config.yml ファイルで指定します。 また、contents ディレクトリ内のサブディレクトリにYAMLファイルを作成し、ディレクトリ別のデフォルト値を指定できます。contents ディレクトリ内の、以下の条件を満たすファイルは、コンフィグファイルとして読み込まれます。 拡張子が .yml である type キーの値が config と指定されている 例として、/dir1/config_dir1.yml と /dir1/dir2/config_dir2.yml の2つのコンフィグファイルを作成します。 contents/dir1/config_dir1.yml type: config # YAMLファイルのタイプを config に指定 lang: ja # lang のデフォルト値を ja に設定 contents/dir1/dir2/config_dir2.yml type: config # YAMLファイルのタイプを con"/>
+<meta property="og:description" content="コンフィグファイルは、文書プロパティのデフォルト値を指定する YAMLファイルです。 アーティクルやインデックスなどのプロパティのデフォルト値は、ルートディレクトリの config.yml ファイルで指定します。 また、contents ディレクトリ内のサブディレクトリにYAMLファイルを作成し、ディレクトリ別のデフォルト値を指定できます。contents ディレクトリ内の、以下の条件を満たすファイルは、コンフィグファイルとして読み込まれます。 拡張子が .yml である type キーの値が config と指定されている 例として、/dir1/config_dir1.yml と /dir1/dir2/config_dir2.yml の2つのコンフィグファイルを作成します。 contents/dir1/config_dir1.yml type: config # YAMLファイルのタイプを config に指定 lang: ja # lang のデフォルト値を ja に設定 contents/dir1/dir2/config_dir2.yml type: config # YAMLファイルのタイプを con" />
 
 
 
@@ -113,7 +114,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
       </li>
 
       <li class="nav-item dropdown">

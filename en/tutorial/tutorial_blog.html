@@ -23,10 +23,11 @@
   <script src="../../static/bootstrap4/bootstrap.min.js"></script>
 
   <!-- include pygments css -->
-  <link rel="stylesheet" href="../../static/pygments/pygments_native.css">
+  <link rel="stylesheet" href="../../static/pygments/native.css">
   
   <!-- include font awesome -->
-  <link rel="stylesheet" href="../../static/fontawesome/css/font-awesome.min.css">
+  <script defer src="../../static/fontawesome/js/all.min.js"></script>
+  <script defer src="../../static/fontawesome/js/v4-shims.min.js"></script>
   
   <meta property="og:url" content="https://miyadaiku.github.io/en/tutorial/tutorial_blog.html" />
 <meta property="og:locale" content="en" />
@@ -34,8 +35,8 @@
 
 <meta property="og:title" content="Create a blog site - Miyadaiku" />
 
-<meta name="description" content="You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog You can view the created site at: https://miyadaiku.github.io/samples/first_blog/index.html Create a project At first, create Miyadaiku project to the"/>
-<meta property="og:description" content="You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog You can view the created site at: https://miyadaiku.github.io/samples/first_blog/index.html Create a project At first, create Miyadaiku project to the" />
+<meta name="description" content="You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog You can view the created site at: https://miyadaiku.github.io/samples/first_blog/index.html Create a project At first, create Miyadaiku project to the first_blog directory with the following command. $ miyadaiku-start ./first_blog Project setting By default, the project configuration file first_blog/config.yml file looks like this: first_blog/config.yml: # Miyadaiku config file # Base"/>
+<meta property="og:description" content="You can download source files in this tutorial from: https://github.com/miyadaiku/miyadaiku-docs/tree/master/samples/first_blog You can view the created site at: https://miyadaiku.github.io/samples/first_blog/index.html Create a project At first, create Miyadaiku project to the first_blog directory with the following command. $ miyadaiku-start ./first_blog Project setting By default, the project configuration file first_blog/config.yml file looks like this: first_blog/config.yml: # Miyadaiku config file # Base" />
 
 
 
@@ -113,7 +114,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="nav-link" href="https://github.com/miyadaiku/miyadaiku"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -266,9 +267,9 @@
 <div class="code-block">
 <div class="code-block-caption">first_blog/contents/first_entry.rst:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
-   <span class="nc">:date:</span> <span class="nf">2017-01-01</span>
-   <span class="nc">:category:</span> <span class="nf">Category1</span>
-   <span class="nc">:tags:</span> <span class="nf">tag1, tag2</span>
+   <span class="nc">:date:</span> 2017-01-01
+   <span class="nc">:category:</span> Category1
+   <span class="nc">:tags:</span> tag1, tag2
 
 <span class="gh">First entry</span>
 <span class="gh">-------------</span>
@@ -281,9 +282,9 @@ This is my first blog entry.
 <div class="code-block">
 <div class="code-block-caption">first_blog/contents/second_entry.rst:</div>
 <div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
-   <span class="nc">:date:</span> <span class="nf">2017-01-01</span>
-   <span class="nc">:category:</span> <span class="nf">Category2</span>
-   <span class="nc">:tags:</span> <span class="nf">tag3</span>
+   <span class="nc">:date:</span> 2017-01-01
+   <span class="nc">:category:</span> Category2
+   <span class="nc">:tags:</span> tag3
 
 <span class="gh">Second entry</span>
 <span class="gh">-------------</span>

@@ -71,7 +71,6 @@ div.input_area {
   border-radius: 2px;
   background: #f7f7f7;
   line-height: 1.21429em;
-  background: #efefef;
 
 }
 /* This is needed so that empty prompt areas can collapse to zero height when there
@@ -125,15 +124,12 @@ div.input_area > div.highlight {
   background-color: transparent;
 }
 
-/*
 div.input_area > div.highlight > pre {
   margin: 0px;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-
-*/
 
 div.output_wrapper {
   /* this position must be relative to enable descendents to be absolute within it */
@@ -193,7 +189,7 @@ div.output_area {
 
 
 .rendered_html img, .rendered_html svg {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -201,104 +197,6 @@ div.output_area {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-
-/* --------------------------------------------------- */
-/*   miyadaiku style                                   */
-/*------------------------------------------------------*/
-
-
-.rendered_html img, .rendered_html svg {
-  max-width: 95%;
-}
-
-.output_png img {
-  max-width: 95%;
-}
-
-pre {
-  white-space: pre-wrap;
-}
-
-div.input_area > div.highlight {
-  margin: 10px; /*0.4em;*/
-}
-
-div.output_area .MathJax_Display {
-  text-align: left !important;
-}
-
-div.input {
-  margin-bottom:0.5em;
-}
-
-.cell pre {
-  margin-bottom: 0;
-}
-
-
-.MathJax_Display {
-/*  text-align: left !important;*/
-}
-
-.anchor-link {
- font-size: 0.7em;
- color: #788896;
- padding-left:0.1em;
- font-weight: normal;
-}
-
-
-.input_prompt {
-    min-width:0;
-    display: none;
-}
-
-
-.output {
-  margin-top: 1em;
-}
-
-.output_area .prompt {
-    display: none !important;
-}
-
-.output_area .output_text {
-  display:flex;
-}
-
-.output_area .output_text:before {
-  content: ">>>";
-  color: #887c7c;
-  font-size:9pt;
-  font-family: Arial Black;
-  padding-left: 10px;;
-  padding-right: 10px;
-}
-
-
-.output_area .output {
-  margin: 0.4em 0 0 0;
-}
-
-.output_area pre {
-  margin-bottom: 0;
-}
-
-
-.output_area pre {
-  color: #212529 !important;
-}
-
-
-.code_cell {
-/*  border: solid 1px #d6d6d6 !important;*/
-  margin-bottom: 1em !important;
-}
-
-.code_cell .input {
-  margin-bottom: 0;
 }
 
 

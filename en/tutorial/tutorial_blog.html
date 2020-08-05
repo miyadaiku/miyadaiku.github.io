@@ -157,23 +157,23 @@
                   <ul>
                     
                       <li class="header_h1">
-                        <a href="#a_Createaproject_1">Create a project</a>
+                        <a href="#a_en_tutorial_tutorial_blog_rst_Create_a_project_1">Create a project</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_Projectsetting">Project setting</a>
+                        <a href="#a_en_tutorial_tutorial_blog_rst_Project_setting_2">Project setting</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_Createanarticle_1">Create an article</a>
+                        <a href="#a_en_tutorial_tutorial_blog_rst_Create_an_article_3">Create an article</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_Buildingthesite_1">Building the site</a>
+                        <a href="#a_en_tutorial_tutorial_blog_rst_Building_the_site_4">Building the site</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_Customizingtemplates_1">Customizing templates</a>
+                        <a href="#a_en_tutorial_tutorial_blog_rst_Customizing_templates_5">Customizing templates</a>
                       </li>
                     
                   </ul>
@@ -206,7 +206,7 @@
 <p><a class="reference external" href="https://miyadaiku.github.io/samples/first_blog/index.html">https://miyadaiku.github.io/samples/first_blog/index.html</a></p>
 </blockquote>
 <div class="section" id="create-a-project">
-<div class="md_header_block" id="h_Createaproject_1"><a class="md_header_anchor" id="a_Createaproject_1"></a><h1>Create a project</h1></div>
+<div class="md_header_block" id="h_en_tutorial_tutorial_blog_rst_Create_a_project_1"><a class="md_header_anchor" id="a_en_tutorial_tutorial_blog_rst_Create_a_project_1"></a><h1>Create a project</h1></div>
 <p>At first, create Miyadaiku project to the <span class="docutils literal">first_blog</span> directory with the following command.</p>
 <div class="code-block">
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-start ./first_blog
@@ -214,7 +214,7 @@
 </div>
 </div>
 <div class="section" id="project-setting">
-<div class="md_header_block" id="h_Projectsetting"><a class="md_header_anchor" id="a_Projectsetting"></a><h1>Project setting</h1></div>
+<div class="md_header_block" id="h_en_tutorial_tutorial_blog_rst_Project_setting_2"><a class="md_header_anchor" id="a_en_tutorial_tutorial_blog_rst_Project_setting_2"></a><h1>Project setting</h1></div>
 <p>By default, the project configuration file <span class="docutils literal">first_blog/config.yml</span> file looks like this:</p>
 <div class="code-block">
 <div class="code-block-caption">first_blog/config.yml:</div>
@@ -262,7 +262,7 @@
 </div>
 </div>
 <div class="section" id="create-an-article">
-<div class="md_header_block" id="h_Createanarticle_1"><a class="md_header_anchor" id="a_Createanarticle_1"></a><h1>Create an article</h1></div>
+<div class="md_header_block" id="h_en_tutorial_tutorial_blog_rst_Create_an_article_3"><a class="md_header_anchor" id="a_en_tutorial_tutorial_blog_rst_Create_an_article_3"></a><h1>Create an article</h1></div>
 <p>Create an  article file <span class="docutils literal">first_blog/contents/first_entry.rst</span>.</p>
 <div class="code-block">
 <div class="code-block-caption">first_blog/contents/first_entry.rst:</div>
@@ -294,7 +294,7 @@ This is my second blog entry.
 </div>
 </div>
 <div class="section" id="building-the-site">
-<div class="md_header_block" id="h_Buildingthesite_1"><a class="md_header_anchor" id="a_Buildingthesite_1"></a><h1>Building the site</h1></div>
+<div class="md_header_block" id="h_en_tutorial_tutorial_blog_rst_Building_the_site_4"><a class="md_header_anchor" id="a_en_tutorial_tutorial_blog_rst_Building_the_site_4"></a><h1>Building the site</h1></div>
 <p>Build the site with the following command.</p>
 <div class="code-block">
 <div class="highlight"><pre><span></span><span class="gp">$</span> miyadaiku-build ./first_blog
@@ -303,7 +303,7 @@ This is my second blog entry.
 <p>If the command succeeds, the <span class="docutils literal">first_blog/outputs/index.html</span> file will be created.</p>
 </div>
 <div class="section" id="customizing-templates">
-<div class="md_header_block" id="h_Customizingtemplates_1"><a class="md_header_anchor" id="a_Customizingtemplates_1"></a><h1>Customizing templates</h1></div>
+<div class="md_header_block" id="h_en_tutorial_tutorial_blog_rst_Customizing_templates_5"><a class="md_header_anchor" id="a_en_tutorial_tutorial_blog_rst_Customizing_templates_5"></a><h1>Customizing templates</h1></div>
 <p>Index pages of the site are converted to HTML with a Jinja2 template file named <span class="docutils literal">page_index.html</span>. The <span class="docutils literal">miyadaiku.themes.sample.blog</span> theme provides <a class="reference external" href="https://github.com/miyadaiku/miyadaiku/blob/master/miyadaiku/themes/sample/blog/templates/page_index.html">page_index.html</a> as an index template.</p>
 <p>To use custom template, you can create template file <span class="docutils literal">page_index.html</span> in the template directory <span class="docutils literal">first_blog/templates</span> as the template file.</p>
 <p>As an example, we create new custom template file inherited from default template file. For reference to the template files in the theme, please refer to <a href="tutorial.html#template">Customizing templates</a></p>
@@ -328,6 +328,7 @@ This is my second blog entry.
 </div>
 <p>In this template file, <a href="../guide/objects.html#contents_collection">Contents collection</a> is used to retrieve recent three articles.</p>
 </div>
+
       </div>
     </div>
   </div>

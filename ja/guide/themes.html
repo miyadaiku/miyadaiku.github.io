@@ -213,15 +213,15 @@
                   <ul>
                     
                       <li class="header_h1">
-                        <a href="#a_%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E4%BD%BF%E7%94%A8">テーマの使用</a>
+                        <a href="#a_ja_guide_themes_rst_テーマの使用_1">テーマの使用</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88">テンプレート</a>
+                        <a href="#a_ja_guide_themes_rst_テンプレート_2">テンプレート</a>
                       </li>
                     
                       <li class="header_h1">
-                        <a href="#a_load_package">load_package()</a>
+                        <a href="#a_ja_guide_themes_rst_load_package__3">load_package()</a>
                       </li>
                     
                   </ul>
@@ -255,7 +255,7 @@
         <p>テーマは、 サイトのコンテンツやデザインなどをまとめたPythonのパッケージです。テーマパッケージの <span class="docutils literal">contents</span> ディレクトリ、<span class="docutils literal">files</span> ディレクトリ、<span class="docutils literal">templates</span> ディレクトリには、通常のプロジェクトと同じようにコンテンツやテンプレートを登録できます。</p>
 <p><img src="../../img/themes.png" width="500px"/></p>
 <div class="section" id="id2">
-<div class="md_header_block" id="h_%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E4%BD%BF%E7%94%A8"><a class="md_header_anchor" id="a_%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E4%BD%BF%E7%94%A8"></a><h1>テーマの使用</h1></div>
+<div class="md_header_block" id="h_ja_guide_themes_rst_テーマの使用_1"><a class="md_header_anchor" id="a_ja_guide_themes_rst_テーマの使用_1"></a><h1>テーマの使用</h1></div>
 <p>テーマは、通常のパッケージと同じようように、PyPIなどから事前にインストールする必要があります。</p>
 <div class="code-block">
 <div class="code-block-caption">Install miyadaiku themes with pip</div>
@@ -274,13 +274,13 @@
 <p>テーマが別のテーマを使用する場合、そのテーマは再帰的に読み込まれます。また、Miyadaikuの組み込みテーマ <span class="docutils literal">miyadaiku.themes.base</span> は、<span class="docutils literal">themes</span> に指定されなくとも常に読み込まれます。</p>
 </div>
 <div class="section" id="id3">
-<div class="md_header_block" id="h_%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88"><a class="md_header_anchor" id="a_%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88"></a><h1>テンプレート</h1></div>
+<div class="md_header_block" id="h_ja_guide_themes_rst_テンプレート_2"><a class="md_header_anchor" id="a_ja_guide_themes_rst_テンプレート_2"></a><h1>テンプレート</h1></div>
 <p>テーマに含まれるテンプレートも、プロジェクトのテンプレートと同様に使用できます。</p>
 <p>アーティクルのテンプレート名や、Jinja2の <span class="docutils literal">import</span> 文などでテンプレート名を指定すると、プロジェクトの <span class="docutils literal">templates</span> ディレクトリに続いて、使用中のテーマからテンプレートディレクトリを検索します。</p>
 <p>テンプレート名の検索順序については、<a href="template.html#template_names">テンプレート名の解決</a> を参照してください。</p>
 </div>
 <div class="section" id="load-package">
-<div class="md_header_block" id="h_load_package"><a class="md_header_anchor" id="a_load_package"></a><h1>load_package()</h1></div>
+<div class="md_header_block" id="h_ja_guide_themes_rst_load_package__3"><a class="md_header_anchor" id="a_ja_guide_themes_rst_load_package__3"></a><h1>load_package()</h1></div>
 <p>テーマパッケージに <span class="docutils literal">load_package(site)</span> 関数があれば、起動時に呼び出されます。テーマ内でのデータの初期化などが必要であれば、ここで行います。</p>
 <div class="code-block">
 <div class="code-block-caption">sample of __init__.py of theme package</div>
@@ -291,6 +291,7 @@
 </pre></div>
 </div>
 </div>
+
       </div>
     </div>
   </div>

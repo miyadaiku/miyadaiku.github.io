@@ -190,12 +190,12 @@
 
 <div class="main">
 
-<div class="md_header_block" id="h_contents_md_アーティクル_1"><a class="md_header_anchor" id="a_contents_md_アーティクル_1"></a><h1>アーティクル</h1></div>
+<h1 class="md_header_block" id="h_contents_md_アーティクル_1">アーティクル</h1>
 <p>プロジェクトの<code>contents</code>ディレクトリに作成したファイルのうち、以下の種類のファイルは、ビルド時に HTML に変換してから<code>outputs</code>ディレクトリに出力します。Miyadaikuでは、このようにHTMLファイルに変換するファイルを、「<strong>アーティクル</strong>」と呼びます</p>
 <p><code>contents</code>ディレクトリには、自由にサブディレクトリを作成できます。サブディレクトリのファイルは、そのままのディレクトリ構造で <code>outputs</code>ディレクトリに出力します。</p>
-<div class="md_header_block" id="h_contents_md_Markdownファイル_2"><a class="md_header_anchor" id="a_contents_md_Markdownファイル_2"></a><h2>Markdownファイル</h2></div>
+<h2 class="md_header_block" id="h_contents_md_Markdownファイル_2">Markdownファイル</h2>
 <p>拡張子が <code>'.md'</code>のファイルは、MarkdownファイルとしてHTMLに変換されます。Markdownの変換には、<a href="https://pypi.org/project/Markdown/">Markdownパッケージ</a> を使用しています。</p>
-<div class="md_header_block" id="h_contents_md_プロパティ_3"><a class="md_header_anchor" id="a_contents_md_プロパティ_3"></a><h3>プロパティ</h3></div>
+<h3 class="md_header_block" id="h_contents_md_プロパティ_3">プロパティ</h3>
 <p>ファイルのタイトル・タグなどのプロパティは、HTML ファイルの先頭に YAML 形式で指定できます。ファイルの一行目が <code>---</code> で始まっている場合、次の <code>---</code> までがプロパティとなります。</p>
 <div class="highlight"><pre><span></span><code>---
 title: ファイルのタイトル
@@ -207,13 +207,13 @@ tags:
 
 ## Hello
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_マークアップ_4"><a class="md_header_anchor" id="a_contents_md_マークアップ_4"></a><h3>マークアップ</h3></div>
+<h3 class="md_header_block" id="h_contents_md_マークアップ_4">マークアップ</h3>
 <p>Miyadaikuでは、Markdownに以下の記法を追加しています。</p>
-<div class="md_header_block" id="h_contents_md__jinja__5"><a class="md_header_anchor" id="a_contents_md__jinja__5"></a><h4>:jinja:``</h4></div>
+<h4 class="md_header_block" id="h_contents_md__jinja__5">:jinja:``</h4>
 <p>Markdownファイルには、<code>:jinja:`</code> と <code>`</code> の間にJinjaテンプレートを記述できます。</p>
 <div class="highlight"><pre><span></span><code>2の10乗は、 :jinja:`{{ 2**10 }}` です。
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md__target__6"><a class="md_header_anchor" id="a_contents_md__target__6"></a><h4>.. target::</h4></div>
+<h4 class="md_header_block" id="h_contents_md__target__6">.. target::</h4>
 <p><code>.. target::</code> は、HTMLに <code>&lt;div&gt;</code> 要素を埋め込み、直後のヘッダ要素へのリンクターゲットとして指定できるようにします。<code>&lt;div&gt;</code> 要素の <code>id</code> を、ディレクティブの引数で指定します。</p>
 <div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">target</span><span class="p">::</span> id_of_section1
 
@@ -225,7 +225,7 @@ Body of section I.
 
 Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to(content, fragment='id_of_section1') }}`</span>.
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_ファイル分割_7"><a class="md_header_anchor" id="a_contents_md_ファイル分割_7"></a><h3>ファイル分割</h3></div>
+<h3 class="md_header_block" id="h_contents_md_ファイル分割_7">ファイル分割</h3>
 <p>Markdownファイルの一行目が <code>%%% ファイル名</code> から始まるファイルは、次の<code>%%% ファイル名</code> で始まる行までを分割して、複数のコンテンツを出力します。</p>
 <p>次の例は、一つのファイルを２つの別々のファイルとして出力します。それぞれのファイル名は、<code>split_file_1.md</code> と、<code>split_file_2.md</code> となります。</p>
 <div class="highlight"><pre><span></span><code>%%% split_file_1.md
@@ -240,10 +240,10 @@ title: 分割ファイル2
 ---
 ファイル2
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_Jupyter_Notebookファイル_8"><a class="md_header_anchor" id="a_contents_md_Jupyter_Notebookファイル_8"></a><h2>Jupyter Notebookファイル</h2></div>
+<h2 class="md_header_block" id="h_contents_md_Jupyter_Notebookファイル_8">Jupyter Notebookファイル</h2>
 <p>Jupyter Notebookファイル(*.ipynb)ファイルは、HTMLに変換して結果を出力します。このHTMLにはCSSが含まれていないので、通常のNotebookとは表示が異なります。CSSの適用については、NotebookのCSS設定を参照してください。</p>
 <p>現在のMiyadaikuでは、NotebookにはJinjaテンプレートは記述できません。</p>
-<div class="md_header_block" id="h_contents_md_プロパティ_9"><a class="md_header_anchor" id="a_contents_md_プロパティ_9"></a><h3>プロパティ</h3></div>
+<h3 class="md_header_block" id="h_contents_md_プロパティ_9">プロパティ</h3>
 <p>ファイルのタイトル・タグなどのプロパティは、最初のセルの先頭に YAML 形式で指定できます。ファイルの一行目が <code>---</code> で始まっている場合、次の <code>---</code> までがプロパティとなります。プロパティは、タイプが <code>code</code> 以外のセル(<code>raw</code>, <code>markdown</code>など)に指定できます。</p>
 <div class="highlight"><pre><span></span><code>---
 title: ファイルのタイトル
@@ -276,7 +276,7 @@ tags:
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_ファイル分割_10"><a class="md_header_anchor" id="a_contents_md_ファイル分割_10"></a><h3>ファイル分割</h3></div>
+<h3 class="md_header_block" id="h_contents_md_ファイル分割_10">ファイル分割</h3>
 <p>ノートブックの最初のセルの一行目が <code>%%% ファイル名</code> から始まるファイルは、以降のセルの<code>%%% ファイル名</code> で始まる行までを分割して、複数のコンテンツを出力します。ファイル分割は、タイプが <code>code</code> 以外のセル(<code>raw</code>, <code>markdown</code>など)に指定できます。</p>
 <p>次の例は、一つのファイルを２つの別々のファイルとして出力します。それぞれのファイル名は、<code>split_file_1.ipynb</code> と、<code>split_file_2.i@pynb</code> となります。</p>
 <div class="highlight"><pre><span></span><code>%%% split_file_1.ipynb
@@ -291,7 +291,7 @@ title: 分割ファイル2
 ---
 ファイル2
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_HTMLファイル_11"><a class="md_header_anchor" id="a_contents_md_HTMLファイル_11"></a><h2>HTMLファイル</h2></div>
+<h2 class="md_header_block" id="h_contents_md_HTMLファイル_11">HTMLファイル</h2>
 <p>拡張子が <code>'.html'</code>, <code>'.htm'</code>, <code>'.j2'</code> のいずれかのファイルは、Jinja のテンプレートとして実行して結果を出力します。通常の Jinja テンプレートのように、<code>{{}}</code>や<code>{% 〜 %}</code> を使って処理を記述します。</p>
 <div class="highlight"><pre><span></span><code><span class="x">&lt;h1&gt;HTMLコンテンツ サンプル&lt;/h1&gt;</span>
 
@@ -301,7 +301,7 @@ title: 分割ファイル2
 <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">&lt;/ol&gt;</span>
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_プロパティ_12"><a class="md_header_anchor" id="a_contents_md_プロパティ_12"></a><h3>プロパティ</h3></div>
+<h3 class="md_header_block" id="h_contents_md_プロパティ_12">プロパティ</h3>
 <p>ファイルのタイトル・タグなどのプロパティは、HTML ファイルの先頭に YAML 形式で指定できます。ファイルの一行目が <code>---</code> で始まっている場合、次の <code>---</code> までがプロパティとなります。</p>
 <div class="highlight"><pre><span></span><code>---
 title: ファイルのタイトル
@@ -313,7 +313,7 @@ tags:
 
 <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ content.title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_ファイル分割_13"><a class="md_header_anchor" id="a_contents_md_ファイル分割_13"></a><h3>ファイル分割</h3></div>
+<h3 class="md_header_block" id="h_contents_md_ファイル分割_13">ファイル分割</h3>
 <p>HTMLファイルの一行目が <code>%%% ファイル名</code> から始まるファイルは、次の <code>%%% ファイル名</code> で始まる行までを分割して、複数のコンテンツを出力します。</p>
 <p>次の例は、一つのファイルを２つの別々のファイルとして出力します。それぞれのファイル名は、<code>split_file_1.html</code> と、<code>split_file_2.html</code> となります。</p>
 <div class="highlight"><pre><span></span><code>%%% split_file_1.html
@@ -328,9 +328,9 @@ title: 分割ファイル2
 ---
 ファイル2
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_reStructuredTextファイル_14"><a class="md_header_anchor" id="a_contents_md_reStructuredTextファイル_14"></a><h2>reStructuredTextファイル</h2></div>
+<h2 class="md_header_block" id="h_contents_md_reStructuredTextファイル_14">reStructuredTextファイル</h2>
 <p>拡張子が <code>'.rst'</code>のファイルは、reStructuredTextファイルとしてHTMLに変換されます。</p>
-<div class="md_header_block" id="h_contents_md_プロパティ_15"><a class="md_header_anchor" id="a_contents_md_プロパティ_15"></a><h3>プロパティ</h3></div>
+<h3 class="md_header_block" id="h_contents_md_プロパティ_15">プロパティ</h3>
 <p>アーティクルのプロパティは、<code>articleディレクティブ</code> で指定します。</p>
 <div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">article</span><span class="p">::</span>
    <span class="nc">:date:</span> 2017-01-01
@@ -344,9 +344,9 @@ title: 分割ファイル2
 
 This is a miyadaiku article in reST.
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_マークアップ_16"><a class="md_header_anchor" id="a_contents_md_マークアップ_16"></a><h3>マークアップ</h3></div>
+<h3 class="md_header_block" id="h_contents_md_マークアップ_16">マークアップ</h3>
 <p>Miyadaikuでは、reStructuredTextに以下の記法を追加しています。</p>
-<div class="md_header_block" id="h_contents_md_jinjaディレクティブ_17"><a class="md_header_anchor" id="a_contents_md_jinjaディレクティブ_17"></a><h4>jinjaディレクティブ</h4></div>
+<h4 class="md_header_block" id="h_contents_md_jinjaディレクティブ_17">jinjaディレクティブ</h4>
 <p>複数行のJinjaテンプレートは、<code>jinjaディレクティブ</code> を使って記述できます。</p>
 <div class="highlight"><pre><span></span><code><span class="gh">この文書のプロパティ</span>
 <span class="gh">-----------------------------------</span>
@@ -359,17 +359,17 @@ This is a miyadaiku article in reST.
      &lt;li&gt; 日付: {{ content.date.strftime('%Y-%m-%d') }} &lt;/li&gt;
    &lt;/ul&gt;
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_jinjaロール_18"><a class="md_header_anchor" id="a_contents_md_jinjaロール_18"></a><h4>jinjaロール</h4></div>
+<h4 class="md_header_block" id="h_contents_md_jinjaロール_18">jinjaロール</h4>
 <p>また、<code>\:jinja: ロール</code> で、インラインにJinjaテンプレートを記述できます。</p>
 <div class="highlight"><pre><span></span><code>この文書は、<span class="na">:jinja:</span><span class="nv">`{{ content.title }}`</span> です。
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_code_blockディレクティブ_19"><a class="md_header_anchor" id="a_contents_md_code_blockディレクティブ_19"></a><h4>code-blockディレクティブ</h4></div>
+<h4 class="md_header_block" id="h_contents_md_code_blockディレクティブ_19">code-blockディレクティブ</h4>
 <p>プログラムのソースコードなどは、<code>code-block ディレクティブ</code> で記述します。<code>.. code-block:: lang</code> のように言語を指定すると、Pygments による構文ハイライトが行われます。</p>
 <div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
    def test():
       pass
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_targetディレクティブ_20"><a class="md_header_anchor" id="a_contents_md_targetディレクティブ_20"></a><h4>targetディレクティブ</h4></div>
+<h4 class="md_header_block" id="h_contents_md_targetディレクティブ_20">targetディレクティブ</h4>
 <p><code>targetディレクティブ</code> は、HTMLに <code>&lt;div&gt;</code> 要素を埋め込み、直後のヘッダ要素へのリンクターゲットとして指定できるようにします。<code>&lt;div&gt;</code> 要素の <code>id</code> を、ディレクティブの引数で指定します。</p>
 <div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="ow">target</span><span class="p">::</span> id_of_section1
 
@@ -383,7 +383,7 @@ Body of section I.
 
 Link to <span class="na">:jinja:</span><span class="nv">`{{ content.link_to(content, fragment='id_of_section1') }}`</span>.
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_スニペット_21"><a class="md_header_anchor" id="a_contents_md_スニペット_21"></a><h2>スニペット</h2></div>
+<h2 class="md_header_block" id="h_contents_md_スニペット_21">スニペット</h2>
 <p><strong>スニペット</strong>は、アーティクルと同様、<em>.rst ファイルや </em>.md ファイルなどから作成されるコンテンツですが、アーティクルとは異なり、スニペットからはHTMLファイルは生成されません。スニペットは、独立したHTMLページを作成するためではなく、他のアーティクルなどから読み込んで使用します。</p>
 <p>スニペットは、ファイルの <code>type</code> プロパティに <code>snippet</code> を指定して作成します。</p>
 <p>次のMarkdownファイル <code>snip.md</code> は、スニペットを作成します。</p>
@@ -402,7 +402,7 @@ title
 
 :jinja:`{{ content.load('snip.md').html }}`
 </code></pre></div>
-<div class="md_header_block" id="h_contents_md_テンプレート変数_22"><a class="md_header_anchor" id="a_contents_md_テンプレート変数_22"></a><h2>テンプレート変数</h2></div>
+<h2 class="md_header_block" id="h_contents_md_テンプレート変数_22">テンプレート変数</h2>
 <p>アーティクルに <code>:jinja:``</code> などを使って記述するJinjaテンプレートでは、次の変数を参照できます。</p>
 <dl>
 <dt>content</dt>

@@ -174,31 +174,31 @@
 
 <div class="main">
 
-<div class="md_header_block" id="h_objects_md_オブジェクトリファレンス_1"><a class="md_header_anchor" id="a_objects_md_オブジェクトリファレンス_1"></a><h1>オブジェクトリファレンス</h1></div>
+<h1 class="md_header_block" id="h_objects_md_オブジェクトリファレンス_1">オブジェクトリファレンス</h1>
 <div class="header_target" id="content_obj"></div>
-<div class="md_header_block" id="h_objects_md_コンテントオブジェクト_2"><a class="md_header_anchor" id="a_objects_md_コンテントオブジェクト_2"></a><h2>コンテントオブジェクト</h2></div>
+<h2 class="md_header_block" id="h_objects_md_コンテントオブジェクト_2">コンテントオブジェクト</h2>
 <p>Miyadaikuで、<code>contents</code> ディレクトリや <code>files</code> ディレクトリのファイルは、コンテントオブジェクトとして読み込まれます。アーティクルやインデックスなどのファイルだけでなく、CSSや画像ファイルなどのMiyadaikuで処理されないファイルも、コンテントオブジェクトとして参照できます。</p>
-<div class="md_header_block" id="h_objects_md_プロパティ_3"><a class="md_header_anchor" id="a_objects_md_プロパティ_3"></a><h3>プロパティ</h3></div>
+<h3 class="md_header_block" id="h_objects_md_プロパティ_3">プロパティ</h3>
 <p><code>tags</code> や <code>title</code> など、コンテントオブジェクトに設定された <a href="contents_props.html">プロパティ</a> は、コンテントオブジェクトの属性として参照できます。</p>
 <p><strong>例: titleプロパティを表示</strong></p>
 <div class="highlight"><pre><span></span><code>この文書のタイトルは、:jinja:`{{ content.title}}` です。
 </code></pre></div>
 <p>コンテンツのプロパティ以外にも、以下の属性を参照できます。</p>
-<div class="md_header_block" id="h_objects_md_abstract_4"><a class="md_header_anchor" id="a_objects_md_abstract_4"></a><h4>abstract</h4></div>
+<h4 class="md_header_block" id="h_objects_md_abstract_4">abstract</h4>
 <p>コンテンツの先頭から、<code>abstract_length</code> で指定した文字数のテキストを取得します。</p>
-<div class="md_header_block" id="h_objects_md_filename_5"><a class="md_header_anchor" id="a_objects_md_filename_5"></a><h4>filename</h4></div>
+<h4 class="md_header_block" id="h_objects_md_filename_5">filename</h4>
 <p>コンテンツの出力ファイル名(ディレクトリを含まない)を取得します。</p>
-<div class="md_header_block" id="h_objects_md_headers_6"><a class="md_header_anchor" id="a_objects_md_headers_6"></a><h4>headers</h4></div>
+<h4 class="md_header_block" id="h_objects_md_headers_6">headers</h4>
 <p>コンテンツのヘッダ要素の一覧を、次の <a href="https://docs.python.org/3/library/collections.html#collections.namedtuple">NamedTuple</a> で返します。</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">HTMLIDInfo</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
     <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span>   <span class="c1"># ヘッダ部分のid</span>
     <span class="n">tag</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># ヘッダタグ名 (h1~h6)</span>
     <span class="n">text</span><span class="p">:</span> <span class="nb">str</span> <span class="c1"># ヘッダ要素内のテキスト</span>
 </code></pre></div>
-<div class="md_header_block" id="h_objects_md_html_7"><a class="md_header_anchor" id="a_objects_md_html_7"></a><h4>html</h4></div>
+<h4 class="md_header_block" id="h_objects_md_html_7">html</h4>
 <p>コンテンツのHTMLを取得します。</p>
-<div class="md_header_block" id="h_objects_md_メソッド_8"><a class="md_header_anchor" id="a_objects_md_メソッド_8"></a><h3>メソッド</h3></div>
-<div class="md_header_block" id="h_objects_md_get_abstract_abstract_length_None_plain_False__9"><a class="md_header_anchor" id="a_objects_md_get_abstract_abstract_length_None_plain_False__9"></a><h4>get_abstract(abstract_length=None, plain=False)</h4></div>
+<h3 class="md_header_block" id="h_objects_md_メソッド_8">メソッド</h3>
+<h4 class="md_header_block" id="h_objects_md_get_abstract_abstract_length_None_plain_False__9">get_abstract(abstract_length=None, plain=False)</h4>
 <p>コンテンツの先頭から、<code>abstract_length</code> で指定した文字数のテキストを取得します。</p>
 <dl>
 <dt>abstract_length</dt>
@@ -206,7 +206,7 @@
 <dt>plain</dt>
 <dd><code>True</code>の場合はHTML、<code>False</code>の場合は plain text を返します。</dd>
 </dl>
-<div class="md_header_block" id="h_objects_md_link_text_None_fragment_None_abs_path_False_attrs_None_group_value_None_npa_10"><a class="md_header_anchor" id="a_objects_md_link_text_None_fragment_None_abs_path_False_attrs_None_group_value_None_npa_10"></a><h4>link(text=None, fragment=None, abs_path=False, attrs=None, group_value=None, npage=None):</h4></div>
+<h4 class="md_header_block" id="h_objects_md_link_text_None_fragment_None_abs_path_False_attrs_None_group_value_None_npa_10">link(text=None, fragment=None, abs_path=False, attrs=None, group_value=None, npage=None):</h4>
 <p>現在のページからリンクする<a>要素を返します。</a></p>
 <dl>
 <dt>text</dt>
@@ -225,7 +225,7 @@
 <div class="highlight"><pre><span></span><code><span class="cp">{{</span> <span class="nv">content.link</span><span class="o">(</span><span class="nv">fragment</span><span class="o">=</span><span class="s2">"id_in_page"</span><span class="o">,</span>
     <span class="nv">attrs</span><span class="o">={</span><span class="s2">"class":"class_a"</span><span class="o">,</span> <span class="s2">"style":"border:solid;"</span><span class="o">})</span> <span class="cp">}}</span><span class="x"></span>
 </code></pre></div>
-<div class="md_header_block" id="h_objects_md_link_to_target_text_None_fragment_None_abs_path_False_attrs_None_group_valu_11"><a class="md_header_anchor" id="a_objects_md_link_to_target_text_None_fragment_None_abs_path_False_attrs_None_group_valu_11"></a><h4>link_to(target, text=None, fragment=None, abs_path=False, attrs=None, group_value=None, npage=None):</h4></div>
+<h4 class="md_header_block" id="h_objects_md_link_to_target_text_None_fragment_None_abs_path_False_attrs_None_group_valu_11">link_to(target, text=None, fragment=None, abs_path=False, attrs=None, group_value=None, npage=None):</h4>
 <p><code>target</code> で指定するコンテントオブジェクトへリンクする <code>&lt;a&gt;</code> 要素を返します。<code>content.load(target).link_to()</code> と同様です。</p>
 <dl>
 <dt>target</dt>
@@ -249,7 +249,7 @@
 <div class="highlight"><pre><span></span><code><span class="cp">{{</span> <span class="nv">content.link_to</span><span class="o">(</span><span class="s2">"../page1.rst"</span><span class="o">,</span> <span class="nv">fragment</span><span class="o">=</span><span class="s2">"id_in_page"</span><span class="o">,</span>
                 <span class="nv">attrs</span><span class="o">={</span><span class="s2">"class":"class_a"</span><span class="o">})</span> <span class="cp">}}</span><span class="x"></span>
 </code></pre></div>
-<div class="md_header_block" id="h_objects_md_load_target__12"><a class="md_header_anchor" id="a_objects_md_load_target__12"></a><h4>load(target)</h4></div>
+<h4 class="md_header_block" id="h_objects_md_load_target__12">load(target)</h4>
 <p><code>target</code> で指定したパスのコンテントオブジェクトを取得します。</p>
 <dl>
 <dt>target</dt>
@@ -257,7 +257,7 @@
 </dl>
 <div class="highlight"><pre><span></span><code><span class="cp">{{</span> <span class="nv">content.load</span><span class="o">(</span><span class="s1">'/page1.rst'</span><span class="o">)</span><span class="nv">.abstract</span> <span class="cp">}}</span><span class="x">  </span>
 </code></pre></div>
-<div class="md_header_block" id="h_objects_md_path_fragment_None_abs_path_False_group_value_None_npage_None__13"><a class="md_header_anchor" id="a_objects_md_path_fragment_None_abs_path_False_group_value_None_npage_None__13"></a><h4>path(fragment=None, abs_path=False, group_value=None, npage=None)</h4></div>
+<h4 class="md_header_block" id="h_objects_md_path_fragment_None_abs_path_False_group_value_None_npage_None__13">path(fragment=None, abs_path=False, group_value=None, npage=None)</h4>
 <p>現在のページから、自分自身へのパスを取得します。</p>
 <dl>
 <dt>fragment</dt>
@@ -273,7 +273,7 @@
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">'{{ content.path() }}'</span><span class="p">&gt;</span>
   Current content<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="md_header_block" id="h_objects_md_path_to_target_fragment_None_abs_path_False_group_value_None_npage_None__14"><a class="md_header_anchor" id="a_objects_md_path_to_target_fragment_None_abs_path_False_group_value_None_npage_None__14"></a><h4>path_to(target, fragment=None, abs_path=False, group_value=None, npage=None)</h4></div>
+<h4 class="md_header_block" id="h_objects_md_path_to_target_fragment_None_abs_path_False_group_value_None_npage_None__14">path_to(target, fragment=None, abs_path=False, group_value=None, npage=None)</h4>
 <p><code>target</code> で指定するコンテントオブジェクトへのパスを取得します。<code>content.load(target).path()</code> と同様です。</p>
 <dl>
 <dt>target</dt>
@@ -291,16 +291,16 @@
   親ディレクトリのpage1.html<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="header_target" id="context_obj"></div>
-<div class="md_header_block" id="h_objects_md_コンテキストオブジェクト_15"><a class="md_header_anchor" id="a_objects_md_コンテキストオブジェクト_15"></a><h2>コンテキストオブジェクト</h2></div>
+<h2 class="md_header_block" id="h_objects_md_コンテキストオブジェクト_15">コンテキストオブジェクト</h2>
 <p>作成中の出力ファイルに関する情報を保持します。</p>
-<div class="md_header_block" id="h_objects_md_メソッド_16"><a class="md_header_anchor" id="a_objects_md_メソッド_16"></a><h3>メソッド</h3></div>
-<div class="md_header_block" id="h_objects_md_get_url__17"><a class="md_header_anchor" id="a_objects_md_get_url__17"></a><h4>get_url()</h4></div>
+<h3 class="md_header_block" id="h_objects_md_メソッド_16">メソッド</h3>
+<h4 class="md_header_block" id="h_objects_md_get_url__17">get_url()</h4>
 <p>出力ファイルのURLを返します。</p>
 <div class="header_target" id="contents_collection"></div>
-<div class="md_header_block" id="h_objects_md_コンテンツ_コレクション_18"><a class="md_header_anchor" id="a_objects_md_コンテンツ_コレクション_18"></a><h2>コンテンツ コレクション</h2></div>
+<h2 class="md_header_block" id="h_objects_md_コンテンツ_コレクション_18">コンテンツ コレクション</h2>
 <p>コンテンツコレクションは、Miyadaikuプロジェクトのすべてのコンテントを管理するオブジェクトです。</p>
-<div class="md_header_block" id="h_objects_md_メソッド_19"><a class="md_header_anchor" id="a_objects_md_メソッド_19"></a><h3>メソッド</h3></div>
-<div class="md_header_block" id="h_objects_md_get_content_key_base_None__20"><a class="md_header_anchor" id="a_objects_md_get_content_key_base_None__20"></a><h4>get_content(key, base=None)</h4></div>
+<h3 class="md_header_block" id="h_objects_md_メソッド_19">メソッド</h3>
+<h4 class="md_header_block" id="h_objects_md_get_content_key_base_None__20">get_content(key, base=None)</h4>
 <p>コレクションから、指定したファイル名の <a href="objects.html#content_obj">コンテントオブジェクト</a> を取得します。</p>
 <dl>
 <dt>key</dt>
@@ -310,7 +310,7 @@
 </dl>
 <div class="highlight"><pre><span></span><code><span class="cp">{{</span> <span class="nv">contents.get_content</span><span class="o">(</span><span class="s2">"../page1.rst"</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
 </code></pre></div>
-<div class="md_header_block" id="h_objects_md_get_contents_subdirs_None_recurse_bool_True_base_None_filters_None_exclud_21"><a class="md_header_anchor" id="a_objects_md_get_contents_subdirs_None_recurse_bool_True_base_None_filters_None_exclud_21"></a><h4>get_contents(subdirs=None, recurse: bool = True, base=None, filters=None, excludes=None)</h4></div>
+<h4 class="md_header_block" id="h_objects_md_get_contents_subdirs_None_recurse_bool_True_base_None_filters_None_exclud_21">get_contents(subdirs=None, recurse: bool = True, base=None, filters=None, excludes=None)</h4>
 <p>コレクションから、指定した条件の <a href="objects.html#content_obj">コンテントオブジェクト</a> を検索します。結果として、<a href="objects.html#content_obj">コンテントオブジェクト</a> のリストを返します。</p>
 <dl>
 <dt>subdirs</dt>
@@ -328,7 +328,7 @@
 <span class="x">  &lt;p&gt;</span><span class="cp">{{</span> <span class="nv">found.title</span><span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
 <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
 </code></pre></div>
-<div class="md_header_block" id="h_objects_md_group_items_group_subdirs_None_recurse_bool_True_base_None_filters_None__22"><a class="md_header_anchor" id="a_objects_md_group_items_group_subdirs_None_recurse_bool_True_base_None_filters_None__22"></a><h4>group_items(group, subdirs=None, recurse: bool = True, base=None, filters=None, excludes=None)</h4></div>
+<h4 class="md_header_block" id="h_objects_md_group_items_group_subdirs_None_recurse_bool_True_base_None_filters_None__22">group_items(group, subdirs=None, recurse: bool = True, base=None, filters=None, excludes=None)</h4>
 <p><code>contents.get_contents()</code> と同様に、アーティクルを検索します。検索結果は、<code>group</code> で指定するプロパティ名の値で分類します。</p>
 <p>戻り値は、</p>
 <div class="highlight"><pre><span></span><code><span class="p">[</span>

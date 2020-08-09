@@ -406,12 +406,16 @@ title
 <p>アーティクルに <code>:jinja:``</code> などを使って記述するJinjaテンプレートでは、次の変数を参照できます。</p>
 <dl>
 <dt>content</dt>
-<dd>実行中のJinjaテンプレートが記述されている、アーティクル自身を参照します。</dd>
+<dd>実行中のJinjaテンプレートが記述されている、アーティクル自身の <a href="objects.html#content_obj">コンテントオブジェクト</a> を参照します。</dd>
 <dt>page</dt>
-<dd>現在のページのオブジェクト を参照します。<br/>
-アーティクルの個別ページでは <code>content</code> と <code>page</code> は同じアーティクルですが、インデックスページにアーティクルを表示する場合などは、<code>content</code> はアーティクルオブジェクトで、<code>page</code> はインデックスオブジェクトとなります。</dd>
+<dd>現在のページのオブジェクトの <a href="objects.html#content_obj">コンテントオブジェクト</a> を参照します。  </dd>
+</dl>
+<p>アーティクルの個別ページでは <code>content</code> と <code>page</code> は同じアーティクルですが、インデックスページにアーティクルを表示する場合などは、<code>content</code> はアーティクルオブジェクトで、<code>page</code> はインデックスオブジェクトとなります。</p>
+<dl>
+<dt>context</dt>
+<dd>実行中の状態を示す <a href="objects.html#context_obj">コンテキストオブジェクト</a> を参照します。</dd>
 <dt>contents</dt>
-<dd>ContentFilesオブジェクトを参照します。</dd>
+<dd><a href="objects.html#contents_collection">コンテンツ コレクション</a> オブジェクトを参照します。</dd>
 </dl>
 
 </div>
